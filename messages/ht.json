@@ -391,12 +391,6 @@
     "eventsFooter": "Evènman gratis ki bon pou moun ki fenk rive nan lis piblik yo.",
     "noEvents": "Pa jwenn okenn evènman kounye a.",
     "loadingEvents": "N ap chèche evènman toupre w…",
-    "people": "Moun ki pase pa la deja",
-    "peopleFooter": "Pwofil egzanp pou demonstrasyon sa a. Vrè jwenti a ap vini talè konsa.",
-    "sayHi": "Di M Bònjou",
-    "sayHiTo": "Di {name} bònjou",
-    "toast": "Sèvis mesaj la ap vini talè konsa.",
-    "bio": "Te deplase soti nan {from} al nan {city} gen {years, plural, one {# ane} other {# ane}} de sa. {job}. Pale {languages}.",
     "open": "Louvri evènman an"
   },
   "jobs": {

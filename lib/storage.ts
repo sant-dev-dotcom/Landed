@@ -2,10 +2,12 @@
 
 import { clear, del, get, set } from "idb-keyval";
 import { maskIds } from "./mask";
+import { queuePush } from "./sync";
 import type { ChecklistState } from "./checklist";
 import type { PlanStep, PrepSummary, Profile, SavedQuestion, TrackedDate } from "./types";
 
-// Everything the app remembers lives in this browser's IndexedDB.
+// Everything the app remembers lives in this browser's IndexedDB, and is copied to the
+// signed-in account in Supabase (lib/sync.ts) so it comes back on any device.
 // Only these keys are ever written. Never images, never full ID numbers.
 export const KEYS = {
   profile: "landed:profile",
@@ -54,6 +56,7 @@ async function safeSet(key: string, value: unknown) {
   } catch {
     // Private mode or storage blocked: the app still works for this session.
   }
+  queuePush(key);
   if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent("landed:storage", { detail: key }));
 }
 
@@ -105,6 +108,7 @@ export const deleteSavedChat = async () => {
   } catch {
     // ignore
   }
+  queuePush(KEYS.chat);
 };
 
 export const getCustomLanguage = () => safeGet<CustomLanguage | null>(KEYS.customLanguage, null);

@@ -9,6 +9,7 @@ import { ToastProvider } from "@/components/ios/Toast";
 import { CustomLocaleProvider } from "@/components/CustomLocaleProvider";
 import { BrowserProvider } from "@/components/browser/InAppBrowser";
 import { AssistantProvider } from "@/components/assistant/Assistant";
+import { SyncProvider } from "@/components/SyncProvider";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -52,15 +53,17 @@ export default async function LocaleLayout({
 
   const app = (
     <ToastProvider>
-      {/* Every external link opens in the in-app browser; Ask Landed is available on every screen. */}
-      <BrowserProvider>
-        <AssistantProvider>
-          {/* Phone-width column; centered on larger screens over the grouped background. */}
-          <div className="relative mx-auto min-h-dvh w-full max-w-app bg-grouped md:shadow-[0_0_0_1px_var(--separator)]">
-            {children}
-          </div>
-        </AssistantProvider>
-      </BrowserProvider>
+      <SyncProvider>
+        {/* Every external link opens in the in-app browser; Ask Landed is available on every screen. */}
+        <BrowserProvider>
+          <AssistantProvider>
+            {/* Phone-width column; centered on larger screens over the grouped background. */}
+            <div className="relative mx-auto min-h-dvh w-full max-w-app bg-grouped md:shadow-[0_0_0_1px_var(--separator)]">
+              {children}
+            </div>
+          </AssistantProvider>
+        </BrowserProvider>
+      </SyncProvider>
     </ToastProvider>
   );
 

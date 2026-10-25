@@ -1,6 +1,7 @@
 import "server-only";
 import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
+import { createCache } from "./cache";
 import { isTrusted } from "./links";
 import { generateJSON } from "./llm";
 
@@ -323,7 +324,8 @@ async function formatWithAI(source: ReturnType<typeof pageText>, pageUrl: string
   return { title: String(outs[0].title || source.title), blocks, requiresSite, siteAction };
 }
 
-const formatted = new Map<string, { at: number; data: FormattedPage }>();
+// AI-formatted pages, shared through Valkey when configured: each one costs a Gemini call.
+const formatted = createCache<FormattedPage>("page", { ttlSeconds: DAY / 1000, memoryMax: 100 });
 
 /**
  * Reading view for a government page that can't be framed: its text, arranged by AI into a
@@ -332,16 +334,17 @@ const formatted = new Map<string, { at: number; data: FormattedPage }>();
  */
 export async function formattedPage(page: Fetched, translateTo?: string): Promise<FormattedPage> {
   const key = `${page.url}|${translateTo ?? ""}`;
-  const hit = formatted.get(key);
-  if (hit && Date.now() - hit.at < DAY) return hit.data;
+  const hit = await formatted.get(key);
+  if (hit) return hit;
   let data: FormattedPage;
   try {
     data = { ...(await formatWithAI(pageText(page), page.url, translateTo)), ai: true };
   } catch (err) {
     if (translateTo) throw err;
     console.error("[pages] AI formatting failed, using plain extraction:", err instanceof Error ? err.message.slice(0, 200) : err);
-    data = { ...extractReading(page), ai: false, requiresSite: false, siteAction: "" };
+    // Not cached: the plain view is cheap, and a short AI outage shouldn't stick for a day.
+    return { ...extractReading(page), ai: false, requiresSite: false, siteAction: "" };
   }
-  remember(formatted, key, { at: Date.now(), data });
+  await formatted.set(key, data);
   return data;
 }

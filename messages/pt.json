@@ -391,12 +391,6 @@
     "eventsFooter": "Eventos gratuitos e acolhedores para recém-chegados de listas públicas.",
     "noEvents": "Nenhum evento encontrado no momento.",
     "loadingEvents": "Procurando eventos perto de você…",
-    "people": "Pessoas que já passaram por isso",
-    "peopleFooter": "Perfis de exemplo para esta demonstração. A combinação real chega em breve.",
-    "sayHi": "Dizer Olá",
-    "sayHiTo": "Dizer olá para {name}",
-    "toast": "As mensagens chegam em breve.",
-    "bio": "Mudou-se de {from} para {city} há {years, plural, =0 {menos de um ano} =1 {# ano} other {# anos}}. {job}. Fala {languages}.",
     "open": "Abrir evento"
   },
   "jobs": {

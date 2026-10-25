@@ -391,12 +391,6 @@
     "eventsFooter": "来自公开列表的免费且对新移民友好的活动。",
     "noEvents": "暂时没有找到活动。",
     "loadingEvents": "正在找你附近的活动…",
-    "people": "过来人",
-    "peopleFooter": "这是演示用的个人资料范例。真实的匹配功能很快就会推出。",
-    "sayHi": "打个招呼",
-    "sayHiTo": "向 {name} 打招呼",
-    "toast": "发消息功能很快就会推出。",
-    "bio": "从 {from} 搬到 {city} {years, plural, other {# 年}}前。{job}。会说 {languages}。",
     "open": "打开活动"
   },
   "jobs": {

@@ -391,12 +391,6 @@
     "eventsFooter": "Événements gratuits et accueillants pour les nouveaux arrivants, tirés de listes publiques.",
     "noEvents": "Aucun événement trouvé pour le moment.",
     "loadingEvents": "Recherche d’événements près de chez vous…",
-    "people": "Des gens qui sont passés par là",
-    "peopleFooter": "Profils d’exemple pour cette démo. La vraie mise en relation arrive bientôt.",
-    "sayHi": "Dire bonjour",
-    "sayHiTo": "Dire bonjour à {name}",
-    "toast": "La messagerie arrive bientôt.",
-    "bio": "Déménagé de {from} à {city} il y a {years, plural, =0 {moins d’un an} one {# an} other {# ans}}. {job}. Parle {languages}.",
     "open": "Ouvrir l’événement"
   },
   "jobs": {

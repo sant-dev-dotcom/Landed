@@ -391,12 +391,6 @@
     "eventsFooter": "Libre at pwedeng-pwedeng sa mga bagong dating na kaganapan mula sa mga pampublikong listahan.",
     "noEvents": "Walang makitang kaganapan sa ngayon.",
     "loadingEvents": "Hinahanap ang mga kaganapan malapit sa sayo…",
-    "people": "Mga Taong Nakaabot Na Doon",
-    "peopleFooter": "Mga halimbawang kwento para sa demo na ito. Malapit na ang totoong pagtutugma.",
-    "sayHi": "Batiin",
-    "sayHiTo": "Batiin si {name}",
-    "toast": "Malapit na ang pagmemensahe.",
-    "bio": "Lumipat mula sa {from} patungong {city} {years, plural, one {# taon} other {# taon}} ang nakalipas. {job}. Marunong magsalita ng {languages}.",
     "open": "Buksan ang kaganapan"
   },
   "jobs": {

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Bell, Globe, Info, MapPin, RotateCcw, Trash2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Bell, Globe, Info, LogOut, Mail, MapPin, RotateCcw, Trash2 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { CUSTOM_LOCALE } from "@/i18n/languages";
@@ -16,11 +16,15 @@ import { useToast } from "@/components/ios/Toast";
 import { LanguageSheet, useCurrentLanguageName } from "@/components/LanguagePicker";
 import { useProfile, useSettings } from "@/lib/hooks";
 import { clearAllData, saveSettings } from "@/lib/storage";
+import { supabase } from "@/lib/supabase/client";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { deleteAccountData, stopSync } from "@/lib/sync";
 import type { Locale } from "@/lib/types";
 
 export default function SettingsPage() {
   const t = useTranslations("settings");
   const tc = useTranslations("common");
+  const ta = useTranslations("auth");
   const th = useTranslations("home");
   const locale = useLocale() as Locale;
   const router = useRouter();
@@ -31,6 +35,22 @@ export default function SettingsPage() {
   const [confirm, setConfirm] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [denied, setDenied] = useState(false);
+  const [email, setEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured()) return;
+    supabase()
+      .auth.getUser()
+      .then(({ data }) => setEmail(data.user?.email ?? null));
+  }, []);
+
+  const signOut = async () => {
+    // Everything is saved in the account, so the device is cleared for whoever uses it next.
+    await stopSync();
+    await supabase().auth.signOut();
+    // A full page load, so the middleware sees the session is gone.
+    window.location.replace(`/${locale}`);
+  };
 
   const setNotifications = async (on: boolean) => {
     if (on && typeof Notification !== "undefined" && Notification.permission !== "granted") {
@@ -80,6 +100,13 @@ export default function SettingsPage() {
           />
         </ListSection>
 
+        {email && (
+          <ListSection header={ta("account")}>
+            <ListRow icon={<Mail size={18} strokeWidth={2} />} iconColor="var(--muted)" title={ta("email")} value={email} />
+            <ListRow icon={<LogOut size={18} strokeWidth={2} />} iconColor="var(--clay)" title={ta("signOut")} destructive onClick={signOut} />
+          </ListSection>
+        )}
+
         <ListSection header={t("privacy")} footer={t("privacyFooter")}>
           <ListRow
             icon={<Trash2 size={18} strokeWidth={2} />}
@@ -106,6 +133,7 @@ export default function SettingsPage() {
             label: t("deleteConfirm"),
             style: "destructive",
             onPress: async () => {
+              await deleteAccountData().catch(() => {});
               await clearAllData();
               try {
                 sessionStorage.clear();

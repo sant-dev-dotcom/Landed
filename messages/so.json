@@ -391,12 +391,6 @@
     "eventsFooter": "Dhacdooyin lacag la'aan ah oo soo-gelootiga u roon oo laga keenay liisaska dadweynaha.",
     "noEvents": "Waqtigan la joogo dhacdooyin lama helin.",
     "loadingEvents": "Waxaa la raadinayaa dhacdooyinka kuugu dhow...",
-    "people": "Dadka Soo Maray Halkaan oo Kale",
-    "peopleFooter": "Muunadaha profile-ka ee demo-gan. Kuwo dhab ah oo soo socda ayaa dhakhso iman doona.",
-    "sayHi": "Salaan",
-    "sayHiTo": "Salaan {name}",
-    "toast": "Fariin diristu dhakhso ayay imanaysaa.",
-    "bio": "Wuxuu ka guuray {from} kuna yimid {city} {years, plural, one {# sano} other {# sano}} kahor. {job}. Wuxuu ku hadlaa {languages}.",
     "open": "Fur dhacdada"
   },
   "jobs": {

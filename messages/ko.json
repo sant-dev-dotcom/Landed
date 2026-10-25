@@ -391,12 +391,6 @@
     "eventsFooter": "공공 목록에서 가져온 무료이고 이주민 환영 행사이오니 안심하고 참여하세요.",
     "noEvents": "지금은 찾은 행사가 없어요.",
     "loadingEvents": "근처 행사를 찾는 중이에요…",
-    "people": "먼저 온 이웃들",
-    "peopleFooter": "체험판용 예시 프로필이에요. 실제 매칭은 곧 시작됩니다.",
-    "sayHi": "인사하기",
-    "sayHiTo": "{name}님에게 인사하기",
-    "toast": "메시지 기능은 곧 찾아옵니다.",
-    "bio": "{from}에서 {city}로 {years, plural, one {#년} other {#년}} 전에 왔어요. {job} 일을 해요. {languages}를 할 수 있어요.",
     "open": "행사 보기"
   },
   "jobs": {

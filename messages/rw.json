@@ -391,12 +391,6 @@
     "eventsFooter": "Ibikorwa by’ubuntu byagenewe abageze bushya bisohoka ku mugaragaro.",
     "noEvents": "Nta bikorwa bibonetse ubu.",
     "loadingEvents": "Turimo gushakisha ibikorwa biri hafi yawe…",
-    "people": "Abantu Babayemo",
-    "peopleFooter": "Urugero rw’ibiranga abantu muri uyu mukino wa mbere. Guhuza by’ukuri bizaza vuba.",
-    "sayHi": "Suhuza",
-    "sayHiTo": "Suhuza {name}",
-    "toast": "Gutumirana ubutumwa bizaza vuba.",
-    "bio": "Yimukiye muri {city} avuye muri {from} hashize imyaka {years, plural, one {# umwaka} other {# imyaka}}. {job}. Avuga {languages}.",
     "open": "Fungura igikorwa"
   },
   "jobs": {

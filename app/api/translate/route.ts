@@ -1,16 +1,19 @@
 import { NextResponse } from "next/server";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { localeForTag, matchLanguage } from "@/i18n/languages";
 import { describeLanguage, flatten, translateMessages, type MessageTree } from "@/lib/translateUi";
+import { createCache } from "@/lib/cache";
 import { clip } from "@/lib/mask";
 
 // Translates the app UI into a language the user typed in. The result goes back to the
-// device (IndexedDB) and is never stored here, apart from a small in-memory cache.
+// device (IndexedDB). Finished translations are cached for 30 days (in Valkey when configured),
+// so the next person who picks the same language gets it in about a second.
 
 export const maxDuration = 60;
 
-const cache = new Map<string, unknown>();
+const cache = createCache<unknown>("translate", { ttlSeconds: 30 * 24 * 60 * 60, memoryMax: 20 });
 
 export async function POST(req: Request) {
   const body = (await req.json().catch(() => ({}))) as { language?: string };
@@ -23,8 +26,12 @@ export async function POST(req: Request) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "not_configured" }, { status: 503 });
 
-  const key = input.toLowerCase();
-  if (cache.has(key)) return NextResponse.json(cache.get(key));
+  // Keyed by the English text too: after en.json changes, languages are translated again
+  // instead of serving a translation that is missing the new strings.
+  const raw = await readFile(path.join(process.cwd(), "messages", "en.json"), "utf8");
+  const key = `${createHash("sha256").update(raw).digest("hex").slice(0, 16)}:${input.toLowerCase()}`;
+  const hit = await cache.get(key);
+  if (hit !== undefined) return NextResponse.json(hit);
 
   try {
     const opts = { apiKey, retries: 2 };
@@ -33,7 +40,7 @@ export async function POST(req: Request) {
     const bundled = localeForTag(language.tag) ?? matchLanguage(language.name);
     if (bundled) return NextResponse.json({ locale: bundled });
 
-    const en = JSON.parse(await readFile(path.join(process.cwd(), "messages", "en.json"), "utf8")) as MessageTree;
+    const en = JSON.parse(raw) as MessageTree;
     const name = language.name === language.nativeName ? language.name : `${language.name} (${language.nativeName})`;
     const { messages, untranslated, errors } = await translateMessages(en, name, opts);
     // Mostly English means the calls failed; don't hand that back as a translation.
@@ -42,8 +49,7 @@ export async function POST(req: Request) {
     }
 
     const result = { language, messages };
-    if (cache.size >= 20) cache.delete(cache.keys().next().value!);
-    cache.set(key, result);
+    await cache.set(key, result);
     return NextResponse.json(result);
   } catch (err) {
     console.error("[translate] failed:", err instanceof Error ? err.message : err);

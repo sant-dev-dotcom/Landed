@@ -391,12 +391,6 @@
     "eventsFooter": "Sự kiện miễn phí và thân thiện với người mới đến từ danh sách công khai.",
     "noEvents": "Hiện không tìm thấy sự kiện nào.",
     "loadingEvents": "Đang tìm sự kiện gần bạn…",
-    "people": "Những người đi trước",
-    "peopleFooter": "Hồ sơ mẫu cho bản demo này. Tính năng tìm người phù hợp thực tế sẽ sớm có.",
-    "sayHi": "Gửi lời chào",
-    "sayHiTo": "Gửi lời chào đến {name}",
-    "toast": "Tính năng nhắn tin sẽ sớm ra mắt.",
-    "bio": "Đã chuyển từ {from} đến {city} cách đây {years, plural, one {# năm} other {# năm}} trước. {job}. Nói {languages}.",
     "open": "Mở sự kiện"
   },
   "jobs": {

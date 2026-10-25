@@ -391,12 +391,6 @@
     "eventsFooter": "Matukio ya bure na ya kirafiki kwa wageni kutoka kwenye orodha za umma.",
     "noEvents": "Hakuna matukio yaliyopatikana kwa sasa.",
     "loadingEvents": "Inatafuta matukio karibu nawe…",
-    "people": "Watu Waliopitia Njia Hii",
-    "peopleFooter": "Wasifu wa mfano kwa toleo hili la majaribio. Ulinganishaji halisi unakuja hivi karibuni.",
-    "sayHi": "Sema Hujambo",
-    "sayHiTo": "Sema hujambo kwa {name}",
-    "toast": "Ujumbe utapatikana hivi karibuni.",
-    "bio": " Alihamia kutoka {from} hadi {city} miaka {years, plural, zero {0} one {# mwaka} other {# miaka}} iliyopita. {job}. Anazungumza {languages}.",
     "open": "Fungua tukio"
   },
   "jobs": {
