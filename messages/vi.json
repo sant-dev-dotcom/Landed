@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Quay lại",
+    "cancel": "Hủy",
+    "done": "Xong",
+    "close": "Đóng",
+    "add": "Thêm",
+    "added": "Đã thêm",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "continue": "Tiếp tục",
+    "skip": "Bỏ qua",
+    "comingSoon": "Sắp ra mắt",
+    "aiLabel": "AI giải thích · Không phải tư vấn pháp lý",
+    "sources": "Nguồn",
+    "error": "Đã xảy ra lỗi. Vui lòng thử lại.",
+    "retry": "Thử lại",
+    "loading": "Đang tải…",
+    "sampleData": "Kết quả mẫu. Thêm mã khóa API để có kết quả thực tế.",
+    "settings": "Cài đặt",
+    "learnMore": "Tìm hiểu thêm",
+    "openSource": "Mã nguồn mở: {name}"
+  },
+  "tabs": {
+    "label": "Chính",
+    "home": "Trang chủ",
+    "legal": "Pháp lý",
+    "community": "Cộng đồng",
+    "jobs": "Việc làm"
+  },
+  "language": {
+    "label": "Ngôn ngữ",
+    "en": "English",
+    "es": "Español",
+    "choose": "Chọn ngôn ngữ của bạn",
+    "search": "Tìm ngôn ngữ",
+    "other": "Ngôn ngữ khác",
+    "otherPlaceholder": "Nhập ngôn ngữ của bạn",
+    "otherFooter": "Chúng tôi sẽ dịch ứng dụng sang ngôn ngữ của bạn bằng AI. Có thể sẽ có một số lỗi.",
+    "translate": "Dịch",
+    "translating": "Đang dịch Landed sang {language}…",
+    "notConfigured": "Việc dịch sang ngôn ngữ mới cần có mã khóa Gemini API trên máy chủ.",
+    "unknownLanguage": "Chúng tôi không tìm thấy ngôn ngữ đó. Hãy kiểm tra lại chính tả và thử lại.",
+    "translateFailed": "Không dịch được. Vui lòng thử lại."
+  },
+  "disclaimer": "Landed giải thích thông tin. Đây không phải là tư vấn pháp lý. Cho hoàn cảnh của bạn, hãy nói chuyện với luật sư hoặc người đại diện được công nhận.",
+  "landing": {
+    "hero": "Năm đầu tiên của bạn ở Mỹ, có người hướng dẫn và vài người bạn.",
+    "sub": "Hiểu các thư từ của bạn, theo dõi các ngày quan trọng, tìm sự giúp đỡ bạn có thể tin tưởng và gặp gỡ những người đã trải qua việc đó.",
+    "whyTitle": "Tại sao điều này quan trọng",
+    "whyIntro": "Chuyện này xảy ra với hàng triệu người, nhưng ít ai nói tới. Nỗi khổ diễn ra lặng lẽ: một bức thư khó hiểu, một hạn chót bị bỏ lỡ, một kẻ giả danh “notario” (cò luật sư giả).",
+    "stat1Value": "34%",
+    "stat1": "số người có các vụ việc hoàn tất tại tòa án di trú có luật sư vào năm tài chính 2026, mức thấp nhất kể từ năm 2010.",
+    "stat2Value": "2%",
+    "stat2": "số người tự nộp đơn xin hỗ trợ mà không có luật sư thành công, theo một nghiên cứu toàn quốc trên 1,2 triệu vụ trục xuất.",
+    "stat3Value": "5×",
+    "stat3": "Các hộ gia đình chỉ dùng tiếng Tây Ban Nha trước đây có khả năng không có tài khoản ngân hàng cao gấp khoảng năm lần (dữ liệu khảo sát của FDIC).",
+    "statsFooter": "Tội lừa đảo giả mạo “notario” ít khi được báo cáo vì nạn nhân sợ lên tiếng. Trẻ em thường phải dịch hóa đơn, hợp đồng thuê nhà và thư pháp lý cho cha mẹ.",
+    "pitch": "Sự trợ giúp luôn có sẵn. Chỉ là mọi người không tìm được, không đọc được, hoặc không biết phần nào áp dụng cho mình.",
+    "privacyTitle": "Quyền riêng tư của bạn",
+    "privacy": "Không cần tài khoản. Không có gì rời khỏi điện thoại của bạn trừ khi bạn yêu cầu. Chúng tôi không bao giờ lưu trữ ảnh tài liệu của bạn.",
+    "getStarted": "Bắt đầu",
+    "demoPersona": "Dùng nhân vật mẫu",
+    "continueToHome": "Tiếp tục vào Trang chủ"
+  },
+  "onboarding": {
+    "progress": "Bước {current} trên {total}",
+    "langTitle": "Bạn thích dùng ngôn ngữ nào?",
+    "countryTitle": "Bạn đến từ đâu?",
+    "countryOther": "Quốc gia khác",
+    "countryPlaceholder": "Nhập quốc gia của bạn",
+    "cityTitle": "Bạn sống ở thành phố nào?",
+    "cityPlaceholder": "Thành phố khác, ví dụ: Chicago, IL",
+    "timeTitle": "Bạn đã ở Mỹ bao lâu rồi?",
+    "time0": "Dưới 1 tháng",
+    "time1": "1–6 tháng",
+    "time2": "6–12 tháng",
+    "time3": "Hơn 1 năm",
+    "aboutTitle": "Một chút về bạn",
+    "aboutFooter": "Không bắt buộc. Điều này giúp chúng tôi gợi ý việc làm và kết nối bạn bè.",
+    "nameLabel": "Tên",
+    "namePlaceholder": "Chúng tôi nên gọi bạn là gì?",
+    "kidsLabel": "Tôi có con nhỏ",
+    "workLabel": "Công việc ở quê nhà",
+    "workPlaceholder": "ví dụ: Y tá đã đăng ký",
+    "hardTitle": "Điều gì làm bạn thấy khó khăn nhất lúc này?",
+    "hardFooter": "Chọn bao nhiêu tùy ý.",
+    "hard_paperwork": "Giấy tờ",
+    "hard_money": "Tiền bạc",
+    "hard_work": "Tìm việc làm",
+    "hard_people": "Kết bạn",
+    "hard_english": "Tiếng Anh",
+    "hard_housing": "Nhà ở",
+    "hard_health": "Sức khỏe",
+    "finish": "Tạo Kế Hoạch Cho Tôi",
+    "making": "Đang tạo kế hoạch...",
+    "demoNote": "Hồ sơ thử nghiệm: Maria, y tá từ Venezuela, ở Houston được 2 tháng."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mexico",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "Ấn Độ",
+    "Vietnam": "Việt Nam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "Pháp lý",
+    "money": "Tiền bạc",
+    "social": "Mọi người",
+    "jobs": "Việc làm",
+    "health": "Sức khỏe",
+    "daily": "Đời sống"
+  },
+  "home": {
+    "title": "Trang Chủ",
+    "greeting": "Chào {name}.",
+    "greetingNoName": "Xin chào.",
+    "dayIn": "Ngày {day} ở {city}",
+    "nextSteps": "Việc Cần Làm Tiếp Theo",
+    "nextStepsFooter": "Từ kế hoạch 90 ngày đầu tiên của bạn. Chạm vào vòng tròn khi bạn làm xong.",
+    "allSteps": "Xem Tất Cả Các Bước ({count})",
+    "fewerSteps": "Thu Gọn",
+    "allDone": "Bạn đã hoàn thành mọi bước. Làm tốt lắm.",
+    "dueIn": "{count, plural, =0 {Hôm nay} one {Trong # ngày} other {Trong # ngày}}",
+    "markDone": "Đánh dấu “{title}” là đã xong",
+    "markNotDone": "Đánh dấu “{title}” là chưa xong",
+    "comingUp": "Sắp Tới",
+    "noDates": "Chưa có ngày nào",
+    "noDatesSub": "Quét thư để theo dõi các mốc thời gian",
+    "explore": "Khám Phá",
+    "legalSub": "Thư từ, ngày tháng và trợ giúp miễn phí",
+    "communitySub": "Sự kiện và mọi người gần bạn",
+    "jobsSub": "Việc làm và bằng cấp của bạn",
+    "money": "Tiền bạc",
+    "health": "Sức khỏe",
+    "noProfile": "Hãy lập kế hoạch cho bạn trước.",
+    "setUp": "Cài đặt",
+    "makingPlan": "Đang lập kế hoạch cho bạn…",
+    "profileButton": "Cài đặt và hồ sơ"
+  },
+  "status": {
+    "green": "Bạn đã xong mọi việc lúc này",
+    "greenSub": "Không có gì sắp diễn ra trong 6 tháng tới.",
+    "yellow": "Sắp diễn ra sau {count, plural, one {# ngày} other {# ngày}}",
+    "red": "Sắp diễn ra: {count, plural, =0 {hôm nay} one {trong # ngày} other {trong # ngày}}",
+    "redPast": "Đã qua một ngày",
+    "redPastSub": "“{label}” đã qua {count, plural, one {# ngày} other {# ngày}} trước.",
+    "nextSub": "{label} · {date}",
+    "empty": "Chưa có ngày nào được theo dõi",
+    "emptySub": "Quét thư hoặc thêm ngày để bắt đầu.",
+    "count": "{count, plural, one {# ngày được theo dõi} other {# ngày được theo dõi}}",
+    "prepare": "Tôi Nên Chuẩn Bị Gì?"
+  },
+  "legal": {
+    "title": "Pháp lý",
+    "myDates": "Ngày Của Tôi",
+    "addDate": "Thêm Ngày",
+    "datesEmpty": "Các ngày bạn thêm hoặc quét sẽ hiển thị ở đây.",
+    "daysLeft": "{count, plural, =0 {Hôm nay} one {Còn # ngày} other {Còn # ngày}}",
+    "daysAgo": "{count, plural, one {# ngày trước} other {# ngày trước}}",
+    "reminder": "Nhắc nhở",
+    "deleteDate": "Xóa “{label}”",
+    "fromScan": "Từ một bản quét",
+    "tools": "Công cụ",
+    "scan": "Quét Thư",
+    "scanSub": "Chụp ảnh để giải thích bằng ngôn ngữ dễ hiểu",
+    "ask": "Đặt Câu Hỏi",
+    "askSub": "Câu trả lời kèm theo nguồn",
+    "help": "Tìm Trợ Giúp Pháp Lý Miễn Phí",
+    "helpSub": "Trợ giúp pháp lý gần bạn",
+    "prep": "Chuẩn Bị Cho Cuộc Hẹn",
+    "prepSub": "Bản tóm tắt để mang theo",
+    "rights": "Biết Quyền Của Bạn",
+    "rightsFooter": "Thông tin chung có kèm liên kết đến các nguồn chính thức.",
+    "addSheetTitle": "Thêm Ngày",
+    "docType": "Tài liệu",
+    "labelField": "Ngày này là gì?",
+    "labelPlaceholder": "ví dụ: Giấy phép làm việc hết hạn",
+    "dateField": "Ngày",
+    "noteField": "Ghi chú",
+    "notePlaceholder": "Không bắt buộc",
+    "docTypes": {
+      "workPermit": "Giấy phép làm việc",
+      "passport": "Hộ chiếu",
+      "uscis": "Thông báo của USCIS",
+      "court": "Thông báo của tòa án",
+      "i94": "I-94",
+      "lease": "Hợp đồng thuê nhà",
+      "other": "Khác"
+    },
+    "sourceLink": "Nguồn: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Notario không được phép tư vấn pháp lý",
+      "short": "Chỉ luật sư và người đại diện được công nhận mới có quyền đó.",
+      "body": "Chỉ luật sư và người đại diện được DOJ công nhận mới có thể đưa ra lời khuyên pháp lý về di trú. Một “notario” không được làm vậy. Tại Mỹ, công chứng viên (notary public) chỉ có thể làm chứng chữ ký.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Không ai có thể đảm bảo chắc chắn có thẻ xanh",
+      "short": "Không có “danh sách đặc biệt” nào cả.",
+      "body": "Không ai có thể đảm bảo chắc chắn bạn sẽ có thẻ xanh hoặc đưa bạn vào “danh sách đặc biệt”. Nếu ai đó hứa hẹn kết quả hoặc đòi tiền để làm nhanh, đó là dấu hiệu đáng ngờ.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Các mẫu đơn USCIS đều miễn phí",
+      "short": "Tải các mẫu đơn này từ uscis.gov.",
+      "body": "Các mẫu đơn chính thức của USCIS đều miễn phí tải xuống từ uscis.gov. Một số hồ sơ có phí nộp đơn, nhưng bản thân các mẫu đơn thì không bao giờ mất tiền. Các trang web chính phủ chính thức có đuôi .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Cách kiểm tra luật sư",
+      "short": "Tra cứu luật sư qua đoàn luật sư tiểu bang của bạn.",
+      "body": "Tra cứu luật sư với đoàn luật sư tiểu bang nơi họ có giấy phép hành nghề. Ở Texas, hãy dùng mục tìm kiếm “Find a Lawyer” của State Bar of Texas. Đối với người đại diện được công nhận, hãy kiểm tra danh sách của DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Quyền cơ bản của người thuê nhà",
+      "short": "Việc trục xuất phải thông qua tòa án.",
+      "body": "Đọc hợp đồng thuê nhà của bạn và giữ lại một bản. Chủ nhà không thể đuổi bạn bằng cách đổi khóa hoặc lấy đồ đạc của bạn; việc trục xuất phải thông qua tòa án. Nếu bạn nhận được giấy tờ từ tòa án, đừng phớt lờ chúng.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Quyền cơ bản tại nơi làm việc",
+      "short": "Lương tối thiểu và tiền làm thêm giờ áp dụng cho hầu hết người lao động.",
+      "body": "Hầu hết người lao động phải được trả ít nhất mức lương tối thiểu liên bang và tiền làm thêm giờ cho số giờ làm quá 40 giờ trong một tuần. Bộ Lao động tiếp nhận các khiếu nại về tiền lương bất kể tình trạng di trú. Hãy ghi chép lại giờ làm và tiền lương của bạn.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Quét một bức thư",
+    "intro": "Chụp ảnh một bức thư hoặc tài liệu. Chúng tôi sẽ giải thích bằng ngôn ngữ đơn giản.",
+    "privacy": "Ảnh của bạn chỉ được đọc một lần để giải thích, sau đó sẽ bị xóa. Ảnh không bao giờ được lưu lại.",
+    "protecting": "Đang che thông tin riêng tư…",
+    "protectingNote": "Việc này diễn ra trên điện thoại của bạn. Chưa có gì được gửi đi cả.",
+    "reviewTitle": "Kiểm tra trước khi gửi",
+    "reviewIntro": "Các thanh màu đen che đi thông tin riêng tư. Chỉ bản đã che này được gửi đi để đọc.",
+    "foundCount": "{count, plural, =0 {Chúng tôi không tự động tìm thấy thông tin riêng tư nào.} one {Chúng tôi đã che # thông tin riêng tư: {kinds}.} other {Chúng tôi đã che # thông tin riêng tư: {kinds}.}}",
+    "ocrFailed": "Chúng tôi không đọc được chữ trên điện thoại của bạn. Hãy quét qua bất kỳ thông tin riêng tư nào để che nó lại.",
+    "reviewHelp": "Kéo qua bất kỳ thứ gì khác bạn muốn ẩn. Chạm vào thanh màu đen để bỏ che.",
+    "reviewImageAlt": "Tài liệu của bạn với các thông tin riêng tư đã được che",
+    "uncover": "Bỏ che phần này",
+    "undo": "Hoàn tác",
+    "sendCovered": "Gửi bản đã che",
+    "cancelScan": "Hủy",
+    "rejected_blurry": "Ảnh này quá mờ để đọc",
+    "rejected_dark": "Ảnh này quá tối để đọc",
+    "rejected_bright": "Ảnh này quá sáng hoặc bị chói",
+    "rejected_unreadable": "Chúng tôi không đọc được đủ chữ trong ảnh này",
+    "rejectedBody": "Để giải thích thư của bạn đúng và che thông tin riêng tư của bạn, chúng tôi cần một ảnh rõ nét. Chưa có gì được gửi đi.",
+    "tipsTitle": "Để có ảnh rõ nét",
+    "tip1": "Đặt lá thư phẳng trên mặt bàn tối màu.",
+    "tip2": "Dùng ánh sáng mạnh và đều. Tránh bóng và chỗ chói.",
+    "tip3": "Cầm điện thoại thẳng phía trên trang giấy để trang giấy chiếm đầy màn hình.",
+    "tip4": "Chạm vào màn hình để lấy nét, rồi giữ yên.",
+    "retake": "Chụp Ảnh Khác",
+    "chooseAnother": "Chọn Ảnh Khác",
+    "kind_aNumber": "số A",
+    "kind_receipt": "số biên nhận",
+    "kind_ssn": "số An sinh Xã hội",
+    "kind_phone": "số điện thoại",
+    "kind_email": "email",
+    "kind_account": "số tài khoản",
+    "kind_name": "tên",
+    "kind_birth": "ngày sinh",
+    "kind_address": "địa chỉ nhà",
+    "kind_id": "số giấy tờ tùy thân",
+    "takePhoto": "Chụp ảnh",
+    "choosePhoto": "Chọn ảnh",
+    "trySample": "Thử thư mẫu",
+    "samplesTitle": "Thư mẫu",
+    "samplesFooter": "Thư mẫu với tên và số giả để dùng thử ứng dụng.",
+    "sample1": "Giấy biên nhận",
+    "sample2": "Thông báo hầu tòa",
+    "sample3": "Gia hạn hợp đồng thuê nhà",
+    "reading": "Đang đọc thư của bạn…",
+    "whatThisIs": "Đây là gì",
+    "summary": "Tóm tắt",
+    "dates": "Ngày tháng",
+    "noDates": "Không tìm thấy ngày nào.",
+    "addDate": "Thêm “{label}” vào ngày của tôi",
+    "wordsToKnow": "Từ cần biết",
+    "nextStep": "Bước tiếp theo",
+    "highRiskTitle": "Việc này có thể cần chuyên gia",
+    "mediumRiskTitle": "Việc này có thể cần trả lời",
+    "risk_low": "Rủi ro thấp",
+    "risk_medium": "Cần chú ý",
+    "risk_high": "Quan trọng",
+    "findHelp": "Tìm trợ giúp pháp lý miễn phí",
+    "photoNotSaved": "Ảnh của bạn chưa được lưu.",
+    "scanAnother": "Quét thư khác",
+    "tooBig": "Ảnh quá lớn. Hãy thử ảnh khác.",
+    "notConfigured": "Tính năng đọc thư cần có khóa AI trên máy chủ. Hãy thử thư mẫu thay thế."
+  },
+  "ask": {
+    "title": "Đặt câu hỏi",
+    "emptyTitle": "Hỏi về cuộc sống tại Mỹ",
+    "emptySub": "Câu trả lời đến từ các nguồn đáng tin cậy. Đối với các câu hỏi về hồ sơ của riêng bạn, chúng tôi sẽ giúp bạn tìm chuyên gia.",
+    "suggested": "Thử hỏi",
+    "q1": "Thẻ xanh và giấy phép làm việc khác nhau thế nào?",
+    "q2": "I-94 là gì?",
+    "q3": "Làm sao biết luật sư là thật?",
+    "q4": "notario là gì và tại sao phải cẩn thận?",
+    "placeholder": "Đặt câu hỏi",
+    "send": "Gửi",
+    "mic": "Nói câu hỏi của bạn",
+    "micStop": "Dừng nghe",
+    "listening": "Đang nghe…",
+    "thinking": "Đang tìm trong các nguồn đáng tin cậy…",
+    "caseSpecific": "Việc này tùy thuộc vào hoàn cảnh của bạn",
+    "findHelp": "Tìm trợ giúp pháp lý miễn phí gần bạn",
+    "you": "Bạn",
+    "landed": "Landed",
+    "clear": "Xóa"
+  },
+  "help": {
+    "title": "Tìm trợ giúp pháp lý miễn phí",
+    "searchPlaceholder": "Tìm ở {city}",
+    "filterLabel": "Lọc",
+    "all": "Tất cả",
+    "free": "Miễn phí",
+    "spanish": "Tiếng Tây Ban Nha",
+    "directories": "Danh bạ đáng tin cậy",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Dịch vụ pháp lý phi lợi nhuận theo mã bưu chính",
+    "eoir": "Danh sách Pro Bono của EOIR",
+    "eoirSub": "Các nơi hỗ trợ miễn phí do tòa án di trú liệt kê",
+    "results": "Gần {city}",
+    "finding": "Đang tìm trợ giúp gần bạn…",
+    "empty": "Không có kết quả phù hợp. Hãy thử “Tất cả.”",
+    "type_nonprofit": "Phi lợi nhuận",
+    "type_accredited_rep": "Người đại diện được công nhận",
+    "type_attorney": "Luật sư",
+    "type_clinic": "Phòng khám pháp lý",
+    "type_unknown": "Tổ chức",
+    "cost_free": "Miễn phí",
+    "cost_low": "Chi phí thấp",
+    "cost_paid": "Có phí",
+    "cost_unknown": "Hỏi về chi phí",
+    "speaks": "Nói {languages}",
+    "call": "Gọi",
+    "website": "Trang web",
+    "directions": "Chỉ đường",
+    "details": "Chi tiết",
+    "howToVerify": "Cách kiểm tra",
+    "verify1": "Hãy hỏi xem người giúp bạn có phải là luật sư có giấy phép hay người đại diện được DOJ công nhận không.",
+    "verify2": "Tra cứu luật sư với đoàn luật sư bang. Tra cứu người đại diện được công nhận trong danh sách của EOIR.",
+    "verify3": "Không bao giờ ký các mẫu đơn trống hoặc giao giấy tờ gốc của bạn.",
+    "verify4": "Hỏi về chi phí trước buổi gặp đầu tiên.",
+    "verifyLinkBar": "Tra cứu đoàn luật sư bang",
+    "verifyLinkEoir": "Danh sách EOIR",
+    "rating": "Được đánh giá {rating} trên 5",
+    "notFound": "Thông tin này không còn nữa."
+  },
+  "prep": {
+    "title": "Chuẩn bị gặp luật sư",
+    "intro": "Tạo một bản tóm tắt một trang để mang theo khi gặp luật sư hoặc người đại diện được công nhận. Bản này có bằng ngôn ngữ của bạn và tiếng Anh.",
+    "datesSection": "Các ngày có trong thư",
+    "noDates": "Chưa có ngày nào. Bạn vẫn có thể thêm câu hỏi.",
+    "questions": "Câu hỏi của tôi",
+    "questionsFooter": "Tối đa 5 câu. Không ghi số giấy tờ tùy thân.",
+    "questionPlaceholder": "Câu hỏi {n}",
+    "create": "Tạo bản tóm tắt",
+    "creating": "Đang viết tóm tắt cho bạn…",
+    "share": "Chia sẻ",
+    "print": "In",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "yourLanguage": "Bằng ngôn ngữ của bạn",
+    "english": "Bằng tiếng Anh",
+    "edit": "Sửa"
+  },
+  "community": {
+    "title": "Cộng đồng",
+    "events": "Sự kiện gần bạn",
+    "eventsFooter": "Sự kiện miễn phí và thân thiện với người mới đến từ danh sách công khai.",
+    "noEvents": "Hiện không tìm thấy sự kiện nào.",
+    "loadingEvents": "Đang tìm sự kiện gần bạn…",
+    "people": "Những người đi trước",
+    "peopleFooter": "Hồ sơ mẫu cho bản demo này. Tính năng tìm người phù hợp thực tế sẽ sớm có.",
+    "sayHi": "Gửi lời chào",
+    "sayHiTo": "Gửi lời chào đến {name}",
+    "toast": "Tính năng nhắn tin sẽ sớm ra mắt.",
+    "bio": "Đã chuyển từ {from} đến {city} cách đây {years, plural, one {# năm} other {# năm}} trước. {job}. Nói {languages}.",
+    "open": "Mở sự kiện"
+  },
+  "jobs": {
+    "title": "Việc làm",
+    "credentialTitle": "Bằng cấp và giấy phép của bạn",
+    "credentialLoading": "Đang tra cứu cách chuyển đổi giấy phép hành nghề của bạn…",
+    "noBackground": "Thêm kinh nghiệm làm việc của bạn trong phần Cài đặt để xem công việc đó được tính ra sao.",
+    "stateBoard": "Tìm cơ quan cấp phép của tiểu bang",
+    "searchPlaceholder": "Tìm việc làm ở {city}",
+    "results": "Việc làm gần {city}",
+    "empty": "Không tìm thấy việc làm. Hãy thử tìm kiếm khác.",
+    "finding": "Đang tìm việc làm…",
+    "via": "qua {source}"
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "profile": "Hồ sơ",
+    "editProfile": "Làm lại từ đầu",
+    "city": "Thành phố",
+    "language": "Ngôn ngữ",
+    "notifications": "Nhắc nhở ngày quan trọng",
+    "notificationsFooter": "Nhắc nhở được lưu trên máy này.",
+    "notificationsDenied": "Thông báo bị chặn trong cài đặt trình duyệt của bạn.",
+    "privacy": "Quyền riêng tư",
+    "privacyFooter": "Mọi thông tin Landed biết chỉ được lưu trên máy này. Ảnh chụp giấy tờ không bao giờ được lưu lại.",
+    "deleteData": "Xóa dữ liệu của tôi",
+    "deleteTitle": "Xóa toàn bộ dữ liệu của bạn?",
+    "deleteBody": "Thao tác này sẽ xóa hồ sơ, kế hoạch, ngày tháng và câu hỏi của bạn khỏi thiết bị này. Không thể hoàn tác được.",
+    "deleteConfirm": "Xóa",
+    "deleted": "Dữ liệu của bạn đã bị xóa.",
+    "about": "Giới thiệu",
+    "version": "Phiên bản",
+    "aboutFooter": "Landed giúp giải thích thông tin. Đây không phải là tư vấn pháp lý."
+  },
+  "checklist": {
+    "title": "Việc cần làm",
+    "entrySub": "Danh sách việc cần làm năm đầu tiên",
+    "progress": "Đã xong {done} trên {total}",
+    "howToToggle": "Cách làm việc này",
+    "howToTitle": "Cách làm",
+    "linksTitle": "Trang web đáng tin cậy",
+    "official": "Chính thức",
+    "nonprofit": "Phi lợi nhuận",
+    "checked": "Đã kiểm tra {date}",
+    "markDone": "Đánh dấu là đã xong",
+    "markNotDone": "Đánh dấu là chưa xong",
+    "doneOn": "Đã xong {date}",
+    "addDate": "Thêm ngày cho việc này",
+    "markItemDone": "Đánh dấu “{title}” là đã xong",
+    "markItemNotDone": "Đánh dấu “{title}” là chưa xong",
+    "notFound": "Mục này không có trong danh sách của bạn.",
+    "stepsFooter": "Các bước chung do nhóm Landed viết. Đây không phải là tư vấn pháp lý.",
+    "sections": {
+      "start": "Bước đầu tiên",
+      "money": "Tiền bạc và Thuế",
+      "work": "Việc làm",
+      "family": "Sức khỏe và Gia đình",
+      "protect": "Bảo vệ bản thân",
+      "status": "Tùy thuộc vào giấy tờ của bạn"
+    },
+    "items": {
+      "i94": {
+        "title": "Lấy một bản sao giấy I-94",
+        "short": "Hồ sơ nhập cảnh chính thức của bạn. Hãy kiểm tra các ngày trên đó.",
+        "body": "I-94 là hồ sơ của chính phủ ghi nhận thời điểm bạn đến và thời gian bạn được phép ở lại. Nhiều văn phòng yêu cầu giấy này và ngày trên giấy rất quan trọng. Bạn có thể lấy miễn phí trên mạng.",
+        "steps": {
+          "s1": "Vào trang web chính thức của I-94. Hoàn toàn miễn phí.",
+          "s2": "Chọn “Get Most Recent I-94” (Lấy I-94 mới nhất) và nhập tên cùng thông tin hộ chiếu đúng như trong hộ chiếu của bạn.",
+          "s3": "Kiểm tra tên của bạn, diện nhập cảnh, và ngày “Admit Until” (Được phép ở đến ngày).",
+          "s4": "Lưu hoặc in một bản và giữ chung với hộ chiếu.",
+          "s5": "Nếu có gì sai sót trên đó, văn phòng Kiểm tra Hoãn lại của CBP có thể giúp sửa lại."
+        },
+        "links": {
+          "l1": "Trang web chính thức của I-94 (CBP)",
+          "l2": "Giới thiệu về giấy I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Lấy số An sinh Xã hội",
+        "short": "Bạn cần số này để đi làm và cho nhiều việc khác.",
+        "body": "Số An sinh Xã hội (SSN) dùng để đi làm, đóng thuế và mở tài khoản ngân hàng. Không phải ai cũng lấy được số này. Việc này tùy thuộc vào diện cư trú và quyền làm việc của bạn. Thẻ và số đều hoàn toàn miễn phí.",
+        "steps": {
+          "s1": "Tìm hiểu xem bạn có được lấy số này không và cần những giấy tờ gì.",
+          "s2": "Chuẩn bị giấy tờ: thường là hộ chiếu, giấy tờ cư trú và giấy chứng nhận độ tuổi.",
+          "s3": "Bắt đầu làm đơn trên mạng hoặc đến văn phòng An sinh Xã hội gần nhà.",
+          "s4": "Chờ nhận thẻ qua đường bưu điện. Cất thẻ ở nơi an toàn, đừng để trong ví."
+        },
+        "links": {
+          "l1": "Số và thẻ An sinh Xã hội (SSA)"
+        }
+      },
+      "address": {
+        "title": "Báo cho USCIS khi bạn chuyển nhà",
+        "short": "Hầu hết mọi người phải báo địa chỉ mới trong vòng 10 ngày.",
+        "body": "Hầu hết người không phải công dân Mỹ phải báo cho USCIS về địa chỉ mới trong vòng 10 ngày sau khi chuyển nhà. Nếu không báo, bạn có thể bỏ lỡ các thư quan trọng. Việc này miễn phí.",
+        "steps": {
+          "s1": "Khi bạn chuyển nhà, hãy ghi lại ngày tháng. Bạn thường có 10 ngày.",
+          "s2": "Đổi địa chỉ trên mạng với USCIS.",
+          "s3": "Nếu bạn có hồ sơ tại tòa án di trú, bạn cũng phải báo cho tòa án bằng mẫu đơn EOIR-33.",
+          "s4": "Lưu trang xác nhận hoặc email lại."
+        },
+        "links": {
+          "l1": "Đổi địa chỉ với USCIS"
+        }
+      },
+      "bank": {
+        "title": "Mở tài khoản ngân hàng",
+        "short": "Giữ tiền an toàn và tránh phí đổi séc.",
+        "body": "Tài khoản ngân hàng hoặc quỹ tín dụng giúp giữ tiền an toàn hơn tiền mặt và giúp bạn tạo lịch sử tài chính ở Mỹ. Một số ngân hàng chấp nhận hộ chiếu hoặc thẻ căn cước lãnh sự.",
+        "steps": {
+          "s1": "So sánh các ngân hàng và quỹ tín dụng. Xem kỹ phí hàng tháng và số dư tối thiểu.",
+          "s2": "Mang theo giấy tờ tùy thân (hộ chiếu hoặc thẻ căn cước lãnh sự) và số SSN hoặc ITIN nếu bạn có. Hỏi xem họ chấp nhận những giấy tờ nào.",
+          "s3": "Mở tài khoản và yêu cầu cấp thẻ ghi nợ (debit card).",
+          "s4": "Tránh các cửa hàng đổi séc vì phí rất cao."
+        },
+        "links": {
+          "l1": "Tài khoản ngân hàng (Cục Bảo vệ Tài chính Người tiêu dùng)",
+          "l2": "Thông tin về ngân hàng (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Lấy căn cước tiểu bang hoặc bằng lái xe",
+        "short": "Thẻ căn cước có ảnh của địa phương giúp nhiều việc trở nên dễ dàng hơn.",
+        "body": "Thẻ căn cước của tiểu bang hoặc bằng lái xe được chấp nhận ở hầu hết mọi nơi. Mỗi tiểu bang có quy định riêng về các giấy tờ bạn cần có.",
+        "steps": {
+          "s1": "Tìm văn phòng cấp bằng lái xe của tiểu bang bạn.",
+          "s2": "Kiểm tra xem tiểu bang của bạn chấp nhận những giấy tờ nào.",
+          "s3": "Đặt lịch hẹn nếu tiểu bang của bạn yêu cầu.",
+          "s4": "Mang theo giấy tờ và lệ phí đến buổi hẹn."
+        },
+        "links": {
+          "l1": "Tìm văn phòng quản lý phương tiện giao thông của tiểu bang bạn (USA.gov)",
+          "l2": "Bằng lái xe và thẻ căn cước Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Lấy số ITIN nếu bạn không thể có SSN",
+        "short": "Mã số thuế dành cho những người không thể có số An sinh Xã hội.",
+        "body": "Số ITIN (Mã số Nhận dạng Người nộp thuế Cá nhân) cho phép bạn khai thuế nếu bạn không thể có số An sinh Xã hội. Số này không cấp quyền làm việc. IRS không chia sẻ số này để thực thi luật di trú.",
+        "steps": {
+          "s1": "Kiểm tra xem bạn có cần số ITIN không. Bạn chỉ cần số này nếu không thể có SSN.",
+          "s2": "Điền vào Mẫu đơn IRS W-7.",
+          "s3": "Gửi kèm theo tờ khai thuế của bạn, hoặc nhận trợ giúp miễn phí từ Đại lý Chấp nhận được IRS Chứng nhận.",
+          "s4": "Đợi thư từ IRS có chứa số của bạn. Cất giữ cẩn thận."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Khai thuế của bạn",
+        "short": "Thuế thường phải nộp vào giữa tháng Tư. Có hỗ trợ miễn phí.",
+        "body": "Nếu bạn kiếm được tiền ở Mỹ, bạn có thể cần phải khai thuế, thường là trước ngày 15 tháng Tư. Khai thuế đúng hạn cũng có thể giúp bạn nhận được tiền hoàn thuế và các khoản tín thuế. Có dịch vụ hỗ trợ khai thuế miễn phí.",
+        "steps": {
+          "s1": "Thu thập các mẫu đơn thuế từ nơi làm việc, chẳng hạn như W-2 hoặc 1099.",
+          "s2": "Tìm dịch vụ hỗ trợ khai thuế miễn phí gần bạn (VITA).",
+          "s3": "Nộp tờ khai thuế trước thời hạn, thường là ngày 15 tháng Tư.",
+          "s4": "Giữ lại bản sao tờ khai và các mẫu đơn thuế của bạn."
+        },
+        "links": {
+          "l1": "Khai thuế (IRS)",
+          "l2": "Hỗ trợ khai thuế miễn phí (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Bắt đầu tạo lịch sử tín dụng",
+        "short": "Điểm tín dụng giúp bạn thuê nhà và vay tiền.",
+        "body": "Lịch sử tín dụng cho thấy cách bạn thanh toán các hóa đơn. Chủ nhà và người cho vay sẽ xem xét điều này. Bạn có thể bắt đầu xây dựng từ từ và kiểm tra báo cáo tín dụng miễn phí.",
+        "steps": {
+          "s1": "Tìm hiểu báo cáo tín dụng và điểm tín dụng là gì.",
+          "s2": "Nhận báo cáo tín dụng miễn phí và kiểm tra lỗi.",
+          "s3": "Thanh toán mọi hóa đơn đúng hạn.",
+          "s4": "Cân nhắc thẻ tín dụng bảo đảm, và đừng bao giờ trả tiền cho ai hứa hẹn “sửa” điểm tín dụng cho bạn."
+        },
+        "links": {
+          "l1": "Báo cáo và điểm tín dụng (CFPB)",
+          "l2": "Báo cáo tín dụng miễn phí (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Nắm rõ thời hạn giấy phép làm việc",
+        "short": "Thêm ngày hết hạn để bạn không bị bỏ lỡ.",
+        "body": "Giấy phép làm việc (EAD) có ngày hết hạn. Một số người có thể xin cấp mới trước khi giấy phép hết hạn. Thời gian và cách thức thực hiện tùy thuộc vào diện của bạn, vì vậy hãy kiểm tra trang chính thức và lưu lại ngày.",
+        "steps": {
+          "s1": "Tìm ngày hết hạn trên thẻ của bạn và thêm vào phần ngày tháng.",
+          "s2": "Đọc thông tin về thời gian và cách thức xin gia hạn (Mẫu đơn I-765).",
+          "s3": "Nếu bạn nộp đơn trực tuyến, hãy sử dụng tài khoản USCIS.",
+          "s4": "Giữ lại thông báo biên nhận và kiểm tra tình trạng hồ sơ của bạn."
+        },
+        "links": {
+          "l1": "Mẫu đơn I-765, giấy phép làm việc (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Biết quyền lợi của bạn tại nơi làm việc",
+        "short": "Lương tối thiểu và làm thêm giờ áp dụng cho hầu hết người lao động.",
+        "body": "Hầu hết người lao động phải nhận ít nhất mức lương tối thiểu và tiền trả thêm khi làm quá giờ. Bộ Lao động tiếp nhận khiếu nại từ người lao động bất kể tình trạng di trú của họ.",
+        "steps": {
+          "s1": "Tìm hiểu mức lương tối thiểu ở tiểu bang của bạn.",
+          "s2": "Ghi chép lại giờ làm việc và giữ lại phiếu lương của bạn.",
+          "s3": "Nếu bạn không được trả đúng số tiền xứng đáng, bạn có thể nộp đơn khiếu nại."
+        },
+        "links": {
+          "l1": "Lương tối thiểu (Bộ Lao động)",
+          "l2": "Nộp đơn khiếu nại tiền lương (Bộ Lao động)"
+        }
+      },
+      "health": {
+        "title": "Tìm dịch vụ chăm sóc sức khỏe chi phí thấp",
+        "short": "Các trung tâm y tế cộng đồng tính phí dựa trên thu nhập của bạn.",
+        "body": "Các trung tâm y tế cộng đồng khám cho bệnh nhân ngay cả khi không có bảo hiểm và tính phí dựa trên thu nhập. Một số người nhập cư cũng có thể mua được bảo hiểm y tế. Phòng cấp cứu bắt buộc phải chữa trị cho bạn trong trường hợp khẩn cấp.",
+        "steps": {
+          "s1": "Tìm trung tâm y tế cộng đồng gần bạn.",
+          "s2": "Kiểm tra xem bạn có thể nhận được gói bảo hiểm y tế nào.",
+          "s3": "Mang theo giấy tờ tùy thân và giấy tờ chứng minh thu nhập trong lần khám đầu tiên.",
+          "s4": "Trong trường hợp khẩn cấp, hãy đến phòng cấp cứu hoặc gọi 911."
+        },
+        "links": {
+          "l1": "Bảo hiểm y tế cho người nhập cư (HealthCare.gov)",
+          "l2": "Tìm trung tâm y tế (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Ghi danh cho con bạn đi học",
+        "short": "Tất cả trẻ em đều có quyền đi học trường công.",
+        "body": "Ở Mỹ, tất cả trẻ em đều được đi học trường công miễn phí, không phân biệt giấy tờ tùy thân. Trường học không được hỏi về giấy tờ để cho con bạn vào học.",
+        "steps": {
+          "s1": "Liên hệ với văn phòng học khu địa phương của bạn.",
+          "s2": "Chuẩn bị giấy tờ chứng minh tuổi của con và nơi bạn ở.",
+          "s3": "Điền vào đơn đăng ký nhập học. Hãy nhờ giúp đỡ bằng ngôn ngữ của bạn.",
+          "s4": "Hỏi về chương trình hỗ trợ tiếng Anh cho con bạn."
+        },
+        "links": {
+          "l1": "Trường học cho trẻ em (USAHello)",
+          "l2": "Quyền giáo dục (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Đăng ký Nghĩa vụ Quân sự (nam 18–25 tuổi)",
+        "short": "Hầu hết nam giới từ 18 đến 25 tuổi sống ở Mỹ phải đăng ký.",
+        "body": "Hầu hết nam giới từ 18 đến 25 tuổi sống ở Mỹ, bao gồm cả phần lớn người nhập cư, phải đăng ký với Selective Service. Việc đăng ký này miễn phí và nhanh chóng.",
+        "steps": {
+          "s1": "Kiểm tra xem bạn có cần đăng ký không. Thường là nam giới từ 18 đến 25 tuổi.",
+          "s2": "Đăng ký trực tuyến.",
+          "s3": "Lưu số đăng ký của bạn."
+        },
+        "links": {
+          "l1": "Đăng ký (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Tìm trợ giúp pháp lý miễn phí mà bạn có thể tin tưởng",
+        "short": "Biết ai có thể tư vấn di trú trước khi bạn cần.",
+        "body": "Chỉ luật sư và người đại diện do DOJ công nhận mới có thể đưa ra lời khuyên pháp lý về di trú. Hãy tìm một nhóm trợ giúp pháp lý miễn phí hoặc chi phí thấp ở gần bạn trước khi bạn cần.",
+        "steps": {
+          "s1": "Tìm kiếm trợ giúp pháp lý miễn phí hoặc chi phí thấp ở gần bạn.",
+          "s2": "Đảm bảo người đó là luật sư hoặc người đại diện do DOJ công nhận.",
+          "s3": "Hỏi về chi phí trước buổi gặp đầu tiên.",
+          "s4": "Mang theo bản sao các giấy tờ của bạn. Hãy giữ lại bản chính."
+        },
+        "links": {
+          "l1": "Tìm trợ giúp pháp lý (ImmigrationLawHelp.org)",
+          "l2": "Các nhà cung cấp dịch vụ pháp lý miễn phí (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Học cách nhận biết lừa đảo di trú",
+        "short": "Notario không thể tư vấn pháp lý. Các mẫu đơn đều miễn phí.",
+        "body": "Kẻ lừa đảo thường nhắm vào người nhập cư. Một “notario” không thể tư vấn pháp lý, không ai có thể đảm bảo thẻ xanh, và các mẫu đơn của USCIS đều miễn phí tải xuống.",
+        "steps": {
+          "s1": "Tìm hiểu các vụ lừa đảo di trú phổ biến nhất.",
+          "s2": "Chỉ tải mẫu đơn từ uscis.gov. Chúng hoàn toàn miễn phí.",
+          "s3": "Nếu ai đó cố lừa bạn, hãy báo cáo."
+        },
+        "links": {
+          "l1": "Tránh lừa đảo (USCIS)",
+          "l2": "Lừa đảo nhắm vào người nhập cư (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Biết quyền lợi của bạn khi đi thuê nhà",
+        "short": "Chủ nhà phải thông qua tòa án mới được đuổi bạn đi.",
+        "body": "Ở Texas, chủ nhà không thể đuổi bạn bằng cách đổi ổ khóa hoặc lấy đồ đạc của bạn. Việc trục xuất phải thông qua tòa án. Hãy đọc hợp đồng thuê nhà và giữ một bản sao.",
+        "steps": {
+          "s1": "Đọc hợp đồng thuê nhà của bạn và giữ một bản sao.",
+          "s2": "Yêu cầu sửa chữa bằng văn bản và giữ các bản sao.",
+          "s3": "Tìm hiểu cách thức hoạt động của quá trình trục xuất.",
+          "s4": "Nếu bạn nhận được giấy tờ từ tòa án, đừng phớt lờ chúng. Hãy tìm trợ giúp pháp lý miễn phí."
+        },
+        "links": {
+          "l1": "Nếu chủ nhà khóa cửa nhà bạn (TexasLawHelp)",
+          "l2": "Quá trình trục xuất diễn ra như thế nào (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Trước khi bạn đi du lịch ra khỏi Mỹ",
+        "short": "Rời khỏi đây có thể ảnh hưởng đến hồ sơ đang chờ xử lý. Hãy hỏi trước.",
+        "body": "Đối với nhiều người nhập cư, việc rời khỏi Mỹ có thể ảnh hưởng đến đơn xin đang chờ giải quyết hoặc khả năng quay lại. Một số người cần giấy tờ đi lại trước khi rời đi. Việc này có an toàn hay không tùy thuộc vào hoàn cảnh của bạn.",
+        "steps": {
+          "s1": "Trước khi mua vé, hãy tìm hiểu có những loại giấy tờ đi lại nào.",
+          "s2": "Đọc về Giấy phép Tái nhập cảnh và Giấy phép đi lại trước (Form I-131).",
+          "s3": "Nói chuyện với dịch vụ trợ giúp pháp lý miễn phí về hoàn cảnh của bạn trước khi đi du lịch.",
+          "s4": "Mang theo giấy tờ tùy thân khi bạn đi du lịch."
+        },
+        "links": {
+          "l1": "Giấy tờ đi lại (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Phúc lợi công cộng và giấy tờ của bạn",
+        "short": "Ai có thể nhận trợ giúp tùy thuộc vào giấy tờ. Hãy hỏi trước khi nộp đơn.",
+        "body": "Một số chương trình giúp đỡ về thực phẩm, y tế và nhà ở. Ai có thể nhận phụ thuộc vào giấy tờ tùy thân, và trong một số trường hợp, việc dùng phúc lợi có thể ảnh hưởng đến hồ sơ trong tương lai. Hãy hỏi trợ giúp pháp lý miễn phí trước khi bạn nộp đơn.",
+        "steps": {
+          "s1": "Tìm hiểu xem có những chương trình phúc lợi chính phủ nào.",
+          "s2": "Điều kiện tùy thuộc vào giấy tờ của bạn. Hãy hỏi trợ giúp pháp lý miễn phí xem điều gì áp dụng cho bạn.",
+          "s3": "Trẻ em sinh ra ở Mỹ có thể đủ điều kiện ngay cả khi cha mẹ không đủ điều kiện.",
+          "s4": "Luôn nói sự thật trong các đơn xin."
+        },
+        "links": {
+          "l1": "Phúc lợi chính phủ (USA.gov)",
+          "l2": "Nguồn lực cộng đồng (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Nếu bạn có lịch hẹn tòa án di trú",
+        "short": "Đừng bao giờ bỏ lỡ buổi hầu tòa. Kiểm tra hồ sơ của bạn trực tuyến.",
+        "body": "Nếu bạn có vụ việc ở tòa án di trú, việc bỏ lỡ phiên tòa có thể dẫn đến hậu quả nghiêm trọng. Bạn có thể kiểm tra ngày phiên tòa tiếp theo trực tuyến bằng số A của mình.",
+        "steps": {
+          "s1": "Kiểm tra ngày phiên tòa tiếp theo trực tuyến.",
+          "s2": "Thêm ngày phiên tòa vào phần ngày của bạn.",
+          "s3": "Nếu bạn chuyển nhà, hãy báo cho tòa án trong vòng 5 ngày bằng mẫu đơn EOIR-33.",
+          "s4": "Tìm trợ giúp pháp lý miễn phí càng sớm càng tốt.",
+          "s5": "Đến dự mọi phiên tòa, ngay cả khi bạn chưa có luật sư."
+        },
+        "links": {
+          "l1": "Thông tin vụ án tự động (EOIR)",
+          "l2": "Tòa án di trú (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Nói chuyện với dịch vụ trợ giúp pháp lý miễn phí",
+    "body": "Việc này tùy thuộc vào tình trạng di trú của bạn. Nhóm trợ giúp pháp lý miễn phí có thể xem xét hoàn cảnh của bạn.",
+    "button": "Tìm Trợ Giúp Pháp Lý Miễn Phí"
+  },
+  "browser": {
+    "close": "Đóng",
+    "back": "Quay lại",
+    "openInBrowser": "Mở trong Trình duyệt",
+    "openPage": "Mở Trang",
+    "versionOfficial": "Bản chính thức bằng tiếng {language}",
+    "versionAi": "Bản dịch bằng AI",
+    "versionOriginal": "Bản gốc",
+    "original": "Bản gốc",
+    "aiBanner": "Được dịch bởi AI từ {source}. Có thể có sai sót. Hãy kiểm tra bản gốc cho những việc quan trọng.",
+    "cantEmbed": "Trang này không hiển thị được bên trong Landed. Dưới đây là tóm tắt ngắn.",
+    "noSummary": "Trang này không hiển thị được bên trong Landed.",
+    "summaryTitle": "Tóm tắt từ Landed",
+    "loading": "Đang mở…",
+    "translating": "Đang dịch…",
+    "preparing": "Đang chuẩn bị trang này…",
+    "translate": "Dịch",
+    "translateTo": "Dịch trang này sang",
+    "noTranslation": "Bản gốc (không dịch)",
+    "translatingTo": "Đang dịch sang {language}…",
+    "alreadyIn": "Trang này đã ở bằng ngôn ngữ {language}.",
+    "mustVisitTitle": "Để dùng tính năng này, bạn cần vào trang web chính thức.",
+    "goTo": "Vào {domain}",
+    "aiFormatted": "Chữ từ {domain}, được AI sắp xếp lại cho dễ đọc. Hãy xem bản gốc để biết các chi tiết quan trọng.",
+    "translateFailed": "Không dịch được. Đang hiển thị bản gốc.",
+    "viewOriginal": "Trang gốc: {domain}",
+    "notTrusted": "Trang này không đến từ nguồn mà Landed đã kiểm tra."
+  },
+  "assistant": {
+    "title": "Hỏi Landed",
+    "button": "Hỏi Landed",
+    "tab": "Hỏi",
+    "welcome": "Hãy hỏi về danh sách việc cần làm, các ngày quan trọng, hoặc cuộc sống ở Mỹ.",
+    "placeholder": "Hỏi Landed",
+    "send": "Gửi",
+    "mic": "Nói câu hỏi của bạn",
+    "micStop": "Dừng nghe",
+    "listening": "Đang nghe…",
+    "thinking": "Đang suy nghĩ…",
+    "clear": "Xóa Trò chuyện",
+    "save": "Lưu cuộc trò chuyện trên thiết bị này",
+    "suggested": "Thử hỏi",
+    "s1": "Tôi nên làm gì trước tiên?",
+    "s2": "Làm thế nào để lấy số ITIN?",
+    "s3": "Giấy phép lao động của tôi khi nào hết hạn?",
+    "s4": "Danh sách của tôi còn lại gì?",
+    "aboutItem": "Về: {title}",
+    "itemPrompt": "Giúp tôi về “{title}”.",
+    "usedData": "Đã dùng: {sources}",
+    "store_profile": "hồ sơ của bạn",
+    "store_dates": "các ngày đã lưu của bạn",
+    "store_checklist": "danh sách việc cần làm của bạn",
+    "store_plan": "kế hoạch 90 ngày của bạn",
+    "store_prepSummaries": "các câu hỏi đã lưu của bạn",
+    "confirm": "Xác nhận",
+    "cancel": "Để sau",
+    "confirmed": "Đã lưu",
+    "declined": "Chưa lưu",
+    "proposeDone": "Đánh dấu “{title}” là đã hoàn thành?",
+    "proposeNotDone": "Đánh dấu “{title}” là chưa hoàn thành?",
+    "proposeDate": "Thêm “{label}” vào ngày {date}?",
+    "backToChat": "Quay lại trò chuyện",
+    "error": "Đã xảy ra lỗi. Vui lòng thử lại."
+  }
+}

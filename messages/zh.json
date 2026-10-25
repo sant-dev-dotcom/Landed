@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "返回",
+    "cancel": "取消",
+    "done": "完成",
+    "close": "关闭",
+    "add": "添加",
+    "added": "已添加",
+    "delete": "删除",
+    "save": "保存",
+    "continue": "继续",
+    "skip": "跳过",
+    "comingSoon": "即将推出",
+    "aiLabel": "AI 解释 · 非法律建议",
+    "sources": "来源",
+    "error": "出错了，请再试一次。",
+    "retry": "重试",
+    "loading": "正在加载…",
+    "sampleData": "示例结果。添加 API 密钥以获取实时结果。",
+    "settings": "设置",
+    "learnMore": "了解更多",
+    "openSource": "开源：{name}"
+  },
+  "tabs": {
+    "label": "主要",
+    "home": "首页",
+    "legal": "法律",
+    "community": "社区",
+    "jobs": "工作"
+  },
+  "language": {
+    "label": "语言",
+    "en": "English",
+    "es": "Español",
+    "choose": "选择您的语言",
+    "search": "搜索语言",
+    "other": "其他语言",
+    "otherPlaceholder": "输入您的语言",
+    "otherFooter": "我们将使用 AI 将应用翻译成您的语言。可能会有一些小错误。",
+    "translate": "翻译",
+    "translating": "正在将 Landed 翻译成 {language}…",
+    "notConfigured": "翻译成新语言需要在服务器上配置 Gemini API 密钥。",
+    "unknownLanguage": "找不到该语言。请检查拼写后重试。",
+    "translateFailed": "翻译失败，请再试一次。"
+  },
+  "disclaimer": "Landed 仅提供信息说明，不构成法律建议。如有具体情况，请咨询律师或合法授权代表。",
+  "landing": {
+    "hero": "有向导和朋友相伴，开启你在美国的头一年。",
+    "sub": "读懂信件，记住重要日期，找到靠谱的帮助，结识有过相同经历的朋友。",
+    "whyTitle": "为什么这很重要",
+    "whyIntro": "这影响着数百万人，但你很少听到。这种伤害静悄悄的：一封看不懂的信、错过的期限、一个假“notario”。",
+    "stat1Value": "34%",
+    "stat1": "在2026财年审结的移民法庭案件中，只有这么多人有律师，是2010年以来最低的。",
+    "stat2Value": "2%",
+    "stat2": "在全国120万起驱逐出境案件的研究中，没有律师自己申请救济的人成功了这么多。",
+    "stat3Value": "5倍",
+    "stat3": "根据FDIC调查数据，只说西班牙语的家庭过去没有银行账户的可能性大约是其他人的五倍。",
+    "statsFooter": "“notario”诈骗受害者因为害怕而不敢站出来，因此这类欺诈严重瞒报。孩子们经常得帮父母看账单、租约和法律信件。",
+    "pitch": "帮助其实就在那儿。只是人们找不到、看不懂，也不知道哪部分适用于自己。",
+    "privacyTitle": "你的隐私",
+    "privacy": "无需账号。除非你主动要求，否则任何内容都不会离开你的手机。我们绝不保存你文件的照片。",
+    "getStarted": "开始",
+    "demoPersona": "使用演示身份",
+    "continueToHome": "继续前往首页"
+  },
+  "onboarding": {
+    "progress": "第 {current} 步，共 {total} 步",
+    "langTitle": "你喜欢用什么语言？",
+    "countryTitle": "你来自哪里？",
+    "countryOther": "其他国家",
+    "countryPlaceholder": "输入你的国家",
+    "cityTitle": "你住在哪个城市？",
+    "cityPlaceholder": "其他城市，例如伊利诺伊州芝加哥",
+    "timeTitle": "你来美国多久了？",
+    "time0": "不到 1 个月",
+    "time1": "1–6 个月",
+    "time2": "6–12 个月",
+    "time3": "超过 1 年",
+    "aboutTitle": "简单介绍一下你",
+    "aboutFooter": "可选。这有助于我们为你推荐工作和可以结识的人。",
+    "nameLabel": "姓名",
+    "namePlaceholder": "我们该怎么称呼你？",
+    "kidsLabel": "我有孩子",
+    "workLabel": "在我祖国的工作",
+    "workPlaceholder": "例如：注册护士",
+    "hardTitle": "现在觉得最难的是什么？",
+    "hardFooter": "可以选多项。",
+    "hard_paperwork": "办文件",
+    "hard_money": "钱",
+    "hard_work": "找工作",
+    "hard_people": "结识新朋友",
+    "hard_english": "英语",
+    "hard_housing": "住房",
+    "hard_health": "健康",
+    "finish": "生成我的计划",
+    "making": "正在生成您的计划…",
+    "demoNote": "演示用户：Maria，来自委内瑞拉的护士，在休斯顿住了 2 个月。"
+  },
+  "countries": {
+    "Venezuela": "委内瑞拉",
+    "Mexico": "墨西哥",
+    "Honduras": "洪都拉斯",
+    "Guatemala": "危地马拉",
+    "El Salvador": "萨尔瓦多",
+    "Cuba": "古巴",
+    "Colombia": "哥伦比亚",
+    "India": "印度",
+    "Vietnam": "越南",
+    "Nigeria": "尼日利亚",
+    "Ukraine": "乌克兰",
+    "Afghanistan": "阿富汗"
+  },
+  "categories": {
+    "legal": "法律",
+    "money": "金钱",
+    "social": "人脉",
+    "jobs": "工作",
+    "health": "健康",
+    "daily": "日常生活"
+  },
+  "home": {
+    "title": "首页",
+    "greeting": "你好，{name}。",
+    "greetingNoName": "你好。",
+    "dayIn": "在 {city} 的第 {day} 天",
+    "nextSteps": "你的下一步",
+    "nextStepsFooter": "来自你的前 90 天计划。做完后点一下圆圈。",
+    "allSteps": "查看所有步骤（{count}）",
+    "fewerSteps": "收起步骤",
+    "allDone": "你完成了所有步骤。干得好！",
+    "dueIn": "{count, plural, =0 {今天} one {# 天内} other {# 天内}}",
+    "markDone": "将“{title}”标记为已完成",
+    "markNotDone": "将“{title}”标记为未完成",
+    "comingUp": "近期安排",
+    "noDates": "还没有日期",
+    "noDatesSub": "扫描信件以追踪日期",
+    "explore": "探索",
+    "legalSub": "信件、日期和免费帮助",
+    "communitySub": "你附近的活动和人们",
+    "jobsSub": "工作与您的资质",
+    "money": "钱",
+    "health": "健康",
+    "noProfile": "我们先来设置您的计划吧。",
+    "setUp": "设置",
+    "makingPlan": "正在制定您的计划…",
+    "profileButton": "设置和个人资料"
+  },
+  "status": {
+    "green": "您目前一切都好",
+    "greenSub": "接下来的 6 个月内没有要紧的事。",
+    "yellow": "{count, plural, one {# 天} other {# 天}}后到期",
+    "red": "即将到期：{count, plural, =0 {今天} one {# 天后} other {# 天后}}",
+    "redPast": "有一个日期已过",
+    "redPastSub": "“{label}”是在 {count, plural, one {# 天} other {# 天}}前。",
+    "nextSub": "{label} · {date}",
+    "empty": "还没有追踪的日期",
+    "emptySub": "扫描信件或添加日期以开始。",
+    "count": "已追踪 {count, plural, one {# 个日期} other {# 个日期}}",
+    "prepare": "我应该准备什么？"
+  },
+  "legal": {
+    "title": "法律",
+    "myDates": "我的日期",
+    "addDate": "添加日期",
+    "datesEmpty": "您添加或扫描的日期会显示在这里。",
+    "daysLeft": "{count, plural, =0 {今天} one {剩 1 天} other {剩 # 天}}",
+    "daysAgo": "{count, plural, one {# 天前} other {# 天前}}",
+    "reminder": "提醒",
+    "deleteDate": "删除“{label}”",
+    "fromScan": "来自扫描",
+    "tools": "工具",
+    "scan": "扫描信件",
+    "scanSub": "拍照即可获得简单易懂的解释",
+    "ask": "提问",
+    "askSub": "附带来源的回答",
+    "help": "寻找免费法律援助",
+    "helpSub": "您附近的法律援助",
+    "prep": "为预约做准备",
+    "prepSub": "一份可以随身携带的总结",
+    "rights": "了解您的权利",
+    "rightsFooter": "包含官方来源链接的通用信息。",
+    "addSheetTitle": "添加日期",
+    "docType": "文件",
+    "labelField": "这是什么日期？",
+    "labelPlaceholder": "例如：工作许可到期",
+    "dateField": "日期",
+    "noteField": "备注",
+    "notePlaceholder": "选填",
+    "docTypes": {
+      "workPermit": "工作许可",
+      "passport": "护照",
+      "uscis": "USCIS 通知",
+      "court": "法院通知",
+      "i94": "I-94",
+      "lease": "租约",
+      "other": "其他"
+    },
+    "sourceLink": "来源：{name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "“notario”不能提供法律建议",
+      "short": "只有律师和认证代表才可以。",
+      "body": "只有律师和 DOJ 认证代表才能提供移民法律建议。“notario”不能。在美国，公证员只能见证签字。",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "没有人能保证拿到绿卡",
+      "short": "根本没有什么“特殊名单”。",
+      "body": "没有人能保证你拿到绿卡，或者把你加进“特殊名单”。如果有人承诺结果或索要金钱以加快办理，那就是危险信号。",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "USCIS 表格都是免费的",
+      "short": "请从 uscis.gov 下载。",
+      "body": "官方 USCIS 表格可以从 uscis.gov 免费下载。有些申请需要交申请费，但表格本身从不收费。官方政府网站网址以 .gov 结尾。",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "如何核实律师身份",
+      "short": "去你所在州的律师协会查询。",
+      "body": "请在其获得执业许可的州律师协会查询律师信息。在德克萨斯州，请使用 State Bar of Texas 的“查找律师”搜索功能。若要查询认证代表，请查看 DOJ (EOIR) 名单。",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "租客基本权益",
+      "short": "驱逐房客必须通过法院程序。",
+      "body": "请阅读你的租约并保留一份副本。房东不能通过换锁或拿走你的东西来赶你走；驱逐必须通过法院。如果你收到法院文件，切勿置之不理。",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "职场基本权益",
+      "short": "大多数工人都享有最低工资和加班费保障。",
+      "body": "大多数工人应当获得至少联邦最低工资，并且每周工作超过 40 小时的部分应享有加班费。US Department of Labor 受理工资投诉，不论你的移民身份如何。请记录好你的工作时间和工资。",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "扫描信件",
+    "intro": "给信件或文件拍张照片。我们会用通俗易懂的语言为你解释。",
+    "privacy": "你的照片只会读取一次用于解释，随后便会删除，绝不会保存。",
+    "protecting": "正在遮盖隐私信息…",
+    "protectingNote": "这在你的手机上完成。还没有发送任何内容。",
+    "reviewTitle": "发送前检查",
+    "reviewIntro": "黑条盖住了隐私信息。只会发送这个盖好的副本来阅读。",
+    "foundCount": "{count, plural, =0 {我们没有自动找到隐私信息。} one {我们盖住了 # 个隐私信息：{kinds}。} other {我们盖住了 # 个隐私信息：{kinds}。}}",
+    "ocrFailed": "我们无法读取你手机上的文字。请在任何隐私信息上拖动以盖住它。",
+    "reviewHelp": "拖动以隐藏你想藏起来的其他内容。点一下黑条就能取消遮盖。",
+    "reviewImageAlt": "你的文件，隐私部位已被遮盖",
+    "uncover": "取消遮盖",
+    "undo": "撤销",
+    "sendCovered": "发送遮盖后的副本",
+    "cancelScan": "取消",
+    "rejected_blurry": "照片太模糊，看不清",
+    "rejected_dark": "照片太暗，看不清",
+    "rejected_bright": "照片太亮或反光，看不清",
+    "rejected_unreadable": "照片上的字看不够清楚",
+    "rejectedBody": "为了帮您正确解释信件并保护您的隐私，我们需要一张清晰的照片。我们没有发送任何内容。",
+    "tipsTitle": "拍出清晰照片的建议",
+    "tip1": "把信平铺在深色桌子上。",
+    "tip2": "光线要亮且均匀。避免阴影和反光。",
+    "tip3": "把手机拿在纸的上方正中，让纸填满屏幕。",
+    "tip4": "点一下屏幕对焦，然后拿稳手机。",
+    "retake": "重拍照片",
+    "chooseAnother": "选择别的照片",
+    "kind_aNumber": "A号码",
+    "kind_receipt": "回执号",
+    "kind_ssn": "社会安全号",
+    "kind_phone": "电话号码",
+    "kind_email": "电子邮件",
+    "kind_account": "账号",
+    "kind_name": "姓名",
+    "kind_birth": "出生日期",
+    "kind_address": "家庭住址",
+    "kind_id": "证件号码",
+    "takePhoto": "拍照",
+    "choosePhoto": "从相册选择",
+    "trySample": "试看样本信件",
+    "samplesTitle": "样本信件",
+    "samplesFooter": "这是用于试用App的虚拟信件，其中的姓名和号码都是假的。",
+    "sample1": "收据通知",
+    "sample2": "听证会通知",
+    "sample3": "续租通知",
+    "reading": "正在读你的信……",
+    "whatThisIs": "这是什么",
+    "summary": "总结",
+    "dates": "日期",
+    "noDates": "没有找到日期。",
+    "addDate": "把“{label}”加到我的日程",
+    "wordsToKnow": "要懂的词",
+    "nextStep": "下一步做什么",
+    "highRiskTitle": "这可能需要专业人士",
+    "mediumRiskTitle": "这可能需要回复",
+    "risk_low": "风险低",
+    "risk_medium": "需要注意",
+    "risk_high": "很重要",
+    "findHelp": "寻找免费法律帮助",
+    "photoNotSaved": "你的照片没有保存。",
+    "scanAnother": "扫描另一封",
+    "tooBig": "照片太大了。换一张试试。",
+    "notConfigured": "读信功能需要服务器上的AI密钥。请先试用样本信件。"
+  },
+  "ask": {
+    "title": "提问",
+    "emptyTitle": "问问在美国生活的问题",
+    "emptySub": "答案来自可靠来源。如果你想问自己的个案，我们会帮你找专业人士。",
+    "suggested": "试试这样问",
+    "q1": "绿卡和工卡有什么区别？",
+    "q2": "什么是 I-94？",
+    "q3": "我怎么知道一个律师是不是真的？",
+    "q4": "什么是不正规移民中介（notario）？为什么要小心？",
+    "placeholder": "问个问题",
+    "send": "发送",
+    "mic": "语音提问",
+    "micStop": "停止听取",
+    "listening": "正在听……",
+    "thinking": "正在可靠来源中查找……",
+    "caseSpecific": "这取决于你的具体情况",
+    "findHelp": "找你附近的免费法律帮助",
+    "you": "你",
+    "landed": "Landed",
+    "clear": "清除"
+  },
+  "help": {
+    "title": "寻找免费法律帮助",
+    "searchPlaceholder": "在{city}搜索",
+    "filterLabel": "筛选",
+    "all": "全部",
+    "free": "免费",
+    "spanish": "西班牙语",
+    "directories": "可信赖的机构名录",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "按邮编查找非营利法律服务",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "移民法院列出的免费服务机构",
+    "results": "{city}附近",
+    "finding": "正在为你查找附近的帮助…",
+    "empty": "没有找到结果。请尝试选择“全部”。",
+    "type_nonprofit": "非营利机构",
+    "type_accredited_rep": "认证代表",
+    "type_attorney": "律师",
+    "type_clinic": "法律诊所",
+    "type_unknown": "机构",
+    "cost_free": "免费",
+    "cost_low": "低收费",
+    "cost_paid": "收费",
+    "cost_unknown": "请询问费用",
+    "speaks": "说{languages}",
+    "call": "打电话",
+    "website": "网站",
+    "directions": "路线",
+    "details": "详情",
+    "howToVerify": "如何核实身份",
+    "verify1": "询问帮助你的人是否是持牌律师或经DOJ认证的代表。",
+    "verify2": "在州律师协会查询律师信息，或在EOIR名单上查询认证代表。",
+    "verify3": "千万不要签署空白表格，也不要交出原件。",
+    "verify4": "在第一次见面之前先问清楚费用。",
+    "verifyLinkBar": "州律师协会查询",
+    "verifyLinkEoir": "EOIR 名单",
+    "rating": "评分 {rating}（满分 5 分）",
+    "notFound": "这个信息已经找不到了。"
+  },
+  "prep": {
+    "title": "面谈准备",
+    "intro": "做一张单页总结，带给律师或有资质的代表。上面会用你的母语和英语写好。",
+    "datesSection": "包含的日期",
+    "noDates": "还没有日期。你仍然可以添加问题。",
+    "questions": "我的问题",
+    "questionsFooter": "最多 5 个。请不要包含证件号码。",
+    "questionPlaceholder": "问题 {n}",
+    "create": "生成总结",
+    "creating": "正在写你的总结…",
+    "share": "分享",
+    "print": "打印",
+    "copy": "复制",
+    "copied": "已复制",
+    "yourLanguage": "你的母语",
+    "english": "英语",
+    "edit": "编辑"
+  },
+  "community": {
+    "title": "社区",
+    "events": "你附近的活动",
+    "eventsFooter": "来自公开列表的免费且对新移民友好的活动。",
+    "noEvents": "暂时没有找到活动。",
+    "loadingEvents": "正在找你附近的活动…",
+    "people": "过来人",
+    "peopleFooter": "这是演示用的个人资料范例。真实的匹配功能很快就会推出。",
+    "sayHi": "打个招呼",
+    "sayHiTo": "向 {name} 打招呼",
+    "toast": "发消息功能很快就会推出。",
+    "bio": "从 {from} 搬到 {city} {years, plural, other {# 年}}前。{job}。会说 {languages}。",
+    "open": "打开活动"
+  },
+  "jobs": {
+    "title": "工作",
+    "credentialTitle": "你的资历",
+    "credentialLoading": "正在查询你的工作资质如何认证…",
+    "noBackground": "在设置里添加你的工作经历，看看能不能直接用。",
+    "stateBoard": "查找你所在州的委员会",
+    "searchPlaceholder": "搜索 {city} 的工作",
+    "results": "{city} 附近的工作",
+    "empty": "没有找到工作。换个关键词搜搜看。",
+    "finding": "正在找工作…",
+    "via": "通过 {source}"
+  },
+  "settings": {
+    "title": "设置",
+    "profile": "个人资料",
+    "editProfile": "重新填写资料",
+    "city": "城市",
+    "language": "语言",
+    "notifications": "日期提醒",
+    "notificationsFooter": "提醒只保存在这台手机上。",
+    "notificationsDenied": "浏览器设置中已关闭通知。",
+    "privacy": "隐私",
+    "privacyFooter": "Landed 知道的所有信息都只存放在这台手机上。绝对不会保存文件的照片。",
+    "deleteData": "删除我的数据",
+    "deleteTitle": "要删除所有数据吗？",
+    "deleteBody": "这会从这台手机上删除你的个人资料、计划、日期和问题。此操作无法撤销。",
+    "deleteConfirm": "删除",
+    "deleted": "你的数据已删除。",
+    "about": "关于",
+    "version": "版本",
+    "aboutFooter": "Landed 负责解释信息，不提供法律建议。"
+  },
+  "checklist": {
+    "title": "需要办的事",
+    "entrySub": "你第一年的待办清单",
+    "progress": "已完成 {done} 项，共 {total} 项",
+    "howToToggle": "怎么做",
+    "howToTitle": "具体怎么做",
+    "linksTitle": "可信赖的网址",
+    "official": "官方",
+    "nonprofit": "非营利组织",
+    "checked": "已于 {date} 检查",
+    "markDone": "标记为已完成",
+    "markNotDone": "标记为未完成",
+    "doneOn": "完成于 {date}",
+    "addDate": "为此添加日期",
+    "markItemDone": "将“{title}”标记为已完成",
+    "markItemNotDone": "将“{title}”标记为未完成",
+    "notFound": "你的清单里没有这一项。",
+    "stepsFooter": "通用步骤由 Landed 团队编写。它们不构成法律意见。",
+    "sections": {
+      "start": "第一步",
+      "money": "金钱与税收",
+      "work": "工作",
+      "family": "健康与家庭",
+      "protect": "保护自己",
+      "status": "视你的身份而定"
+    },
+    "items": {
+      "i94": {
+        "title": "获取你的 I-94 副本",
+        "short": "你的官方入境记录。请检查上面的日期。",
+        "body": "I-94 是政府关于你何时入境以及你可以停留多久的记录。许多机构会索要它，上面的日期非常重要。你可以在网上免费获取。",
+        "steps": {
+          "s1": "访问官方 I-94 网站。它是免费的。",
+          "s2": "选择“获取最新 I-94”(Get Most Recent I-94)，并完全按照护照上的信息输入你的姓名和护照详情。",
+          "s3": "检查你的姓名、入境身份类别以及“合法停留至”(Admit Until) 日期。",
+          "s4": "保存或打印一份副本，并与你的护照放在一起。",
+          "s5": "如果上面的信息有误，CBP 延迟检查办公室可以帮你更正。"
+        },
+        "links": {
+          "l1": "I-94 官方网站 (CBP)",
+          "l2": "关于 I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "获取社会安全号",
+        "short": "你工作以及做很多其他事情都需要它。",
+        "body": "社会安全号 (SSN) 用于工作、报税和银行。并非所有人都能获得。这取决于你的移民身份和工作许可。卡片和号码都是完全免费的。",
+        "steps": {
+          "s1": "了解你是否能获得社安号以及需要哪些文件。",
+          "s2": "准备好你的文件：通常是你的护照、移民文件和年龄证明。",
+          "s3": "在网上开始申请，或者去你附近的社会安全局办公室。",
+          "s4": "等待卡片寄到。把它放在安全的地方，不要放在钱包里。"
+        },
+        "links": {
+          "l1": "社会安全号和卡 (SSA)"
+        }
+      },
+      "address": {
+        "title": "搬家时通知 USCIS",
+        "short": "大多数人必须在 10 天内申报新地址。",
+        "body": "大多数非美国公民必须在搬家后 10 天内将新地址告知 USCIS。如果不这样做，你可能会错过重要的信件。这是免费的。",
+        "steps": {
+          "s1": "当你搬家时，记下日期。你通常有 10 天时间。",
+          "s2": "在 USCIS 网站上在线更改你的地址。",
+          "s3": "如果你的案子正在移民法庭审理，你必须使用 EOIR-33 表格同时通知法庭。",
+          "s4": "保存确认页面或电子邮件。"
+        },
+        "links": {
+          "l1": "在 USCIS 更改你的地址"
+        }
+      },
+      "bank": {
+        "title": "开设银行账户",
+        "short": "让你的钱更安全，并避免支票兑现费用。",
+        "body": "在银行或信用合作社开户比用现金更安全，还能帮你在美国建立信用记录。有些银行接受护照或领事馆身份证。",
+        "steps": {
+          "s1": "比较不同的银行和信用合作社。关注月费和最低存款要求。",
+          "s2": "带上你的身份证（护照或领事馆身份证），如果有的话，带上你的 SSN 或 ITIN。询问他们接受哪些文件。",
+          "s3": "开立账户并申请借记卡。",
+          "s4": "避免去支票兑现店。他们的费用很高。"
+        },
+        "links": {
+          "l1": "银行账户 (Consumer Financial Protection Bureau)",
+          "l2": "银行信息 (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "获取州身份证或驾照",
+        "short": "本地带照片的身份证可以让很多事情变得更简单。",
+        "body": "州身份证或驾照几乎到处都认。每个州对需要什么文件都有自己的规定。",
+        "steps": {
+          "s1": "找到你所在州的驾照办公室。",
+          "s2": "看看你州接受哪些文件。",
+          "s3": "如果需要，先预约。",
+          "s4": "带上文件和费用去办。"
+        },
+        "links": {
+          "l1": "查找你所在的车管所 (USA.gov)",
+          "l2": "德州驾照和身份证 (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "拿不到 SSN 就申请 ITIN",
+        "short": "给拿不到社会安全号的人用的税号。",
+        "body": "如果你拿不到社会安全号，ITIN（个人纳税人识别号）可以让你报税。它不代表有工作许可。IRS 不会把这信息给移民执法部门。",
+        "steps": {
+          "s1": "看看你是不是需要 ITIN。只有拿不到 SSN 才需要。",
+          "s2": "填写 IRS W-7 表格。",
+          "s3": "连同税表一起寄出，或者找 IRS 认证的受理代理人免费帮忙。",
+          "s4": "等 IRS 寄来写有你号码的信。收好它。"
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "报税",
+        "short": "通常在四月中旬前报税。有免费帮忙。",
+        "body": "如果你在美国赚了钱，可能需要报税，通常在 4 月 15 日前。按时报税还能帮你拿退税和补贴。有免费的报税帮助。",
+        "steps": {
+          "s1": "收集你工作的税表，比如 W-2 或 1099。",
+          "s2": "在附近找免费报税点 (VITA)。",
+          "s3": "在截止日期前报税，通常是 4 月 15 日。",
+          "s4": "留好税表和文件的复印件。"
+        },
+        "links": {
+          "l1": "报税 (IRS)",
+          "l2": "免费报税帮助 (IRS)"
+        }
+      },
+      "credit": {
+        "title": "开始建立信用",
+        "short": "信用好帮你在美国租房和借钱。",
+        "body": "你的信用记录显示你付账单的情况。房东和贷款人会看这个。你可以慢慢开始建立信用，并免费查信用报告。",
+        "steps": {
+          "s1": "了解什么是信用报告和信用分。",
+          "s2": "拿到免费信用报告并检查有没有错。",
+          "s3": "按时付每个账单。",
+          "s4": "考虑办一张押金信用卡，千万别给承诺“修复”信用的人付钱。"
+        },
+        "links": {
+          "l1": "信用报告和信用分 (CFPB)",
+          "l2": "免费信用报告 (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "记住工卡到期日",
+        "short": "记下到期日，别错过了。",
+        "body": "工卡 (EAD) 有截止日期。有些人在到期前可以申请新的。什么时候以及怎么申请取决于你的身份类别，所以请看官方页面并记下日期。",
+        "steps": {
+          "s1": "找到卡上的到期日并记到日期里。",
+          "s2": "了解什么时候以及如何申请换新（I-765 表格）。",
+          "s3": "如果网上申请，用 USCIS 账号。",
+          "s4": "留好收据并查看案件进度。"
+        },
+        "links": {
+          "l1": "I-765 表格，工卡 (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "了解你在工作中的权利",
+        "short": "大多数工人都享有最低工资和加班费。",
+        "body": "大多数工人至少应得最低工资，加班还有加班费。不管移民身份如何，美国劳工部都受理工人的投诉。",
+        "steps": {
+          "s1": "了解你所在州的最低工资。",
+          "s2": "记下工时并留好工资单。",
+          "s3": "如果没拿到该得的工钱，你可以投诉。"
+        },
+        "links": {
+          "l1": "最低工资 (Department of Labor)",
+          "l2": "投诉工资问题 (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "找便宜的医疗服务",
+        "short": "社区卫生中心根据收入收费。",
+        "body": "社区卫生中心看病不需要保险，并按收入收费。有些移民也能买医保。遇到紧急情况，急诊室必须给你治病。",
+        "steps": {
+          "s1": "在附近找一个社区卫生中心。",
+          "s2": "看看你能申请哪种医保。",
+          "s3": "第一次去带上身份证件和收入证明。",
+          "s4": "遇到紧急情况，去急诊室或打 911。"
+        },
+        "links": {
+          "l1": "移民医疗保险 (HealthCare.gov)",
+          "l2": "寻找卫生中心 (HRSA)"
+        }
+      },
+      "school": {
+        "title": "给孩子报名上学",
+        "short": "所有孩子都有上公立学校的权利。",
+        "body": "在美国，所有孩子都可以上免费的公立学校，不论他们的移民身份如何。学校不能为了让孩子入学而询问移民身份。",
+        "steps": {
+          "s1": "联系你当地的学区办公室。",
+          "s2": "准备好证明你孩子年龄的文件和住址证明。",
+          "s3": "填写入学表格。可以要求用你的语言提供帮助。",
+          "s4": "询问有关为你孩子提供英语学习支持的信息。"
+        },
+        "links": {
+          "l1": "儿童学校 (USAHello)",
+          "l2": "教育权利 (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "注册兵役登记（18至25岁男性）",
+        "short": "住在美国的18至25岁的大多数男性必须进行登记。",
+        "body": "住在美国的18至25岁的大多数男性，包括大多数移民，都必须在 Selective Service 进行登记。登记是免费且快捷的。",
+        "steps": {
+          "s1": "检查你是否需要登记。主要是18至25岁的男性。",
+          "s2": "在网上登记。",
+          "s3": "保存好你的登记号码。"
+        },
+        "links": {
+          "l1": "注册 (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "寻找你可以信任的免费法律帮助",
+        "short": "在需要之前，先了解谁可以提供移民建议。",
+        "body": "只有律师和 DOJ 认证的代表才能提供移民法律建议。在你需要之前，先在附近找一个免费或低收费的法律援助组织。",
+        "steps": {
+          "s1": "搜索你附近的免费或低收费法律帮助。",
+          "s2": "确保此人是律师或 DOJ 认证的代表。",
+          "s3": "在第一次见面之前询问费用。",
+          "s4": "带上你的文件复印件。原件请自己留好。"
+        },
+        "links": {
+          "l1": "寻找法律帮助 (ImmigrationLawHelp.org)",
+          "l2": "免费法律服务提供商 (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "学会识别移民骗局",
+        "short": "notario 不能提供法律建议。表格都是免费的。",
+        "body": "骗子专挑移民下手。“notario”不能提供法律建议，没有人能保证拿到绿卡，而且 USCIS 表格下载是免费的。",
+        "steps": {
+          "s1": "了解最常见的移民骗局。",
+          "s2": "只从 uscis.gov 下载表格。它们是免费的。",
+          "s3": "如果有人企图骗你，请进行举报。"
+        },
+        "links": {
+          "l1": "避免受骗 (USCIS)",
+          "l2": "针对移民的骗局 (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "了解你作为租客的权利",
+        "short": "房东必须通过法院才能把你赶走。",
+        "body": "在德克萨斯州，房东不能通过换锁或拿走你的东西来赶你走。驱逐必须通过法院。请阅读你的租约并保留一份复印件。",
+        "steps": {
+          "s1": "阅读你的租约并保留一份复印件。",
+          "s2": "以书面形式要求维修并保留副本。",
+          "s3": "了解驱逐流程是如何运作的。",
+          "s4": "如果你收到法院文件，不要置之不理。请寻求免费法律帮助。"
+        },
+        "links": {
+          "l1": "如果房东把你锁在门外 (TexasLawHelp)",
+          "l2": "驱逐流程是如何运作的 (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "在你离开美国旅行之前",
+        "short": "离开可能会影响正在审理的案件。请先询问清楚。",
+        "body": "对许多移民来说，离开美国可能会影响正在审理的申请或返回美国的能力。有些人离开前需要旅行证件。是否安全取决于你的情况。",
+        "steps": {
+          "s1": "在你买票之前，先了解有哪些旅行证件。",
+          "s2": "了解回美证（Advance Parole）和重新入境许可（Form I-131）。",
+          "s3": "在你旅行之前，就你的情况咨询免费法律帮助。",
+          "s4": "旅行时随身携带你的移民文件。"
+        },
+        "links": {
+          "l1": "旅行证件 (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "公共福利与你的身份",
+        "short": "谁能获得帮助取决于身份。申请前请先咨询。",
+        "body": "有些项目可以提供食品、医疗和住房方面的帮助。谁能获得这些帮助取决于移民身份，在某些情况下，使用福利可能会对未来的申请产生影响。申请前请先咨询免费法律帮助。",
+        "steps": {
+          "s1": "了解有哪些政府福利项目。",
+          "s2": "资格取决于你的身份。向免费法律帮助咨询什么适合你。",
+          "s3": "在美国出生的孩子即使父母不符合资格，也可能符合资格。",
+          "s4": "在申请时务必说实话。"
+        },
+        "links": {
+          "l1": "政府福利 (USA.gov)",
+          "l2": "社区资源 (ILRC)"
+        }
+      },
+      "court": {
+        "title": "如果你有移民法庭出庭日期",
+        "short": "切勿错过听证会。请在网上查看你的案件。",
+        "body": "如果您有移民法庭案件，错过听证会可能会带来严重的后果。您可以使用您的 A 号码在网上查询下一次听证会的日期。",
+        "steps": {
+          "s1": "在网上查询下一次听证会的日期。",
+          "s2": "将听证会日期添加到您的日期中。",
+          "s3": "如果您搬家了，请在 5 天内使用 EOIR-33 表格告知法庭。",
+          "s4": "尽早寻找免费的法律帮助。",
+          "s5": "出席每一次听证会，即使您还没有律师。"
+        },
+        "links": {
+          "l1": "自动化案件信息 (EOIR)",
+          "l2": "移民法庭 (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "咨询免费法律帮助",
+    "body": "这取决于您的移民身份。免费法律援助组织可以查看您的具体情况。",
+    "button": "寻找免费法律帮助"
+  },
+  "browser": {
+    "close": "关闭",
+    "back": "返回",
+    "openInBrowser": "在浏览器中打开",
+    "openPage": "打开页面",
+    "versionOfficial": "官方 {language} 版本",
+    "versionAi": "AI 翻译",
+    "versionOriginal": "原文",
+    "original": "原文",
+    "aiBanner": "由 AI 从 {source} 翻译。可能包含错误。重要内容请查看原文。",
+    "cantEmbed": "无法在 Landed 内部显示此网站。以下是简短摘要。",
+    "noSummary": "无法在 Landed 内部显示此网站。",
+    "summaryTitle": "Landed 的摘要",
+    "loading": "正在打开…",
+    "translating": "正在翻译…",
+    "preparing": "正在准备此页面…",
+    "translate": "翻译",
+    "translateTo": "把这个网页翻译成",
+    "noTranslation": "原文（不翻译）",
+    "translatingTo": "正在翻译成 {language}…",
+    "alreadyIn": "这个网页已经是 {language} 的了。",
+    "mustVisitTitle": "要使用这个功能，你需要去官方网站。",
+    "goTo": "前往 {domain}",
+    "aiFormatted": "来自 {domain} 的文字，经人工智能整理以方便阅读。请查看原文以核对任何重要内容。",
+    "translateFailed": "翻译失败。正在显示原文。",
+    "viewOriginal": "原网页：{domain}",
+    "notTrusted": "此页面并非来自 Landed 审核过的来源。"
+  },
+  "assistant": {
+    "title": "问问 Landed",
+    "button": "问问 Landed",
+    "tab": "提问",
+    "welcome": "询问关于您的清单、日期或美国生活的问题。",
+    "placeholder": "问问 Landed",
+    "send": "发送",
+    "mic": "说出您的问题",
+    "micStop": "停止聆听",
+    "listening": "正在聆听…",
+    "thinking": "正在思考…",
+    "clear": "清除聊天",
+    "save": "在此设备上保存聊天",
+    "suggested": "试着问",
+    "s1": "我应该先做什么？",
+    "s2": "如何获取 ITIN？",
+    "s3": "我的工作许可什么时候到期？",
+    "s4": "我的清单上还剩什么？",
+    "aboutItem": "关于：{title}",
+    "itemPrompt": "帮帮我处理“{title}”。",
+    "usedData": "已使用：{sources}",
+    "store_profile": "您的个人资料",
+    "store_dates": "您保存的日期",
+    "store_checklist": "您的清单",
+    "store_plan": "您的 90 天计划",
+    "store_prepSummaries": "您保存的问题",
+    "confirm": "确认",
+    "cancel": "暂不",
+    "confirmed": "已保存",
+    "declined": "未保存",
+    "proposeDone": "将“{title}”标记为已完成？",
+    "proposeNotDone": "将“{title}”标记为未完成？",
+    "proposeDate": "在 {date} 添加“{label}”？",
+    "backToChat": "返回聊天",
+    "error": "出了一点问题。请再试一次。"
+  }
+}

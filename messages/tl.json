@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Bumalik",
+    "cancel": "Kanselahin",
+    "done": "Tapos na",
+    "close": "Isara",
+    "add": "Idagdag",
+    "added": "Naidagdag na",
+    "delete": "Burahin",
+    "save": "I-save",
+    "continue": "Magpatuloy",
+    "skip": "Laktawan",
+    "comingSoon": "Malapit na",
+    "aiLabel": "Paliwanag mula sa AI · Hindi ito legal na payo",
+    "sources": "Mga Pinagmulan",
+    "error": "May nangyaring mali. Pakisubukan ulit.",
+    "retry": "Subukan Ulit",
+    "loading": "Nagbubukas...",
+    "sampleData": "Halimbawang resulta. Maglagay ng mga API key para sa totoong resulta.",
+    "settings": "Mga Setting",
+    "learnMore": "Matuto Pa",
+    "openSource": "Open source: {name}"
+  },
+  "tabs": {
+    "label": "Pangunahing Pahina",
+    "home": "Tahanan",
+    "legal": "Legal",
+    "community": "Komunidad",
+    "jobs": "Trabaho"
+  },
+  "language": {
+    "label": "Wika",
+    "en": "English",
+    "es": "Español",
+    "choose": "Piliin ang Iyong Wika",
+    "search": "Maghanap ng wika",
+    "other": "Ibang wika",
+    "otherPlaceholder": "I-type ang iyong wika",
+    "otherFooter": "Isasalin namin ang app sa iyong wika gamit ang AI. Maaari itong magkaroon ng ilang pagkakamali.",
+    "translate": "Isalin",
+    "translating": "Isinasalin ang Landed sa wikang {language}...",
+    "notConfigured": "Ang pagsasalin sa bagong wika ay nangangailangan ng Gemini API key sa server.",
+    "unknownLanguage": "Hindi namin nakita ang wikang iyon. Suriin ang spelling at subukan ulit.",
+    "translateFailed": "Hindi gumana ang pagsasalin. Pakisubukan ulit."
+  },
+  "disclaimer": "Ipinapaliwanag ng Landed ang mga impormasyon. Hindi ito legal na payo. Para sa iyong sitwasyon, kumausap ng abogado o lisensyadong kinatawan.",
+  "landing": {
+    "hero": "Ang iyong unang taon sa US, may kasamang gabay at ilang kaibigan.",
+    "sub": "Intindihin ang iyong mga liham, tandaan ang mga importanteng petsa, maghanap ng tulong na mapagkakatiwalaan, at makipagkilala sa mga taong dumaan din sa parehong sitwasyon.",
+    "whyTitle": "Bakit Mahalaga Ito",
+    "whyIntro": "Maraming tao ang naaapektuhan nito, pero bihira mong marinig. Tahimik ang pinsala: nakakalito na sulat, lumampas sa takdang araw, o huwad na “notario.”",
+    "stat1Value": "34%",
+    "stat1": "ng mga taong may tapos nang kaso sa korte ng imigrasyon ang may abugado noong FY2026, ang pinakamababa mula noong 2010.",
+    "stat2Value": "2%",
+    "stat2": "ng mga taong nag-apply ng tulong nang walang abugado ang nagtagumpay, batay sa pambansang pag-aaral ng 1.2 milyong kaso ng deportasyon.",
+    "stat3Value": "5×",
+    "stat3": "Ang mga pamilyang nagsasalita lang ng Espanyol ay halos limang beses na mas malamang na walang bangko (datos ng sarbey ng FDIC).",
+    "statsFooter": "Hindi gaanong naiuulat ang pandaraya ng notario dahil natatakot magsalita ang mga biktima. Kadalasang ang mga bata ang nagpapaliwanag ng mga bayarin, upa, at legal na sulat para sa kanilang mga magulang.",
+    "pitch": "Andirn ang tulong. Hindi lang alam ng mga tao kung saan hahanapin, babasahin, o kung alin ang para sa kanila.",
+    "privacyTitle": "Ang Iyong Privacy",
+    "privacy": "Walang account. Walang umaalis sa iyong telepono maliban na lang kung hihilingin mo. Hindi kami nagtatago ng mga larawan ng iyong mga dokumento.",
+    "getStarted": "Magsimula",
+    "demoPersona": "Gamitin ang Demo Persona",
+    "continueToHome": "Magpatuloy sa Home"
+  },
+  "onboarding": {
+    "progress": "Hakbang {current} ng {total}",
+    "langTitle": "Anong wika ang gusto mo?",
+    "countryTitle": "Taga-saan ka?",
+    "countryOther": "Ibang bansa",
+    "countryPlaceholder": "I-type ang iyong bansa",
+    "cityTitle": "Anong lungsod ka naninirahan?",
+    "cityPlaceholder": "Ibang lungsod, hal. Chicago, IL",
+    "timeTitle": "Gaano ka na katagal sa US?",
+    "time0": "Wala pang 1 buwan",
+    "time1": "1–6 na buwan",
+    "time2": "6–12 buwan",
+    "time3": "Mahigit 1 taon",
+    "aboutTitle": "Kaunting impormasyon tungkol sa iyo",
+    "aboutFooter": "Opsyonal. Nakakatulong ito sa amin na magrekomenda ng trabaho at mga taong maaaring makasama.",
+    "nameLabel": "Pangalan",
+    "namePlaceholder": "Ano ang gusto naming itawag sa iyo?",
+    "kidsLabel": "May mga anak ako",
+    "workLabel": "Trabaho sa aking sariling bansa",
+    "workPlaceholder": "hal. Rehistradong nars",
+    "hardTitle": "Ano ang pinakamahirap ngayon?",
+    "hardFooter": "Pumili ng kahit ilan.",
+    "hard_paperwork": "Mga papeles",
+    "hard_money": "Pera",
+    "hard_work": "Paghahanap ng trabaho",
+    "hard_people": "Pakikipagkilala sa mga tao",
+    "hard_english": "Ingles",
+    "hard_housing": "Pabahay",
+    "hard_health": "Kalusugan",
+    "finish": "Gawin ang Plano Ko",
+    "making": "Ginagawa ang iyong plano…",
+    "demoNote": "Halimbawang tao: Maria, isang nars mula sa Venezuela, 2 buwan na sa Houston."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mehiko",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "India",
+    "Vietnam": "Vietnam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "Legal",
+    "money": "Pera",
+    "social": "Mga Tao",
+    "jobs": "Trabaho",
+    "health": "Kalusugan",
+    "daily": "Pang-araw-araw na Buhay"
+  },
+  "home": {
+    "title": "Tahanan",
+    "greeting": "Kumusta, {name}.",
+    "greetingNoName": "Kumusta.",
+    "dayIn": "Araw {day} sa {city}",
+    "nextSteps": "Ang Susunod mong Hakbang",
+    "nextStepsFooter": "Mula sa iyong plano sa unang 90 araw. Pindutin ang bilog kapag tapos ka na.",
+    "allSteps": "Tingnan Lahat ng Hakbang ({count})",
+    "fewerSteps": "Ipakita ang Kaunti",
+    "allDone": "Natapos mo ang lahat ng hakbang. Magaling.",
+    "dueIn": "{count, plural, =0 {Ngayon} one {Sa loob ng # araw} other {Sa loob ng # araw}}",
+    "markDone": "Markahan ang “{title}” bilang tapos na",
+    "markNotDone": "Markahan ang “{title}” bilang hindi pa tapos",
+    "comingUp": "Paparating Na",
+    "noDates": "Wala pang mga petsa",
+    "noDatesSub": "Mag-scan ng liham para masubaybayan ang mga petsa nito",
+    "explore": "Galugarin",
+    "legalSub": "Mga liham, petsa, at libreng tulong",
+    "communitySub": "Mga kaganapan at tao malapit sa iyo",
+    "jobsSub": "Trabaho at ang iyong mga papel",
+    "money": "Pera",
+    "health": "Kalusugan",
+    "noProfile": "Ayusin muna natin ang iyong plano.",
+    "setUp": "Ayusin",
+    "makingPlan": "Ginagawa ang iyong plano…",
+    "profileButton": "Mga setting at profile"
+  },
+  "status": {
+    "green": "Ayos na ang lahat sa ngayon",
+    "greenSub": "Wala pang kailangang gawin sa susunod na 6 na buwan.",
+    "yellow": "Malapit na sa loob ng {count, plural, one {# araw} other {# araw}}",
+    "red": "Malapit na: {count, plural, =0 {ngayon} one {sa loob ng # araw} other {sa loob ng # araw}}",
+    "redPast": "Lumipas na ang isang petsa",
+    "redPastSub": "Ang “{label}” ay noong nakaraang {count, plural, one {# araw} other {# araw}}.",
+    "nextSub": "{label} · {date}",
+    "empty": "Wala pang nakalistang petsa",
+    "emptySub": "Mag-scan ng liham o magdagdag ng petsa para magsimula.",
+    "count": "{count, plural, one {# nakalistang petsa} other {# nakalistang petsa}}",
+    "prepare": "Ano ang Dapat Kong Ihanda?"
+  },
+  "legal": {
+    "title": "Legal",
+    "myDates": "Aking mga Petsa",
+    "addDate": "Magdagdag ng Petsa",
+    "datesEmpty": "Dito lalabas ang mga idinagdag o na-scan mong petsa.",
+    "daysLeft": "{count, plural, =0 {Ngayon} one {May # araw na natitira} other {May # na araw na natitira}}",
+    "daysAgo": "{count, plural, one {# araw ang nakalipas} other {# na araw ang nakalipas}}",
+    "reminder": "Paalala",
+    "deleteDate": "Burahin ang “{label}”",
+    "fromScan": "Mula sa scan",
+    "tools": "Mga Gamit",
+    "scan": "Mag-scan ng Liham",
+    "scanSub": "Larawan papunta sa madaling paliwanag",
+    "ask": "Magtanong",
+    "askSub": "Mga sagot na may patunay",
+    "help": "Maghanap ng Libreng Tulong Legal",
+    "helpSub": "Tulong legal malapit sa iyo",
+    "prep": "Maghanda para sa Appointment",
+    "prepSub": "Buod na dadalhin mo",
+    "rights": "Alamin ang Iyong mga Karapatan",
+    "rightsFooter": "Pangkalahatang impormasyon na may mga link sa opisyal na pinagkukunan.",
+    "addSheetTitle": "Magdagdag ng Petsa",
+    "docType": "Dokumento",
+    "labelField": "Anong petsa ito?",
+    "labelPlaceholder": "hal. Nag-expire ang work permit",
+    "dateField": "Petsa",
+    "noteField": "Tala",
+    "notePlaceholder": "Opsyonal",
+    "docTypes": {
+      "workPermit": "Work permit",
+      "passport": "Pasaporte",
+      "uscis": "Abiso mula sa USCIS",
+      "court": "Abiso mula sa korte",
+      "i94": "I-94",
+      "lease": "Kontrata sa upa",
+      "other": "Iba pa"
+    },
+    "sourceLink": "Pinagmulan: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Ang mga notario ay hindi pwedeng magbigay ng payong legal",
+      "short": "Ang mga abogado at awtorisadong kinatawan lang ang pwedeng gumawa nito.",
+      "body": "Ang mga abogado at DOJ-accredited representatives lang ang pwedeng magbigay ng payong legal tungkol sa immigration. Ang “notario” ay hindi pwede. Sa US, ang notary public ay taga-saksi lang ng pirma.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Walang makakapagbigay ng garantiya sa green card",
+      "short": "Walang tinatawag na “special list.”",
+      "body": "Walang makakapagbigay ng garantiya sa green card o maglalagay sa iyo sa “special list.” Kung may mangako ng resulta o humingi ng pera para pabilisin ang lakad, tandaan na babala ito.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Libre ang mga form ng USCIS",
+      "short": "I-download ang mga ito sa uscis.gov.",
+      "body": "Libreng i-download ang mga opisyal na form ng USCIS sa uscis.gov. May bayad ang ilang aplikasyon, pero ang mga form mismo ay laging libre. Ang mga opisyal na website ng gobyerno ay nagtatapos sa .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Paano suriin ang isang abogado",
+      "short": "Hanapin sila sa state bar.",
+      "body": "Hanapin ang abogado sa state bar kung saan sila lisensyado. Sa Texas, gamitin ang “Find a Lawyer” ng State Bar of Texas. Para sa mga akreditadong kinatawan, tingnan ang listahan ng DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Mga pangunahing karapatan sa pag-upa",
+      "short": "Ang pagpapalayas ay dapat dumaan sa korte.",
+      "body": "Basahin ang iyong kontrata sa pag-upa at magtago ng kopya. Hindi ka pwedeng paalisin ng may-ari sa pamamagitan ng pagpapalit ng kandado o pagkuha ng iyong mga gamit; ang pagpapalayas ay kailangang dumaan sa korte. Huwag balewalain ang mga papel mula sa korte kung matanggap mo ito.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Mga pangunahing karapatan sa trabaho",
+      "short": "Ang minimum wage at overtime ay para sa karamihan ng mga manggagawa.",
+      "body": "Kailangang bayaran ang karamihan ng mga manggagawa ng hindi bababa sa federal minimum wage at overtime para sa mga oras na sumusobra sa 40 sa isang linggo. Tumatanggap ang Department_of_Labor ng mga reklamo sa sahod anuman ang katayuan sa immigration. Magtago ng tala ng iyong mga oras at sahod.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Mag-scan ng Liham",
+    "intro": "Kunan ng litrato ang liham o dokumento. Ipapaliwanag namin ito sa simpleng wika.",
+    "privacy": "Babasahin lang ang iyong litrato para ipaliwanag ito, pagkatapos ay itatapon na. Hindi ito kailanman itatago.",
+    "protecting": "Itinatago ang mga sariling detalye...",
+    "protectingNote": "Ginagawa ito sa iyong telepono. Wala pang naipapadala.",
+    "reviewTitle": "Suriin bago ipadala",
+    "reviewIntro": "Tinatakpan ng itim na guhit ang mga sariling detalye. Ang tinakpan lang na kopya ang ipapadala para basahin.",
+    "foundCount": "{count, plural, =0 {Wala kaming nakitang sariling detalye na awtomatikong tinakpan.} one {Tinakpan namin ang # sariling detalye: {kinds}.} other {Tinakpan namin ang # na sariling detalye: {kinds}.}}",
+    "ocrFailed": "Hindi namin mabasa ang teksto sa iyong telepono. I-drag sa ibabaw ng anumang pribado para takpan ito.",
+    "reviewHelp": "I-drag sa anumang gusto mong itago. Pindutin ang itim na guhit para alisin ang takip nito.",
+    "reviewImageAlt": "Ang iyong dokumento na may mga takip na sariling detalye",
+    "uncover": "Alisin ang takip",
+    "undo": "Ibalik",
+    "sendCovered": "Ipadala ang Tinakpang Kopya",
+    "cancelScan": "Huwag ituloy",
+    "rejected_blurry": "Masyadong malabo ang larawang ito para mabasa",
+    "rejected_dark": "Masyadong madilim ang larawang ito para mabasa",
+    "rejected_bright": "Masyadong maliwanag o kupas ang larawang ito",
+    "rejected_unreadable": "Hindi namin mabasa nang sapat ang larawang ito",
+    "rejectedBody": "Para maipaliwanag nang tama ang sulat mo at matakpan ang iyong pribadong impormasyon, kailangan namin ng malinaw na larawan. Walang naipadala.",
+    "tipsTitle": "Para sa malinaw na larawan",
+    "tip1": "Ilatag nang patag ang sulat sa madilim na mesa.",
+    "tip2": "Gumamit ng maliwanag at pantay na ilaw. Iwasan ang anino at silaw.",
+    "tip3": "Hawakan nang diretso ang telepono sa ibabaw ng pahina para mapuno ng pahina ang screen.",
+    "tip4": "I-tap ang screen para mag-focus, saka huwag gumalaw.",
+    "retake": "Kumuha ng Ibang Larawan",
+    "chooseAnother": "Pumili ng Ibang Larawan",
+    "kind_aNumber": "A-number",
+    "kind_receipt": "numero ng resibo",
+    "kind_ssn": "numero ng Social Security",
+    "kind_phone": "numero ng telepono",
+    "kind_email": "email",
+    "kind_account": "numero ng account",
+    "kind_name": "pangalan",
+    "kind_birth": "petsa ng kapanganakan",
+    "kind_address": "tirahan",
+    "kind_id": "numero ng ID",
+    "takePhoto": "Kumuha ng Litrato",
+    "choosePhoto": "Pumili ng Litrato",
+    "trySample": "Subukan ang Isang Halimbawang Liham",
+    "samplesTitle": "Mga Halimbawang Liham",
+    "samplesFooter": "Mga huwad na liham na may mga gawa-gawang pangalan at numero, para masubukan ang app.",
+    "sample1": "Abiso ng resibo",
+    "sample2": "Abiso sa pagdinig",
+    "sample3": "Pag-renew ng upa",
+    "reading": "Binabasa ang iyong liham…",
+    "whatThisIs": "Kung Ano Ito",
+    "summary": "Buod",
+    "dates": "Mga Petsa",
+    "noDates": "Walang nakitang petsa.",
+    "addDate": "Idagdag ang “{label}” sa aking mga petsa",
+    "wordsToKnow": "Mga Salitang Dapat Malaman",
+    "nextStep": "Susunod na Hakbang",
+    "highRiskTitle": "Maaaring kailanganin nito ang isang propesyonal",
+    "mediumRiskTitle": "Maaaring kailangan itong sagutin",
+    "risk_low": "Mababang panganib",
+    "risk_medium": "Kailangan ng pansin",
+    "risk_high": "Mahalaga",
+    "findHelp": "Maghanap ng Libreng Tulong Legal",
+    "photoNotSaved": "Hindi na-save ang iyong litrato.",
+    "scanAnother": "Mag-scan ng Iba Pa",
+    "tooBig": "Masyadong malaki ang litratong iyon. Subukan ang iba.",
+    "notConfigured": "Kailangan ng app ang isang AI key sa server para magbasa ng liham. Subukan na lang ang isang halimbawang liham."
+  },
+  "ask": {
+    "title": "Magtanong",
+    "emptyTitle": "Magtanong tungkol sa buhay sa US",
+    "emptySub": "Ang mga sagot ay galing sa mga pinagkakatiwalaang pagkukunan. Para sa mga tanong tungkol sa iyong kaso, tutulungan ka naming makahanap ng propesyonal.",
+    "suggested": "Subukang Itanong",
+    "q1": "Ano ang pagkakaiba ng green card at work permit?",
+    "q2": "Ano ang I-94?",
+    "q3": "Paano ko malalaman kung totoo ang isang abogado?",
+    "q4": "Ano ang isang notario at bakit ako dapat mag-ingat?",
+    "placeholder": "Magtanong",
+    "send": "Ipadala",
+    "mic": "Sabihin ang iyong tanong",
+    "micStop": "Itigil ang pakikinig",
+    "listening": "Nakikinig…",
+    "thinking": "Hinahanap sa mga pinagkakatiwalaang pagkukunan…",
+    "caseSpecific": "Depende ito sa iyong sitwasyon",
+    "findHelp": "Maghanap ng Libreng Tulong Legal Malapit sa Iyo",
+    "you": "Ikaw",
+    "landed": "Landed",
+    "clear": "I-clear"
+  },
+  "help": {
+    "title": "Maghanap ng Libreng Tulong Legal",
+    "searchPlaceholder": "Maghanap sa {city}",
+    "filterLabel": "I-filter",
+    "all": "Lahat",
+    "free": "Libre",
+    "spanish": "Espanyol",
+    "directories": "Mga Mapagkakatiwalaang Direktoryo",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Libreng tulong legal ayon sa ZIP code",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "Mga libreng tutulong na nakalista sa korte ng imigrasyon",
+    "results": "Malapit sa {city}",
+    "finding": "Naghahanap ng tulong malapit sa iyo…",
+    "empty": "Walang nakita. Subukan ang “Lahat.”",
+    "type_nonprofit": "Nonprofit",
+    "type_accredited_rep": "Akreditadong kinatawan",
+    "type_attorney": "Abogado",
+    "type_clinic": "Klinika",
+    "type_unknown": "Organisasyon",
+    "cost_free": "Libre",
+    "cost_low": "Mababang bayad",
+    "cost_paid": "May bayad",
+    "cost_unknown": "Magtanong tungkol sa bayad",
+    "speaks": "Nagsasalita ng {languages}",
+    "call": "Tumawag",
+    "website": "Website",
+    "directions": "Direksyon",
+    "details": "Detalye",
+    "howToVerify": "Paano I-verify",
+    "verify1": "Tanungin kung ang tumutulong sa iyo ay lisensyadong abogado o akreditadong kinatawan ng DOJ.",
+    "verify2": "Hanapin ang mga abogado sa state bar. Hanapin ang mga akreditadong kinatawan sa EOIR roster.",
+    "verify3": "Huwag na huwag pipirma sa mga blangkong papel o magbibigay ng mga orihinal na dokumento.",
+    "verify4": "Magtanong muna tungkol sa bayad bago ang inyong unang pagkikita.",
+    "verifyLinkBar": "State Bar Lookup",
+    "verifyLinkEoir": "EOIR Roster",
+    "rating": "Binigyan ng {rating} mula sa 5",
+    "notFound": "Wala na ang listahang ito."
+  },
+  "prep": {
+    "title": "Paghahanda sa Pagkikita",
+    "intro": "Gumawa ng isang pahinang buod para dalhin sa abogado o awtorisadong kinatawan. Naka-sulat ito sa wika mo at sa Ingles.",
+    "datesSection": "Mga Petsang Kasama",
+    "noDates": "Wala pang petsa. Pwede ka pa ring magdagdag ng mga tanong.",
+    "questions": "Mga Tanong Ko",
+    "questionsFooter": "Hanggang 5. Huwag maglagay ng mga numero ng ID.",
+    "questionPlaceholder": "Tanong {n}",
+    "create": "Gumawa ng Buod",
+    "creating": "Ginagawa ang buod mo…",
+    "share": "Ibahagi",
+    "print": "I-print",
+    "copy": "Kopyahin",
+    "copied": "Nakopya na",
+    "yourLanguage": "Sa Wika Mo",
+    "english": "Sa Ingles",
+    "edit": "Baguhin"
+  },
+  "community": {
+    "title": "Komunidad",
+    "events": "Mga Kaganapan Malapit sa Sayo",
+    "eventsFooter": "Libre at pwedeng-pwedeng sa mga bagong dating na kaganapan mula sa mga pampublikong listahan.",
+    "noEvents": "Walang makitang kaganapan sa ngayon.",
+    "loadingEvents": "Hinahanap ang mga kaganapan malapit sa sayo…",
+    "people": "Mga Taong Nakaabot Na Doon",
+    "peopleFooter": "Mga halimbawang kwento para sa demo na ito. Malapit na ang totoong pagtutugma.",
+    "sayHi": "Batiin",
+    "sayHiTo": "Batiin si {name}",
+    "toast": "Malapit na ang pagmemensahe.",
+    "bio": "Lumipat mula sa {from} patungong {city} {years, plural, one {# taon} other {# taon}} ang nakalipas. {job}. Marunong magsalita ng {languages}.",
+    "open": "Buksan ang kaganapan"
+  },
+  "jobs": {
+    "title": "Mga Trabaho",
+    "credentialTitle": "Ang Iyong mga Kwalipikasyon",
+    "credentialLoading": "Tinitingnan kung paano kinikilala ang trabaho mo…",
+    "noBackground": "Ilagay ang karanasan mo sa trabaho sa Mga Setting para makita kung paano ito gagamitin dito.",
+    "stateBoard": "Hanapin ang Lupon sa Iyong Estado",
+    "searchPlaceholder": "Maghanap ng trabaho sa {city}",
+    "results": "Mga Trabaho Malapit sa {city}",
+    "empty": "Walang nakitang trabaho. Subukang maghanap ng iba.",
+    "finding": "Hinahanap ang mga trabaho…",
+    "via": "mula sa {source}"
+  },
+  "settings": {
+    "title": "Mga Setting",
+    "profile": "Profile",
+    "editProfile": "Ulitin ang Pagsisimula",
+    "city": "Lungsod",
+    "language": "Wika",
+    "notifications": "Paalala sa Petsa",
+    "notificationsFooter": "Nakatago ang mga paalala sa teleponong ito.",
+    "notificationsDenied": "Naka-block ang mga paalala sa settings ng iyong browser.",
+    "privacy": "Privacy",
+    "privacyFooter": "Ang lahat ng alam ng Landed ay nakatago lamang sa teleponong ito. Hindi kailanman nase-save ang mga litrato ng dokumento.",
+    "deleteData": "Burahin ang Aking Data",
+    "deleteTitle": "Burahin ang lahat ng data mo?",
+    "deleteBody": "Buburahin nito ang iyong profile, plano, mga petsa, at tanong mula sa teleponong ito. Hindi na ito maibabalik.",
+    "deleteConfirm": "Burahin",
+    "deleted": "Nabura na ang iyong data.",
+    "about": "Tungkol sa Landed",
+    "version": "Bersyon",
+    "aboutFooter": "Ipinapaliwanag ng Landed ang mga impormasyon. Hindi ito legal na payo."
+  },
+  "checklist": {
+    "title": "Mga Dapat Ayusin",
+    "entrySub": "Ang iyong listahan para sa unang taon",
+    "progress": "Tapos na ang {done} sa {total}",
+    "howToToggle": "Paano ito gagawin",
+    "howToTitle": "Paano Ito Gawin",
+    "linksTitle": "Mga Mapagkakatiwalaang Link",
+    "official": "Opisyal",
+    "nonprofit": "Nonprofit",
+    "checked": "Sinuri noong {date}",
+    "markDone": "Markahan bilang Tapos na",
+    "markNotDone": "Markahan bilang Hindi Pa Tapos",
+    "doneOn": "Tapos na noong {date}",
+    "addDate": "Maglagay ng Petsa para Dito",
+    "markItemDone": "Markahan ang “{title}” bilang tapos na",
+    "markItemNotDone": "Markahan ang “{title}” bilang hindi pa tapos",
+    "notFound": "Wala ang bagay na ito sa iyong listahan.",
+    "stepsFooter": "Pangkalahatang hakbang na isinulat ng koponan ng Landed. Hindi ito payong legal.",
+    "sections": {
+      "start": "Mga Unang Hakbang",
+      "money": "Pera at Buwis",
+      "work": "Trabaho",
+      "family": "Kalusugan at Pamilya",
+      "protect": "Protektahan ang Iyong Sarili",
+      "status": "Nakadepende sa Iyong Status"
+    },
+    "items": {
+      "i94": {
+        "title": "Kumuha ng kopya ng iyong I-94",
+        "short": "Ang iyong opisyal na rekord ng pagdating. Suriin ang mga petsa rito.",
+        "body": "Ang I-94 ay ang rekord ng pamahalaan kung kailan ka dumating at kung gaano katagal ka maaaring manatili. Hinihingi ito ng maraming tanggapan, at mahalaga ang petsa rito. Makukuha mo ito nang libre online.",
+        "steps": {
+          "s1": "Pumunta sa opisyal na website ng I-94. Libre ito.",
+          "s2": "Piliin ang “Get Most Recent I-94” at i-type ang iyong pangalan at mga detalye ng pasaporte nang eksakto tulad ng nasa pasaporte mo.",
+          "s3": "Suriin ang iyong pangalan, uri ng iyong pagpasok (class of admission), at ang petsa ng “Admit Until”.",
+          "s4": "I-save o mag-print ng kopya at itago itong kasama ng iyong pasaporte.",
+          "s5": "Kung may mali rito, matutulungan ka ng isang tanggapan ng CBP Deferred Inspection na maitama ito."
+        },
+        "links": {
+          "l1": "Opisyal na website ng I-94 (CBP)",
+          "l2": "Tungkol sa I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Kumuha ng Social Security number",
+        "short": "Kailangan mo ito para magtrabaho at sa marami pang iba.",
+        "body": "Ang Social Security number (SSN) ay ginagamit para sa trabaho, buwis, at mga bangko. Hindi lahat ay maaaring kumuha nito. Nakadepende ito sa iyong immigration status at pahintulot na magtrabaho. Ang kard at ang numero ay laging libre.",
+        "steps": {
+          "s1": "Alamin kung maaari kang kumuha ng numero at kung aling mga dokumento ang kailangan mo.",
+          "s2": "Tipunin ang iyong mga dokumento: kadalasang ang iyong pasaporte, dokumento sa immigration, at patunay ng iyong edad.",
+          "s3": "Simulan ang iyong aplikasyon online o pumunta sa isang malapit na tanggapan ng Social Security.",
+          "s4": "Maghintay para sa iyong kard sa pamamagitan ng koreo. Itago ito sa ligtas na lugar, huwag sa iyong pitaka."
+        },
+        "links": {
+          "l1": "Social Security number at kard (SSA)"
+        }
+      },
+      "address": {
+        "title": "Sabihin sa USCIS kapag lumipat ka",
+        "short": "Kailangang iulat ng karamihan ang bagong tirahan sa loob ng 10 araw.",
+        "body": "Kailangang sabihin ng karamihan sa mga hindi mamamayan sa USCIS ang bagong tirahan sa loob ng 10 araw paglipat. Kung hindi mo gagawin, baka mapalampas mo ang mahahalagang liham. Libre ito.",
+        "steps": {
+          "s1": "Kapag lumipat ka, isulat ang petsa. Kadalasang mayroon kang 10 araw.",
+          "s2": "Palitan ang iyong tirahan online sa USCIS.",
+          "s3": "Kung mayroon kang kaso sa korte ng immigration, kailangan mo ring sabihin sa korte, gamit ang pormang EOIR-33.",
+          "s4": "I-save ang pahina ng kumpirmasyon o email."
+        },
+        "links": {
+          "l1": "Palitan ang iyong tirahan sa USCIS"
+        }
+      },
+      "bank": {
+        "title": "Magbukas ng bank account",
+        "short": "Panatilihing ligtas ang iyong pera at iwasan ang mga bayarin sa pag-cash ng tseke.",
+        "body": "Ang account sa bangko o credit union ay mas ligtas para sa iyong pera kaysa sa cash at tumutulong sa iyong bumuo ng rekord sa US. Ang ilang bangko ay tumatanggap ng pasaporte o consular ID.",
+        "steps": {
+          "s1": "Ihambing ang mga bangko at credit union. Tingnan ang buwanang bayarin at minimum na balanse.",
+          "s2": "Dalhin ang iyong ID (pasaporte o consular ID) at ang iyong SSN o ITIN kung mayroon ka nito. Magtanong kung aling mga dokumento ang tinatanggap nila.",
+          "s3": "Buksan ang account at humingi ng debit card.",
+          "s4": "Iwasan ang mga tindahan ng pag-cash ng tseke. Mataas ang kanilang mga bayarin."
+        },
+        "links": {
+          "l1": "Mga account sa bangko (Consumer Financial Protection Bureau)",
+          "l2": "Impormasyon sa bangko (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Kumuha ng state ID o driver's license",
+        "short": "Pinapadali ng lokal na photo ID ang maraming bagay.",
+        "body": "Ang state ID o driver's license ay tinatanggap halos kahit saan. Bawat state ay may sariling patakaran kung anong mga dokumento ang kailangan mo.",
+        "steps": {
+          "s1": "Hanapin ang opisina ng driver's license sa iyong state.",
+          "s2": "Tingnan kung aling mga dokumento ang tinatanggap ng iyong state.",
+          "s3": "Mag-set ng appointment kung kailangan ito sa inyong state.",
+          "s4": "Dalhin ang iyong mga dokumento at bayad sa iyong appointment."
+        },
+        "links": {
+          "l1": "Hanapin ang motor vehicle office ng iyong state (USA.gov)",
+          "l2": "Texas driver license at ID (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Kumuha ng ITIN kung wala kang SSN",
+        "short": "Isang tax number para sa mga taong walang Social Security number.",
+        "body": "Ang ITIN (Individual Taxpayer Identification Number) ay nagbibigay-daan sa iyong magbayad ng buwis kung wala kang Social Security number. Hindi ito nagbibigay ng pahintulot na magtrabaho. Hindi ibinubunyag ng IRS ang numerong ito para magpatupad ng batas sa imigrasyon.",
+        "steps": {
+          "s1": "Tingnan kung kailangan mo ng ITIN. Kailangan mo lang nito kung wala kang SSN.",
+          "s2": "Punan ang IRS Form W-7.",
+          "s3": "Ipadala ito kasama ang iyong tax return, o humingi ng libreng tulong sa isang IRS Certified Acceptance Agent.",
+          "s4": "Maghintay sa sulat mula sa IRS na naglalaman ng iyong numero. Itabi ito nang ligtas."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Mag-file ng iyong buwis",
+        "short": "Karaniwang kailangang magbayad ng buwis sa kalagitnaan ng Abril. May libreng tulong na available.",
+        "body": "Kung ikaw ay kumita ng pera sa US, baka kailangan mong mag-file ng tax return, karaniwan bago ang Abril 15. Ang pag-file sa takdang oras ay makakatulong din sa iyong makakuha ng mga refund at credit. May libreng tulong sa buwis na available.",
+        "steps": {
+          "s1": "Tipunin ang iyong mga form sa buwis mula sa trabaho, tulad ng W-2 o 1099.",
+          "s2": "Maghanap ng libreng tulong sa buwis malapit sa iyo (VITA).",
+          "s3": "Mag-file ng iyong return sa itinakdang petsa, karaniwan ay Abril 15.",
+          "s4": "Magtabi ng mga kopya ng iyong return at mga form."
+        },
+        "links": {
+          "l1": "Mag-file ng iyong buwis (IRS)",
+          "l2": "Libreng tulong sa buwis (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Simulan ang pagbuo ng credit",
+        "short": "Tinutulungan ka ng credit na umupa ng bahay at kumuha ng mga pautang.",
+        "body": "Ipinapakita ng iyong kasaysayan ng credit kung paano ka nagbabayad ng mga bayarin. Tinitingnan ito ng mga nagpapakomersyo ng bahay at nagpapautang. Maaari mo itong simulan nang paunti-unti at suriin ang iyong mga ulat nang libre.",
+        "steps": {
+          "s1": "Alamin kung ano ang mga credit report at score.",
+          "s2": "Kunin ang iyong mga libreng credit report at suriin kung may mga mali.",
+          "s3": "Magbayad ng bawat bayarin sa tamang oras.",
+          "s4": "Isipin ang tungkol sa isang secured credit card, at huwag na huwag magbabayad sa sinumang nangangakong “aayusin” ang iyong credit."
+        },
+        "links": {
+          "l1": "Mga credit report at score (CFPB)",
+          "l2": "Mga libreng credit report (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Alamin ang mga petsa ng iyong work permit",
+        "short": "Idagdag ang petsa ng pagtatapos para hindi mo ito makaligtaan.",
+        "body": "Ang work permit (EAD) ay may petsa ng pagtatapos. Ang ilang tao ay maaaring humingi ng bago bago ito matapos. Nakasalalay sa iyong kategorya kung kailan at paano, kaya suriin ang opisyal na pahina at i-save ang petsa.",
+        "steps": {
+          "s1": "Hanapin ang petsa ng pagtatapos sa iyong card at idagdag ito sa iyong mga petsa.",
+          "s2": "Basahin kung kailan at paano ka maaaring humiling ng pagpapanibago (Form I-765).",
+          "s3": "Kung nag-file ka online, gumamit ng USCIS account.",
+          "s4": "Itabi ang iyong abiso ng resibo at suriin ang estado ng iyong kaso."
+        },
+        "links": {
+          "l1": "Form I-765, work permit (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Alamin ang iyong mga karapatan sa trabaho",
+        "short": "Ang minimum wage at overtime ay para sa karamihan ng mga manggagawa.",
+        "body": "Kailangang makuha ng karamihan sa mga manggagawa ang kahit man lang minimum wage at dagdag na bayad para sa overtime. Tinatanggap ng Department of Labor ang mga reklamo mula sa mga manggagawa anuman ang kanilang estado sa imigrasyon.",
+        "steps": {
+          "s1": "Alamin ang minimum wage sa iyong state.",
+          "s2": "Isulat ang iyong mga oras at itago ang iyong mga pay stub.",
+          "s3": "Kung hindi mo nakuha ang bayad na para sa iyo, maaari kang maghain ng reklamo."
+        },
+        "links": {
+          "l1": "Minimum wage (Department of Labor)",
+          "l2": "Maghain ng reklamo sa sahod (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "Maghanap ng murang pangangalagang pangkalusugan",
+        "short": "Ang mga sentrong pangkalusugan ng komunidad ay naniningil batay sa iyong kita.",
+        "body": "Tinatanggap ng mga sentrong pangkalusugan ng komunidad ang mga pasyente kahit walang insurance at naniningil batay sa kita. Ang ilang imigrante ay maaari ding makakuha ng health insurance. Kailangang gamutin ka sa emergency room kung may emergency.",
+        "steps": {
+          "s1": "Maghanap ng sentrong pangkalusugan ng komunidad malapit sa iyo.",
+          "s2": "Tingnan kung aling saklaw sa kalusugan ang maaari mong makuha.",
+          "s3": "Dalhin ang ID at patunay ng kita sa iyong unang pagbisita.",
+          "s4": "Sa panahon ng emergency, pumunta sa emergency room o tumawag sa 911."
+        },
+        "links": {
+          "l1": "Saklaw sa kalusugan para sa mga imigrante (HealthCare.gov)",
+          "l2": "Maghanap ng sentrong pangkalusugan (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Ipa-enroll ang iyong mga anak sa paaralan",
+        "short": "Ang lahat ng bata ay may karapatan sa pampublikong paaralan.",
+        "body": "Sa US, lahat ng bata ay maaaring pumasok sa libreng pampublikong paaralan, anuman ang kanilang estado sa imigrasyon. Hindi maaaring magtanong ang mga paaralan tungkol sa estado sa imigrasyon para makapasok ang isang bata.",
+        "steps": {
+          "s1": "Makipag-ugnayan sa opisina ng distrito ng paaralan sa inyong lugar.",
+          "s2": "Maghanda ng katibayan ng edad ng inyong anak at katibayan kung saan kayo nakatira.",
+          "s3": "Punan ang mga form sa pagpapatala. Humingi ng tulong sa inyong wika.",
+          "s4": "Magtanong tungkol sa suporta sa pag-aaral ng Ingles para sa inyong anak."
+        },
+        "links": {
+          "l1": "Paaralan para sa mga bata (USAHello)",
+          "l2": "Mga karapatan sa edukasyon (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Magparehistro sa Selective Service (mga lalaking 18–25)",
+        "short": "Kailangang magparehistro ng karamihan sa mga lalaking edad 18 hanggang 25 na naninirahan sa US.",
+        "body": "Kailangang magparehistro sa Selective Service ang karamihan sa mga lalaking edad 18 hanggang 25 na nakatira sa US, kasama ang karamihan sa mga imigrante. Libre at mabilis ang pagpaparehistro.",
+        "steps": {
+          "s1": "Suriin kung kailangan mong magparehistro. Kadalasang para ito sa mga lalaking edad 18 hanggang 25.",
+          "s2": "Magparehistro online.",
+          "s3": "I-save ang iyong numero ng pagpaparehistro."
+        },
+        "links": {
+          "l1": "Magparehistro (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Maghanap ng libreng tulong legal na mapagkakatiwalaan mo",
+        "short": "Alamin kung sino ang pwedeng magbigay ng payo sa imigrasyon bago mo ito kailanganin.",
+        "body": "Mga abogado lamang at kinatawan na may akreditasyon ng DOJ ang maaaring magbigay ng payo sa ligal na imigrasyon. Maghanap ng libre o murang grupo ng tulong legal malapit sa iyo bago mo pa ito kailanganin.",
+        "steps": {
+          "s1": "Maghanap ng libre o murang tulong legal malapit sa iyo.",
+          "s2": "Siguraduhing ang tao ay isang abogado o kinatawan na may akreditasyon ng DOJ.",
+          "s3": "Magtanong tungkol sa gastos bago ang inyong unang pagpupulong.",
+          "s4": "Magdala ng mga kopya ng iyong mga dokumento. Itago ang mga orihinal."
+        },
+        "links": {
+          "l1": "Maghanap ng tulong legal (ImmigrationLawHelp.org)",
+          "l2": "Mga nagbibigay ng libreng serbisyong legal (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Matutong mamataan ang mga scam sa imigrasyon",
+        "short": "Hindi pwedeng magbigay ng legal na payo ang mga notario. Libre ang mga form.",
+        "body": "Pinupuntirya ng mga scammer ang mga imigrante. Ang isang “notario” ay hindi pwedeng magbigay ng legal na payo, walang sinuman ang pwedeng mangako ng green card, at libreng i-download ang mga form ng USCIS.",
+        "steps": {
+          "s1": "Alamin ang mga pinakakaraniwang scam sa imigrasyon.",
+          "s2": "Mag-download lamang ng mga form mula sa uscis.gov. Libre ang mga ito.",
+          "s3": "Kung may subukang mang-scam sa iyo, i-report ito."
+        },
+        "links": {
+          "l1": "Iwasan ang mga scam (USCIS)",
+          "l2": "Mga scam laban sa mga imigrante (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Alamin ang iyong mga karapatan bilang nangungupahan",
+        "short": "Kailangang dumaan sa korte ang may-ari ng bahay para mapaalis ka.",
+        "body": "Sa Texas, hindi ka maaaring paalisin ng may-ari ng bahay sa pamamagitan ng pagpapalit ng mga kandado o pagkuha ng iyong mga gamit. Ang pagpapaalis ay kailangang dumaan sa korte. Basahin ang iyong kontrata sa pag-upa at magtabi ng kopya.",
+        "steps": {
+          "s1": "Basahin ang iyong kontrata sa pag-upa at magtabi ng kopya.",
+          "s2": "Humingi ng mga pagkukumpuni sa pamamagitan ng sulat at magtabi ng mga kopya.",
+          "s3": "Alamin kung paano gumagana ang proseso ng pagpapaalis.",
+          "s4": "Kung makakatanggap ka ng mga papel mula sa korte, huwag itong balewalain. Humingi ng libreng tulong legal."
+        },
+        "links": {
+          "l1": "Kung sakaling i-lock ka sa labas ng may-ari ng bahay (TexasLawHelp)",
+          "l2": "Paano gumagana ang pagpapaalis (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Bago ka maglakbay sa labas ng US",
+        "short": "Ang pag-alis ay maaaring makaapekto sa nakabinbing kaso. Magtanong muna.",
+        "body": "Para sa maraming imigrante, ang pag-alis sa US ay maaaring makaapekto sa isang nakabinbing aplikasyon o sa kakayahang makabalik. Ang ilang mga tao ay nangangailangan ng dokumento sa paglalakbay bago sila umalis. Kung ligtas ito ay nakasalalay sa iyong sitwasyon.",
+        "steps": {
+          "s1": "Bago ka bumili ng tiket, alamin kung anong mga dokumento sa paglalakbay ang mayroon.",
+          "s2": "Magbasa tungkol sa Advance Parole at Re-entry Permits (Form I-131).",
+          "s3": "Makipag-usap sa libreng tulong legal tungkol sa iyong sitwasyon bago ka maglakbay.",
+          "s4": "Dalhin ang iyong mga dokumento sa imigrasyon kapag naglalakbay ka."
+        },
+        "links": {
+          "l1": "Mga dokumento sa paglalakbay (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Mga benepisyo mula sa gobyerno at ang iyong estado",
+        "short": "Nakadepende sa estado kung sino ang pwedeng makakuha ng tulong. Magtanong bago mag-apply.",
+        "body": "Ang ilang mga programa ay tumutulong sa pagkain, pangangalagang pangkalusugan, at pabahay. Nakadepende sa estado ng imigrasyon kung sino ang makakakuha nito, at sa ilang mga kaso, ang paggamit ng mga benepisyo ay maaaring makaapekto sa hinaharap na aplikasyon. Magtanong sa libreng tulong legal bago ka mag-apply.",
+        "steps": {
+          "s1": "Alamin kung aling mga programa ng benepisyo mula sa gobyerno ang mayroon.",
+          "s2": "Nakadepende sa iyong estado ang pagiging kwalipikado. Tanungin ang libreng tulong legal kung ano ang naaangkop sa iyo.",
+          "s3": "Maaaring maging kwalipikado ang mga batang ipinanganak sa US kahit na hindi kwalipikado ang kanilang mga magulang.",
+          "s4": "Palaging magsabi ng katotohanan sa mga aplikasyon."
+        },
+        "links": {
+          "l1": "Mga benepisyo mula sa gobyerno (USA.gov)",
+          "l2": "Mga mapagkukunan sa komunidad (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Kung mayroon kang petsa sa korte ng imigrasyon",
+        "short": "Huwag na huwag palampasin ang pagdinig. Suriin ang iyong kaso online.",
+        "body": "Kung may kaso ka sa korte ng imigrasyon, ang hindi pagsipot sa pagdinig ay may mabigat na epekto. Pwede mong tingnan ang susunod mong petsa ng pagdinig online gamit ang iyong A-number.",
+        "steps": {
+          "s1": "Tingnan ang susunod mong petsa ng pagdinig online.",
+          "s2": "Idagdag ang petsa ng pagdinig sa iyong mga petsa.",
+          "s3": "Kung lumipat ka, sabihin sa korte sa loob ng 5 araw gamit ang form EOIR-33.",
+          "s4": "Maghanap ng libreng tulong legal sa lalong madaling panahon.",
+          "s5": "Pumunta sa bawat pagdinig, kahit wala ka pang abogado."
+        },
+        "links": {
+          "l1": "Awtomatikong impormasyon ng kaso (EOIR)",
+          "l2": "Mga korte ng imigrasyon (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Makipag-usap sa libreng tulong legal",
+    "body": "Depende ito sa iyong katayuan sa imigrasyon. Matitingnan ng isang libreng grupo ng tulong legal ang iyong sitwasyon.",
+    "button": "Maghanap ng Libreng Tulong Legal"
+  },
+  "browser": {
+    "close": "Isara",
+    "back": "Bumalik",
+    "openInBrowser": "Buksan sa Browser",
+    "openPage": "Buksan ang Pahina",
+    "versionOfficial": "Opisyal na bersyon sa {language}",
+    "versionAi": "Salin ng AI",
+    "versionOriginal": "Orihinal",
+    "original": "Orihinal",
+    "aiBanner": "Isinalin ng AI mula sa {source}. Maaaring may mga mali. Suriin ang orihinal para sa anumang mahalaga.",
+    "cantEmbed": "Hindi maipakita ang site na ito sa loob ng Landed. Narito ang maikling buod.",
+    "noSummary": "Hindi maipakita ang site na ito sa loob ng Landed.",
+    "summaryTitle": "Buod mula sa Landed",
+    "loading": "Binubuksan…",
+    "translating": "Isinasalin…",
+    "preparing": "Inihahanda ang pahinang ito…",
+    "translate": "Isalin",
+    "translateTo": "Isalin ang pahinang ito sa",
+    "noTranslation": "Orihinal (walang salin)",
+    "translatingTo": "Isinasalin sa {language}…",
+    "alreadyIn": "Ang pahinang ito ay nasa {language} na.",
+    "mustVisitTitle": "Para magamit ito, kailangan mong pumunta sa opisyal na website.",
+    "goTo": "Pumunta sa {domain}",
+    "aiFormatted": "Teksto mula sa {domain}, inayos ng AI para mas madaling basahin. Tingnan ang orihinal para sa anumang mahalaga.",
+    "translateFailed": "Hindi gumana ang pagsasalin. Ipinapakita ang orihinal.",
+    "viewOriginal": "Orihinal na pahina: {domain}",
+    "notTrusted": "Ang pahinang ito ay hindi mula sa pinagkakatiwalaang pinagmulan ng Landed."
+  },
+  "assistant": {
+    "title": "Magtanong sa Landed",
+    "button": "Magtanong sa Landed",
+    "tab": "Magtanong",
+    "welcome": "Magtanong tungkol sa iyong checklist, iyong mga petsa, o buhay sa US.",
+    "placeholder": "Magtanong sa Landed",
+    "send": "Ipadala",
+    "mic": "Sabihin ang iyong tanong",
+    "micStop": "Itigil ang pakikinig",
+    "listening": "Nakinig…",
+    "thinking": "Nag-iisip…",
+    "clear": "I-clear ang Chat",
+    "save": "I-save ang chat sa device na ito",
+    "suggested": "Subukang magtanong",
+    "s1": "Ano ang dapat kong unahing gawin?",
+    "s2": "Paano ako kukuha ng ITIN?",
+    "s3": "Kailan mag-e-expire ang aking work permit?",
+    "s4": "Ano ang natitira sa aking listahan?",
+    "aboutItem": "Tungkol sa: {title}",
+    "itemPrompt": "Tulungan mo ako sa “{title}”.",
+    "usedData": "Ginamit: {sources}",
+    "store_profile": "iyong profile",
+    "store_dates": "iyong mga naka-save na petsa",
+    "store_checklist": "iyong checklist",
+    "store_plan": "iyong 90-araw na plano",
+    "store_prepSummaries": "iyong mga naka-save na tanong",
+    "confirm": "Kumpirmahin",
+    "cancel": "Huwag Muna",
+    "confirmed": "Naka-save",
+    "declined": "Hindi naka-save",
+    "proposeDone": "Markahan ang “{title}” bilang tapos na?",
+    "proposeNotDone": "Markahan ang “{title}” bilang hindi pa tapos?",
+    "proposeDate": "Idagdag ang “{label}” sa {date}?",
+    "backToChat": "Bumalik sa usapan",
+    "error": "May nangyaring mali. Pakisubukan ulit."
+  }
+}

@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Retounen",
+    "cancel": "Anile",
+    "done": "Fini",
+    "close": "Fèmen",
+    "add": "Ajoute",
+    "added": "Te ajoute",
+    "delete": "Efase",
+    "save": "Anrejistre",
+    "continue": "Kontinye",
+    "skip": "Sote",
+    "comingSoon": "L ap vini talè jou",
+    "aiLabel": "Eksplikasyon AI · Se pa konsèy legal",
+    "sources": "Sous",
+    "error": "Yon bagay ale mal. Tanpri eseye ankò.",
+    "retry": "Eseye ankò",
+    "loading": "L ap chaje…",
+    "sampleData": "Rezilta kòm echantiyon. Ajoute kle API pou rezilta an dirèk.",
+    "settings": "Anviwònman",
+    "learnMore": "Aprann plis",
+    "openSource": "Open source: {name}"
+  },
+  "tabs": {
+    "label": "Prensipal",
+    "home": "Akèy",
+    "legal": "Legal",
+    "community": "Kominote",
+    "jobs": "Travay"
+  },
+  "language": {
+    "label": "Lang",
+    "en": "English",
+    "es": "Español",
+    "choose": "Chwazi lang ou",
+    "search": "Chèche lang",
+    "other": "Yon lòt lang",
+    "otherPlaceholder": "Tape lang ou",
+    "otherFooter": "Nou pral tradui aplikasyon an nan lang ou avèk AI. Li ka gen kèk erè.",
+    "translate": "Tradui",
+    "translating": "L ap tradui Landed nan {language}…",
+    "notConfigured": "Pou tradui nan yon nouvo lang, li bezwen yon kle Gemini API sou sèvè a.",
+    "unknownLanguage": "Nou pa jwenn lang sa a. Tcheke òtograf la epi eseye ankò.",
+    "translateFailed": "Tradiksyon an pa t mache. Tanpri eseye ankò."
+  },
+  "disclaimer": "Landed eksplike enfòmasyon. Se pa konsèy legal. Pou sitiyasyon pa w la, pale ak yon avoka oswa yon reprezantan ki gen otorizasyon.",
+  "landing": {
+    "hero": "Premye ane ou Ozetazini, ak yon gid epi kèk zanmi.",
+    "sub": "Konprann lèt ou yo, kenbe dat enpòtan yo nan tèt ou, jwenn èd ou ka fè konfyans, ak rankontre moun ki te pase nan menm chemen an.",
+    "whyTitle": "Poukisa sa enpòtan",
+    "whyIntro": "Sa touche milyon moun, men nou pa souvan tande pale de sa. Mal la fèt an kachèt: yon lèt ki konfizan, yon dat limit yo rate, yon fo “notario.”",
+    "stat1Value": "34%",
+    "stat1": "moun ki te fini ak ka tribiman imigrasyon yo te gen yon avoka nan ane fiskal 2026 la, sa ki pi ba depi 2010.",
+    "stat2Value": "2%",
+    "stat2": "moun ki te mande èd san yon avoka ki te reyisi, nan yon etid nasyonal sou 1.2 milyon ka depòtasyon.",
+    "stat3Value": "5×",
+    "stat3": "Nan listwa, kay ki pale Panyòl sèlman te gen apeprè senk fwa plis chans pou yo pa t gen kont labank (done sondaj FDIC).",
+    "statsFooter": "Yo pa rapòte fwod notario yo byen paske viktim yo pè pale. Timoun souvan ap tradui bòdwo, kontra lokasyon ak lèt legal pou paran yo.",
+    "pitch": "Èd la la. Men moun yo pa jwenn li, yo pa ka li l, ni yo pa konnen ki pati ki konsène yo.",
+    "privacyTitle": "Konfidansyalite ou",
+    "privacy": "Pa gen kont. Pa gen anyen ki kite telefòn ou si ou pa mande sa. Nou pa janm kenbe foto dokiman ou yo.",
+    "getStarted": "Kòmanse",
+    "demoPersona": "Sèvi ak Pèsonaj Demo a",
+    "continueToHome": "Kontinye ale nan Akèy la"
+  },
+  "onboarding": {
+    "progress": "Etap {current} sou {total}",
+    "langTitle": "Ki lang ou prefere?",
+    "countryTitle": "Kote ou soti?",
+    "countryOther": "Yon lòt peyi",
+    "countryPlaceholder": "Tape peyi ou",
+    "cityTitle": "Ki vil ou rete?",
+    "cityPlaceholder": "Lòt vil, pa egzanp Chicago, IL",
+    "timeTitle": "Konbyen tan ou genyen depi ou Ozetazini?",
+    "time0": "Mwens pase 1 mwa",
+    "time1": "1–6 mwa",
+    "time2": "6–12 mwa",
+    "time3": "Plis pase 1 ane",
+    "aboutTitle": "Yon ti kras sou ou",
+    "aboutFooter": "Si ou vle. Sa ede nou sijere travay ak moun pou ou rankontre.",
+    "nameLabel": "Non",
+    "namePlaceholder": "Kijan nou dwe rele ou?",
+    "kidsLabel": "Mwen gen timoun",
+    "workLabel": "Travay nan peyi mwen",
+    "workPlaceholder": "pa egzanp Enfimyè diplome",
+    "hardTitle": "Kisa ki sanble pi difisil kounye a?",
+    "hardFooter": "Chwazi tout sa ou vle.",
+    "hard_paperwork": "Papiye",
+    "hard_money": "Lajan",
+    "hard_work": "Jwenn travay",
+    "hard_people": "Rankontre moun",
+    "hard_english": "Angle",
+    "hard_housing": "Lojman",
+    "hard_health": "Sante",
+    "finish": "Fè plan mwen an",
+    "making": "N ap fè plan ou la…",
+    "demoNote": "Egzanp: Maria, yon enfimyè ki soti Venezuela, ki nan Houston depi 2 mwa."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Meksik",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Kiba",
+    "Colombia": "Kolonbi",
+    "India": "End",
+    "Vietnam": "Vyetnam",
+    "Nigeria": "Nijerya",
+    "Ukraine": "Ikrèn",
+    "Afghanistan": "Afganistan"
+  },
+  "categories": {
+    "legal": "Legal",
+    "money": "Lajan",
+    "social": "Moun",
+    "jobs": "Travay",
+    "health": "Sante",
+    "daily": "Lavi Chak Jou"
+  },
+  "home": {
+    "title": "Akey",
+    "greeting": "Bonjou, {name}.",
+    "greetingNoName": "Bonjou.",
+    "dayIn": "Jou {day} nan {city}",
+    "nextSteps": "Pwochen Lach Yo",
+    "nextStepsFooter": "Soti nan plan premye 90 jou ou an. Peze sèk la lè ou fini.",
+    "allSteps": "Gade Tout Etap Yo ({count})",
+    "fewerSteps": "Montre Mwens",
+    "allDone": "Ou fini tout etap yo. Bon travay.",
+    "dueIn": "{count, plural, =0 {Jodia} one {Nan # jou} other {Nan # jou}}",
+    "markDone": "Make “{title}” kòm fini",
+    "markNotDone": "Make “{title}” kòm pa fini",
+    "comingUp": "K ap Vini Yo",
+    "noDates": "Pa gen dat pou kounye a",
+    "noDatesSub": "Eskane yon lèt pou swiv dat li yo",
+    "explore": "Eksplore",
+    "legalSub": "Lèt, dat ak èd gratis",
+    "communitySub": "Evènman ak moun tou pre ou",
+    "jobsSub": "Travay ak diplòm ou yo",
+    "money": "Lajan",
+    "health": "Sante",
+    "noProfile": "Ann mete plan ou an an plas anvan.",
+    "setUp": "Mete l an plas",
+    "makingPlan": "N ap fè plan ou an…",
+    "profileButton": "Anviwònman ak pwofil"
+  },
+  "status": {
+    "green": "Tout bagay bon pou kounye a",
+    "greenSub": "Pa genyen nothing k ap vini nan 6 mwa k ap vini yo.",
+    "yellow": "L ap vini nan {count, plural, one {# jou} other {# jou}}",
+    "red": "L ap vini talè: {count, plural, =0 {jodi a} one {nan # jou} other {nan # jou}}",
+    "redPast": "Gen yon dat ki pase",
+    "redPastSub": "“{label}” te pase sa gen {count, plural, one {# jou} other {# jou}}.",
+    "nextSub": "{label} · {date}",
+    "empty": "Pa gen dat ki anrejistre ankò",
+    "emptySub": "Eskane yon lèt oubyen ajoute yon dat pou kòmanse.",
+    "count": "{count, plural, one {# dat anrejistre} other {# dat anrejistre}}",
+    "prepare": "Kisa pou m prepare?"
+  },
+  "legal": {
+    "title": "Legal",
+    "myDates": "Dat mwen yo",
+    "addDate": "Ajoute yon dat",
+    "datesEmpty": "Dat ou ajoute oswa eskane yo ap parèt isit la.",
+    "daysLeft": "{count, plural, =0 {Jodi a} one {rete # jou} other {rete # jou}}",
+    "daysAgo": "{count, plural, one {sa gen # jou} other {sa gen # jou}}",
+    "reminder": "Règèl",
+    "deleteDate": "Efase “{label}”",
+    "fromScan": "Soti nan yon eskanè",
+    "tools": "Zouti",
+    "scan": "Eskane yon lèt",
+    "scanSub": "Pran foto pou yon eksplikasyon ki klè",
+    "ask": "Poze yon kesyon",
+    "askSub": "Repons ak sous yo",
+    "help": "Jwenn èd legal gratis",
+    "helpSub": "Èd legal toupre ou",
+    "prep": "Prepare pou yon randevou",
+    "prepSub": "Yon rezime pou pote avèk ou",
+    "rights": "Konnen dwa ou",
+    "rightsFooter": "Enfòmasyon jeneral ki gen lyen ak sous ofisyèl.",
+    "addSheetTitle": "Ajoute yon dat",
+    "docType": "Dokiman",
+    "labelField": "Kijan dat sa a ye?",
+    "labelPlaceholder": "egz. Pèmi travay la ekspire",
+    "dateField": "Dat",
+    "noteField": "Nòt",
+    "notePlaceholder": "Si w vle",
+    "docTypes": {
+      "workPermit": "Pèmi travay",
+      "passport": "Paspò",
+      "uscis": "Avi USCIS",
+      "court": "Avi nan tribinal",
+      "i94": "I-94",
+      "lease": "Kontra lokasyon",
+      "other": "Lòt"
+    },
+    "sourceLink": "Sous: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Yon notario pa ka ba ou konsèy legal",
+      "short": "Se avoka ak reprezantan otorize sèlman ki kapab.",
+      "body": "Se sèl avoka ak reprezantan DOJ apwouve ki ka bay konsèy sou kesyon imigrasyon. Yon “notario” pa kapab. Ozetazini, yon notè piblik la pou wè si ou siyen yon dokiman sèlman.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Personn pa ka garanti ou yon green card",
+      "short": "Pa gen okenn “lis espesyal.”",
+      "body": "Pesòn pa ka garanti ou yon green card ni mete ou sou yon “lis espesyal.” Si yon moun pwomèt ou yon rezilta oswa mande ou lajan pou fè bagay yo mache pi vit, se yon gwo avètisman.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Fòm USCIS yo gratis",
+      "short": "Telechaje yo sou uscis.gov.",
+      "body": "Fòm ofisyèl USCIS yo gratis pou telechaje sou uscis.gov. Gen kèk demann ki gen frè pou depoze, men fòm yo menm pa janm koute lajan. Sitwèb gouvènman an fini ak .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Kijan pou verifiye yon avoka",
+      "short": "Chèche konnen sou li nan ba pou avoka nan eta ou a.",
+      "body": "Chèche enfòmasyon sou yon avoka nan ba avoka eta kote l gen lisans lan. Nan Texas, itilize rechèch “Find a Lawyer” nan State Bar of Texas. Pou reprezantan otorize, tcheke lis DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Baz pou moun ki lwe kay",
+      "short": "Fòk yo pase nan tribinal pou mete ou deyò.",
+      "body": "Lekti kontra lokasyon ou a epi kenbe yon kopi. Yon mèt kay pa ka mete ou deyò nan chanje kadna yo oswa pran afè ou; yo oblije pase nan tribinal pou mete ou deyò. Si ou resevwa papye tribinal, pa inyore yo.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Baz nan travay",
+      "short": "Salè minimòm ak lè siplemantè pou pifò travayè.",
+      "body": "Pifò travayè dwe resevwa omwen salè minimòm federal la ak lajan pou lè siplemantè si yo travay plis pase 40 èdtan nan yon semèn. Depatman Travay (US Department of Labor) ap aksepte plent pou salè kèlkeswa estati imigrasyon ou. Kenbe yon kontwòl sou lè ou travay ak konbyen yo peye ou.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Eskane yon lèt",
+    "intro": "Pran yon foto yon lèt oswa yon dokiman. Nou pral eksplike li nan lang senp.",
+    "privacy": "Y ap li foto ou a yon sèl fwa pou eksplike li, epi y ap efase l. Yo pa janm sove l.",
+    "protecting": "N’ap kouvri detay prive yo…",
+    "protectingNote": "Sa fèt sou telefòn ou. Pa gen anyen ki voye ankò.",
+    "reviewTitle": "Verifye anvan ou voye",
+    "reviewIntro": "Bann nwa yo kouvri detay prive yo. Se sèl kopi kouvri sa a ki voye pou l vin li.",
+    "foundCount": "{count, plural, =0 {Nou pa jwenn detay prive otomatikman.} one {Nou kouvri # detay prive: {kinds}.} other {Nou kouvri # detay prive: {kinds}.}}",
+    "ocrFailed": "Nou pa t ’ kapab li tèks la sou telefòn ou an. Trennen sou tout sa ki prive pou kache l ’.",
+    "reviewHelp": "Glase dwèt ou sou nenpòt lòt bagay ou vle kache. Tape yon bann nwa pou w retire l.",
+    "reviewImageAlt": " Dokiman ou an ak detay prive yo kouvri",
+    "uncover": "Retire kouvèti a",
+    "undo": "Anile",
+    "sendCovered": "Voye Kopi Kouvri a",
+    "cancelScan": "Fè anile",
+    "rejected_blurry": "Foto sa a twoub anpil, nou pa ka li l",
+    "rejected_dark": "Foto sa a fè nwa anpil, nou pa ka li l",
+    "rejected_bright": "Foto sa a klere anpil oubyen gen twòp limyè ladan l",
+    "rejected_unreadable": "Nou pa ka li ase nan foto sa a",
+    "rejectedBody": "Pou n ka esplike lèt ou a kòrèk epi pwoteje enfòmasyon prive ou yo, nou bezwen yon foto ki klè. Pa gen anyen ki te voye.",
+    "tipsTitle": "Pou fè yon foto klè",
+    "tip1": "Mete lèt la plat sou yon tab ki nwa.",
+    "tip2": "Sèvi ak bon limyè ki klere tout kote menm jan. Evite lonbraj ak limyè k ap flache nan je.",
+    "tip3": "Kenbe telefòn nan dwat anlè paj la yon fason pou paj la ranpli ekran an.",
+    "tip4": "Tape ekran an pou l vin net, epi kenbe l fiks.",
+    "retake": "Pran Yon Lòt Foto",
+    "chooseAnother": "Chwazi Yon Lòt Foto",
+    "kind_aNumber": "Nimewo A",
+    "kind_receipt": "nimewo resi",
+    "kind_ssn": "nimewo Sekirite Sosyal",
+    "kind_phone": "nimewo telefòn",
+    "kind_email": "imèl",
+    "kind_account": "nimewo kont",
+    "kind_name": "non",
+    "kind_birth": "dat li fèt",
+    "kind_address": "adrès kay",
+    "kind_id": "nimewo pyès idantite",
+    "takePhoto": "Pran Foto",
+    "choosePhoto": "Chwazi Foto",
+    "trySample": "Eseye Yon Lèt Egzanp",
+    "samplesTitle": "Lèt Egzanp",
+    "samplesFooter": "Fo lèt ak non ak nimewo envante, pou teste aplikasyon an.",
+    "sample1": "Avis resepsyon",
+    "sample2": "Avis odyans",
+    "sample3": "Renouvèlman kontra lwaye",
+    "reading": "Ap li lèt ou a…",
+    "whatThisIs": "Ki sa sa ye",
+    "summary": "Rezime",
+    "dates": "Dat",
+    "noDates": "Pa gen dat yo jwenn.",
+    "addDate": "Ajoute “{label}” nan dat mwen yo",
+    "wordsToKnow": "Vokabilè pou konnen",
+    "nextStep": "Pwochen Etap",
+    "highRiskTitle": "Sa ka bezwen yon pwofesyonèl",
+    "mediumRiskTitle": "Sa ka bezwen yon repons",
+    "risk_low": "Risk ki ba",
+    "risk_medium": "Bezwen atansyon",
+    "risk_high": "Enpòtan",
+    "findHelp": "Jwenn Ed Jirik Gratis",
+    "photoNotSaved": "Yo pa t anrejistre foto w la.",
+    "scanAnother": "Eskane Yon Lòt",
+    "tooBig": "Foto sa a twò gwo. Eseye yon lòt.",
+    "notConfigured": "Lekti lèt bezwen yon kle AI sou sèvè a. Eseye yon lèt egzanp pito."
+  },
+  "ask": {
+    "title": "Poze yon Kesyon",
+    "emptyTitle": "Poze kesyon sou lavi nan Etazini",
+    "emptySub": "Repons yo soti nan sous serye. Pou kesyon sou ka pa w la, n ap ede w jwenn yon pwofesyonèl.",
+    "suggested": "Eseye Poze",
+    "q1": "Ki diferans ki genyen ant yon green card ak yon pèmi travay?",
+    "q2": "Ki sa yon I-94 ye?",
+    "q3": "Kouman pou m konnen si yon avoka se yon tout bon avoka?",
+    "q4": "Ki sa yon notario ye e poukisa mwen dwe fè atansyon?",
+    "placeholder": "Poze yon kesyon",
+    "send": "Voye",
+    "mic": "Pale kesyon ou an",
+    "micStop": "Sispann koute",
+    "listening": "Ap koute…",
+    "thinking": "N ap chèche nan sous serye…",
+    "caseSpecific": "Sa depann de sitiyasyon ou",
+    "findHelp": "Jwenn èd legal gratis toupre ou",
+    "you": "Ou menm",
+    "landed": "Landed",
+    "clear": "Efase"
+  },
+  "help": {
+    "title": "Jwenn èd legal gratis",
+    "searchPlaceholder": "Chèche nan {city}",
+    "filterLabel": "Filtre",
+    "all": "Tout",
+    "free": "Gratis",
+    "spanish": "Panyòl",
+    "directories": "Direktwa ou ka fè konfyans",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Sèvis legal pou san fè benefis pa kòd postal",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "Moun ki bay èd gratis tribinal imigrasyon yo liste",
+    "results": "Toupre {city}",
+    "finding": "N ap chèche èd toupre ou…",
+    "empty": "Pa gen rezilta ki matche. Eseye “Tout.”",
+    "type_nonprofit": "San fè benefis",
+    "type_accredited_rep": "Reprezantan akredite",
+    "type_attorney": "Avoka",
+    "type_clinic": "Klinik",
+    "type_unknown": "Òganizasyon",
+    "cost_free": "Gratis",
+    "cost_low": "Bon mache",
+    "cost_paid": "Peye",
+    "cost_unknown": "Mande sou pri a",
+    "speaks": "Pale {languages}",
+    "call": "Rele",
+    "website": "Sit entènèt",
+    "directions": "Direksyon",
+    "details": "Detay",
+    "howToVerify": "Kijan pou verifye",
+    "verify1": "Mande si moun k ap ede ou la se yon avoka ki gen lisans oubyen yon reprezantan DOJ akredite.",
+    "verify2": "Chèche avoka yo nan ba avoka eta a. Chèche reprezantan akredite yo sou lis EOIR la.",
+    "verify3": "Jamè siyen fòm ki vid oubyen bay dokiman orijinal ou yo.",
+    "verify4": "Mande sou pri a anvan premye reyinyon ou.",
+    "verifyLinkBar": "Chèche nan Ba Avoka",
+    "verifyLinkEoir": "Lis EOIR",
+    "rating": "Noté {rating} sou 5",
+    "notFound": "Anons sa a pa disponib ankò."
+  },
+  "prep": {
+    "title": "Preparasyon pou Randevou",
+    "intro": "Fè yon rezime sou yon sèl paj pou pote bay yon avoka oswa yon reprezantan ki akredite. Li ekri nan lang ou ak an Anglè.",
+    "datesSection": "Dat ki Enkli",
+    "noDates": "Poko gen dat. Ou ka toujou ajoute kesyon.",
+    "questions": "Kesyon Mwen Yo",
+    "questionsFooter": "Jiska 5. Pa mete nimewo idantifikasyon.",
+    "questionPlaceholder": "Kesyon {n}",
+    "create": "Kreye Rezime",
+    "creating": "N ap ekri rezime w la…",
+    "share": "Pataje",
+    "print": " Enprime",
+    "copy": "Kopye",
+    "copied": "Kopye",
+    "yourLanguage": "Nan Lang Ou",
+    "english": "An Anglè",
+    "edit": "Modifye"
+  },
+  "community": {
+    "title": "Kominote",
+    "events": "Evènman toupre w",
+    "eventsFooter": "Evènman gratis ki bon pou moun ki fenk rive nan lis piblik yo.",
+    "noEvents": "Pa jwenn okenn evènman kounye a.",
+    "loadingEvents": "N ap chèche evènman toupre w…",
+    "people": "Moun ki pase pa la deja",
+    "peopleFooter": "Pwofil egzanp pou demonstrasyon sa a. Vrè jwenti a ap vini talè konsa.",
+    "sayHi": "Di M Bònjou",
+    "sayHiTo": "Di {name} bònjou",
+    "toast": "Sèvis mesaj la ap vini talè konsa.",
+    "bio": "Te deplase soti nan {from} al nan {city} gen {years, plural, one {# ane} other {# ane}} de sa. {job}. Pale {languages}.",
+    "open": "Louvri evènman an"
+  },
+  "jobs": {
+    "title": "Travay",
+    "credentialTitle": "Diplòm ak Sètifika Ou",
+    "credentialLoading": "N ap gade ki jan yo rekonèt travay ou…",
+    "noBackground": "Ajoute eksperyans travay ou nan Anviwònman (Settings) pou w wè ki jan l transfere.",
+    "stateBoard": "Jwenn Komisyon Eta Ou",
+    "searchPlaceholder": "Chèche travay nan {city}",
+    "results": "Travay Toupre {city}",
+    "empty": "Pa jwenn okenn travay. Eseye yon lòt rechèch.",
+    "finding": "N ap chèche travay…",
+    "via": "pa {source}"
+  },
+  "settings": {
+    "title": "Anviwònman",
+    "profile": "Pwofil",
+    "editProfile": "Refè Kesyon Baz yo",
+    "city": "Vil",
+    "language": "Lang",
+    "notifications": "Rapèl Dat",
+    "notificationsFooter": "Rapèl yo rete sou aparèy sa a.",
+    "notificationsDenied": "Notifikasyon yo bloke nan anviwònman navigatè ou a.",
+    "privacy": "Konfidansyalite",
+    "privacyFooter": "Tout sa Landed konnen estoke sèlman sou aparèy sa a. Yo pa janm sove foto dokiman yo.",
+    "deleteData": "Efase Done Mwen Yo",
+    "deleteTitle": "Èske ou vle efase tout done ou yo?",
+    "deleteBody": "Sa ap retire pwofil ou, plan ou, dat ou ak kesyon ou yo sou aparèy sa a. Ou pap ka tounen dèyè ak sa.",
+    "deleteConfirm": "Efase",
+    "deleted": "Yo te efase done ou yo.",
+    "about": "Konsènan",
+    "version": "Vèsyon",
+    "aboutFooter": "Landed esplike enfòmasyon. Li pa bay konsèy legal."
+  },
+  "checklist": {
+    "title": "Bagay pou regle",
+    "entrySub": "Lis pou premye ane ou",
+    "progress": "{done} sou {total} fini",
+    "howToToggle": "Kijan pou fè sa",
+    "howToTitle": "Kijan pou fè l",
+    "linksTitle": "Lyen ou ka fè konfyans",
+    "official": "Ofisyèl",
+    "nonprofit": "San bi likratif",
+    "checked": "Verifye {date}",
+    "markDone": "Mete kòm Fini",
+    "markNotDone": "Mete kòm Pa Fini",
+    "doneOn": "Fini {date}",
+    "addDate": "Ajoute yon Dat pou sa",
+    "markItemDone": "Mete “{title}” kòm fini",
+    "markItemNotDone": "Mete “{title}” kòm pa fini",
+    "notFound": "Atik sa a pa sou lis ou a.",
+    "stepsFooter": "Etap jeneral ekri pa ekip Landed. Yo pa konsèy legal.",
+    "sections": {
+      "start": "Premye Etap yo",
+      "money": "Lajan ak Taks",
+      "work": "Travay",
+      "family": "Sante ak Fanmi",
+      "protect": "Proteje tèt ou",
+      "status": "Sa depann de estati ou"
+    },
+    "items": {
+      "i94": {
+        "title": "Jwenn yon kopi I-94 ou",
+        "short": "Dosye an dirèk sou kote ou rive a. Tcheke dat ki sou li yo.",
+        "body": "I-94 se dosye gouwènman an ki montre kilè ou te rive ak konbyen tan ou ka rete. Anpil biwo mande l, epi dat ki sou li a enpòtan. Ou ka jwenn li gratis sou entènèt.",
+        "steps": {
+          "s1": "Ale sou sitwèb ofisyèl I-94 la. Li gratis.",
+          "s2": "Chwazi “Get Most Recent I-94” epi tape non ou ak detay paspò ou egzakteman jan yo ye nan paspò ou a.",
+          "s3": "Tcheke non ou, kategori admisyon ou, ak dat “Admit Until” la.",
+          "s4": "Anrejistre oswa enprime yon kopi epi kenbe l avèk paspò ou.",
+          "s5": "Si yon bagay pa bon sou li, yon biwo CBP Deferred Inspection ka ede w korije l."
+        },
+        "links": {
+          "l1": "Sitwèb ofisyèl I-94 (CBP)",
+          "l2": "Konsènan I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Jwenn yon nimewo Sekirite Sosyal",
+        "short": "Ou bezwen l pou travay ak pou anpil lòt bagay.",
+        "body": "Nou itilize yon nimewo Sekirite Sosyal (SSN) pou travay, taks, ak nan bank. Se pa tout moun ki ka jwenn youn. Sa depann de estati imigrasyon ou ak pèmi travay ou. Kat la ak nimewo a toujou gratis.",
+        "steps": {
+          "s1": "Chèche konnen si ou ka jwenn yon nimewo ak ki dokiman ou bezwen.",
+          "s2": "Rasanble dokiman ou yo: an jeneral paspò ou, dokiman imigrasyon ou, ak prèv laj ou.",
+          "s3": "Kòmanse demann ou an sou entènèt oswa ale nan yon biwo Sekirite Sosyal toupre ou.",
+          "s4": "Etann kat ou a nan lapòs. Kenbe l nan yon kote ki an sekirite, pa nan pòtèf ou."
+        },
+        "links": {
+          "l1": "Nimewo ak kat Sekirite Sosyal (SSA)"
+        }
+      },
+      "address": {
+        "title": "Di USCIS lè ou demenaje",
+        "short": "Pifò moun dwe rapòte yon nouvo adrès nan 10 jou.",
+        "body": "Pifò moun ki pa sitwayen dwe di USCIS sou yon nouvo adrès nan 10 jou apre yo fin demenaje. Si ou pa fè l, ou ta ka manke lèt enpòtan. Li gratis.",
+        "steps": {
+          "s1": "Lè ou demenaje, ekri dat la. Anjeneral ou gen 10 jou.",
+          "s2": "Chanje adrès ou sou entènèt ak USCIS.",
+          "s3": "Si ou gen yon dosye nan tribinal imigrasyon, ou dwe di tribinal la tou, lè l sèvi avèk fòm EOIR-33.",
+          "s4": "Anrejistre paj konfimasyon an oswa imèl la."
+        },
+        "links": {
+          "l1": "Chanje adrès ou ak USCIS"
+        }
+      },
+      "bank": {
+        "title": "Louvri yon kont labank",
+        "short": "Kenbe lajan ou an sekirite epi evite frè pou chanje chèk.",
+        "body": "Yon kont labank oswa nan yon inyon kredi kenbe lajan ou pi an sekirite pase lajan kach epi li ede ou bati yon istwa nan peyi Etazini. Kèk bank aksepte yon paspò oswa yon idantifikasyon konsilè.",
+        "steps": {
+          "s1": "Konpare bank yo ak inyon kredi yo. Gade frè chak mwa yo ak kantite lajan minimòm yo.",
+          "s2": "Mennen pyès idantifikasyon ou (paspò oswa ID konsilè) ak SSN ou oswa ITIN ou si ou gen youn. Mande ki dokiman yo aksepte.",
+          "s3": "Louvri kont lan epi mande yon kat debi.",
+          "s4": "Evite kote ki chanje chèk yo. Frè yo wo anpil."
+        },
+        "links": {
+          "l1": "Kont labank (Consumer Financial Protection Bureau)",
+          "l2": "Enfòmasyon sou bank (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Jwenn yon ID leta oswa yon pèmi kondi",
+        "short": "Yon pyès idantifikasyon ak foto nan eta a fè anpil bagay pi fasil.",
+        "body": "Yo aksepte kat idantifikasyon leta oswa pèmi kondi prèske tout kote. Chak eta gen pwòp règ pa l sou ki dokiman ou bezwen.",
+        "steps": {
+          "s1": "Jwenn biwo pèmi kondi nan eta ou a.",
+          "s2": "Verifye ki dokiman eta ou a aksepte.",
+          "s3": "Pran yon randevou si eta ou a mande sa.",
+          "s4": "Pote dokiman ou yo ak lajan an avèk ou nan randevou a."
+        },
+        "links": {
+          "l1": "Jwenn biwo pou machin nan eta ou (USA.gov)",
+          "l2": "Pèmi kondi ak kat idantifikasyon Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Jwenn yon ITIN si ou pa ka jwenn yon SSN",
+        "short": "Yon nimewo taks pou moun ki pa ka jwenn yon nimewo Sekirite Sosyal.",
+        "body": "Yon ITIN (Nimewo Idantifikasyon Kontribyab Endividyèl) pèmèt ou ranpli taks si ou pa ka jwenn yon nimewo Sekirite Sosyal. Li pa ba ou dwa pou travay. IRS pa pataje l pou fè respekte lwa sou imigrasyon.",
+        "steps": {
+          "s1": "Verifye si ou bezwen yon ITIN. Ou bezwen youn sèlman si ou pa ka jwenn yon SSN.",
+          "s2": "Ranpli Fòm W-7 IRS la.",
+          "s3": "Voye l ansanm ak deklarasyon taks ou, oswa jwenn èd gratis nan men yon Ajan Akseptasyon Sètifye IRS.",
+          "s4": "Tann lèt IRS la ak nimewo ou a. Kenbe l an sekirite."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Ranpli taks ou",
+        "short": "Anjeneral, yo dwe peye taks nan mitan mwa avril. Gen èd gratis ki disponib.",
+        "body": "Si ou te gen lajan nan Etazini, ou ka bezwen ranpli yon deklarasyon taks, anjeneral anvan 15 avril. Lè ou ranpli l alè, sa ka ede ou jwenn lajan ranbousman ak kredi tou. Gen èd taks gratis ki disponib.",
+        "steps": {
+          "s1": "Rasanble fòm taks ou yo nan travay, tankou yon W-2 oswa 1099.",
+          "s2": "Jwenn èd taks gratis toupre ou (VITA).",
+          "s3": "Ranpli deklarasyon ou anvan dat limit la, anjeneral 15 avril.",
+          "s4": "Kenbe kopi deklarasyon ou ak fòm ou yo."
+        },
+        "links": {
+          "l1": "Ranpli taks ou (IRS)",
+          "l2": "Èd taks gratis (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Kòmanse bati kredi ou",
+        "short": "Kredi ede ou lwe yon kay epi jwenn prè.",
+        "body": "Istwa kredi ou montre jan ou peye bòdwo ou yo. Pwopriyetè kay ak moun k ap bay prè gade sa. Ou dousman kòmanse bati l epi tcheke rapò ou yo gratis.",
+        "steps": {
+          "s1": "Aprann kisa rapò kredi ak nòt kredi ye.",
+          "s2": "Jwenn rapò kredi gratis ou yo epi tcheke yo pou wè si gen erè.",
+          "s3": "Peye chak bòdwo alè.",
+          "s4": "Panse ak yon kat kredi sekirize, epi pa janm peye yon moun ki pwomèt li pral “ranje” kredi ou."
+        },
+        "links": {
+          "l1": "Rapò ak nòt kredi (CFPB)",
+          "l2": "Rapò kredi gratis (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Konnen dat pèmi travay ou",
+        "short": "Ajoute dat ekspirasyon an yon fason pou ou pa bliye l.",
+        "body": "Yon pèmi travay (EAD) gen yon dat bout. Kèk moun ka mande yon lòt anvan li bout. Kilè ak kijan sa depann de kategori ou, kidonk tcheke paj resmi a epi sove dat la.",
+        "steps": {
+          "s1": "Jwenn dat ekspirasyon an sou kat ou a epi ajoute l nan dat ou yo.",
+          "s2": "Li kilè ak kijan ou ka mande yon renovasyon (Fòm I-765).",
+          "s3": "Si ou fè demann lan sou entènèt, sèvi ak yon kont USCIS.",
+          "s4": "Kenbe avi resevwa ou a epi tcheke estati dosye ou a."
+        },
+        "links": {
+          "l1": "Fòm I-765, pèmi travay (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Konnen dwa ou nan travay",
+        "short": "Salè minimòm ak lèt anplis konsène pifò travayè.",
+        "body": "Pifò travayè dwe jwenn omwen salè minimòm lan ak plis lajan pou lè siplemantè. Depatman Travay pran plent nan men travayè kèlkeswa estati imigrasyon yo.",
+        "steps": {
+          "s1": "Aprann kisa salè minimòm lan ye nan eta ou a.",
+          "s2": "Ekri lè ou travay yo epi kenbe ti papye pay ou yo.",
+          "s3": "Si yo pa peye ou lajan ou dwe jwenn, ou ka fè yon plent."
+        },
+        "links": {
+          "l1": "Salè minimòm (Depatman Travay)",
+          "l2": "Fè yon plent pou salè (Depatman Travay)"
+        }
+      },
+      "health": {
+        "title": "Jwenn swen sante ki pa koute chè",
+        "short": "Sant sante kominotè mande lajan selon sa ou touche.",
+        "body": "Sant sante kominotè wè pasyan menm san asirans epi mande lajan selon sa yo touche. Kèk imigran kapab jwenn asirans sante tou. Sal ijans dwe trete ou nan ka ijans.",
+        "steps": {
+          "s1": "Jwenn yon sant sante kominotè toupre ou.",
+          "s2": "Verifye ki pwoteksyon sante ou ka kapab jwenn.",
+          "s3": "Pote kat idantifikasyon ak prè revni ou nan premye vizit ou a.",
+          "s4": "Nan ka ijans, ale nan sal ijans oswa rele 911."
+        },
+        "links": {
+          "l1": "Pwoteksyon sante pou imigran (HealthCare.gov)",
+          "l2": "Jwenn yon sant sante (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Enskri timoun ou yo nan lekòl",
+        "short": "Tout timoun gen dwa ale nan lekòl piblik.",
+        "body": "Nan Etazini, tout timoun ka ale nan lekòl piblik gratis, kèlkeswa estati imigrasyon yo. Lekòl yo pa ka mande estati imigrasyon pou enskri yon timoun.",
+        "steps": {
+          "s1": "Kontakte biwo distri lekòl ou a.",
+          "s2": "Rasanble prèv laj timoun nan ak prèv ki montre kote w ap viv.",
+          "s3": "Ranpli fòm enskripsyon yo. Mande èd nan lang ou.",
+          "s4": "Mande enfòmasyon sou sipò pou elèv k ap aprann anglè pou timoun nan."
+        },
+        "links": {
+          "l1": "Lekòl pou timoun (USAHello)",
+          "l2": "Dwa edikasyon (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Enskri nan Selective Service (gason 18–25)",
+        "short": "Pifò gason ki gen ant 18 ak 25 an k ap viv Ozetazini dwe enskri.",
+        "body": "Pifò gason ki gen ant 18 ak 25 an k ap viv Ozetazini, enkli pifò imigran, dwe enskri nan Selective Service. Enskripsyon an gratis epi li rapid.",
+        "steps": {
+          "s1": "Tcheke si ou bezwen enskri. Se sitou gason ki gen ant 18 ak 25 an.",
+          "s2": "Enskri sou entènèt.",
+          "s3": "Sere nimewo enskripsyon ou an."
+        },
+        "links": {
+          "l1": "Enskri (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Jwenn èd legal gratis ou ka fè konfyans",
+        "short": "Konnen kim ki ka ba ou konsèy sou imigrasyon anvan ou bezwen li.",
+        "body": "Sèl avoka ak reprezantan DOJ apwouve ki ka bay konsèy legal sou imigrasyon. Jwenn yon gwoup asistans legal ki gratis oswa ki pa koute chè toupre ou anvan ou bezwen youn.",
+        "steps": {
+          "s1": "Chèche èd legal gratis oswa ki pa koute chè toupre ou.",
+          "s2": "Asire w moun nan se yon avoka oswa yon reprezantan DOJ apwouve.",
+          "s3": "Mande pri a anvan premye reyinyon ou a.",
+          "s4": "Mennen kopi dokiman ou yo. Kenbe dokiman orijinal yo."
+        },
+        "links": {
+          "l1": "Jwenn èd legal (ImmigrationLawHelp.org)",
+          "l2": "Founisè sèvis legal gratis (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Aprann rekonèt fo towo nan imigrasyon",
+        "short": "Notarios pa ka bay konsèy legal. Fòm yo gratis.",
+        "body": "Moun k ap fè eskandal vize imigran. Yon “notario” pa ka bay konsèy legal, pèsonn pa ka garanti yon green card, epi fòm USCIS yo gratis pou telechaje.",
+        "steps": {
+          "s1": "Aprann pi bonè nan eskandal imigrasyon yo.",
+          "s2": "Telechaje fòm yo sèlman sou uscis.gov. Yo gratis.",
+          "s3": "Si yon moun eseye ba ou yon kout wòch, rapòte li."
+        },
+        "links": {
+          "l1": "Evite eskandal (USCIS)",
+          "l2": "Eskandal kont imigran (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Konnen dwa ou kòm lokatè",
+        "short": "Yon pwopriyetè dwe pase nan tribinal pou mete ou deyò.",
+        "body": "Nan Texas, yon pwopriyetè pa ka mete ou deyò lè li chanje kadna yo oswa pran afè ou. Yon pwosedi pou mete moun deyò dwe pase nan tribinal. Lektir kontra lwaye ou epi kenbe yon kopi.",
+        "steps": {
+          "s1": "Lekti kontra lwaye ou epi kenbe yon kopi.",
+          "s2": "Mande pou reparasyon yo alekri epi kenbe kopi.",
+          "s3": "Aprann kijan pwosesis pou mete moun deyò a mache.",
+          "s4": "Si ou resevwa papye tribinal, pa inyore yo. Jwenn èd legal gratis."
+        },
+        "links": {
+          "l1": "Si pwopriyetè ou fèmen ou deyò (TexasLawHelp)",
+          "l2": "Kijan pwosesis pou mete moun deyò a mache (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Anvan ou vwayaje andeyò Etazini",
+        "short": "Kite peyi a ka afekte yon dosye ki ankou. Mande anvan.",
+        "body": "Pou anpil imigran, kite Etazini ka afekte yon aplikasyon ki sou tab la oswa kapasite pou tounen. Gen moun ki bezwen yon dokiman vwayaj anvan yo pati. Si sa san danje depann de sitiyasyon ou.",
+        "steps": {
+          "s1": "Anvan ou achte yon tikè, aprann ki dokiman vwayaj ki egziste.",
+          "s2": "Li sou Advance Parole ak pèmi pou retounen (Fòm I-131).",
+          "s3": "Pale ak èd legal gratis sou sitiyasyon ou anvan ou vwayaje.",
+          "s4": " pote dokiman imigrasyon ou avèk ou lè ou vwayaje."
+        },
+        "links": {
+          "l1": "Dokiman vwayaj (USCIS)",
+          "l2": "Fòm I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Benefis piblik ak estati ou",
+        "short": "Kim ki ka jwenn èd depann de estati. Mande anvan ou aplike.",
+        "body": "Gen kèk pwogram ki ede ak manje, swen sante ak lojman. Kim ki ka jwenn yo depann de estati imigrasyon, epi nan kèk ka itilize benefis ka enpòtan pou yon aplikasyon nan lavni. Mande èd legal gratis anvan ou aplike.",
+        "steps": {
+          "s1": "Aprann ki pwogram benefis gouvènman ki egziste.",
+          "s2": "Kalifikasyon depann de estati ou. Mande èd legal gratis kisa ki konsène ou.",
+          "s3": "Timoun ki fèt Ozetazini ka kalifye menm si paran yo pa kalifye.",
+          "s4": "Toujou di verite a sou aplikasyon yo."
+        },
+        "links": {
+          "l1": "Benefis gouvènman (USA.gov)",
+          "l2": "Resous kominotè (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Si ou gen yon dat nan tribinal imigrasyon",
+        "short": "Jamè rate yon seyans. Tcheke ka ou sou entènèt.",
+        "body": "Si ou gen yon dosye nan tribinal imigrasyon, si ou pa ale nan yon odyans sa ka bay gwo pwoblèm. Ou ka tcheke dat pwochen odyans ou an sou entènèt ak nimewo A ou a.",
+        "steps": {
+          "s1": "Tcheke dat pwochen odyans ou a sou entènèt.",
+          "s2": "Ajoute dat odyans lan nan dat ou yo.",
+          "s3": "Si ou deplase, di tribinal la nan 5 jou lè l sèvi avèk fòm EOIR-33.",
+          "s4": "Jwenn èd legal gratis osi bonè posib.",
+          "s5": "Ale nan tout odyans, menm si ou poko gen yon avoka."
+        },
+        "links": {
+          "l1": "Enfòmasyon sou dosye otomatik (EOIR)",
+          "l2": "Tribinal imigrasyon (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Pale ak yon sèvis legal gratis",
+    "body": "Sa depann de estati imigrasyon ou. Yon gwoup èd legal gratis ka gade sitiyasyon ou.",
+    "button": "Jwenn Èd Legal Gratis"
+  },
+  "browser": {
+    "close": "Fèmen",
+    "back": "Retounen",
+    "openInBrowser": "Louvri nan Navigatè a",
+    "openPage": "Louvri Paj la",
+    "versionOfficial": "Vèsyon ofisyèl nan {language}",
+    "versionAi": "Tradiksyon pa AI",
+    "versionOriginal": "Orijinal",
+    "original": "Orijinal",
+    "aiBanner": "Tradui pa AI soti nan {source}. Li ka gen erè. Gade vèsyon orijinal la pou anyen ki enpòtan.",
+    "cantEmbed": "Sit sa a pa ka parèt anndan Landed. Men yon rezime kout.",
+    "noSummary": "Sit sa a pa ka parèt anndan Landed.",
+    "summaryTitle": "Rezime nan Landed",
+    "loading": "L ap louvri…",
+    "translating": "L ap tradui…",
+    "preparing": "N ap prepare paj sa a...",
+    "translate": "Tradui",
+    "translateTo": "Tradui paj sa a an",
+    "noTranslation": "Orijinal (san tradiksyon)",
+    "translatingTo": "N ap tradui l an {language}…",
+    "alreadyIn": "Paj sa a deja an {language}.",
+    "mustVisitTitle": "Pou itilize sa a, ou dwe ale sou sit entènèt ofisyèl la.",
+    "goTo": "Ale sou {domain}",
+    "aiFormatted": "Tèks ki soti nan {domain}, entèlijans atifisyèl la ranje l yon fason pou l pi fasil pou w li. Tcheke orijinal la pou w sèten pa gen anyen enpòtan ki manke.",
+    "translateFailed": "Tradiksyon an pa mache. N ap montre orijinal la.",
+    "viewOriginal": "Paj orijinal: {domain}",
+    "notTrusted": "Paj sa a pa soti nan yon sous Landed verifye."
+  },
+  "assistant": {
+    "title": "Mande Landed",
+    "button": "Mande Landed",
+    "tab": "Mande",
+    "welcome": "Mande sou lis ou a, dat ou yo, oswa lavi Ozetazini.",
+    "placeholder": "Mande Landed",
+    "send": "Voye",
+    "mic": "Di kesyon ou an",
+    "micStop": "Sispann koute",
+    "listening": "L ap koute…",
+    "thinking": "L ap reflechi…",
+    "clear": "Efase Chat la",
+    "save": "Sere chat sa a sou aparèy sa a",
+    "suggested": "Eseye mande",
+    "s1": "Kisa pou m fè an premye?",
+    "s2": "Kijan pou m jwenn yon ITIN?",
+    "s3": "Kilè pèmi travay mwen an ekspire?",
+    "s4": "Kisa ki rete sou lis mwen an?",
+    "aboutItem": "Konsènan: {title}",
+    "itemPrompt": "Ede m avèk “{title}”.",
+    "usedData": "Itilize: {sources}",
+    "store_profile": "profil ou",
+    "store_dates": "dat ou sere yo",
+    "store_checklist": "lis ou a",
+    "store_plan": "plan 90 jou ou a",
+    "store_prepSummaries": "kesyon ou sere yo",
+    "confirm": "Konfime",
+    "cancel": "Pa kounye a",
+    "confirmed": "Sere",
+    "declined": "Pa sere",
+    "proposeDone": "Mete “{title}” kòm fèt?",
+    "proposeNotDone": "Mete “{title}” kòm poko fèt?",
+    "proposeDate": "Ajoute “{label}” sou {date}?",
+    "backToChat": "Tounen nan chat la",
+    "error": "Gen yon bagay ki ale mal. Tanpri eseye ankò."
+  }
+}

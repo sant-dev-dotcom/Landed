@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "뒤로",
+    "cancel": "취소",
+    "done": "완료",
+    "close": "닫기",
+    "add": "추가",
+    "added": "추가됨",
+    "delete": "삭제",
+    "save": "저장",
+    "continue": "계속",
+    "skip": "건너뛰기",
+    "comingSoon": "준비 중",
+    "aiLabel": "AI 설명 · 법률 자문이 아님",
+    "sources": "출처",
+    "error": "문제가 발생했습니다. 다시 시도해 주세요.",
+    "retry": "다시 시도",
+    "loading": "불러오는 중…",
+    "sampleData": "샘플 결과입니다. 실시간 결과를 보려면 API 키를 추가하세요.",
+    "settings": "설정",
+    "learnMore": "자세히 알아보기",
+    "openSource": "오픈소스: {name}"
+  },
+  "tabs": {
+    "label": "메인",
+    "home": "홈",
+    "legal": "법률",
+    "community": "커뮤니티",
+    "jobs": "일자리"
+  },
+  "language": {
+    "label": "언어",
+    "en": "English",
+    "es": "Español",
+    "choose": "사용할 언어를 선택하세요",
+    "search": "언어 검색",
+    "other": "다른 언어",
+    "otherPlaceholder": "언어 이름을 입력하세요",
+    "otherFooter": "AI가 앱을 선택하신 언어로 번역해 드립니다. 일부 번역이 정확하지 않을 수 있습니다.",
+    "translate": "번역",
+    "translating": "Landed을(를) {language}(으)로 번역하는 중…",
+    "notConfigured": "새 언어로 번역하려면 서버에 Gemini API 키가 필요합니다.",
+    "unknownLanguage": "해당 언어를 찾을 수 없습니다. 철자를 확인하고 다시 시도해 주세요.",
+    "translateFailed": "번역에 실패했습니다. 다시 시도해 주세요."
+  },
+  "disclaimer": "Landed은(는) 정보를 알기 쉽게 설명해 주는 도구입니다. 법률 자문이 아닙니다. 본인의 상황에 대해서는 변호사나 공인된 대리인과 상담하세요.",
+  "landing": {
+    "hero": "미국에서의 첫 1년, 든든한 안내자와 친구들과 함께 시작하세요.",
+    "sub": "우편물을 이해하고, 중요한 날짜를 챙기고, 믿을 수 있는 도움을 찾고, 비슷한 경험을 한 사람들을 만나보세요.",
+    "whyTitle": "이것이 중요한 이유",
+    "whyIntro": "수백만 명이 겪는 일이지만 잘 알려지지 않았습니다. 이해하기 어려운 우편물, 놓친 마감일, 가짜 “notario” 등으로 인해 조용히 피해를 입습니다.",
+    "stat1Value": "34%",
+    "stat1": "2026 회계연도 기준, 이민 재판을 완료한 사람들 중 변호사의 조력을 받은 비율은 34%로 2010년 이후 최저치를 기록했습니다.",
+    "stat2Value": "2%",
+    "stat2": "120만 건의 추방 사건을 분석한 전국 연구에 따르면, 변호사 없이 구제 신청을 해 성공한 사람의 비율은 2%에 불과합니다.",
+    "stat3Value": "5배",
+    "stat3": "스페인어만 사용하는 가구는 역사적으로 은행 계좌가 없을 확률이 은행 이용 가구에 비해 약 5배 높았습니다 (FDIC 조사 데이터 기준).",
+    "statsFooter": "피해자들이 보복을 두려워해 신고를 꺼리기 때문에 'notario' 사기는 실제보다 훨씬 적게 집계됩니다. 아이들이 종종 부모를 대신해 고지서, 임대차 계약서, 법률 서류를 통역하고 있습니다.",
+    "pitch": "도움은 존재합니다. 다만 사람들이 찾기 어렵고, 읽기 힘들며, 자신에게 어떤 부분이 적용되는지 모를 뿐입니다.",
+    "privacyTitle": "개인정보 보호",
+    "privacy": "계정이 필요 없습니다. 요청하지 않는 한 어떤 정보도 휴대폰 밖으로 나가지 않습니다. 문서 사진은 절대 저장하지 않습니다.",
+    "getStarted": "시작하기",
+    "demoPersona": "데모 프로필 사용",
+    "continueToHome": "홈으로 계속"
+  },
+  "onboarding": {
+    "progress": "{total}단계 중 {current}단계",
+    "langTitle": "어떤 언어를 선호하시나요?",
+    "countryTitle": "어느 나라에서 오셨나요?",
+    "countryOther": "다른 국가",
+    "countryPlaceholder": "국가 이름을 입력하세요",
+    "cityTitle": "어느 도시에 살고 계시나요?",
+    "cityPlaceholder": "다른 도시 (예: Chicago, IL)",
+    "timeTitle": "미국에 오신 지 얼마나 되셨나요?",
+    "time0": "1달 미만",
+    "time1": "1~6개월",
+    "time2": "6~12개월",
+    "time3": "1년 이상",
+    "aboutTitle": "본인에 대해 알려주세요",
+    "aboutFooter": "선택 사항입니다. 일자리와 만날 사람을 추천하는 데 도움이 됩니다.",
+    "nameLabel": "이름",
+    "namePlaceholder": "어떻게 불러드릴까요?",
+    "kidsLabel": "자녀가 있습니다",
+    "workLabel": "고국에서의 일",
+    "workPlaceholder": "예: 정간호사",
+    "hardTitle": "지금 가장 어려운 점이 무엇인가요?",
+    "hardFooter": "원하는 만큼 선택하세요.",
+    "hard_paperwork": "서류 작업",
+    "hard_money": "돈",
+    "hard_work": "일자리 찾기",
+    "hard_people": "사람 만나기",
+    "hard_english": "영어",
+    "hard_housing": "주거",
+    "hard_health": "건강",
+    "finish": "내 계획 만들기",
+    "making": "계획을 만드는 중…",
+    "demoNote": "체험용 프로필: Maria, 베네수엘라 출신 간호사, 휴스턴에 온 지 2개월."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mexico",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "India",
+    "Vietnam": "Vietnam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "법률",
+    "money": "돈",
+    "social": "사람들",
+    "jobs": "일",
+    "health": "건강",
+    "daily": "일상생활"
+  },
+  "home": {
+    "title": "홈",
+    "greeting": "안녕하세요, {name}님.",
+    "greetingNoName": "안녕하세요.",
+    "dayIn": "{city}에 오신 지 {day}일째",
+    "nextSteps": "다음 단계",
+    "nextStepsFooter": "처음 90일 계획에서 가져왔습니다. 완료되면 동그라미를 누르세요.",
+    "allSteps": "모든 단계 보기 ({count})",
+    "fewerSteps": "간단히 보기",
+    "allDone": "모든 단계를 마쳤습니다. 잘하셨어요!",
+    "dueIn": "{count, plural, =0 {오늘} other {#일 내}}",
+    "markDone": "“{title}” 완료로 표시",
+    "markNotDone": "“{title}” 미완료로 표시",
+    "comingUp": "다가오는 일정",
+    "noDates": "일정이 아직 없습니다",
+    "noDatesSub": "편지를 스캔하여 일정을 관리하세요",
+    "explore": "둘러보기",
+    "legalSub": "편지, 일정 및 무료 법률 도움",
+    "communitySub": "주변의 모임과 사람들",
+    "jobsSub": "일자리와 자격증",
+    "money": "돈",
+    "health": "건강",
+    "noProfile": "먼저 계획을 세워봐요.",
+    "setUp": "설정하기",
+    "makingPlan": "계획을 만드는 중…",
+    "profileButton": "설정 및 프로필"
+  },
+  "status": {
+    "green": "지금은 문제가 없어요",
+    "greenSub": "앞으로 6개월 동안 예정된 일이 없어요.",
+    "yellow": "{count, plural, other {#일 뒤에 다가와요}}",
+    "red": "곧 다가와요: {count, plural, =0 {오늘} other {#일 후}}",
+    "redPast": "날짜가 지났어요",
+    "redPastSub": "‘{label}’(이)가 {count, plural, other {#일}} 전에 지났어요.",
+    "nextSub": "{label} · {date}",
+    "empty": "추적 중인 날짜가 없어요",
+    "emptySub": "편지를 스캔하거나 날짜를 추가해 시작하세요.",
+    "count": "{count, plural, other {날짜 #개 추적 중}}",
+    "prepare": "무엇을 준비해야 하나요?"
+  },
+  "legal": {
+    "title": "법률",
+    "myDates": "내 일정",
+    "addDate": "날짜 추가",
+    "datesEmpty": "추가하거나 스캔한 날짜가 여기에 표시돼요.",
+    "daysLeft": "{count, plural, =0 {오늘} other {#일 남음}}",
+    "daysAgo": "{count, plural, other {#일 전}}",
+    "reminder": "알림",
+    "deleteDate": "‘{label}’ 삭제",
+    "fromScan": "스캔에서 가져옴",
+    "tools": "도구",
+    "scan": "편지 스캔",
+    "scanSub": "사진을 찍으면 쉬운 말로 설명해 드려요",
+    "ask": "질문하기",
+    "askSub": "출처와 함께 답변을 알려드려요",
+    "help": "무료 법률 지원 찾기",
+    "helpSub": "가까운 법률 구조 기관",
+    "prep": "상담 준비하기",
+    "prepSub": "가져갈 수 있는 요약본",
+    "rights": "나의 권리 알기",
+    "rightsFooter": "공식 출처 링크가 포함된 일반 정보입니다.",
+    "addSheetTitle": "날짜 추가",
+    "docType": "서류",
+    "labelField": "어떤 날짜인가요?",
+    "labelPlaceholder": "예: 취업 허가증 만료",
+    "dateField": "날짜",
+    "noteField": "메모",
+    "notePlaceholder": "선택 사항",
+    "docTypes": {
+      "workPermit": "취업 허가증",
+      "passport": "여권",
+      "uscis": "USCIS 통지서",
+      "court": "법원 통지서",
+      "i94": "I-94",
+      "lease": "임대차 계약서",
+      "other": "기타"
+    },
+    "sourceLink": "출처: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "notario는 법률 조언을 할 수 없습니다",
+      "short": "변호사와 공인 대리인만 할 수 있습니다.",
+      "body": "변호사와 DOJ 공인 대리인만 이민 법률 조언을 할 수 있습니다. notario는 할 수 없습니다. 미국에서 공증인(notary public)은 서명 입회만 할 수 있습니다.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "그린 카드를 보장해 줄 사람은 아무도 없습니다",
+      "short": "“특별한 명단” 같은 것은 없습니다.",
+      "body": "그 누구도 영주권을 보장하거나 “특별 명단”에 올려줄 수 없습니다. 누군가 결과를 약속하거나 일을 빨리 처리해준다는 명목으로 돈을 요구한다면 위험 신호입니다.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "USCIS 양식은 무료입니다",
+      "short": "uscis.gov에서 내려받으세요.",
+      "body": "공식 USCIS 양식은 uscis.gov에서 무료로 내려받을 수 있습니다. 일부 신청서에는 접수 수수료가 있지만, 양식 자체는 절대 비용이 들지 않습니다. 공식 정부 웹사이트 주소는 .gov로 끝납니다.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "변호사가 진짜인지 확인하는 법",
+      "short": "주(State) 변호사 협회에서 조회해보세요.",
+      "body": "변호사가 면허를 받은 주의 변호사 협회에서 조회해 보세요. 텍사스주의 경우 State Bar of Texas의 “변호사 찾기(Find a Lawyer)” 검색을 이용하세요. 공인된 대리인의 경우 DOJ (EOIR) 명부를 확인하세요.",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "세입자 기본 상식",
+      "short": "퇴거 조치는 반드시 법원을 거쳐야 합니다.",
+      "body": "계약서를 읽고 한 부를 보관하세요. 집주인이 자물쇠를 바꾸거나 물건을 치워버리는 방식으로 쫓아낼 수 없습니다. 퇴거는 반드시 법원을 거쳐야 합니다. 법원 서류를 받으면 무시하지 마세요.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "직장인 기본 상식",
+      "short": "최저임금과 초과근무 수당은 대부분의 근로자에게 적용됩니다.",
+      "body": "대부분의 근로자는 연방 최저임금 이상을 받아야 하며, 일주일 40시간을 초과한 시간에 대해서는 초과근무 수당을 받아야 합니다. US Department of Labor는 이민 신분에 상관없이 임금 체불 신고를 접수합니다. 근무 시간과 급여 기록을 잘 보관해 두세요.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "편지 스캔하기",
+    "intro": "편지나 서류의 사진을 찍어주세요. 알기 쉬운 말로 설명해 드립니다.",
+    "privacy": "사진은 내용을 설명하기 위해 한 번 읽힌 후 바로 삭제되며 절대 저장되지 않습니다.",
+    "protecting": "개인 정보를 가리는 중이에요…",
+    "protectingNote": "휴대폰에서 직접 처리되는 작업이에요. 아직 아무것도 보내지지 않았어요.",
+    "reviewTitle": "보내기 전에 확인하기",
+    "reviewIntro": "검은색 막대가 개인 정보를 가려줘요. 가려진 내용만 읽기 위해 전송돼요.",
+    "foundCount": "{count, plural, =0 {자동으로 찾은 개인 정보가 없어요.} one {개인 정보 #개를 가렸어요: {kinds}.} other {개인 정보 #개를 가렸어요: {kinds}.}}",
+    "ocrFailed": "휴대폰에서 글자를 읽지 못했어요. 숨기고 싶은 부분을 손가락으로 드래그해 가려주세요.",
+    "reviewHelp": "숨기고 싶은 다른 부분이 있다면 드래그하세요. 검은색 막대를 누르면 다시 보일 수 있어요.",
+    "reviewImageAlt": "개인 정보가 가려진 서류",
+    "uncover": "가리기 취소",
+    "undo": "되돌리기",
+    "sendCovered": "가린 내용 보내기",
+    "cancelScan": "취소",
+    "rejected_blurry": "사진이 너무 흐려서 읽을 수 없어요",
+    "rejected_dark": "사진이 너무 어두워서 읽을 수 없어요",
+    "rejected_bright": "사진이 너무 밝거나 빛이 반사되었어요",
+    "rejected_unreadable": "사진의 내용을 충분히 읽을 수 없어요",
+    "rejectedBody": "편지 내용을 정확히 설명하고 개인 정보를 보호하려면 선명한 사진이 필요해요. 전송된 내용은 없어요.",
+    "tipsTitle": "선명한 사진을 찍는 법",
+    "tip1": "편지를 어두운 탁자 위에 평평하게 놓아주세요.",
+    "tip2": "밝고 고른 빛을 이용하세요. 그림자와 빛 반사를 피해주세요.",
+    "tip3": "휴대폰을 페이지 바로 위에 수직으로 들어 화면에 가득 차게 하세요.",
+    "tip4": "화면을 터치해서 초점을 맞춘 뒤 가만히 있으세요.",
+    "retake": "사진 다시 찍기",
+    "chooseAnother": "다른 사진 선택하기",
+    "kind_aNumber": "A-number",
+    "kind_receipt": "접수 번호",
+    "kind_ssn": "소셜 보안 번호",
+    "kind_phone": "전화번호",
+    "kind_email": "이메일",
+    "kind_account": "계좌 번호",
+    "kind_name": "이름",
+    "kind_birth": "생년월일",
+    "kind_address": "집 주소",
+    "kind_id": "신분증 번호",
+    "takePhoto": "사진 찍기",
+    "choosePhoto": "사진 선택하기",
+    "trySample": "샘플 편지 써보기",
+    "samplesTitle": "샘플 편지",
+    "samplesFooter": "앱을 테스트해 볼 수 있도록 이름과 번호를 가짜로 만든 편지입니다.",
+    "sample1": "접수 통지서",
+    "sample2": "심리(재판) 출석 통지서",
+    "sample3": "임대차 계약 갱신",
+    "reading": "편지를 읽는 중입니다…",
+    "whatThisIs": "이 문서의 내용",
+    "summary": "요약",
+    "dates": "날짜",
+    "noDates": "날짜를 찾지 못했습니다.",
+    "addDate": "“{label}”을(를) 내 일정에 추가",
+    "wordsToKnow": "알아두어야 할 단어",
+    "nextStep": "다음 단계",
+    "highRiskTitle": "전문가의 도움이 필요할 수 있습니다",
+    "mediumRiskTitle": "답변이 필요할 수 있습니다",
+    "risk_low": "낮은 위험",
+    "risk_medium": "주의 필요",
+    "risk_high": "중요",
+    "findHelp": "무료 법률 지원 찾기",
+    "photoNotSaved": "사진이 저장되지 않았습니다.",
+    "scanAnother": "다른 편지 스캔하기",
+    "tooBig": "사진 용량이 너무 큽니다. 다른 사진을 시도해 주세요.",
+    "notConfigured": "편지 읽기 기능을 사용하려면 서버에 AI 키가 필요합니다. 대신 샘플 편지를 시도해 보세요."
+  },
+  "ask": {
+    "title": "질문하기",
+    "emptyTitle": "미국 생활에 대해 물어보세요",
+    "emptySub": "믿을 수 있는 출처에서 답변을 제공합니다. 본인의 사건에 대한 질문은 전문가를 찾으실 수 있도록 도와드립니다.",
+    "suggested": "이런 질문을 해보세요",
+    "q1": "영주권과 취업비자의 차이점이 무엇인가요?",
+    "q2": "I-94가 무엇인가요?",
+    "q3": "변호사가 진짜인지 어떻게 알 수 있나요?",
+    "q4": "notario가 무엇이고 왜 조심해야 하나요?",
+    "placeholder": "질문을 입력하세요",
+    "send": "보내기",
+    "mic": "음성으로 질문하기",
+    "micStop": "듣기 중지",
+    "listening": "듣는 중입니다…",
+    "thinking": "믿을 수 있는 곳을 찾아보고 있어요…",
+    "caseSpecific": "이건 회원님의 상황에 따라 달라요",
+    "findHelp": "내 근처 무료 법률 도움 찾기",
+    "you": "나",
+    "landed": "Landed",
+    "clear": "지우기"
+  },
+  "help": {
+    "title": "무료 법률 도움 찾기",
+    "searchPlaceholder": "{city}에서 검색",
+    "filterLabel": "필터",
+    "all": "모두",
+    "free": "무료",
+    "spanish": "스페인어",
+    "directories": "믿을 수 있는 안내",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "우편번호별 비영리 법률 서비스",
+    "eoir": "EOIR Pro Bono 목록",
+    "eoirSub": "이민 법원에서 안내하는 무료 지원 기관",
+    "results": "{city} 근처",
+    "finding": "근처에서 도움을 찾는 중…",
+    "empty": "결과가 없어요. ‘모두’를 눌러보세요.",
+    "type_nonprofit": "비영리",
+    "type_accredited_rep": "인정받은 대리인",
+    "type_attorney": "변호사",
+    "type_clinic": "클리닉",
+    "type_unknown": "기관",
+    "cost_free": "무료",
+    "cost_low": "저렴한 비용",
+    "cost_paid": "유료",
+    "cost_unknown": "비용 문의",
+    "speaks": "{languages} 사용 가능",
+    "call": "전화하기",
+    "website": "웹사이트",
+    "directions": "길찾기",
+    "details": "상세 정보",
+    "howToVerify": "확인하는 방법",
+    "verify1": "도와주는 사람이 면허가 있는 변호사인지 또는 DOJ 인증 대리인인지 물어보세요.",
+    "verify2": "주 변호사 협회에서 변호사를 검색해 보세요. EOIR 명단에서 인증된 대리인을 찾아보세요.",
+    "verify3": "빈 양식에 서명하거나 원본 서류를 넘겨주지 마세요.",
+    "verify4": "첫 만남 전에 비용을 물어보세요.",
+    "verifyLinkBar": "주 변호사 협회 조회",
+    "verifyLinkEoir": "EOIR 명단",
+    "rating": "5점 만점에 {rating}점",
+    "notFound": "이 정보는 더 이상 사용할 수 없어요."
+  },
+  "prep": {
+    "title": "상담 준비",
+    "intro": "변호사나 인증된 대리인에게 보여줄 한 페이지 요약본을 만드세요. 모국어와 영어로 작성됩니다.",
+    "datesSection": "포함된 날짜",
+    "noDates": "아직 날짜가 없어요. 질문은 계속 추가할 수 있어요.",
+    "questions": "내 질문",
+    "questionsFooter": "최대 5개까지. 신분증 번호는 넣지 마세요.",
+    "questionPlaceholder": "질문 {n}",
+    "create": "요약 만들기",
+    "creating": "요약본을 쓰는 중…",
+    "share": "공유하기",
+    "print": "인쇄",
+    "copy": "복사",
+    "copied": "복사됨",
+    "yourLanguage": "모국어로 보기",
+    "english": "영어로 보기",
+    "edit": "수정"
+  },
+  "community": {
+    "title": "커뮤니티",
+    "events": "근처 행사",
+    "eventsFooter": "공공 목록에서 가져온 무료이고 이주민 환영 행사이오니 안심하고 참여하세요.",
+    "noEvents": "지금은 찾은 행사가 없어요.",
+    "loadingEvents": "근처 행사를 찾는 중이에요…",
+    "people": "먼저 온 이웃들",
+    "peopleFooter": "체험판용 예시 프로필이에요. 실제 매칭은 곧 시작됩니다.",
+    "sayHi": "인사하기",
+    "sayHiTo": "{name}님에게 인사하기",
+    "toast": "메시지 기능은 곧 찾아옵니다.",
+    "bio": "{from}에서 {city}로 {years, plural, one {#년} other {#년}} 전에 왔어요. {job} 일을 해요. {languages}를 할 수 있어요.",
+    "open": "행사 보기"
+  },
+  "jobs": {
+    "title": "일자리",
+    "credentialTitle": "내 자격증",
+    "credentialLoading": "내 경력이 여기서 어떻게 인정되는지 알아보는 중이에요…",
+    "noBackground": "설정에서 경력을 추가하면 내 경력을 여기서 어떻게 쓸 수 있는지 알 수 있어요.",
+    "stateBoard": "주(State) 기관 찾기",
+    "searchPlaceholder": "{city} 일자리 검색",
+    "results": "{city} 근처 일자리",
+    "empty": "일자리를 찾지 못했어요. 다른 검색어로 찾아보세요.",
+    "finding": "일자리를 찾는 중이에요…",
+    "via": "{source} 제공"
+  },
+  "settings": {
+    "title": "설정",
+    "profile": "프로필",
+    "editProfile": "처음부터 다시 하기",
+    "city": "도시",
+    "language": "언어",
+    "notifications": "날짜 알림",
+    "notificationsFooter": "알림은 이 기기에만 저장됩니다.",
+    "notificationsDenied": "브라우저 설정에서 알림이 차단되어 있어요.",
+    "privacy": "개인정보 보호",
+    "privacyFooter": "Landed가 아는 모든 것은 이 기기에만 저장됩니다. 서류 사진은 절대 저장되지 않아요.",
+    "deleteData": "내 데이터 삭제",
+    "deleteTitle": "모든 데이터를 삭제할까요?",
+    "deleteBody": "기기에서 프로필, 계획, 날짜, 질문이 모두 사라져요. 이 작업은 되돌릴 수 없어요.",
+    "deleteConfirm": "삭제",
+    "deleted": "데이터가 삭제되었습니다.",
+    "about": "앱 정보",
+    "version": "버전",
+    "aboutFooter": "Landed는 정보를 쉽게 설명해 주는 앱이에요. 법률 자문이 아닙니다."
+  },
+  "checklist": {
+    "title": "챙겨야 할 일",
+    "entrySub": "미국 생활 첫해 체크리스트",
+    "progress": "{total}개 중 {done}개 완료",
+    "howToToggle": "이렇게 해보세요",
+    "howToTitle": "하는 방법",
+    "linksTitle": "믿을 수 있는 링크",
+    "official": "정부 기관",
+    "nonprofit": "비영리 단체",
+    "checked": "{date}에 확인함",
+    "markDone": "완료로 표시",
+    "markNotDone": "미완료로 표시",
+    "doneOn": "{date}에 완료함",
+    "addDate": "관련 날짜 추가하기",
+    "markItemDone": "“{title}” 항목을 완료로 표시",
+    "markItemNotDone": "“{title}” 항목을 미완료로 표시",
+    "notFound": "이 목록에 없는 항목이에요.",
+    "stepsFooter": "Landed 팀이 작성한 일반적인 단계 안내입니다. 법률 자문이 아닙니다.",
+    "sections": {
+      "start": "첫 단계",
+      "money": "돈과 세금",
+      "work": "일",
+      "family": "건강과 가족",
+      "protect": "내 정보 보호하기",
+      "status": "신분에 따라 확인하기"
+    },
+    "items": {
+      "i94": {
+        "title": "I-94 사본 받기",
+        "short": "공식 입국 기록입니다. 날짜를 확인하세요.",
+        "body": "I-94는 언제 입국했고 언제까지 머물 수 있는지 정부가 기록한 것입니다. 여러 기관에서 이를 요구하며 기록된 날짜가 중요합니다. 온라인에서 무료로 받을 수 있습니다.",
+        "steps": {
+          "s1": "공식 I-94 웹사이트로 가세요. 무료입니다.",
+          "s2": "“Get Most Recent I-94”를 누르고 여권에 적힌 그대로 이름과 여권 정보를 입력하세요.",
+          "s3": "이름, 입국 신분, 체류 허가 기한(“Admit Until” 날짜)을 확인하세요.",
+          "s4": "사본을 저장하거나 인쇄해서 여권과 함께 보관하세요.",
+          "s5": "내용에 틀린 부분이 있다면 CBP Deferred Inspection 사무소에서 고칠 수 있습니다."
+        },
+        "links": {
+          "l1": "I-94 공식 웹사이트 (CBP)",
+          "l2": "I-94 안내 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "소셜 보안 번호(SSN) 받기",
+        "short": "일할 때와 여러 곳에서 필요합니다.",
+        "body": "소셜 보안 번호(SSN)는 일하거나 세금을 낼 때, 은행을 이용할 때 씁니다. 누구나 받을 수 있는 것은 아니며 이민 신분과 취업 허가 여부에 따라 다릅니다. 카드와 번호는 항상 무료입니다.",
+        "steps": {
+          "s1": "번호를 받을 수 있는지, 어떤 서류가 필요한지 알아보세요.",
+          "s2": "서류를 챙기세요. 보통 여권, 이민 서류, 나이를 증명할 서류가 필요합니다.",
+          "s3": "온라인으로 신청하거나 가까운 소셜 보안 사무소를 방문하세요.",
+          "s4": "우편으로 카드가 올 때까지 기다리세요. 지갑에 넣지 말고 안전한 곳에 보관하세요."
+        },
+        "links": {
+          "l1": "소셜 보안 번호 및 카드 (SSA)"
+        }
+      },
+      "address": {
+        "title": "이사하면 USCIS에 알리기",
+        "short": "대부분 10일 이내에 새 주소를 신고해야 합니다.",
+        "body": "대부분의 비시민권자는 이사 후 10일 이내에 USCIS에 새 주소를 알려야 합니다. 알리지 않으면 중요한 우편물을 받지 못할 수 있습니다. 무료로 할 수 있습니다.",
+        "steps": {
+          "s1": "이사한 날짜를 적어두세요. 보통 10일의 기간이 있습니다.",
+          "s2": "USCIS 웹사이트에서 온라인으로 주소를 바꾸세요.",
+          "s3": "이민 재판이 진행 중이라면 EOIR-33 양식을 써서 법원에도 반드시 알려야 합니다.",
+          "s4": "확인 페이지나 이메일을 저장해 두세요."
+        },
+        "links": {
+          "l1": "USCIS 주소 변경"
+        }
+      },
+      "bank": {
+        "title": "은행 계좌 만들기",
+        "short": "돈을 안전하게 지키고 수수료를 아끼세요.",
+        "body": "은행이나 신용조합 계좌를 쓰면 현금보다 안전하며 미국에서 금융 기록을 쌓는 데 도움이 됩니다. 일부 은행은 여권이나 영사관 신분증을 받아줍니다.",
+        "steps": {
+          "s1": "여러 은행과 신용조합을 비교해 보세요. 월 수수료와 최소 잔고를 확인하세요.",
+          "s2": "신분증(여권 또는 영사관 신분증), 그리고 소셜 보안 번호나 ITIN이 있다면 가져가세요. 어떤 서류를 받는지 미리 물어보세요.",
+          "s3": "계좌를 만들고 체크카드(직불카드)를 신청하세요.",
+          "s4": "수표 현금화 업체는 이용하지 않는 것이 좋습니다. 수수료가 비쌉니다."
+        },
+        "links": {
+          "l1": "은행 계좌 (소비자금융보호국)",
+          "l2": "은행 이용 정보 (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "주(State) 신분증이나 운전면허증 받기",
+        "short": "사진이 있는 지역 신분증이 있으면 생활이 편해집니다.",
+        "body": "주(State) 신분증이나 운전면허증은 거의 모든 곳에서 신분 증명으로 쓸 수 있습니다. 필요한 서류는 주마다 규정이 다릅니다.",
+        "steps": {
+          "s1": "거주하는 주의 운전면허 시험장을 찾으세요.",
+          "s2": "주에서 받아주는 서류가 무엇인지 확인하세요.",
+          "s3": "예약이 필요한 주라면 미리 예약하세요.",
+          "s4": "서류와 수수료를 챙겨서 예약 날짜에 방문하세요."
+        },
+        "links": {
+          "l1": "주별 차량국(DMV) 찾기 (USA.gov)",
+          "l2": "텍사스 운전면허 및 신분증 (텍사스 DPS)"
+        }
+      },
+      "itin": {
+        "title": "소셜 보안 번호가 없다면 ITIN 받기",
+        "short": "소셜 보안 번호를 받을 수 없는 사람을 위한 세금 번호입니다.",
+        "body": "ITIN(개인 납세자 번호)이 있으면 소셜 보안 번호가 없어도 세금을 신고할 수 있습니다. 일할 수 있는 허가를 뜻하는 것은 아닙니다. IRS는 이 정보를 이민 단속 목적으로 공유하지 않습니다.",
+        "steps": {
+          "s1": "ITIN이 필요한지 확인하세요. 소셜 보안 번호를 받을 수 없는 경우에만 필요합니다.",
+          "s2": "IRS 양식 W-7을 작성하세요.",
+          "s3": "세금 신고서와 함께 보내거나, IRS 공인 대행인(Acceptance Agent)에게 무료 도움을 받으세요.",
+          "s4": "번호가 적힌 IRS 편지가 올 때까지 기다리세요. 안전하게 보관하세요."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "세금 신고하기",
+        "short": "세금 신고는 보통 4월 중순까지 해야 합니다. 무료 도움을 받을 수 있습니다.",
+        "body": "미국에서 돈을 벌었다면 보통 4월 15일까지 세금 신고를 해야 할 수 있습니다. 제때 신고하면 환급금과 세액 공제를 받는 데도 도움이 됩니다. 무료 세금 신고 도움을 받을 수 있습니다.",
+        "steps": {
+          "s1": "직장에서 받은 W-2나 1099 같은 세금 관련 서류를 모으세요.",
+          "s2": "가까운 곳에서 무료 세금 신고 도움(VITA)을 찾아보세요.",
+          "s3": "마감일(보통 4월 15일)까지 세금 신고를 마치세요.",
+          "s4": "세금 신고서와 서류 사본을 잘 보관하세요."
+        },
+        "links": {
+          "l1": "세금 신고하기 (IRS)",
+          "l2": "무료 세금 지원 (IRS)"
+        }
+      },
+      "credit": {
+        "title": "신용 점수 쌓기 시작하기",
+        "short": "신용도가 있으면 집을 구하고 대출을 받기 쉬워집니다.",
+        "body": "신용 기록은 공과금이나 빚을 어떻게 갚았는지 보여줍니다. 집주인과 대출 기관이 이 기록을 확인합니다. 천천히 신용 점수를 쌓아가고, 본인의 신용 보고서를 무료로 확인할 수 있습니다.",
+        "steps": {
+          "s1": "신용 보고서와 신용 점수가 무엇인지 알아보세요.",
+          "s2": "무료 신용 보고서를 발급받아 잘못된 내용이 없는지 확인하세요.",
+          "s3": "모든 청구서는 제때 납부하세요.",
+          "s4": "담보부 신용카드 이용을 고려해 보세요. 신용 점수를 “올려주겠다”며 돈을 요구하는 사람은 절대 믿지 마세요."
+        },
+        "links": {
+          "l1": "신용 보고서 및 점수 (CFPB)",
+          "l2": "무료 신용 보고서 (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "취업 허가증 만료일 확인하기",
+        "short": "만료일을 놓치지 않도록 미리 등록해 두세요.",
+        "body": "취업 허가증(EAD)에는 유효기간이 있습니다. 만료일 전에 갱신을 신청할 수 있는 사람도 있습니다. 신청 시기와 방법은 자격 조건에 따라 다르므로 공식 웹사이트를 확인하고 날짜를 저장해 두세요.",
+        "steps": {
+          "s1": "카드에 적힌 만료일을 확인하고 일정에 추가하세요.",
+          "s2": "언제 어떻게 갱신을 신청할 수 있는지 알아보세요 (I-765 양식).",
+          "s3": "온라인으로 신청하는 경우 USCIS 계정을 사용하세요.",
+          "s4": "접수증(receipt notice)을 보관하고 진행 상황을 확인하세요."
+        },
+        "links": {
+          "l1": "I-765 양식, 취업 허가증 (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "직장에서의 권리 알기",
+        "short": "최저임금과 초과근무 수당은 대부분의 근로자에게 적용됩니다.",
+        "body": "대부분의 근로자는 최소한 최저임금을 받아야 하며 초과 근무 시 추가 수당을 받아야 합니다. 노동부는 이민 신분에 관계없이 근로자들의 신고를 받습니다.",
+        "steps": {
+          "s1": "거주하는 주의 최저임금을 알아보세요.",
+          "s2": "근무 시간을 기록하고 급여 명세서를 잘 보관하세요.",
+          "s3": "받아야 할 임금을 받지 못했다면 진정을 제기할 수 있습니다."
+        },
+        "links": {
+          "l1": "최저임금 (Department of Labor)",
+          "l2": "임금 체불 신고하기 (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "저렴한 의료 서비스 찾기",
+        "short": "지역 보건소는 소득에 따라 진료비를 받습니다.",
+        "body": "지역 보건소는 보험이 없어도 환자를 진료하며 소득에 따라 진료비를 책정합니다. 일부 이민자는 건강보험에 가입할 수도 있습니다. 응급실은 응급 상황 시 신분과 관계없이 반드시 치료해야 합니다.",
+        "steps": {
+          "s1": "가까운 지역 보건소를 찾아보세요.",
+          "s2": "본인이 이용할 수 있는 건강보험이 있는지 확인하세요.",
+          "s3": "첫 방문 시 신분증과 소득 증명 서류를 챙겨가세요.",
+          "s4": "응급 상황에는 응급실로 가거나 911에 전화하세요."
+        },
+        "links": {
+          "l1": "이민자를 위한 건강보험 (HealthCare.gov)",
+          "l2": "보건소 찾기 (HRSA)"
+        }
+      },
+      "school": {
+        "title": "자녀를 학교에 등록하기",
+        "short": "모든 아이들은 공립학교에 다닐 권리가 있습니다.",
+        "body": "미국에서는 이민 신분에 관계없이 모든 아이가 무료 공립학교에 다닐 수 있습니다. 학교는 아이를 등록할 때 이민 신분을 물어볼 수 없습니다.",
+        "steps": {
+          "s1": "지역 교육청 사무실에 연락하세요.",
+          "s2": "자녀의 나이를 증명할 서류와 거주지 증명 서류를 준비하세요.",
+          "s3": "등록 서류를 작성하세요. 모르는 경우 언어 지원을 요청하세요.",
+          "s4": "자녀를 위한 영어 학습 지원 프로그램에 대해 문의하세요."
+        },
+        "links": {
+          "l1": "어린이 학교 등록 (USAHello)",
+          "l2": "교육권 (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "병역 준비역 등록하기 (18~25세 남성)",
+        "short": "미국에 사는 18세에서 25세 사이의 남성은 대부분 등록해야 합니다.",
+        "body": "대부분의 이민자를 포함하여 미국에 거주하는 18~25세 남성은 병역 준비역(Selective Service)에 등록해야 합니다. 등록은 무료이며 간단합니다.",
+        "steps": {
+          "s1": "등록 대상인지 확인하세요. 주로 18~25세 남성이 해당됩니다.",
+          "s2": "온라인으로 등록하세요.",
+          "s3": "등록 번호를 잘 보관하세요."
+        },
+        "links": {
+          "l1": "등록하기 (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "믿을 수 있는 무료 법률 지원 찾기",
+        "short": "도움이 필요하기 전에 누가 이민 상담을 해줄 수 있는지 알아두세요.",
+        "body": "변호사와 DOJ(법무부) 공인 대리인만이 이민 법률 상담을 제공할 수 있습니다. 도움이 필요해지기 전에 가까운 무료 또는 저렴한 법률 지원 단체를 찾아보세요.",
+        "steps": {
+          "s1": "가까운 무료 또는 저렴한 법률 지원 서비스를 찾아보세요.",
+          "s2": "상담해 주는 사람이 변호사 또는 DOJ 공인 대리인이 맞는지 확인하세요.",
+          "s3": "첫 상담 전에 비용이 드는지 문의하세요.",
+          "s4": "서류 사본을 챙겨가세요. 원본은 본인이 보관하세요."
+        },
+        "links": {
+          "l1": "법률 지원 찾기 (ImmigrationLawHelp.org)",
+          "l2": "무료 법률 서비스 기관 (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "이민 사기 구별하는 법",
+        "short": "notario는 법률 조언을 할 수 없습니다. 서류 양식은 무료입니다.",
+        "body": "사기꾼들이 이민자들을 노립니다. “notario”는 법률 조언을 할 수 없고, 그 누구도 영주권을 보장할 수 없으며, USCIS 양식은 무료로 내려받을 수 있습니다.",
+        "steps": {
+          "s1": "가장 흔한 이민 사기 유형을 알아보세요.",
+          "s2": "uscis.gov에서만 양식을 내려받으세요. 무료입니다.",
+          "s3": "사기를 당할 뻔했다면 신고하세요."
+        },
+        "links": {
+          "l1": "사기 피하기 (USCIS)",
+          "l2": "이민자 대상 사기 (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "세입자로서 나의 권리 알기",
+        "short": "집주인은 퇴거 조치를 하려면 법원을 거쳐야 합니다.",
+        "body": "텍사스주에서는 집주인이 자물쇠를 바꾸거나 물건을 치워버리는 방식으로 쫓아낼 수 없습니다. 퇴거는 반드시 법원을 거쳐야 합니다. 임대차 계약서를 읽고 사본을 보관하세요.",
+        "steps": {
+          "s1": "임대차 계약서를 읽고 사본을 보관하세요.",
+          "s2": "수리는 서면으로 요청하고 사본을 보관하세요.",
+          "s3": "퇴거 절차가 어떻게 진행되는지 알아보세요.",
+          "s4": "법원 서류를 받으면 무시하지 마세요. 무료 법률 도움을 받으세요."
+        },
+        "links": {
+          "l1": "집주인이 문을 잠그고 들여보내지 않을 때 (TexasLawHelp)",
+          "l2": "퇴거 진행 방식 (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "미국 밖으로 여행하기 전에",
+        "short": "출국은 진행 중인 사건에 영향을 줄 수 있습니다. 먼저 문의하세요.",
+        "body": "많은 이민자에게 미국 출국은 현재 심사 중인 신청이나 재입국 능력에 영향을 줄 수 있습니다. 떠나기 전에 여행 서류가 필요한 사람이 있습니다. 안전한지는 본인 상황에 따라 다릅니다.",
+        "steps": {
+          "s1": "표를 사기 전에 어떤 여행 서류가 있는지 알아보세요.",
+          "s2": "사전 여행 허가(Advance Parole)와 재입국 허가서(Form I-131)에 대해 알아보세요.",
+          "s3": "여행하기 전에 무료 법률 지원을 통해 본인 상황을 상담받으세요.",
+          "s4": "여행할 때는 이민 서류를 지참하세요."
+        },
+        "links": {
+          "l1": "여행 서류 (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "공적 부조와 나의 신분",
+        "short": "혜택을 받을 수 있는지는 신분에 따라 다릅니다. 신청하기 전에 문의하세요.",
+        "body": "일부 프로그램은 음식, 의료, 주거를 지원합니다. 혜택을 받을 수 있는지는 이민 신분에 따라 다르며, 경우에 따라 혜택 이용이 향후 신청에 영향을 줄 수 있습니다. 신청하기 전에 무료 법률 도움을 받으세요.",
+        "steps": {
+          "s1": "어떤 정부 지원 프로그램이 있는지 알아보세요.",
+          "s2": "자격은 신분에 따라 다릅니다. 본인에게 해당하는 내용을 무료 법률 지원에 문의하세요.",
+          "s3": "부모가 자격이 안 되더라도 미국에서 태어난 자녀는 혜택을 받을 수 있습니다.",
+          "s4": "신청서에는 항상 사실대로 적으세요."
+        },
+        "links": {
+          "l1": "정부 혜택 (USA.gov)",
+          "l2": "지역사회 자원 (ILRC)"
+        }
+      },
+      "court": {
+        "title": "이민 법원 출석일이 있는 경우",
+        "short": "심문 기일을 절대 놓치지 마세요. 온라인으로 사건을 확인하세요.",
+        "body": "이민 법원에 사건이 있는 경우 심문 기일에 불참하면 심각한 결과가 초래될 수 있습니다. A-번호를 사용하여 온라인으로 다음 심문 기일을 확인할 수 있습니다.",
+        "steps": {
+          "s1": "다음 심문 기일을 온라인으로 확인하세요.",
+          "s2": "심문 기일을 일정에 추가하세요.",
+          "s3": "이사를 하면 form EOIR-33을 사용하여 5일 이내에 법원에 알리세요.",
+          "s4": "가능한 한 빨리 무료 법률 도움을 찾으세요.",
+          "s5": "아직 변호사가 없더라도 모든 심문 기일에 참석하세요."
+        },
+        "links": {
+          "l1": "자동 사건 정보 (EOIR)",
+          "l2": "이민 법원 (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "무료 법률 지원 받기",
+    "body": "이는 회원님의 이민 신분에 따라 다릅니다. 무료 법률 구조 단체에서 회원님의 상황을 검토해 드릴 수 있습니다.",
+    "button": "무료 법률 도움 찾기"
+  },
+  "browser": {
+    "close": "닫기",
+    "back": "뒤로",
+    "openInBrowser": "브라우저에서 열기",
+    "openPage": "페이지 열기",
+    "versionOfficial": "공식 {language} 버전",
+    "versionAi": "AI 번역",
+    "versionOriginal": "원본",
+    "original": "원본",
+    "aiBanner": "{source}에서 AI로 번역되었습니다. 오류가 있을 수 있으니 중요한 내용은 원본을 확인하세요.",
+    "cantEmbed": "이 사이트는 Landed 안에서 표시할 수 없습니다. 대신 간단한 요약을 제공합니다.",
+    "noSummary": "이 사이트는 Landed 안에서 볼 수 없어요.",
+    "summaryTitle": "Landed 요약",
+    "loading": "여는 중…",
+    "translating": "번역하는 중…",
+    "preparing": "이 페이지를 준비하고 있어요…",
+    "translate": "번역하기",
+    "translateTo": "이 페이지를 다음 언어로 번역하기:",
+    "noTranslation": "원문 (번역 안 함)",
+    "translatingTo": "{language}(으)로 번역하는 중…",
+    "alreadyIn": "이 페이지는 이미 {language}(으)로 되어 있어요.",
+    "mustVisitTitle": "이 기능을 쓰려면 공식 웹사이트로 가셔야 해요.",
+    "goTo": "{domain}(으)로 가기",
+    "aiFormatted": "{domain}에서 가져온 글이에요. AI가 읽기 쉽게 정리했어요. 중요한 내용은 원문을 꼭 확인해 주세요.",
+    "translateFailed": "번역이 안 됐어요. 원본을 보여드릴게요.",
+    "viewOriginal": "원래 페이지: {domain}",
+    "notTrusted": "이 페이지는 Landed가 확인한 곳이 아니에요."
+  },
+  "assistant": {
+    "title": "Landed에게 물어보기",
+    "button": "Landed에게 물어보기",
+    "tab": "질문",
+    "welcome": "할 일, 날짜, 또는 미국 생활에 대해 물어보세요.",
+    "placeholder": "Landed에게 물어보기",
+    "send": "보내기",
+    "mic": "질문을 말로 하세요",
+    "micStop": "듣기 멈추기",
+    "listening": "듣는 중…",
+    "thinking": "생각하는 중…",
+    "clear": "대화 지우기",
+    "save": "이 기기에 대화 저장하기",
+    "suggested": "이렇게 물어보세요",
+    "s1": "처음에 뭘 해야 하나요?",
+    "s2": "ITIN은 어떻게 받나요?",
+    "s3": "내 work permit은 언제 끝나나요?",
+    "s4": "내 목록에 뭐가 남았나요?",
+    "aboutItem": "정보: {title}",
+    "itemPrompt": "“{title}”에 대해 도와주세요.",
+    "usedData": "사용한 정보: {sources}",
+    "store_profile": "내 프로필",
+    "store_dates": "저장한 날짜들",
+    "store_checklist": "내 할 일 목록",
+    "store_plan": "90일 계획",
+    "store_prepSummaries": "저장한 질문들",
+    "confirm": "확인",
+    "cancel": "나중에",
+    "confirmed": "저장됨",
+    "declined": "저장 안 됨",
+    "proposeDone": "“{title}”을(를) 끝난 것으로 할까요?",
+    "proposeNotDone": "“{title}”을(를) 안 끝난 것으로 할까요?",
+    "proposeDate": "“{label}”을(를) {date}에 넣을까요?",
+    "backToChat": "대화로 돌아가기",
+    "error": "문제가 생겼어요. 다시 시도해 주세요."
+  }
+}

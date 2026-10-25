@@ -1,0 +1,674 @@
+{
+  "sections": [
+    "start",
+    "money",
+    "work",
+    "family",
+    "protect",
+    "status"
+  ],
+  "items": [
+    {
+      "id": "i94",
+      "section": "start",
+      "deadline": {
+        "docType": "i94"
+      },
+      "links": [
+        {
+          "url": "https://i94.cbp.dhs.gov/",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.cbp.gov/travel/international-visitors/i-94",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://i94.cbp.dhs.gov/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {},
+        {},
+        {
+          "link": {
+            "url": "https://www.cbp.gov/contact/ports/deferred-inspection-sites",
+            "lastVerified": "2026-10-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ssn",
+      "section": "start",
+      "links": [
+        {
+          "url": {
+            "en": "https://www.ssa.gov/number-card",
+            "es": "https://www.ssa.gov/es/number-card"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": {
+              "en": "https://www.ssa.gov/number-card/request-number-first-time",
+              "es": "https://www.ssa.gov/es/numero-y-tarjeta/request-number-first-time"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {
+          "link": {
+            "url": {
+              "en": "https://www.ssa.gov/locator",
+              "es": "https://www.ssa.gov/es/locator"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "address",
+      "section": "start",
+      "deadline": {
+        "docType": "uscis"
+      },
+      "links": [
+        {
+          "url": {
+            "en": "https://www.uscis.gov/addresschange",
+            "es": "https://www.uscis.gov/es/cambiodedireccion"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/addresschange",
+              "es": "https://www.uscis.gov/es/cambiodedireccion"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://www.justice.gov/eoir/eoir-forms",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "bank",
+      "section": "start",
+      "links": [
+        {
+          "url": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://usahello.org/life-in-usa/money/bank-accounts/",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "stateId",
+      "section": "start",
+      "links": [
+        {
+          "url": "https://www.usa.gov/state-motor-vehicle-services",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.dps.texas.gov/section/driver-license",
+          "requires": "texas",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://www.usa.gov/state-motor-vehicle-services",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "itin",
+      "section": "money",
+      "links": [
+        {
+          "url": {
+            "en": "https://www.irs.gov/tin/itin/individual-taxpayer-identification-number-itin",
+            "es": "https://www.irs.gov/es/tin/itin/individual-taxpayer-identification-number-itin",
+            "zh": "https://www.irs.gov/zh-hans/tin/itin/individual-taxpayer-identification-number-itin"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": {
+              "en": "https://www.irs.gov/tin/itin/individual-taxpayer-identification-number-itin",
+              "es": "https://www.irs.gov/es/tin/itin/individual-taxpayer-identification-number-itin",
+              "zh": "https://www.irs.gov/zh-hans/tin/itin/individual-taxpayer-identification-number-itin"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.irs.gov/forms-pubs/about-form-w-7",
+              "es": "https://www.irs.gov/es/forms-pubs/about-form-w-7",
+              "zh": "https://www.irs.gov/zh-hans/forms-pubs/about-form-w-7"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.irs.gov/individuals/itin-acceptance-agent-program",
+              "es": "https://www.irs.gov/es/individuals/itin-acceptance-agent-program",
+              "zh": "https://www.irs.gov/zh-hans/individuals/itin-acceptance-agent-program"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "taxes",
+      "section": "money",
+      "deadline": {
+        "docType": "other"
+      },
+      "links": [
+        {
+          "url": {
+            "en": "https://www.irs.gov/filing",
+            "es": "https://www.irs.gov/es/filing",
+            "zh": "https://www.irs.gov/zh-hans/filing"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": {
+            "en": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+            "es": "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+            "zh": "https://www.irs.gov/zh-hans/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {
+          "link": {
+            "url": {
+              "en": "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+              "es": "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+              "zh": "https://www.irs.gov/zh-hans/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.irs.gov/filing",
+              "es": "https://www.irs.gov/es/filing",
+              "zh": "https://www.irs.gov/zh-hans/filing"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "credit",
+      "section": "money",
+      "links": [
+        {
+          "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": {
+            "en": "https://consumer.ftc.gov/articles/free-credit-reports",
+            "es": "https://consumidor.ftc.gov/articulos/informes-de-credito-gratuitos"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://consumer.ftc.gov/articles/free-credit-reports",
+              "es": "https://consumidor.ftc.gov/articulos/informes-de-credito-gratuitos"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "workPermit",
+      "section": "work",
+      "statusDependent": true,
+      "deadline": {
+        "docType": "workPermit"
+      },
+      "links": [
+        {
+          "url": {
+            "en": "https://www.uscis.gov/i-765",
+            "es": "https://www.uscis.gov/es/i-765"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/i-765",
+              "es": "https://www.uscis.gov/es/i-765"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://my.uscis.gov/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "wages",
+      "section": "work",
+      "links": [
+        {
+          "url": "https://www.dol.gov/agencies/whd/minimum-wage",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.dol.gov/agencies/whd/contact/complaints",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://www.dol.gov/agencies/whd/minimum-wage/state",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {
+          "link": {
+            "url": "https://www.dol.gov/agencies/whd/contact/complaints",
+            "lastVerified": "2026-10-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "section": "family",
+      "links": [
+        {
+          "url": {
+            "en": "https://www.healthcare.gov/immigrants/",
+            "es": "https://www.cuidadodesalud.gov/es/immigrants/"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://findahealthcenter.hrsa.gov/",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://findahealthcenter.hrsa.gov/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.healthcare.gov/immigrants/",
+              "es": "https://www.cuidadodesalud.gov/es/immigrants/"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "school",
+      "section": "family",
+      "requires": "children",
+      "links": [
+        {
+          "url": {
+            "en": "https://usahello.org/education/children/",
+            "es": "https://usahello.org/es/educacion/ninos/"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.justice.gov/crt/educational-opportunities-section",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {},
+        {
+          "link": {
+            "url": {
+              "en": "https://usahello.org/education/children/",
+              "es": "https://usahello.org/es/educacion/ninos/"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://www.justice.gov/crt/educational-opportunities-section",
+            "lastVerified": "2026-10-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "selectiveService",
+      "section": "family",
+      "links": [
+        {
+          "url": "https://www.sss.gov/register/",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {
+          "link": {
+            "url": "https://www.sss.gov/register/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "legalHelp",
+      "section": "protect",
+      "links": [
+        {
+          "url": "https://www.immigrationlawhelp.org/",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.justice.gov/eoir/list-pro-bono-legal-service-providers",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://www.immigrationlawhelp.org/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://www.justice.gov/eoir/recognition-and-accreditation-program",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "scams",
+      "section": "protect",
+      "links": [
+        {
+          "url": {
+            "en": "https://www.uscis.gov/avoid-scams",
+            "es": "https://www.uscis.gov/es/evite-las-estafas-de-inmigracion"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": {
+            "en": "https://consumer.ftc.gov/features/scams-against-immigrants",
+            "es": "https://consumidor.ftc.gov/destacado/como-evitar-las-estafas-contra-inmigrantes"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/scams-fraud-and-misconduct/avoid-scams/common-scams",
+              "es": "https://www.uscis.gov/es/fraude-estafas-y-fallas-en-el-desempeno/evite-las-estafas-de-inmigracion/estafas-comunes"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/forms/all-forms",
+              "es": "https://www.uscis.gov/es/formularios/todos-los-formularios"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://reportfraud.ftc.gov/",
+            "lastVerified": "2026-10-25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tenant",
+      "section": "protect",
+      "requires": "texas",
+      "links": [
+        {
+          "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://texaslawhelp.org/article/eviction",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {},
+        {},
+        {
+          "link": {
+            "url": "https://texaslawhelp.org/article/eviction",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    },
+    {
+      "id": "travel",
+      "section": "status",
+      "statusDependent": true,
+      "links": [
+        {
+          "url": {
+            "en": "https://www.uscis.gov/green-card/green-card-processes-and-procedures/travel-documents",
+            "es": "https://www.uscis.gov/es/residencia-permanente-tarjeta-verde/procesos-y-procedimientos-para-la-residencia-permanente/documentos-de-viaje"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": {
+            "en": "https://www.uscis.gov/i-131",
+            "es": "https://www.uscis.gov/es/i-131"
+          },
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/green-card/green-card-processes-and-procedures/travel-documents",
+              "es": "https://www.uscis.gov/es/residencia-permanente-tarjeta-verde/procesos-y-procedimientos-para-la-residencia-permanente/documentos-de-viaje"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": {
+              "en": "https://www.uscis.gov/i-131",
+              "es": "https://www.uscis.gov/es/i-131"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "benefits",
+      "section": "status",
+      "statusDependent": true,
+      "links": [
+        {
+          "url": {
+            "en": "https://www.usa.gov/benefits",
+            "es": "https://www.usa.gov/es/beneficios-gobierno"
+          },
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.ilrc.org/community-resources",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": {
+              "en": "https://www.usa.gov/benefits",
+              "es": "https://www.usa.gov/es/beneficios-gobierno"
+            },
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "court",
+      "section": "status",
+      "statusDependent": true,
+      "deadline": {
+        "docType": "court"
+      },
+      "links": [
+        {
+          "url": "https://acis.eoir.justice.gov/en/",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.justice.gov/eoir",
+          "lastVerified": "2026-10-25"
+        }
+      ],
+      "howTo": [
+        {
+          "link": {
+            "url": "https://acis.eoir.justice.gov/en/",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {},
+        {
+          "link": {
+            "url": "https://www.justice.gov/eoir/eoir-forms",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {
+          "link": {
+            "url": "https://www.justice.gov/eoir/list-pro-bono-legal-service-providers",
+            "lastVerified": "2026-10-25"
+          }
+        },
+        {}
+      ]
+    }
+  ]
+}

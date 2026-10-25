@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+.env
+.env.example
+.env.local
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+
+# Local environment files may contain API keys, including examples.
+.env*
+
+# Local tooling
+.local-tools/

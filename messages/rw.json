@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Inyuma",
+    "cancel": "Kuramo",
+    "done": "Birarangiye",
+    "close": "Funga",
+    "add": "Ongera",
+    "added": "Byongewe",
+    "delete": "Siba",
+    "save": "Bika",
+    "continue": "Komeza",
+    "skip": "Simbuka",
+    "comingSoon": "Biraza vuba",
+    "aiLabel": "Ibisobanuro by’ubwenge bw’ubukorano · Si inama z’amategeko",
+    "sources": "Inkomoko",
+    "error": "Hari ikitagenze neza. Ongera ugerageze.",
+    "retry": "Ongera ugerageze",
+    "loading": "Birimo birapakira…",
+    "sampleData": "ibyavuyemo by’icyitegererezo. Shyiramo urufunguzo rwa API kugira ngo ubone iby’ukuri.",
+    "settings": "Igenamiterere",
+    "learnMore": "Menya byinshi",
+    "openSource": "Isoko ifunguye: {name}"
+  },
+  "tabs": {
+    "label": "Ahabanza",
+    "home": "Ahabanza",
+    "legal": "Amategeko",
+    "community": "Umuryango",
+    "jobs": "Akazi"
+  },
+  "language": {
+    "label": "Ururimi",
+    "en": "English",
+    "es": "Español",
+    "choose": "Hitamo ururimi rwawe",
+    "search": "Shakisha indimi",
+    "other": "Ubundi burimi",
+    "otherPlaceholder": "Andika ururimi rwawe",
+    "otherFooter": "Tuzasebanura porogaramu mu rurimi rwawe dukoresheje ubwenge bw’ubukorano. Bishobora kugira amakosa.",
+    "translate": "Hindura mu rundi rurimi",
+    "translating": "Birimo guhindurira Landed mu rurimi rwa {language}…",
+    "notConfigured": "Guhindura mu rurimi rushya bisaba urufunguzo rwa API ya Gemini ku rubuga.",
+    "unknownLanguage": "Ntitwashoboye kubona urwo rurimi. Reba niba rwanditse neza wongere ugerageze.",
+    "translateFailed": "Guhindura ntibyagenze neza. Ongera ugerageze."
+  },
+  "disclaimer": "Landed isobanura amakuru. Si inama z’amategeko. Ku kibazo cyawe,agana umunyamategeko cyangwa umuntu wemewe.",
+  "landing": {
+    "hero": "Umwaka wawe wa mbere muri Leta Zunze Ubumwe z’Amerika, ufite umuyobozi n’inshuti nke.",
+    "sub": "Sobanukirwa amabaruwa yawe, kurikirana italiki z’ingenzi, shakisha ubufasha bwizewe, uhure n’abantu banyuze muri byo.",
+    "whyTitle": "Impamvuibi Bifite Akamaro",
+    "whyIntro": "Ibi bigira ingaruka ku bantu benshi cyane, ariko ntajya wumva bivugwa cyane. Ingaruka ziba mu rwihishwa: urupapuro ruyoberanye, igihe ntarengwa cyarenze, cyangwa “notario” w’umubeshyi.",
+    "stat1Value": "34%",
+    "stat1": "by’abantu bari bafite imanza mu rukiko rw’abimukira bari bafite umunyamategeko mu mwaka wa 2026, bikaba ari byo byari hasi cyane kuva mu 2026.",
+    "stat2Value": "2%",
+    "stat2": "by’abantu basabye uburenganzira nta munyamategeko bageze kuri byinshi, mu bushakashatsi bwakozwe ku rwego rw’igihugu ku manza zirenga miliyoni 1.2 z’abajyanwa mu bihugu byabo.",
+    "stat3Value": "5×",
+    "stat3": "Imiryango ikoresha ururimi rumwe yari isanzwe igira amahirwe angana n’incuro eshanu yo kutagira konti muri banki (ishingiye ku bushakashatsi bwa FDIC).",
+    "statsFooter": "Uburiganya bwa notario ntibuvugwa bihagije kuko abahohotewe batinya kubigaragaza. Abana bakunze gusobanurira ababyeyi babo fagitire, amasezerano y’inzu n’amapapuro y’amategeko.",
+    "pitch": "Ubufasha burahari. Gusa abantu ntibabasha kububona, kubisoma, cyangwa kumenya igice kibareba.",
+    "privacyTitle": "Ibanga ryawe",
+    "privacy": "Nta konti isabwa. Nta na kimwe gisohoka muri telefoni yawe keretse niba ubisabye. Ntitubika na rimwe amafoto y’ibyangombwa byawe.",
+    "getStarted": "Tangira",
+    "demoPersona": "Koresha uburyo bw’icyitegererezo",
+    "continueToHome": "Komeza ku rupapuro rw’ibanze"
+  },
+  "onboarding": {
+    "progress": "Intambwe ya {current} kuri {total}",
+    "langTitle": "Ni iruhe rurimi ukunda?",
+    "countryTitle": "Ukomoka he?",
+    "countryOther": "Ikindi gihugu",
+    "countryPlaceholder": "Andika igihugu cyawe",
+    "cityTitle": "Utuye mu buhe mujyi?",
+    "cityPlaceholder": "Undi mujyi, urugero: Chicago, IL",
+    "timeTitle": "Umaze igihe kingana iki muri Leta Zunze Ubumwe z’Amerika?",
+    "time0": "Munsi y’ukwezi kumwe",
+    "time1": "Amezi 1–6",
+    "time2": "Amezi 6–12",
+    "time3": "Arenze umwaka 1",
+    "aboutTitle": "Utuntu duke kuri wowe",
+    "aboutFooter": "Ntabwo ari ngombwa. Ibi bidufasha kukugira inama z’akazi n’abantu mwahura.",
+    "nameLabel": "Amazina",
+    "namePlaceholder": "Twiture nde?",
+    "kidsLabel": "Mfite abana",
+    "workLabel": "Akazi nakoze mu gihugu cyanjye",
+    "workPlaceholder": "urugero: Umuforomo wemewe",
+    "hardTitle": "Ni iki kimeze nk’icyoroshye cyangwa kigoye ubu?",
+    "hardFooter": "Hitamo byinshi uko ubishaka.",
+    "hard_paperwork": "Imapapuro",
+    "hard_money": "Amafaranga",
+    "hard_work": "Gushaka akazi",
+    "hard_people": "Guhura n’abantu",
+    "hard_english": "Icyongereza",
+    "hard_housing": "Icumbi",
+    "hard_health": "Ubuzima",
+    "finish": "Kora Gahunda Yanjye",
+    "making": "Turi gukora gahunda yawe…",
+    "demoNote": "Urugero rw’uwitegura: Maria, umugiraneza ukomoka muri Venezuela, umaze amezi 2 i Houston."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mexico",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "India",
+    "Vietnam": "Vietnam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "Amategeko",
+    "money": "Amafaranga",
+    "social": "Abantu",
+    "jobs": "Akazi",
+    "health": "Ubuzima",
+    "daily": "Ubuzima bwa buri munsi"
+  },
+  "home": {
+    "title": "Ahabanza",
+    "greeting": "Baho, {name}.",
+    "greetingNoName": "Baho.",
+    "dayIn": "Umunsi wa {day} muri {city}",
+    "nextSteps": "Intambwe Zindi",
+    "nextStepsFooter": "Kuva muri gahunda y’iminsi ya mbere 90. Kanda ku ruhembe iyo urangije.",
+    "allSteps": "Reba Intambwe Zose ({count})",
+    "fewerSteps": "Erekana Keye",
+    "allDone": "Warangije buri ntambwe. Wakoze cyane.",
+    "dueIn": "{count, plural, =0 {Uyu munsi} one {Mu minsi #} other {Mu minsi #}}",
+    "markDone": "Shyira “{title}” nka byarangiye",
+    "markNotDone": "Shyira “{title}” nka bitararangira",
+    "comingUp": "Ibiri imbere",
+    "noDates": "Nta matariki arahari",
+    "noDatesSub": "Sikana ibaruwa kugira ngo ukurikiranire hafi amatariki yayo",
+    "explore": "Shakisha",
+    "legalSub": "Amabaruwa, amatariki n’ubufasha bw’ubuntu bwisanzuye",
+    "communitySub": "Ibikorwa n’abantu bari hafi yawe",
+    "jobsSub": "Akazi n’impamyabumenyi",
+    "money": "Amafaranga",
+    "health": "Ubuzima",
+    "noProfile": "Reka tubanze dutegure gahunda yawe.",
+    "setUp": "Gutegura",
+    "makingPlan": "Turimo gutegura gahunda yawe…",
+    "profileButton": "Igenamiterere n’umwirondoro"
+  },
+  "status": {
+    "green": "Witeguye neza kugeza ubu",
+    "greenSub": "Nta cyihutirwa mu mezi 6 ari imbere.",
+    "yellow": "Biraje mu minsi {count, plural, one {#} other {#}}",
+    "red": "Biraje vuba: {count, plural, =0 {uyu munsi} one {mu minsi #} other {mu minsi #}}",
+    "redPast": "Hari italiki yarenze",
+    "redPastSub": "“{label}” byari hashije iminsi {count, plural, one {#} other {#}}.",
+    "nextSub": "{label} · {date}",
+    "empty": "Nta mataliki arimo gukurikiranwa",
+    "emptySub": "Fata amafoto y’ibaruwa cyangwa wongeremo italiki kugira ngo utangire.",
+    "count": "{count, plural, one {Italiki # ikurikiranwa} other {Mataliki # akurikiranwa}}",
+    "prepare": "Ntegure iki?"
+  },
+  "legal": {
+    "title": "Amategeko",
+    "myDates": "Mataliki yanjye",
+    "addDate": "Ongeraho italiki",
+    "datesEmpty": "Mataliki wongeraho cyangwa wafatiye amafoto azagaragara hano.",
+    "daysLeft": "{count, plural, =0 {Uyu munsi} one {Umunsi # usigaye} other {Iminsi # isigaye}}",
+    "daysAgo": "{count, plural, one {Umunsi # ushize} other {Iminsi # ishize}}",
+    "reminder": "Urwibutso",
+    "deleteDate": "Siba “{label}”",
+    "fromScan": "Bivuye mu ifoto yafashwe",
+    "tools": "Ibikoresho",
+    "scan": "Fata ifoto y’ibaruwa",
+    "scanSub": "Hindura ifoto ibisobanuro byoroheje",
+    "ask": "Baza ikibazo",
+    "askSub": "Isubizo rifite aho ryashingiye",
+    "help": "Shaka ubufasha bw’amategeko buntu",
+    "helpSub": "Ubufasha bw’amategeko buri hafi yawe",
+    "prep": "Witegure guhura n’inzego zibishinzwe",
+    "prepSub": "Incamake yo kwitwaza",
+    "rights": "Menya uburenganzira bwawe",
+    "rightsFooter": "Amakuru rusange n’amahuza y’ibigo byemewe.",
+    "addSheetTitle": "Ongeraho italiki",
+    "docType": "Inyandiko",
+    "labelField": "Iyi tariki ni iyihe?",
+    "labelPlaceholder": "urugero: Uruhushya rwo gukora rurangira",
+    "dateField": "Itariki",
+    "noteField": "Icyo kwitondera",
+    "notePlaceholder": "Nta ngamba zikenewe",
+    "docTypes": {
+      "workPermit": "Uruhushya rwo gukora",
+      "passport": "Pasiporo",
+      "uscis": "Itangazo rya USCIS",
+      "court": "Itangazo ry’urukiko",
+      "i94": "I-94",
+      "lease": "Amasezerano y’ubukode",
+      "other": "Ibindi"
+    },
+    "sourceLink": "Inkomoko: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Notario ntashobora gutanga inama z’amategeko",
+      "short": "Abavoka n’abemerewe gusa nibo babishobora.",
+      "body": "Abavoka n’abahagarariye bemewe na DOJ gusa nibo bashobora gutanga inama z’amategeko ku bijyanye n’abimukira. “Notario” ntashobora kubikora. Muri Leta Zunze Ubumwe z’Amerika, umuntu utangiza inyandiko ashobora gusa kuba umuhamya w’umukono.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Nta n’umwe ushobora kwemeza icyemezo cy’aho uba",
+      "short": "Nta “rutonde rwihariye” rubaho.",
+      "body": "Nta n’umwe ushobora kwemeza ko uzabona icyemezo cy’aho uba cyangwa ngo agushyire ku “rutonde rwihariye.” Hari umuntu wemeye ibitangaza cyangwa usabye amafaranga yo kwihutisha ibintu, ibyo ni ikimenyetso cy’akaga.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Impapuro za USCIS ni ubuntu",
+      "short": "Uzikure kuri uscis.gov.",
+      "body": "Impapuro zemewe za USCIS ni ubuntu kuzikura kuri uscis.gov. Hari ubusabe bugira amafaranga y’ubwishyu, ariko impapuro z ubwazo ntizishyirwa amafaranga. Imbuga za leta zemewe zirangira na .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Uburyo bwo kugenzura umuvoka",
+      "short": "Murebe mu nzego z’abavoka z’intara yawe.",
+      "body": "Shaka umuvoka mu nzego z’abavoka z’intara afiteho uruhushya. Muri Texas, koresha ishakisha rya State Bar of Texas “Find a Lawyer”. Ku bahagarariye bemewe, reba urutonde rwa DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Iby’ibanze ku mukodesha",
+      "short": "Kwirukanwa bigomba kunyura mu rukiko.",
+      "body": "Soma amasezerano yawe y’ubukode kandi ubike kopi. Nyir’inzu ntashobora kukwirukana ahindura ingufuri cyangwa afata ibintu byawe; kwirukanwa bigomba kunyura mu rukiko. Nubona impapuro z’urukiko, ntuzirengagize.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Iby’ibanze ku kazi",
+      "short": "Umushahara muto n’amasaha y’inyongera bireba abakozi benshi.",
+      "body": "Abakozi benshi bagomba guhabwa byibuze umushahara muto wa Leta n’inyongera y’amasaha y’akaziarenze 40 mu cyumweru. Ishami ry’Abakozi ryakira ibirego by’umushahara hatitawe ku ITERABERE ry’ubwimukira. Bika inyandiko y’amasaha yawe n’umushahara.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Soma ibaruwa",
+    "intro": "Fata ifoto y’ibaruwa cyangwa y’urupfu. Turayisobanura mu rurimi rworoshye.",
+    "privacy": "Ifoto yawe isomwa rimwe gusa ngo isobanurwe, hanyuma igashyingurwa. Ntibiba byiza ko ibikwa.",
+    "protecting": "Duhisha amakuru yawe yiteguriye...",
+    "protectingNote": "Ibi bikorerwa kuri telefone yawe. Nta na kimwe kirererezwa.",
+    "reviewTitle": "Reba mbere yo kohereza",
+    "reviewIntro": "Imirongo y’umukara ihisha amakuru yawe yiteguriye. Kopi yakingiwe gusa ni yo yoherezwa ngo isomwe.",
+    "foundCount": "{count, plural, =0 {Ntitwabonye amakuru yiteguriye mu buryo bwikora.} one {Twahishe amakuru # yihariye: {kinds}.} other {Twahishe amakuru # yihariye: {kinds}.}}",
+    "ocrFailed": "Ntushoboye gusoma ibiri kuri telefone yawe. Kurura kuri ikintu cyose cy’ibanga kugira ngo ugihishe.",
+    "reviewHelp": "Kurura ku bindi byose ushaka guhisha. Kanda ku murongo w’umukara kugira ngo wongere ubone ibirimo.",
+    "reviewImageAlt": "Inyandiko yawe ifite amakuru yihariye yahishwe",
+    "uncover": "Werekana ibi",
+    "undo": "Subira inyuma",
+    "sendCovered": "Ohereza kopi yahishwe",
+    "cancelScan": "Hagarika",
+    "rejected_blurry": "Iyi foto irasa n’ibihu cyane ku buryo idasomeka",
+    "rejected_dark": "Iyi foto irijimye cyane ku buryo idasomeka",
+    "rejected_bright": "Iyi foto ifite urumuri rwinshi cyane cyangwa amabara yayo yarazimye",
+    "rejected_unreadable": "Ntidushobora gusoma igice gihagije cy’iyi foto",
+    "rejectedBody": "Kugira ngo dusobanure ibaruwa yawe neza kandi dupfuke amakuru yawe bwite, dukeneye foto igaragara neza. Nta kintu cyoherejwe.",
+    "tipsTitle": "Kugira ngo ufate foto igaragara neza",
+    "tip1": "Shyira ibaruwa iringaniye ku meza yijimye.",
+    "tip2": "Koresha urumuri rwinshi kandi rungana. Irinde igicucu n’urumuri rubengerana.",
+    "tip3": "Fata telefone igororotse hejuru y’urupapuro kugira ngo urupapuro wuzure kuri ekirani.",
+    "tip4": "Kanda kuri ekirani kugira ngo ifate neza, hanyuma ntunyeganyege.",
+    "retake": "Fata Indi Foto",
+    "chooseAnother": "Hitamo Indi Foto",
+    "kind_aNumber": "Nimero ya A",
+    "kind_receipt": "nimero y’inyemezabwishyu",
+    "kind_ssn": "Nimero y’Ubwishingizi bwa Leta (SSN)",
+    "kind_phone": "nimero ya telefone",
+    "kind_email": "imeri",
+    "kind_account": "nimero ya konti",
+    "kind_name": "izina",
+    "kind_birth": "itariki y’amavuko",
+    "kind_address": "aho utuye",
+    "kind_id": "nimero y’indangamuntu",
+    "takePhoto": "Fata Ifoto",
+    "choosePhoto": "Hitamo Ifoto",
+    "trySample": "Gerageza Urwandiko rw’icyitegererezo",
+    "samplesTitle": "Inyandiko z’Icyitegererezo",
+    "samplesFooter": "Inyandiko z’ibihimbano zifite amazina n’imibare byashyizweho kugira ngo ugerageze porogaramu.",
+    "sample1": "Urupapuro rw’icyemezo cy’uko cyagezeho",
+    "sample2": "Itangazo ry’urubanza",
+    "sample3": "Kuvuguruza amasezerano y’ubukode",
+    "reading": "Turimo gusoma urwandiko rwawe…",
+    "whatThisIs": "Iki ni iki",
+    "summary": "Inshamake",
+    "dates": "Amatariki",
+    "noDates": "Nta matariki yabonetse.",
+    "addDate": "Ongera “{label}” mu matariki yanjye",
+    "wordsToKnow": "Amagambo Ugomba Kumenya",
+    "nextStep": "Intambwe Ikurikira",
+    "highRiskTitle": "Ibi bishobora gukenewe umuhanga",
+    "mediumRiskTitle": "Ibi bishobora gukenewe igisubizo",
+    "risk_low": "Byoroheje",
+    "risk_medium": "Bikeneye kwitonderwa",
+    "risk_high": "By’ingenzi",
+    "findHelp": "Shaka Ubufasha bw’Amategeko buntu",
+    "photoNotSaved": "Ifoto yawe ntiyabitswe.",
+    "scanAnother": "Sikana Indundi",
+    "tooBig": "Iyo foto iraremereye cyane. Gerageza indi.",
+    "notConfigured": "Gusoma urwandiko bisaba urufunguzo rwa AI kuri seriveri. Ahubwo gerageza urwandiko rw’icyitegererezo."
+  },
+  "ask": {
+    "title": "Baza Ikibazo",
+    "emptyTitle": "Baza ku buzima muri Leta Zunze Ubumwe z’Amerika",
+    "emptySub": "Igisubizo gituruka ku masoko yizewe. Ku bibazo bijyanye n’ikibazo cyiteganyijwe kuri wowe, tuzagufasha kubona umuhanga.",
+    "suggested": "Gerageza Kubaza",
+    "q1": "Ni iki gitandukanya ikarita ya girikandi (green card) n’uruhushya rwo gukora?",
+    "q2": "I-94 ni iki?",
+    "q3": "Namenya nte ko umunyamategeko ari nyirizina?",
+    "q4": "Notario ni iki kandi kuki ngomba kwitonda?",
+    "placeholder": "Baza ikibazo",
+    "send": "Ohereza",
+    "mic": "Vuga ikibazo cyawe",
+    "micStop": "Hagarika kumva",
+    "listening": "Turimo kumva…",
+    "thinking": "Turimo gushakisha mu masoko yizewe…",
+    "caseSpecific": "Ibi biterwa n’uko ibyawe bihagaze",
+    "findHelp": "Shakisha ubufasha bw’amategeko bw’ubuntu hafi yawe",
+    "you": "Wowe",
+    "landed": "Landed",
+    "clear": "Siba"
+  },
+  "help": {
+    "title": "Shakisha ubufasha bw’amategeko bw’ubuntu",
+    "searchPlaceholder": "Shakisha muri {city}",
+    "filterLabel": "Hitamo",
+    "all": "Byose",
+    "free": "Ubuntu",
+    "spanish": "Icyesipanyole",
+    "directories": "Urutonde rw’abizewe",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Ubufasha bw’amategeko butari ubw’ubucuruzi bukoresha kode y’aho utuye (ZIP code)",
+    "eoir": "Urutonde rw’abikorera ku bushake rwa EOIR",
+    "eoirSub": "Abatanga ubufasha bw’ubuntu banditse mu nkiko z’abinjira n’abasohoka",
+    "results": "Hafi ya {city}",
+    "finding": "Turi gushakisha ubufasha hafi yawe…",
+    "empty": "Nta byabonetse. Gerageza kuri “Byose.”",
+    "type_nonprofit": "Idaharanira inyungu",
+    "type_accredited_rep": "Uhagarariye wemewe",
+    "type_attorney": "Umwavoka",
+    "type_clinic": "Ikinini",
+    "type_unknown": "Umuryango",
+    "cost_free": "Ubuntu",
+    "cost_low": "Ibiciro bike",
+    "cost_paid": "Byishyuwe",
+    "cost_unknown": "Baza ibiciro",
+    "speaks": "Avuga {languages}",
+    "call": "Hamagara",
+    "website": "Urubuga rwa interineti",
+    "directions": "Icyerekezo",
+    "details": "Amakuru arambuye",
+    "howToVerify": "Uburyo bwo kugenzura",
+    "verify1": "Baza niba uwo ugufasha ari umwavoka wemewe cyangwa uhagarariye wemewe na DOJ.",
+    "verify2": "Shakisha abavoka ku rutonde rw’abavoka b’intara (state bar). Shakisha abahagarariye ku rutonde rwa EOIR.",
+    "verify3": "Ntuzigere usinya impapuro zitujuje cyangwa ngo utange ibyangombwa bya nyabyo.",
+    "verify4": "Baza ibiciro mbere y’uko mubonana bwa mbere.",
+    "verifyLinkBar": "Gushakisha ku rutonde rw’abavoka b’intara",
+    "verifyLinkEoir": "Urutonde rwa EOIR",
+    "rating": "Wahawe amanota {rating} kuri 5",
+    "notFound": "Ibi ntibigihari."
+  },
+  "prep": {
+    "title": "Gutegura Gahunda",
+    "intro": "Kora icyegeranyo cy’urupapuro rumwe uzashyira umunyamategeko cyangwa umuhagarariwe wemewe. Cyanditse mu rurimi rwawe no mu Cyongereza.",
+    "datesSection": "Amatariki Harimo",
+    "noDates": "Nta matariki arimo. Ushobora kongeraho ibibazo.",
+    "questions": "Ibibazo Byange",
+    "questionsFooter": "Kugeza kuri 5. Ntushyiremo nimero z’indangamuntu.",
+    "questionPlaceholder": "Ikibazo {n}",
+    "create": "Kora Icyegeranyo",
+    "creating": "Turimo kwandika icyegeranyo cyawe…",
+    "share": "Sangiza",
+    "print": "Gucapa",
+    "copy": "Koporora",
+    "copied": "Byakoporowe",
+    "yourLanguage": "Mu Rurimi Rwawe",
+    "english": "Mu Cyongereza",
+    "edit": "Hindura"
+  },
+  "community": {
+    "title": "Umuryango",
+    "events": "Ibikorwa Biri Hafi Yawe",
+    "eventsFooter": "Ibikorwa by’ubuntu byagenewe abageze bushya bisohoka ku mugaragaro.",
+    "noEvents": "Nta bikorwa bibonetse ubu.",
+    "loadingEvents": "Turimo gushakisha ibikorwa biri hafi yawe…",
+    "people": "Abantu Babayemo",
+    "peopleFooter": "Urugero rw’ibiranga abantu muri uyu mukino wa mbere. Guhuza by’ukuri bizaza vuba.",
+    "sayHi": "Suhuza",
+    "sayHiTo": "Suhuza {name}",
+    "toast": "Gutumirana ubutumwa bizaza vuba.",
+    "bio": "Yimukiye muri {city} avuye muri {from} hashize imyaka {years, plural, one {# umwaka} other {# imyaka}}. {job}. Avuga {languages}.",
+    "open": "Fungura igikorwa"
+  },
+  "jobs": {
+    "title": "Akazi",
+    "credentialTitle": "Ibyemezo By’ubushobozi Bwawe",
+    "credentialLoading": "Turimo kureba uko akazi kawe gafite uruhushya…",
+    "noBackground": "Ongeraho amateka yawe y’akazi muri Setting kugira ngo urebe uko bikomeza.",
+    "stateBoard": "Shakisha Urwego rw’Intara Yawe",
+    "searchPlaceholder": "Shakisha akazi muri {city}",
+    "results": "Akazi Hafi ya {city}",
+    "empty": "Nta kazi kabonetse. Gerageza ahandi.",
+    "finding": "Turimo gushakisha akazi…",
+    "via": "binyuze kuri {source}"
+  },
+  "settings": {
+    "title": "Amagenamiterere",
+    "profile": "Umwirondoro",
+    "editProfile": "Subiramo Inyigisho z’ibanze",
+    "city": "Umujyi",
+    "language": "Ururimi",
+    "notifications": "Kwibutsa Igihe",
+    "notificationsFooter": "Ubu butumwa bwibutsa buguma kuri iyi telefone.",
+    "notificationsDenied": "Ubutumwa bwibutsa bufunze mu byo wahisemo kuri mudasobwa yawe.",
+    "privacy": "Ibanga",
+    "privacyFooter": "Byose Landed izi bibikwa gusa kuri iyi telefone. Amafoto y’ibyangombwa ntajya abikwa.",
+    "deleteData": "Siba Amakuru Yanjye",
+    "deleteTitle": "Gusiba amakuru yawe yose?",
+    "deleteBody": "Ibi bikuza umwirondoro wawe, gahunda, amatariki n’ibibazo kuri iyi telefone. Ibi ntibishobora gusubirwaho.",
+    "deleteConfirm": "Siba",
+    "deleted": "Amakuru yawe yasibwe.",
+    "about": "Ibyerekeye",
+    "version": "Verisiyo",
+    "aboutFooter": "Landed isobanura amakuru. Si inama z’amategeko."
+  },
+  "checklist": {
+    "title": "Ibintu ugomba kwitaho",
+    "entrySub": "Urutonde rw’ibyo ugomba gukora mu mwaka wawe wa mbere",
+    "progress": "{done} kuri {total} byarangiye",
+    "howToToggle": "Uko wabigenza",
+    "howToTitle": "Uko wabigenza",
+    "linksTitle": "Imbuga zizewe",
+    "official": "Zemewe na Leta",
+    "nonprofit": "Zitayobowe n’intego z’inyungu",
+    "checked": "Byagenzuwe ku wa {date}",
+    "markDone": "Shyira ahagaragara ko byarangiye",
+    "markNotDone": "Shyira ahagaragara ko bitararangira",
+    "doneOn": "Byarangiye ku wa {date}",
+    "addDate": "Ongeraho itariki y’ibi",
+    "markItemDone": "Shyira ahagaragara ko “{title}” byarangiye",
+    "markItemNotDone": "Shyira ahagaragara ko “{title}” bitararangira",
+    "notFound": "Iki kintu ntiri ku rutonde rwawe.",
+    "stepsFooter": "Intambwe rusange zanditswe n’abakozi ba Landed. Ntizihwanye n’inama z’abanyamategeko.",
+    "sections": {
+      "start": "Intambwe za Mbere",
+      "money": "Amafaranga n’Imisoro",
+      "work": "Akazi",
+      "family": "Ubuzima n’Umuryango",
+      "protect": "Wirinde",
+      "status": "Bitewe n’Uko Uhagaze mu mategeko"
+    },
+    "items": {
+      "i94": {
+        "title": "Bonera kopi y’urupapuro rwawe rwa I-94",
+        "short": "Inyandiko yawe yemewe y’aho wahereye ugera hano. Reba amatariki ariho.",
+        "body": "I-94 ni inyandiko ya Leta yerekana igihe wageze hano n’igihe ushobora kumara hano. Ibiro byinshi birayisaba, kandi itariki iriho irakenewe cyane. Ushobora kuyibona ku buntu kuri interineti.",
+        "steps": {
+          "s1": "Jya ku rubuga rwa interineti rwemewe rwa I-94. Ni ubuntu.",
+          "s2": "Hitamo “Get Most Recent I-94” hanyuma wandike izina ryawe na pasiporo yawe uko byanditswe muri pasiporo.",
+          "s3": "Reba izina ryawe, ubwoko bw’icyo winjiriyemo, ndetse n’itariki ya “Admit Until”.",
+          "s4": "Bika cyangwa usohore kopi yayo uyibike hamwe na pasiporo yawe.",
+          "s5": "Hari ikitarimo neza? Ibiro bya CBP Deferred Inspection bishobora kugufasha kubikosora."
+        },
+        "links": {
+          "l1": "Urubuga rwemewe rwa I-94 (CBP)",
+          "l2": "Amakuru kuri I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Bona nimero y’ubwiteganyiriza bw’abakozi (Social Security number)",
+        "short": "Uyikeneye kugira ngo ukore no mu bindi bintu byinshi.",
+        "body": "Nimero ya Social Security (SSN) ikoreshwa mu kazi, mu misoro, no muri banki. Si buri wese ushobora kuyibona. Bitewe n’uko uhagaze mu by’abimukira n’uburenganzira bwo gukora. Ikarita n’iyi nimero ni ubuntu burundu.",
+        "steps": {
+          "s1": "Menya niba ushobora kubona iyi nimero n’inyandiko ukeneye.",
+          "s2": "Tondeka inyandiko zawe: akenshi ni pasiporo yawe, icyemezo cy’uko uri umunyamahanga, n’icyemezo cy’imyaka yawe.",
+          "s3": "Tangira gusaba kuri interineti cyangwa ujye ku biro bya Social Security biri hafi yawe.",
+          "s4": "Tegereza ikarita yawe mu iposita. Uyibike ahantu hatekanye, ntiyishyire mu mufuka wawe w’amafaranga."
+        },
+        "links": {
+          "l1": "Nimero y’ubwiteganyiriza bw’abakozi n’ikarita (SSA)"
+        }
+      },
+      "address": {
+        "title": "Menyesha USCIS igihe wimukiye ahandi",
+        "short": "Abantu benshi bagomba kumenyesha aho batuye hashya mu minsi 10.",
+        "body": "Abatari abaturage benshi bagomba kumenyesha USCIS aho batuye hashya mu minsi 10 nyuma yo kwimuka. Nurabikora, ushobora kubura amakuru y’ingenzi cyangwa amabaruwa. Ni ubuntu.",
+        "steps": {
+          "s1": "Nimwimuka, andika itariki. Akenshi uba ufite iminsi 10.",
+          "s2": "Hindura aho utuye kuri interineti kuri USCIS.",
+          "s3": "Niba ufite urubanza mu rukiko rw’abimukira, ugomba no kubimenyesha urukiko ukoresha fagitire ya EOIR-33.",
+          "s4": "Bika urupapuro rwemeza ko wabikoze cyangwa ubutumwa bwa email."
+        },
+        "links": {
+          "l1": "Hindura aho utuye muri USCIS"
+        }
+      },
+      "bank": {
+        "title": "Fungura konti muri banki",
+        "short": "Bika amafaranga yawe neza kandi wirinde amafaranga yo kwishyuza cheques.",
+        "body": "Konti muri banki cyangwa koperative y’imari (credit union) irinda amafaranga yawe kuruta kuyabitika mu ntoki kandi igufasha kubaka amateka meza muri Leta Zunze Ubumwe z’Amerika. Banki zimwe zemera pasiporo cyangwa indangamuntu ya konsila.",
+        "steps": {
+          "s1": "Gereranya banki na koperative z’imari. Reba amafaranga yishyurwa buri kwezi n’amafaranga make agomba kuguma kuri konti.",
+          "s2": "Zana indangamuntu yawe (pasiporo cyangwa indangamuntu ya konsila) na SSN cyangwa ITIN niba uzifite. Baza inyandiko zemewe.",
+          "s3": "Fungura konti maze usabe ikarita ya banki yo kwishyuraho (debit card).",
+          "s4": "Irinde aho baha abantu amafaranga ya cheques. Amafaranga yabo yo hejuru ni menshi."
+        },
+        "links": {
+          "l1": "Konti za banki (Consumer Financial Protection Bureau)",
+          "l2": "Amakuru ya banki (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Bona indangamuntu y’intara cyangwa uruhushya rwo gutwara ibinyabiziga",
+        "short": "Indangamuntu y’aho utuye iriho ifoto yorohereza ibintu byinshi.",
+        "body": "Ikarita y’indangamuntu ya Leta cyangwa uruhushya rwo gutwara ibinyabiziga byemewe hose hafi. Buri Leta ifite amategeko yayo y’impapuro ukeneye.",
+        "steps": {
+          "s1": "Shaka ibiro bitanga uruhushya rwo gutwara ibinyabiziga bya Leta yawe.",
+          "s2": "Reba impapuro Leta yawe yemera.",
+          "s3": "Fata gahunda niba Leta yawe ibisaba.",
+          "s4": "Zana impapuro zawe n’amafaranga ku biro byawe."
+        },
+        "links": {
+          "l1": "Shaka ibiro bishinzwe ibinyabiziga bya Leta yawe (USA.gov)",
+          "l2": "Uruhushya rwo gutwara ibinyabiziga n’indangamuntu bya Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Fata ITIN niba utabasha kubona SSN",
+        "short": "Nimero y’imisoro ku bantu batabasha kubona nimero ya Social Security.",
+        "body": "ITIN (Individual Taxpayer Identification Number) iguha uburenganzira bwo gutanga imisoro niba udashobora kubona nimero ya Social Security. Ntiduha uburenganzira bwo gukora. IRS ntisangira amakuru ngo ikurikize amategeko y’abinjira n’abasohoka.",
+        "steps": {
+          "s1": "Reba niba ukeneye ITIN. Uyikeneye gusa niba utabasha kubona SSN.",
+          "s2": "Uzuza Ifishi ya IRS W-7.",
+          "s3": "Uyohereze hamwe n’imisoro yawe, cyangwa ubone ubufasha buntu ku Mujyanama wemewe na IRS.",
+          "s4": "Tegereza ibaruwa ya IRS iriho nimero yawe. Uyibike neza."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Tanga imisoro yawe",
+        "short": "Imisoro akensunyi isabwa hagati muri Mata. Hari ubufasha buntu.",
+        "body": "Niba warakoreye amafaranga muri Leta Zunze Ubumwe z’Amerika, ushobora gukeneka gutanga imisoro, akensunyi bitarenze Mata 15. Gutanga ku gihe bishobora no kugufasha kubona amafaranga yisubiza n’ibyiza. Hari ubufasha buntu bw’imisoro.",
+        "steps": {
+          "s1": "Teranya impapuro zawe z’imisoro uvuye ku kazi, nka W-2 cyangwa 1099.",
+          "s2": "Shaka ubufasha buntu bw’imisoro hafi yawe (VITA).",
+          "s3": "Tanga imisoro yawe bitarenze igihe ntarengwa, akensunyi ni Mata 15.",
+          "s4": "Bika kopi z’imisoro yawe n’impapuro."
+        },
+        "links": {
+          "l1": "Tanga imisoro yawe (IRS)",
+          "l2": "Ubufasha buntu bw’imisoro (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Tangira kwubaka uburyo bwo kwizerwa mu by’imari",
+        "short": "Kwizerwa mu by’imari bigufasha gukodesha inzu no kubona inguzanyo.",
+        "body": "Amateka yawe y’imari agaragaza uko wishyuza fagitire. Abanyamituriko n’abatanga inguzanyo barayibona. Ushobora kuyubaka buhoro buhoro kandi ukagenzura raporo zawe ku buntu.",
+        "steps": {
+          "s1": "Menya icyo raporo z’imari n’amanota bivuga.",
+          "s2": "Bona raporo zawe z’imari z’ubuntu uzigenzuremo amakosa.",
+          "s3": "Wishyure buri fagitire ku gihe.",
+          "s4": "Tekereza kuri karita y’inguzanyo yishingiye, kandi ntuzishyure umuntu wese usezeranya “gukosora” imari yawe."
+        },
+        "links": {
+          "l1": "Raporo z’imari n’amanota (CFPB)",
+          "l2": "Raporo z’imari z’ubuntu (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Menya igihe uruhushya rwawe rwo gukora ruzarangirira",
+        "short": "Ongeraho igihe cyo kurangira kugira ngo utagihusha.",
+        "body": "Uruhushya rwo gukora (EAD) rufite igihe cyo kurangira. Abantu bamwe bashobora gusaba urushya rushya mbere y’uko rurangira. Igihe n’uburyo biterwa n’icyiciro cyawe, bityo reba urupapuro rwemewe ubike itariki.",
+        "steps": {
+          "s1": "Shaka itariki y’irangirira kuri karita yawe uyishyire mu matariki yawe.",
+          "s2": "Soma igihe n’uburyo ushobora gusaba kongera igihe (Ifishi I-765).",
+          "s3": "Niba utanga impapuro kuri interineti, koresha konti ya USCIS.",
+          "s4": "Bika icyemezo cy’uko wakiriwe kandi ugenzure uko dosiye yawe ihagaze."
+        },
+        "links": {
+          "l1": "Ifishi I-765, uruhushya rwo gukora (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Menya uburenganzira bwawe ku kazi",
+        "short": "Umushahara muto n’amasaha y’inyongera bireba abakozi benshi.",
+        "body": "Abakozi benshi bagomba kubona nibura umushahara muto n’amafaranga y’inyongera y’amasaha yarenzeho. Ishami ry’Abakozi ryakira ibirego by’abakozi batitaye ku miterere yabo yo kuba abinjira n’abasohoka.",
+        "steps": {
+          "s1": "Menya umushahara muto muri Leta yawe.",
+          "s2": "Andika amasaha yawe kandi ubike impapuro z’umushahara wawe.",
+          "s3": "Niba utishyuwe ibyo udebeye, ushobora gutanga ikirego."
+        },
+        "links": {
+          "l1": "Umushahara muto (Ishami ry’Abakozi)",
+          "l2": "Tanga ikirego cy’umushahara (Ishami ry’Abakozi)"
+        }
+      },
+      "health": {
+        "title": "Shaka ubuvuzi bw’abaturage buhendutse",
+        "short": "Ibigo Nderabuzima by’abaturage bishyurisha hashingiwe ku mafaranga winjiza.",
+        "body": "Ibigo Nderabuzima by’abaturage bivura abarwayi ndetse n’abatagira ubwishingizi kandi bikishyurisha hashingiwe ku mafaranga binjiza. Abinjira bamwe bashobora no kubona ubwishingizi bw’ubuzima. Ibyumba by’ihutirwaho bigomba kukuvura mu bihe by’ubihutirwaho.",
+        "steps": {
+          "s1": "Shaka ikigo nderabuzima cy’abaturage hafi yawe.",
+          "s2": "Reba ubuvuzi ushobora kubona.",
+          "s3": "Zana indangamuntu n’icyemezo cy’amafaranga winjiza ku gusura kwawe kwa mbere.",
+          "s4": "Mu bihe by’ihutirwaho, jya mu cyumba cy’ihutirwaho cyangwa uhamagare 911."
+        },
+        "links": {
+          "l1": "Ubwishingizi bw’ubuzima bw’abinjira (HealthCare.gov)",
+          "l2": "Shaka ikigo nderabuzima (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Andikisha abana bawe ku ishuri",
+        "short": "Abana bose bafite uburenganzira bwo kwiga mu mashuri ya Leta.",
+        "body": "Mu Leta Zunze Ubumwe z'Amerika, abana bose bashobora kwiga mu mashuri ya Leta ku buntu, uko ibyangombwa byabo byaba bimeze kose. Amashuri ntashobora kubaza ibijyanye n'ibyangombwa by'abinjira n'abasohoka kugira ngo yandikishe umwana.",
+        "steps": {
+          "s1": "Vugana n'ibiro by'akarere k'amashuri yanyu.",
+          "s2": "Shaka icyemezo cy'imyaka y'umwana wawe n'icyemezo cy'aho utuye.",
+          "s3": "Uzura impapuro zo kwiyandikisha. Saba ubufasha mu rurimi rwawe.",
+          "s4": "Saba ubufasha bw'abiga icyongereza ku mwana wawe."
+        },
+        "links": {
+          "l1": "Ishuri ry'abana (USAHello)",
+          "l2": "Uburenganzira mu burezi (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Kwiyandikisha muri Selective Service (abagabo bafite imimyaka 18–25)",
+        "short": "Abagabo benshi bafite imyaka 18 kugeza kuri 25 batuye muri Leta Zunze Ubumwe z'Amerika bagomba kwiyandikisha.",
+        "body": "Abagabo benshi bafite imyaka 18 kugeza kuri 25 batuye muri Leta Zunze Ubumwe z'Amerika, harimo n'abinjira n'abasohoka benshi, bagomba kwiyandikisha muri Selective Service. Kwiyandikisha ni ubuntu kandi byoroshye.",
+        "steps": {
+          "s1": "Reba niba ukeneye kwiyandikisha. Ni cyane cyane abagabo bafite imyaka 18 kugeza kuri 25.",
+          "s2": "Yiyandikishe kuri interineti.",
+          "s3": "Bika nomero yawe y'iyandikisha."
+        },
+        "links": {
+          "l1": "Yiyandikishe (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Shaka ubufasha bw'amategeko ku buntu ushobora kwiringira",
+        "short": "Menya uwo ushobora gusaba inama ku byerekeye abinjira n'abasohoka mbere y'uko ubikenera.",
+        "body": "Abavoka n'abagaragiye ba DOJ bemerewe bonyine ni bo batanga inama z'amategeko y'abinjira n'abasohoka. Shaka itsinda ry'abafasha mu mategeko ku buntu cyangwa rihendutse hafi yawe mbere y'uko ubikenera.",
+        "steps": {
+          "s1": "Shakisha ubufasha bw'amategeko ku buntu cyangwa rihendutse hafi yawe.",
+          "s2": "Menya neza ko uwo muntu ari umuvoka cyangwa umuhagararije wemewe na DOJ.",
+          "s3": "Baza igiciro mbere y'inama yanyu ya mbere.",
+          "s4": "Zana kopi z'ibyangombwa byawe. Bika iby'umwimerere."
+        },
+        "links": {
+          "l1": "Shaka ubufasha bw'amategeko (ImmigrationLawHelp.org)",
+          "l2": "Abatanga serivisi z'amategeko ku buntu (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Wige kumenya ubutekamutwe bw'abinjira n'abasohoka",
+        "short": "Notarios ntibashobora gutanga inama z'amategeko. Impapuro ni ubuntu.",
+        "body": "Abatekamutwe bagambira abinjira n'abasohoka. “Notario” ntashobora gutanga inama z'amategeko, nta n'umwe ushobora kwizeza green card, kandi impapuro za USCIS zikurwa kuri interineti ku buntu.",
+        "steps": {
+          "s1": "Wige ubutekamutwe bw'abinjira n'abasohoka bukunze kugaragara.",
+          "s2": "Kurura impapuro kuri uscis.gov honyine. Ni ubuntu.",
+          "s3": "Niba hari uwagerageza kuguha ubutekamutwe, birohoze."
+        },
+        "links": {
+          "l1": "Irinde ubutekamutwe (USCIS)",
+          "l2": "Ubutekamutwe ku binjira n'abasohoka (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Menya uburenganzira bwawe nk'umukodesha",
+        "short": "Nyir'inzu agomba kunyura mu rukiko kugira ngo akwirukane.",
+        "body": "Muri Texas, nyir'inzu ntashobora kukwirukana ahindura ingufuri cyangwa atwara ibintu byawe. Kwirukana umuntu bigomba kunyura mu rukiko. Soma amasezerano yawe y'ubukode kandi ubike kopi.",
+        "steps": {
+          "s1": "Soma amasezerano yawe y'ubukode kandi ubike kopi.",
+          "s2": "Saba ibikorwa byo gusanwa mu nyandiko kandi ubike kopi.",
+          "s3": "Wige uko uburyo bwo kwirukana bukora.",
+          "s4": "Niba ubonye impapuro z'urukiko, ntuzirengagize. Shaka ubufasha bw'amategeko ku buntu."
+        },
+        "links": {
+          "l1": "Niba nyir'inzu agufungirana hanze (TexasLawHelp)",
+          "l2": "Uko kwirukana gukora (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Mbere y'uko ujya urugendo hanze ya Leta Zunze Ubumwe z'Amerika",
+        "short": "Kugenda gushobora kugira icyo bihungabanya ku rubanza ruri mu nzira. Banza ubaze.",
+        "body": "Ku binjira n'abasohoka benshi, kuva muri Leta Zunze Ubumwe z'Amerika gushobora kugira icyo bihungabanya ku cyifuzo cyatanzwe cyangwa ubushobozi bwo kugaruka. Abantu bamwe bakeneye urupapuro rw'urugendo mbere y'uko bagenda. Niba byizewe bitewe n'uko uhagaze.",
+        "steps": {
+          "s1": "Mbere y'uko ugura tike, wige ibyangombwa by'urugendo bihari.",
+          "s2": "Soma ibyerekeye Advance Parole na Re-entry Permits (Form I-131).",
+          "s3": "Vugana n'ubufasha bw'amategeko ku buntu ku bijyanye n'uko uhagaze mbere y'uko ujya urugendo.",
+          "s4": "Twara ibyangombwa byawe by'abinjira n'abasohoka igihe cyose ujya urugendo."
+        },
+        "links": {
+          "l1": "Ibyangombwa by'urugendo (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Ubufasha bwa Leta n'ibyangombwa byawe",
+        "short": "Ushobora kubona ubufasha bitewe n'ibyangombwa byawe. Banza ubaze mbere y'uko usaba.",
+        "body": "Porogaramu zimwe zifasha mu biribwa, ubuvuzi n'aho kuba. Ushobora kubibona bitewe n'ibyangombwa by'abinjira n'abasohoka, kandi rimwe na rimwe gukoresha ubufasha bwa leta bishobora kugira umumaro ku cyifuzo cy'ejo hazaza. Saba ubufasha bw'amategeko ku buntu mbere y'uko usaba.",
+        "steps": {
+          "s1": "Wige porogaramu z'ubufasha bwa leta zihari.",
+          "s2": "Uburenganzira bushingiye ku byangombwa byawe. Saba ubufasha bw'amategeko ku buntu icyo wakora.",
+          "s3": "Abana bavukiye muri Leta Zunze Ubumwe z'Amerika bashobora kubona uburenganzira n'ubwo ababyeyi babo batabufite.",
+          "s4": "Buri gihe vugisha ukuri ku byo usaba."
+        },
+        "links": {
+          "l1": "Ubufasha bwa Leta (USA.gov)",
+          "l2": "ibikoresho by'abaturage (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Niba ufite itariki y'urukiko rw'abinjira n'abasohoka",
+        "short": "Ntuzigere ucikwa n'urubanza. Reba urubanza rwawe kuri interineti.",
+        "body": "Niba ufite urubanza mu rukiko rw’abinjira n’abasohoka,gusiba urubanza bishobora kugira ingaruka zikomeye. Ushobora kureba itariki y’urubanza rwawe rutaha kuri interineti ukoresheje nimero yawe ya A-number.",
+        "steps": {
+          "s1": "Reba itariki y’urubanza rwawe rutaha kuri interineti.",
+          "s2": "Shyira itariki y’urubanza mu matariki yawe.",
+          "s3": "Niba wimutse, bwire urukiko mu minsi 5 ukoresheje fagitire ya EOIR-33.",
+          "s4": "Shakisha ubufasha bw’abunganizi mu mategeko bw’ubuntu vuba bishoboka.",
+          "s5": "Jya mu manza zose, kabiri niyo waba utarabona umunamategeko."
+        },
+        "links": {
+          "l1": "Amakuru y’urubanza yikora (EOIR)",
+          "l2": "Inkiko z’abinjira n’abasohoka (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Vugana n’abunganizi mu mategeko b’ubuntu",
+    "body": "Ibi biterwa n’aho uhagaze mu mategeko y’abinjira n’abasohoka. Ishyirahamwe ry’ubufasha bw’amategeko bw’ubuntu rishobora gusuzuma ibyawe.",
+    "button": "Shaka Ubufasha bw’Amategeko bw’Ubuntu"
+  },
+  "browser": {
+    "close": "Funga",
+    "back": "Inyuma",
+    "openInBrowser": "Fungura muri Browser",
+    "openPage": "Fungura Urupapuro",
+    "versionOfficial": "Verisiyo y’official ya {language}",
+    "versionAi": "Gihinduwe na AI",
+    "versionOriginal": "Iy’umwimerere",
+    "original": "Iy’umwimerere",
+    "aiBanner": "Gihinduwe na AI kuva kuri {source}. Bishobora kuba birimo amakosa. Reba iy’umwimerere ku bintu bikomeye.",
+    "cantEmbed": "Urwo rubuga ntirushobora kugaragara muri Landed. Dore incamake ngufi.",
+    "noSummary": "Urwo rubuga ntirushobora kugaragara muri Landed.",
+    "summaryTitle": "Incamake iva muri Landed",
+    "loading": "Birimo gufungura…",
+    "translating": "Birimo guhindurwa…",
+    "preparing": "Turategura iyi paji...",
+    "translate": "Hindura",
+    "translateTo": "Hindura iyi paji mu",
+    "noTranslation": "Umwimerere (nta buhinduzi)",
+    "translatingTo": "Birahindurirwa muri {language}…",
+    "alreadyIn": "Iyi paji yamaze kuba mu {language}.",
+    "mustVisitTitle": "Kugira ngo ukoreshe ibi, ugomba kujya ku rubuga rwemewe.",
+    "goTo": "Jya kuri {domain}",
+    "aiFormatted": "Amagambo yavuye muri {domain}, yatunganijwe na AI kugira ngo yorohie gusoma. Reba umwimerere kugira ngo umenye ibyingenzi.",
+    "translateFailed": "Guhindura ntibyagenze neza. Herekanwa iy’umwimerere.",
+    "viewOriginal": "Urupapuro rw’umwimerere: {domain}",
+    "notTrusted": "Uru rupapuro ntirurutse ku soko rigenzuwe na Landed."
+  },
+  "assistant": {
+    "title": "Baza Landed",
+    "button": "Baza Landed",
+    "tab": "Baza",
+    "welcome": "Baza ibijyanye n’urutonde rwawe, amatariki yawe, cyangwa ubuzima muri Leta Zunze Ubumwe z’Amerika.",
+    "placeholder": "Baza Landed",
+    "send": "Ohereza",
+    "mic": "Vuga ikibazo cyawe",
+    "micStop": "Hagarika kumva",
+    "listening": "Birimo kumva…",
+    "thinking": "Birimo gutekereza…",
+    "clear": "Siba Ibiganiro",
+    "save": "Bika ikiganiro kuri iyi telefone",
+    "suggested": "Gerageza kubaza",
+    "s1": "Nigomba gukora iki mbere na mbere?",
+    "s2": "Nshobora nte kubona ITIN?",
+    "s3": "Permis yo gukora irarangira ryari?",
+    "s4": "Ni iki gisigaye ku rutonde rwanjye?",
+    "aboutItem": "Ibyerekeye: {title}",
+    "itemPrompt": "Mfasha kuri “{title}”.",
+    "usedData": "Byakoreshejwe: {sources}",
+    "store_profile": "umwirondoro wawe",
+    "store_dates": "amatariki yawe wabitse",
+    "store_checklist": "urutonde rwawe",
+    "store_plan": "gahunda yawe y’iminsi 90",
+    "store_prepSummaries": "ibibazo byawe wabitse",
+    "confirm": "Emeza",
+    "cancel": "Si ubu",
+    "confirmed": "Byabitse",
+    "declined": "Ntibyabitse",
+    "proposeDone": "Gushyira “{title}” nka byakozwe?",
+    "proposeNotDone": "Gushyira “{title}” nka bitarakorwa?",
+    "proposeDate": "Kongeraho “{label}” kuri {date}?",
+    "backToChat": "Subira kuri chat",
+    "error": "Hari ibitagenze neza. Ongera ugerageze."
+  }
+}

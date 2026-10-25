@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lamplight: a warm, deep black, like a kitchen table at night with one lamp on.
+   Sage means you can tap it. Oat marks dates coming up, clay rose marks urgent ones,
+   lavender is for community. Status always comes with an icon and words.
+   Hairlines are warm (#363431), never grey. Dark only. */
+:root {
+  --ink: #131211;
+  --surface: #1f1d1b;
+  --paper: #ede6da;
+  --sage: #a8c3a0;
+  --sage-hover: #c4d8bd;
+  --on-accent: #142012;
+  --lavender: #b7a9c9;
+  --oat: #d9cbb0;
+  --clay: #c9958a;
+  --muted: #a1a1a6;
+  --soft: #d1d1d6;
+  --faint: #6e6e73;
+  --hairline: #363431;
+
+  /* Card fills behind a status color. Urgent is from the reference screens; the
+     others are the same warm surface nudged toward their hue. */
+  --urgent-surface: #2a1f1e;
+  --oat-surface: #27231d;
+  --sage-surface: #1e241d;
+  --lavender-surface: #24212a;
+
+  /* Semantic names the components use. */
+  --system-blue: var(--sage);
+  --system-green: var(--sage);
+  --system-orange: var(--oat);
+  --system-red: var(--clay);
+  --system-teal: var(--lavender);
+  --system-indigo: var(--lavender);
+  --system-gray: var(--muted);
+
+  --tint: var(--sage);
+  --tint-fill: var(--sage);
+  --red-text: var(--clay);
+
+  --label: var(--paper);
+  --label-soft: var(--soft);
+  --secondary-label: var(--muted);
+  --tertiary-label: var(--faint);
+  --separator: var(--hairline);
+  --system-background: var(--ink);
+  --system-grouped-background: var(--ink);
+  --secondary-grouped-background: var(--surface);
+  --secondary-background: var(--surface);
+  --system-fill: rgba(237, 230, 218, 0.08);
+  --bar-background: rgba(19, 18, 17, 0.94);
+
+  --blue-tint: var(--sage-surface);
+  --green-tint: var(--sage-surface);
+  --orange-tint: var(--oat-surface);
+  --red-tint: var(--urgent-surface);
+  --indigo-tint: var(--lavender-surface);
+  --teal-tint: var(--lavender-surface);
+
+  --card-shadow: none;
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--ink);
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-inter), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+a.text-tint:hover,
+button.text-tint:hover {
+  color: var(--sage-hover);
+}
+
+/* No text selection or callouts on controls; content stays selectable. */
+button,
+[role="button"],
+[role="tab"],
+[role="switch"],
+nav,
+label {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::placeholder {
+  color: var(--faint);
+}
+
+.hairline-b {
+  box-shadow: inset 0 -1px 0 var(--hairline);
+}
+.hairline-t {
+  box-shadow: inset 0 1px 0 var(--hairline);
+}
+
+/* Rows in a list card are split by full-width warm hairlines. */
+.list-section > * + * {
+  border-top: 1px solid var(--hairline);
+}
+.row-sep {
+  display: none;
+}
+
+.bar-blur {
+  background: var(--bar-background);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+}
+
+.pressable {
+  transition: opacity 200ms var(--ease-ios);
+}
+.pressable:active:not(:disabled) {
+  opacity: 0.6;
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Round check: 2px faint ring, sage fill with an ink tick when done. */
+.lamp-check {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--faint);
+  background: transparent;
+}
+.lamp-check[data-checked="true"] {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+.lamp-check[data-checked="true"]::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--on-accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@keyframes ios-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  /* When a printable summary exists, print only that. */
+  body:has(.print-root) > *:not(.print-root) {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+.print-only {
+  display: none;
+}

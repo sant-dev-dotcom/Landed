@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Dib ugu noqo",
+    "cancel": "Jooji",
+    "done": "Waa la dhameeyay",
+    "close": "Xir",
+    "add": "Ku dar",
+    "added": "La daray",
+    "delete": "Tirtir",
+    "save": "Kaydi",
+    "continue": "Sii wad",
+    "skip": "Ka bood",
+    "comingSoon": "Dhawaan ayuu imaan doonaa",
+    "aiLabel": "Sharaxaada AI · Talo sharci ma aha",
+    "sources": "Ilaha xogta",
+    "error": "Wax bay khaldameen. Fadlan dib u day.",
+    "retry": "Dib u day",
+    "loading": "Waa la soo dejinayaa…",
+    "sampleData": "Tusaale natiijooyin ah. Ku dar furayaasha API si aad u hesho natiijooyin toos ah.",
+    "settings": "Dejinta",
+    "learnMore": "Wax badan baro",
+    "openSource": "Isha furan: {name}"
+  },
+  "tabs": {
+    "label": "Weyn",
+    "home": "Bogga Hore",
+    "legal": "Sharci",
+    "community": "Bulshada",
+    "jobs": "Shaqooyinka"
+  },
+  "language": {
+    "label": "Luqadda",
+    "en": "English",
+    "es": "Español",
+    "choose": "Dooro Luqaddaada",
+    "search": "Raadi luqadaha",
+    "other": "Luqad kale",
+    "otherPlaceholder": "Gali luqaddaada",
+    "otherFooter": "Waxaan app-ka ugu tarjumeynaa luqadadaada AI. Waxaa laga yaabaa inay cillado yaryar ku jiraan.",
+    "translate": "Turjum",
+    "translating": "Landed waxaa loo turjumayaa {language}…",
+    "notConfigured": "Turjumida luqad cusub waxay u baahan tahay furaha Gemini API ee server-ka.",
+    "unknownLanguage": "Waan heli weynay luqaddaas. Hubi higgaadda oo dib u day.",
+    "translateFailed": "Turjumiddu ma shaqayn. Fadlan dib u day."
+  },
+  "disclaimer": "Landed waxay sharraxaysaa macluumaadka. Talo sharci ma aha. Xaaladdaada, la hadal qareen ama wakiil sharciaysan.",
+  "landing": {
+    "hero": "Sanadkaaga ugu horreeya ee US, adigoo haysta hage iyo saaxiibo dhawr ah.",
+    "sub": "Faham warqadahaaga, la soco taariikhaha muhiimka ah, hel caawimo aad ku qorshan karto, oo la kulan dad soo maray.",
+    "whyTitle": "Wuxuu Kan Muhiim U Yahay",
+    "whyIntro": "Tani waxay dhibtaa malaayiin qof, laakiin dhif baad ka maqashaa. Dhibku waa mid aamusan: warqad wareersan, waqti dhaafo, been-abuur “notario.”",
+    "stat1Value": "34%",
+    "stat1": "oo ka mid ah dadka dacwooyinkooda maxkamadda socdaalka la dhameeyay ayaa lahaa qareen FY2026, taasoo ahayd tii ugu hooseysay tan iyo 2010.",
+    "stat2Value": "2%",
+    "stat2": "oo ka mid ah dadka codsaday caawimaad iyaga oo aan lahayn qareen ayaa guuleystay, daraasad heer qaran ah oo ku saabsan 1.2 milyan oo kiisas masaafurin ah.",
+    "stat3Value": "5×",
+    "stat3": "Qoysaska ku hadla Isbaanishka kaliya ayaa taariikh ahaan ku dhowaad shan jeer uga daran inayaan lahayn xisaab bangi (xogta sahanka FDIC).",
+    "statsFooter": "Khiyaanada notario si xun looma soo sheego sababtoo ah dhibbanayaashu waxay ka baqayaan inay soo baxaan. Carruurtu waxay badanaa u turjumaan biilasha, kirada iyo warqadaha sharciga waalidkood.",
+    "pitch": "Caawinta waa jirtaa. Dadku ma heli karaan, ma akhrin karaan, mana garan karaan qaybta ay khuseyso.",
+    "privacyTitle": "Sirtaada",
+    "privacy": "Ma jiro akoon. Waxba kama baxayaan taleefankaaga haddii aadan codsan. Weligayo ma hayno sawirada dukumiintiyadaada.",
+    "getStarted": "Bilow",
+    "demoPersona": "Isticmaal Qofka Tusaalaha ah",
+    "continueToHome": "Sii wad Guriga"
+  },
+  "onboarding": {
+    "progress": "Tallaabada {current} ee {total}",
+    "langTitle": "Waa kuwee luqadda aad doorbidaysaa?",
+    "countryTitle": "Halkee baad ka timid?",
+    "countryOther": "Wadan kale",
+    "countryPlaceholder": "Qor dalkaaga",
+    "cityTitle": "Waa kuwee magaalada aad ku nooshahay?",
+    "cityPlaceholder": "Magaalo kale, tusaale Chicago, IL",
+    "timeTitle": "Intee in le'eg ayaad joogtay Mareykanka?",
+    "time0": "In ka yar 1 bil",
+    "time1": "1–6 bilood",
+    "time2": "6–12 bilood",
+    "time3": "In ka badan 1 sano",
+    "aboutTitle": "Wax yar oo ku saabsan adiga",
+    "aboutFooter": "Ikhtiyaari. Tani waxay naga caawinaysaa inaan soo jeedino shaqooyin iyo dad aan la kulanno.",
+    "nameLabel": "Magaca",
+    "namePlaceholder": "Maxaan kuugu yeernaa?",
+    "kidsLabel": "Waxaan leeyahay carruur",
+    "workLabel": "Ka shaqee dalkayga hooyo",
+    "workPlaceholder": "tusaale kalkaalisada diiwaangashan",
+    "hardTitle": "Maxaa adag hadda?",
+    "hardFooter": "Dooro inta aad rabto.",
+    "hard_paperwork": "Waraaqaha",
+    "hard_money": "Lacagta",
+    "hard_work": "Raadinta shaqo",
+    "hard_people": "La kulanka dadka",
+    "hard_english": "Ingiriisi",
+    "hard_housing": "Guryaha",
+    "hard_health": "Caafimaadka",
+    "finish": "Samee Qorshahayga",
+    "making": "Waa la sameynayaa qorshahaaga…",
+    "demoNote": "Tusaale: Maria, oo ah kalkaalisada ka timid Venezuela,na Houston joogta 2 bilood."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mexico",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "India",
+    "Vietnam": "Vietnam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "Sharci",
+    "money": "Lacag",
+    "social": "Dad",
+    "jobs": "Shaqo",
+    "health": "Caafimaadka",
+    "daily": "Nolosha Maalinlaha ah"
+  },
+  "home": {
+    "title": "Guriga",
+    "greeting": "Haye, {name}.",
+    "greetingNoName": "Haye.",
+    "dayIn": "Maalinta {day} ee {city}",
+    "nextSteps": "Tallaabooyinkaaga Xiga",
+    "nextStepsFooter": "Laga bilaabo qorshahaaga 90-ka maalmood ee ugu horreeya. Taabo goobaabada markaad dhammayso.",
+    "allSteps": "Eeg Dhammaan Tallaabooyinka ({count})",
+    "fewerSteps": "Muuji Kuwo Yar",
+    "allDone": "Waxa aad dhammaystirtay tallaabo kasta. Shaqo wacan.",
+    "dueIn": "{count, plural, =0 {Maanta} one {Gudaha # maalin} other {Gudaha # maalmood}}",
+    "markDone": "Calaamadee “{title}” in la sameeyay",
+    "markNotDone": "Calaamadee “{title}” in aan la sameyn",
+    "comingUp": "Imaneysa",
+    "noDates": "Taariikho ma jiraan weli",
+    "noDatesSub": "Sawir warqad si aad ula socoto taariikhdeeda",
+    "explore": "Baadh",
+    "legalSub": "Waraaqaha, taariikhaha iyo caawinaad bilaash ah",
+    "communitySub": "Dhacdooyinka iyo dadka kuu dhow",
+    "jobsSub": "Shaqooyinka iyo shahaadooyinkaaga",
+    "money": "Lacag",
+    "health": "Caafimaad",
+    "noProfile": "Aynu marka hore qorshahaaga dejino.",
+    "setUp": "Deji",
+    "makingPlan": "Waa la diyaarinayaa qorshahaaga…",
+    "profileButton": "Dejinta iyo xogtaada shakhsiga ah"
+  },
+  "status": {
+    "green": "Wax walba waa ay kuu hagaagsan yihiin hadda",
+    "greenSub": "Wax dhibaato ah ama taariikh ah ma jiraan 6-da bilood ee soo socota.",
+    "yellow": "Waxaa soo dhow {count, plural, one {# maalin} other {# maalmood}}",
+    "red": "Waxaa soo dhow dhakhso: {count, plural, =0 {maanta} one {in # maalin} other {in # maalmood}}",
+    "redPast": "Taariikh baa dhaaftay",
+    "redPastSub": "“{label}” waxay ahayd {count, plural, one {# maalin} other {# maalmood}} ka hor.",
+    "nextSub": "{label} · {date}",
+    "empty": "Weli taariikh lama raadraacin",
+    "emptySub": "Sawir warqad ama ku dar taariikh si aad u bilowdo.",
+    "count": "{count, plural, one {# taariikh ayaa la raadraacay} other {# taariikhood ayaa la raadraacay}}",
+    "prepare": "Maxaan u Diyaargaroobaa?"
+  },
+  "legal": {
+    "title": "Sharci",
+    "myDates": "Taariikhdeyda",
+    "addDate": "Ku dar Taariikh",
+    "datesEmpty": "Taariikhaha aad ku darto ama sawirto waxay ka muuqanayaan halkaan.",
+    "daysLeft": "{count, plural, =0 {Maanta} one {# maalin ayaa hartay} other {# maalmood ayaa hartay}}",
+    "daysAgo": "{count, plural, one {# maalin ka hor} other {# maalmood ka hor}}",
+    "reminder": "Xusuusin",
+    "deleteDate": "Tirtir “{label}”",
+    "fromScan": "Laga soo sawiray",
+    "tools": "Qalabka",
+    "scan": "Sawir Warqad",
+    "scanSub": "Sawir u beddel sharaxaad fudud",
+    "ask": "Weydii Su’aal",
+    "askSub": "Jawaabo wata meelaha laga soo xigtay",
+    "help": "Hel Caawimaad Sharci oo Lacag La’aan ah",
+    "helpSub": "Gargaar sharci oo kuu dhow",
+    "prep": "U diyaar garow Ballan",
+    "prepSub": "Warbixin kooban oo aad wadatid",
+    "rights": "Baro Xuquuqdaada",
+    "rightsFooter": "Macluumaad guud oo wata xiriiriyeyaal xagga ilaha rasmiga ah.",
+    "addSheetTitle": "Ku dar Taariikh",
+    "docType": "Dukumenti",
+    "labelField": "Waa maxay taariikhdani?",
+    "labelPlaceholder": "tusaale: Ogolaanshaha shaqada wuu dhacayaa",
+    "dateField": "Taariikhda",
+    "noteField": "Fiiro gaar ah",
+    "notePlaceholder": "Ikhtiyaari",
+    "docTypes": {
+      "workPermit": "Ogolaanshaha shaqada",
+      "passport": "Baasaboor",
+      "uscis": "Ogeysiis ka yimid USCIS",
+      "court": "Ogeysiis maxkamad",
+      "i94": "I-94",
+      "lease": "Heshiiska kireynta",
+      "other": "Mid kale"
+    },
+    "sourceLink": "Xigashada: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Notarios ma siin karaan talo sharci ah",
+      "short": "Qareennada iyo dadka idman kaliya ayaa bixin kara.",
+      "body": "Qareennada iyo wakiillada DOJ u idman kaliya ayaa bixin kara talo sharci ah oo ku saabsan socdaalka. “Notario” ma samayn karo. Mareykanka, qofka shaabadaha xaqiijiya wuxuu kaliya marag ka noqon karaa saxiixyada.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Qofna dammaanad ka bixin maayo green card",
+      "short": "Ma jiro “liis gaar ah.”",
+      "body": "Qofna dammaanad ka bixin maayo green card ama kuma dari karo “liis gaar ah.” Haddii qof balanqaado natiijo ama uu lacag weydiisto si arrimaha loo dedejiyo, waa calaamad digniin ah.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Foomamka USCIS waa bilaash",
+      "short": "Kala soo deg uscis.gov.",
+      "body": "Foomamka rasmiga ah ee USCIS waa bilaash in laga soo dejiyo uscis.gov. Codsiyada qaar waxay leeyihiin khidmad gudbin, laakiin foomamka laftoodu lacag ma aha. Mareegaha dowladda ee rasmiga ah waxay ku dhammaadaan .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Sida loo hubiyo qareen",
+      "short": "Ka raadi ururka qareennada gobolkaaga.",
+      "body": "Ka raadi qareen ururka qareennada gobolka uu shatiga ka haysto. Texas, adeegso “Find a Lawyer” ee State Bar of Texas. Wakiillada idman, ka eeg liiska DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Aasaaska Kireystaha",
+      "short": "Ceyrinta waa in ay martaa maxkamad.",
+      "body": "Akhri heshiiskaaga kireynta oo hayso koobi. Milkiilaha gurigu si sharci darro ah kuuma saari karo isaga oo beddelaya qufulka ama qaadanaya alaabtaada; ceyrinta waa inay martaa maxkamad. Haddii aad hesho warqad maxkamad, ha iska indhatirin.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Aasaaska Goobta Shaqada",
+      "short": "Mushaharka ugu yar iyo saacadaha dheeraadka ah waxay khuseeyaan shaqaalaha badankooda.",
+      "body": "Shaqaalaha badankooda waa in la siiyaa ugu yaraan mushaharka ugu yar ee federaalka iyo lacagta saacadaha dheeraadka ah ee ka baxsan 40 saacadood toddobaadkii. Waaxda Shaqadu waxay aqbashaa cabashooyinka mushaharka iyadoon la eegin heerka socdaalka. Keydi diiwaanka saacadahaaga iyo mushaharkaaga.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Sawir warqad",
+    "intro": "Sawir warqad ama dukumenti. Waan kuu sharxi doonaa luqad fudud.",
+    "privacy": "Sawirkaaga hal mar ayaa la akhriyaa si loo sharxo, dabadeed waa la tirtiraa. Abid lama keydiyo.",
+    "protecting": "Waxa la qarinayaa wixii gaar ah…",
+    "protectingNote": "Tani waxay ka dhacaysaa taleefankaaga. Waxba lama dirin weli.",
+    "reviewTitle": "Hubi intaan la dirin",
+    "reviewIntro": "Baarka madow wuxuu qarinayaa waxyaabaha gaarka ah. Nuqulkan qarsoon keliya ayaa la dirayaa si loo akhriyo.",
+    "foundCount": "{count, plural, =0 {Ma aan helin waxyaabo gaar ah oo si otomaatig ah u qarsan.} one {Waxaan qarinay # shay oo gaar ah: {kinds}.} other {Waxaan qarinay # shay oo gaar ah: {kinds}.}}",
+    "ocrFailed": "Kama akhrisan Karin qoraalka taleefankaaga. Jiid wixii gaar ah si aad u qariso.",
+    "reviewHelp": "Jiid wixii kale ee aad rabto inaad qariso. Taabo baarka madow si aad u soo saarto.",
+    "reviewImageAlt": "Waraaqdaadii oo waxyaabihii gaarka ahaa ay ka xiran yihiin",
+    "uncover": "Soo saar kan",
+    "undo": "Celi",
+    "sendCovered": "Dir Nuqulka Qarsoon",
+    "cancelScan": "Jooji",
+    "rejected_blurry": "Sawirkan aad ayuu u baaba’san yahay, lama akhrin karo",
+    "rejected_dark": "Sawirkan aad ayuu u mugdi badan yahay, lama akhrin karo",
+    "rejected_bright": "Sawirkan iftiin aad u badan ayuu leeyahay ama wuu dhalaalayaa",
+    "rejected_unreadable": "Kuma akhrin karno qayb ku filan sawirkan",
+    "rejectedBody": "Si aan warqaddaada si sax ah ugu sharaxno oo aan u qarinno macluumaadkaaga gaarka ah, waxaan u baahanahay sawir cad. Waxba lama dirin.",
+    "tipsTitle": "Si aad u hesho sawir cad",
+    "tip1": "Warqadda si siman ugu dhig miis madow dushiisa.",
+    "tip2": "Isticmaal iftiin xoog leh oo siman. Ka fogow hooska iyo dhalaalka.",
+    "tip3": "Taleefanka si toos ah ugu qabo bogga korkiisa si boggu u buuxiyo shaashadda.",
+    "tip4": "Taabo shaashadda si aad u hagaajiso, kadibna ha dhaqaaqin.",
+    "retake": "Qaado Sawir Kale",
+    "chooseAnother": "Dooro Sawir Kale",
+    "kind_aNumber": "Lambar A-ga ah",
+    "kind_receipt": "lambarka rasiidka",
+    "kind_ssn": "lambarka Amniga Bulshada",
+    "kind_phone": "lambarka taleefanka",
+    "kind_email": "imaylka",
+    "kind_account": "lambarka xisaabta",
+    "kind_name": "magaca",
+    "kind_birth": "taariikhda dhalashada",
+    "kind_address": "cinwaanka guriga",
+    "kind_id": "lambarka aqoonsiga",
+    "takePhoto": "Sawir Qaado",
+    "choosePhoto": "Sawir Dooro",
+    "trySample": "Tijaabi Warqad Tusaale ah",
+    "samplesTitle": "Warqadaha Tusaalaha ah",
+    "samplesFooter": "Warqado been abuur ah oo leh magacyo iyo lambaro la ikhtiraacay, si loo tijaabiyo app-ka.",
+    "sample1": "Ogeysiiska rasiidka",
+    "sample2": "Ogeysiiska dhageysiga maxkamadda",
+    "sample3": "Cusboonaysiinta kirada",
+    "reading": "Akhriya warqaddaada…",
+    "whatThisIs": "Waxa ay tani tahay",
+    "summary": "Kooban",
+    "dates": "Taariikhaha",
+    "noDates": "Lama helin taariikho.",
+    "addDate": "Ku dar “{label}” taariikhdeyda",
+    "wordsToKnow": "Erayada aad ogaato",
+    "nextStep": "Tallaabada Xigta",
+    "highRiskTitle": "Tani waxaa laga yaabaa inay u baahato qof xirfad leh",
+    "mediumRiskTitle": "Tani waxay u baahan kartaa jawaab",
+    "risk_low": "Halis hoose",
+    "risk_medium": "Wuxuu u baahan yahay dareen",
+    "risk_high": "Muhiim",
+    "findHelp": "Hel Caawimaad Sharci oo Lacag La'aan ah",
+    "photoNotSaved": "Sawirkaaga lama kaydin.",
+    "scanAnother": "Sawir Mid Kale",
+    "tooBig": "Sawirkaas waa mid aad u weyn. Isku day mid kale.",
+    "notConfigured": "Akhrinta warqaddu waxay u baahan tahay furaha AI ee server-ka. Halkaas beddelkeeda tijaabi warqad tusaale ah."
+  },
+  "ask": {
+    "title": "Weydii Su'aal",
+    "emptyTitle": "Wax ka weydiiso nolosha Mareykanka",
+    "emptySub": "Jawaabuhu waxay ka yimaadaan ilo lagu kalsoon yahay. Wixii ku saabsan kiiskaaga gaarka ah, waxaan kaa caawin doonaa inaad hesho qof xirfad leh.",
+    "suggested": "Isku day inaad Weydiiso",
+    "q1": "Waa maxay faraqa u dhexeeya green card iyo ogolaanshaha shaqada?",
+    "q2": "Waa maxay I-94?",
+    "q3": "Sidee ku ogaadaa haddii qareenku uu yahay mid dhab ah?",
+    "q4": "Waa maxay notario iyo sababta ay tahay inaad uga taxaddarto?",
+    "placeholder": "Weydii su'aal",
+    "send": "Dir",
+    "mic": "Ku hadal su'aashaada",
+    "micStop": "Jooji dhegeysiga",
+    "listening": "Waa la dhegeysanayaa…",
+    "thinking": "Waxaa la eegayaa ilaha lagu kalsoon yahay…",
+    "caseSpecific": "Tani waxay ku xiran tahay xaaladdaada",
+    "findHelp": "Hel Caawimaad Sharci oo Bilaash ah oo u dhow",
+    "you": "Adiga",
+    "landed": "Landed",
+    "clear": "Tirtir"
+  },
+  "help": {
+    "title": "Hel Caawimaad Sharci oo Bilaash ah",
+    "searchPlaceholder": "Ka raadi {city}",
+    "filterLabel": "Sifee",
+    "all": "Dhammaan",
+    "free": "Bilaash",
+    "spanish": "Isbaanish",
+    "directories": "Liisaska Lagu Kalsoonaan Karo",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Adeegyada sharciga ee aan faa'iido doonka ahayn iyadoo la raacayo lambarka boostada (ZIP code)",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "Dadka bixiya caawimaadda bilaashka ah ee ay maxkamadaha socdaalku liiska ku dareen",
+    "results": "U dhow {city}",
+    "finding": "Waa la raadinayaa caawimaad kuu dhow…",
+    "empty": "Wax natiijo ah ma leh. Isku day “Dhammaan.”",
+    "type_nonprofit": "Aan faa'iido doon ahayn",
+    "type_accredited_rep": "Wakiil la aqoonsan yahay",
+    "type_attorney": "Qareen",
+    "type_clinic": "Kiliinik",
+    "type_unknown": "Urur",
+    "cost_free": "Bilaash",
+    "cost_low": "Qiimo jaban",
+    "cost_paid": "Lacag la bixiyay",
+    "cost_unknown": "Wax ka weydiiso qiimaha",
+    "speaks": "Wuxuu ku hadlaa {languages}",
+    "call": "Wac",
+    "website": "Bogga internetka",
+    "directions": "Tilmaamaha wadada",
+    "details": "Faahfaahin",
+    "howToVerify": "Sida loo Xaqiijiyo",
+    "verify1": "Weydii in qofka ku caawinaya uu yahay qareen haysta shati ama wakiil ay DOJ aqoonsanaato.",
+    "verify2": "Ka eeg qareenada ururka qareenada gobolka. Ka eeg wakiillada la aqoonsan yahay liiska EOIR.",
+    "verify3": "Weligaa ha saxiixin foomam марран (madhan) ama ha dhiibin dukumentiyadaada asalka ah.",
+    "verify4": "Ka weydiiso qiimaha ka hor kulankaaga ugu horreeya.",
+    "verifyLinkBar": "Raadinta Ururka Qareenada Gobolka",
+    "verifyLinkEoir": "Liiska EOIR",
+    "rating": "Wuxuu helay {rating} oo ka mid ah 5",
+    "notFound": "Liiskan hadda danbe ma jiro."
+  },
+  "prep": {
+    "title": "Diyaarinta Ballanta",
+    "intro": "Samee warqad kooban oo hal bog ah oo aad u geyso qareen ama wakiil sharci ah oo la aqoonsan yahay. Waxaa lagu qoray afkaaga iyo Ingiriisiga.",
+    "datesSection": "Taariikhaha ku Jira",
+    "noDates": "Weli taariikh ma jiraan. Weli waad dari kartaa su'aalo.",
+    "questions": "Su'aalahayga",
+    "questionsFooter": "Ilaa 5. Ha ku darin nambarada aqoonsiga.",
+    "questionPlaceholder": "Su'aal {n}",
+    "create": "Samee Warqadda Kooban",
+    "creating": "Waa la qorayaa warqaddaada kooban...",
+    "share": "La wadaag",
+    "print": "Daabaco",
+    "copy": "Nuqul ka qaado",
+    "copied": "Waa la nuqulay",
+    "yourLanguage": "Afkaaga",
+    "english": "Ingiriisiga",
+    "edit": "Wax ka beddel"
+  },
+  "community": {
+    "title": "Bulshada",
+    "events": "Dhacdooyinka u Dhow",
+    "eventsFooter": "Dhacdooyin lacag la'aan ah oo soo-gelootiga u roon oo laga keenay liisaska dadweynaha.",
+    "noEvents": "Waqtigan la joogo dhacdooyin lama helin.",
+    "loadingEvents": "Waxaa la raadinayaa dhacdooyinka kuugu dhow...",
+    "people": "Dadka Soo Maray Halkaan oo Kale",
+    "peopleFooter": "Muunadaha profile-ka ee demo-gan. Kuwo dhab ah oo soo socda ayaa dhakhso iman doona.",
+    "sayHi": "Salaan",
+    "sayHiTo": "Salaan {name}",
+    "toast": "Fariin diristu dhakhso ayay imanaysaa.",
+    "bio": "Wuxuu ka guuray {from} kuna yimid {city} {years, plural, one {# sano} other {# sano}} kahor. {job}. Wuxuu ku hadlaa {languages}.",
+    "open": "Fur dhacdada"
+  },
+  "jobs": {
+    "title": "Shaqooyinka",
+    "credentialTitle": "Shahaadooyinkaaga",
+    "credentialLoading": "Waxaa la eegayaa sida shaqadaadu shati ugu leedahay...",
+    "noBackground": "Ku dar xirfaddaada shaqo Qorshaha si aad u aragto sida ay ugu gudubto halkan.",
+    "stateBoard": "Hel Golaha Gobolkaaga",
+    "searchPlaceholder": "Ka raadi shaqooyin {city}",
+    "results": "Shaqooyinka ka Agdhow {city}",
+    "empty": "Shaqooyin lama helin. Fadlan isku day raadin kale.",
+    "finding": "Shaqooyin ayaan raadinaynaa...",
+    "via": "iyada oo la adeegsanayo {source}"
+  },
+  "settings": {
+    "title": "Dejinta",
+    "profile": "Macluumaadkaaga",
+    "editProfile": "Dib u bilow su'aalaha hore",
+    "city": "Magaalada",
+    "language": "Luqadda",
+    "notifications": "Xusuusinta Taariikhaha",
+    "notificationsFooter": "Xusuusintu waxay ku jirtaa taleefankaaga oo keliya.",
+    "notificationsDenied": "Ogeysiisyada waa laga xiray goobaha biraawsarkaaga.",
+    "privacy": "Arrimaha Gaarka ah",
+    "privacyFooter": "Wax kasta oo Landed og yahay waxaa lagu hayaa taleefankaaga oo keliya. Sawirrada waraaqaha weligood lama keydiyo.",
+    "deleteData": "Tirtir Xogtayda",
+    "deleteTitle": "Ma tirtiraysaa dhammaan xogtaada?",
+    "deleteBody": "Tani waxay ka tirtiraysaa taleefankaaga macluumaadkaaga, qorshahaaga, taariikhahaaga, iyo su'aalahaaga. Tani dib looma soo celin karo.",
+    "deleteConfirm": "Tirtir",
+    "deleted": "Xogtaadii waa la tirtiray.",
+    "about": "Ku saabsan",
+    "version": "Nooca",
+    "aboutFooter": "Landed wuxuu sharxayaa macluumaadka. Kuma ahan talo sharci."
+  },
+  "checklist": {
+    "title": "Waxyaabaha La Rabo Inaad Qabato",
+    "entrySub": "Liiskaaga sanadkaaga koowaad",
+    "progress": "{done} ka mid ah {total} waa la qabtay",
+    "howToToggle": "Sida loo sameeyo tan",
+    "howToTitle": "Sida Loo Sameeyo",
+    "linksTitle": "Linkiyada Lagu Kalsoonaan Karo",
+    "official": "Rasmiga ah",
+    "nonprofit": "Aan faa’iido doon ahayn",
+    "checked": "La hubiyay {date}",
+    "markDone": "Calaamadi sidii La Qabtay",
+    "markNotDone": "Calaamadi sidii Aan La Qaban",
+    "doneOn": "La qabtay {date}",
+    "addDate": "Ku dar Taariikh tan",
+    "markItemDone": "Calaamadi “{title}” sidii la qabtay",
+    "markItemNotDone": "Calaamadi “{title}” sidii aan la qaban",
+    "notFound": "Shaygan kuma jiro liiskaaga.",
+    "stepsFooter": "Tallaabooyinka guud waxaa qoray kooxda Landed. Iyagu maaha talo sharci ah.",
+    "sections": {
+      "start": "Tallaabooyinka Ugu Horreeya",
+      "money": "Lacagta iyo Canshuuraha",
+      "work": "Shaqada",
+      "family": "Caafimaadka iyo Qoyska",
+      "protect": "Is Difaac",
+      "status": "Waxay ku xiran tahay Xaaladdaada"
+    },
+    "items": {
+      "i94": {
+        "title": "Hel nuqul ka mid ah I-94 kaaga",
+        "short": "Diiwaankaaga rasmiga ah ee imaatinka. Hubi taariikhaha ku qoran.",
+        "body": "I-94 waa diiwaanka dowladda ee xilligii aad timid iyo inta ay le'eg tahay muddada aad joogi kartid. Xafiisyo badan ayaa soo asxaaba, taariikhda ku qortayna waa muhiim. Waxaad kala soo bixi kartaa internetka adigoon lacag bixin.",
+        "steps": {
+          "s1": "Tag degelka rasmiga ah ee I-94. Waa lacag la’aan.",
+          "s2": "Dooro “Get Most Recent I-94” oo ku qor magacaaga iyo faahfaahinta baasaboorkaaga sidii ay ugu qornaayeen baasaboorka.",
+          "s3": "Hubi magacaaga, nooca gelitaankaada, iyo taariikhda “Admit Until” ee ku qoran.",
+          "s4": "Keydi ama daabaco nuqul oo la soco baasaboorkaaga.",
+          "s5": "Haddii wax ka khaldan yihiin, xafiiska CBP Deferred Inspection ayaa kaa caawin kara sixitaanka."
+        },
+        "links": {
+          "l1": "Degelka rasmiga ah ee I-94 (CBP)",
+          "l2": "Ku saabsan I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Hel lambarka Amniga Bulshada (Social Security number)",
+        "short": "Waxaad u baahan tahay shaqada iyo waxyaabo kale oo badan.",
+        "body": "Lambarka Amniga Bulshada (SSN) waxaa loo isticmaalaa shaqada, canshuuraha, iyo bangiyada. Qof walba ma heli karo. Waxay ku xiran tahay xaaladdaada socdaalka iyo ogolaanshaha shaqada. Kaarka iyo lambarkaba waa lacag la’aan.",
+        "steps": {
+          "s1": "Ogow haddii aad heli kartid lambar iyo waraaqaha aad u baahan tahay.",
+          "s2": "Ururi waraaqahaaga: badanaa baasaboorkaaga, waraaqahaaga socdaalka, iyo cadaynta da'daada.",
+          "s3": "Ka bilow codsigaaga internetka ama tag xafiiska Amniga Bulshada ee ku dhow.",
+          "s4": "Sug kaarkaaga oo boostada kuugu imanaya. Meel ammaan ah ku hay, hana ku haynin jeebkaaga."
+        },
+        "links": {
+          "l1": "Lambarka Amniga Bulshada iyo kaarka (SSA)"
+        }
+      },
+      "address": {
+        "title": "U sheeg USCIS marka aad guurto",
+        "short": "Dadka badankoodu waa inay ku warqaliyaan ciwaan cusub 10 maalmood gudahood.",
+        "body": "Dadka aan muwaadiniinta ahayn badankoodu waa inay u sheegaan USCIS ciwaanka cusub 10 maalmood gudahood marka ay guuraan. Haddii aadan samayn, waxaad seegi kartaa warqado muhiim ah. Waa lacag la'aan.",
+        "steps": {
+          "s1": "Markaad guurto, qor taariikhda. Badanaa waxaad haysataa 10 maalmood.",
+          "s2": "Ka beddel ciwaankaaga internetka adigoo isticmaalaya USCIS.",
+          "s3": "Haddii aad kiis ku leedahay maxkamadda socdaalka, waa inaad sidoo kale u sheegtaa maxkamadda, adigoo isticmaalaya foomka EOIR-33.",
+          "s4": "Keydi bogga xaqiijinta ama iimeylka."
+        },
+        "links": {
+          "l1": "Beddel ciwaankaaga adigoo wata USCIS"
+        }
+      },
+      "bank": {
+        "title": "Fur akoon bangi",
+        "short": "Lacagtaada ku hay ammaan oo iska ilaali khidmadaha lagu bixiyo jeegadka.",
+        "body": "Akoonka bangiga ama ururka deynta wuxuu lacagtaada ka dhigaa mid ka ammaan badan kaashka wuxuuna kaa caawinayaa inaad taariikh ka samaysato Mareykanka. Bangiyada qaar waxay aqbalaan baasaboorka ama aqoonsiga quunsiladda.",
+        "steps": {
+          "s1": "Isbarbar dhig bangiyada iyo ururada deynta. Fiiri khidmadaha bilaha ah iyo haraaga ugu yar.",
+          "s2": "Keen aqoonsigaaga (baasaboor ama aqoonsiga quunsiladda) iyo SSN-kaaga ama ITIN-kaaga haddii aad leedahay. Weydii waraaqaha ay aqbalaan.",
+          "s3": "Fur akoonka oo codso kaarka debit-ka ah.",
+          "s4": "Iska ilaali dukaamada jeegadka lagu beddelo. Khidmadahoodu waa kuwo sarreeya."
+        },
+        "links": {
+          "l1": "Akoonada bangiga (Consumer Financial Protection Bureau)",
+          "l2": "Macluumaadka bangiga (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Hel aqoonsiga gobolka ama shatiga wadista",
+        "short": "Aqoonsiga sawirka leh ee maxalliga ah wuxuu ka dhigayaa waxyaabo badan kuwo fudud.",
+        "body": "Kaarka aqoonsiga gobolka ama shatiga darawalnimada waxaa laga aqbalaa ku dhawaad meel kasta. Gobol kasta wuxuu leeyahay xeerar u gaar ah oo ku saabsan dukumentiyada aad u baahan tahay.",
+        "steps": {
+          "s1": "Raadi xafiiska shatiga darawalnimada ee gobolkaaga.",
+          "s2": "Hubi dukumentiyada uu gobolkaagu aqbalo.",
+          "s3": "Balan samee haddii gobolkaagu u baahdo.",
+          "s4": "Keen dukumentiyadaada iyo lacagta balantaada."
+        },
+        "links": {
+          "l1": "Raadi xafiiska gaadiidka gobolkaaga (USA.gov)",
+          "l2": "Shatiga darawalnimada iyo aqoonsiga Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Hel ITIN haddii aanad heli karin SSN",
+        "short": "Nambar canshuur oo loogu talagalay dadka aan heli karin lambarka Social Security.",
+        "body": "ITIN (Individual Taxpayer Identification Number) wuxuu kuu ogolaanayaa inaad bixiso canshuurta haddii aanad heli karin lambarka Social Security. Ma siinayso ogolaansho shaqo. IRS lama wadaagto si ay u fuliso sharciga socdaalka.",
+        "steps": {
+          "s1": "Hubi haddii aad u baahan tahay ITIN. Waxaad u baahan tahay oo kaliya haddii aanad heli karin SSN.",
+          "s2": "Buuxi foomka IRS W-7.",
+          "s3": "U dir celintaada canshuurta, ama ka hel caawimaad bilaash ah wakiil ay aqoonsatay IRS oo ah Certified Acceptance Agent.",
+          "s4": "Sug warqadda IRS ee wadata lambarkaaga. Si fiican u hayso."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Bixi canshuurtaada",
+        "short": "Canshuurtu badiyaa waa la bixiyaa bartamaha Abriil. Caawimaad bilaash ah ayaa jirta.",
+        "body": "Haddii aad lacag ka samaysay Maraykanka, waxaa laga yaabaa inaad u baahato inaad gudbiso canshuur celin, badiyaa Abriil 15 keedu dambayn. Gudbinta waqtigeeda waxay juga ka caawin kartaa inaad hesho lacag celin iyo gunnooyin. Caawimaad canshuur oo bilaash ah ayaa la heli karaa.",
+        "steps": {
+          "s1": "Ururi foomamkaaga canshuurta ee shaqada, sida W-2 ama 1099.",
+          "s2": "Hel caawimaad canshuur oo bilaash ah oo kuu dhow (VITA).",
+          "s3": "Gudbi canshuur celintaada ka hor waqtiga ugu dambeeya, oo badiyaa ah Abriil 15.",
+          "s4": "Hayso nuqullada canshuur celintaada iyo foomamka."
+        },
+        "links": {
+          "l1": "Gudbi canshuurtaada (IRS)",
+          "l2": "Caawimaad canshuur oo bilaash ah (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Bilow dhisidda taariikhda deynta (credit)",
+        "short": "Deyntu waxay kaa caawinaysaa inaad guri kiraysato oo aad lacag amaahato.",
+        "body": "Taariikhdaadu waxay tusaysaa sida aad u bixiso biilasha. Dadka guryaha kirada ah bixiya iyo kuwa wax amaahiya ayaa eega. Waxaad bilaabi kartaa dhiskeeda si tartiib ah oo aad warbixinnadaada si bilaash ah u hubin kartaa.",
+        "steps": {
+          "s1": "Baro waxa ay yihiin warbixinnada deynta iyo dhibcaha deynta.",
+          "s2": "Hel warbixinnada deynta ee bilaashka ah oo hubi khaladaadka.",
+          "s3": "Bixi biil kasta waqtigiisa.",
+          "s4": "Ka fakar kaarka deynta ee la sugay (secured credit card), oo weligaa ha siin lacag qof ballan qaadaya inuu “habaynayo” deyntadaada."
+        },
+        "links": {
+          "l1": "Warbixinnada deynta iyo dhibcaha (CFPB)",
+          "l2": "Warbixinnada deynta ee bilaashka ah (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Ogow taariikhaha warqaddaada shaqada (work permit)",
+        "short": "Ku dar taariikhda dhicitaanka si aanay kaaga bixin.",
+        "body": "Warqadda shaqada (EAD) waxay leedahay taariikh ay dhacayso. Qaar ka mid ah dadku waxay dalban karaan mid cusub ka hor intaanay dhicin. Goorta iyo sida ay ku xiran tahay qaybtaada, markaa hubi bogga rasmiga ah oo keydi taariikhda.",
+        "steps": {
+          "s1": "Ka hel taariikhda dhicitaanka kaarkaaga oo ku dar taariikhahaaga.",
+          "s2": "Akhri goorta iyo sida aad u dalban karto cusboonaysiin (Foomka I-765).",
+          "s3": "Haddii aad online ku gudbiso, isticmaal akoon USCIS ah.",
+          "s4": "Hayso ogeysiiska rasiidhka oo hubi xaaladda kiiskaaga."
+        },
+        "links": {
+          "l1": "Foomka I-765, warqadda shaqada (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Ogow xuquuqdaada shaqada",
+        "short": "Mushaharka ugu yar iyo saacadaha dheeraadka ah waxay khuseeyaan shaqaale badan.",
+        "body": "Shaqaalaha badankoodu waxay xaq u leeyihiin ugu yaraan mushaharka ugu yar iyo lacag dheeraad ah oo loogu talagalay shaqada saacadaha dheeraadka ah. Waaxda Shaqaaluhu waxay aqbashaa cabashooyinka shaqaalaha dhib malaha xaaladdooda socdaale.",
+        "steps": {
+          "s1": "Baro mushaharka ugu yar ee gobolkaaga.",
+          "s2": "Qor saacadahaaga oo hayso warqadaha mushaharkaaga.",
+          "s3": "Haddii aan lagu siin lacagtaada aad xaqqa u leedahay, waad caban kartaa."
+        },
+        "links": {
+          "l1": "Mushaharka ugu yar (Department of Labor)",
+          "l2": "Gudbi cabasho mushahar (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "Hel daryeel caafimaad oo jaban",
+        "short": "Xarumaha caafimaadka bulshadu waxay ku qaadaan lacag ku xiran dakhligaaga.",
+        "body": "Xarumaha caafimaadka bulshadu waxay arkaan bukaanada xataa iyaga oo aan haysan caymis waxayna ku qaadaan lacag ku salaysan dakhliga. Qoysaska qaar ee soo haajiray waxay kaloo heli karaan caymis caafimaad. Qolalka xaaladaha degdegga ah waa inay ku daweeyaan xaalad degdeg ah.",
+        "steps": {
+          "s1": "Hel xarun caafimaad bulsho oo kuu dhow.",
+          "s2": "Hubi caymiska caafimaad ee aad heli karto.",
+          "s3": "Keen aqoonsi iyo caddayn dakhli booqashadaada koowaad.",
+          "s4": "Xaalad degdeg ah, tag qolka gurmadka ama wac 911."
+        },
+        "links": {
+          "l1": "Caymiska caafimaadka ee soo-galootiga (HealthCare.gov)",
+          "l2": "Hel xarun caafimaad (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Geli carruurtaada dugsiga",
+        "short": "Carruurta oo dhami waxay xaq u leeyihiin dugsiyada dowladda.",
+        "body": "Mareykanka, dhammaan carruurtu waxay aadi karaan dugsiyada dowladda oo lacag la’aan ah, iyadoo aan loo eegin xaaladdooda qaxootinimo ama tahriibnimo. Dugsiyadu ma waydiin karaan xaaladdaada tahriib si ay ilmo u diiwaangeliyaan.",
+        "steps": {
+          "s1": "La xiriir xafiiska degmada dugsigaaga.",
+          "s2": "Ururi caddaynta da'da ilmahaaga iyo caddaynta halka aad deggan tahay.",
+          "s3": "Buuxi foomamka diiwaangelinta. Weydiiso caawimaad luqaddaada ah.",
+          "s4": "Weydiiso taageerada barashada Ingiriiska ee ilmahaaga."
+        },
+        "links": {
+          "l1": "Dugsiga carruurta (USAHello)",
+          "l2": "Xuquuqda waxbarashada (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Iska diiwaangeli Adeegga Ciidanka (ragga 18–25)",
+        "short": "Inta badan ragga da'doodu u dhaxayso 18 ilaa 25 ee ku nool Mareykanka waa inay iska diiwaangeliyaan.",
+        "body": "Inta badan ragga da'doodu tahay 18 ilaa 25 ee ku nool Mareykanka, oo ay ku jiraan qaxooti badan, waa inay iska diiwaangeliyaan Selective Service. Diiwaangelintu waa lacag la'aan oo waa mid degdeg ah.",
+        "steps": {
+          "s1": "Hubi haddii ay kugu waajibto in aad iska diiwaangeliso. Waa inta badan ragga da'doodu u dhaxayso 18 ilaa 25.",
+          "s2": "Kaga diiwaangeli internetka.",
+          "s3": "Kaydso lambarkaaga diiwaangelinta."
+        },
+        "links": {
+          "l1": "Iska diiwaangeli (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Hel caawimaad sharci oo lacag la'aan ah oo aad ku kalsoonaan karto",
+        "short": "Ogow qofka ku siin kara talo sharci oo la xiriirta socdaalka inta aadan u baahan.",
+        "body": "Qareennada iyo wakiillada ay oggoshahay DOJ oo kaliya ayaa bixin kara talo sharci oo socdaal ah. Hel koox gargaar sharci ah oo lacag la'aan ah ama jaban oo kuu dhow inta aadan u baahan.",
+        "steps": {
+          "s1": "Ka raadi caawimaad sharci oo lacag la'aan ah ama jaban oo kuu dhow.",
+          "s2": "Hubi in qofku yahay qareen ama wakiil ay aqoonsantahay DOJ.",
+          "s3": "Weydiiso qiimaha kahor kulankaaga ugu horreeya.",
+          "s4": "Keen koobiyada dukumentiyadaada. Hayso kuwa asalka ah."
+        },
+        "links": {
+          "l1": "Hel caawimaad sharci (ImmigrationLawHelp.org)",
+          "l2": "Bixiyeyaasha adeegga sharciga ee lacag la'aanta ah (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Baro sida loo aqoonsado dhagarta socdaalka",
+        "short": "Notarios ma bixin karaan talo sharci. Foomamku waa lacag la'aan.",
+        "body": "Dadka wax dhaca waxay bartilmaameedsadaan dadka soo-galootiga ah. “notario” ma bixin karo talo sharci, majiro qof damaanad qaadi kara green card, foomamka USCIS-na waa lacag la'aan in la soo dejiyo.",
+        "steps": {
+          "s1": "Baro dhagarta socdaalka ee ugu badan.",
+          "s2": "Ka soo dejiso foomamka uscis.gov oo keliya. Waa lacag la'aan.",
+          "s3": "Haddii qofisku dayo inuu ku dhaco, ka warbixi."
+        },
+        "links": {
+          "l1": "Iska ilaali dhagarta (USCIS)",
+          "l2": "Dhagarta lagula kaco dadka soo-galootiga ah (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Ogow xuquuqdaada ah qof guri kireysta",
+        "short": "Mulkiilaha gurigu waa inuu maxkamadraa inuu ku saaro.",
+        "body": "Texas gudaheeda, mulkiilaha gurigu kuguma saari karo inuu beddelo qufulada ama uu qaato alaabtaada. Cayrinta waa inay marto maxkamad. Akhri heshiiskaaga kirada oo hayso koobi.",
+        "steps": {
+          "s1": "Akhri heshiiskaaga kirada oo hayso koobi.",
+          "s2": "Weydiiso dayactir adigoo qoraal ku gudbinaya oo hayso koobiyo.",
+          "s3": "Baro sida ay u shaqeyso habraaca cayrisku.",
+          "s4": "Haddii aad hesho waraaqo maxkamadeed, ha iska indhatirin. Hel caawimaad sharci oo lacag la'aan ah."
+        },
+        "links": {
+          "l1": "Haddii mulkiilahaagu ku xiro bannaanka (TexasLawHelp)",
+          "l2": "Sida ay cayrisku u shaqeyso (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Kahor inta aadan u safrin bannaanka Mareykanka",
+        "short": "Tagitaanku waxay saameyn kartaa kiis socda. Weydiiso marka hore.",
+        "body": "Qaxooti badan, ka bixitaanka Mareykanka waxay saameyn kartaa codsi socda ama awoodda aad dib ugu soo laaban karto. Dadka qaar waxay u baahan yihiin dukumenti safar inta aysan bixin. In ay ammaan tahay iyo in kale waxay ku xiran tahay xaaladdaada.",
+        "steps": {
+          "s1": "Kahor inta aadan iibsan tigidh, baro dukumentiyada safarka ee jira.",
+          "s2": "Ka akhri Advance Parole iyo Re-entry Permits (Form I-131).",
+          "s3": "La hadal caawimaad sharci oo lacag la'aan ah oo ku saabsan xaaladdaada kahor safarka.",
+          "s4": "Wado dukumentiyadaada socdaalka marka aad safrayso."
+        },
+        "links": {
+          "l1": "Dukumentiyada safarka (USCIS)",
+          "l2": "Form I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Faa'iidooyinka dowladda iyo xaaladdaada",
+        "short": "Qofka heli kara caawimaad wuxuu ku xiran yahay xaaladdiisa. Weydiiso kahor codsiga.",
+        "body": "Barnaamijyada qaar waxay ka caawiyaan cuntada, daryeelka caafimaadka iyo hoyga. Qofka heli kara wuxuu ku xiran yahay xaaladda socdaalka, marmarna isticmaalka faa'iidooyinka waxay muhiim u noqon kartaa codsi mustaqbalka ah. Weydiiso caawimaad sharci oo lacag la'aan ah kahor inta aadan codsan.",
+        "steps": {
+          "s1": "Baro barnaamijyada faa'iidooyinka dowladda ee jira.",
+          "s2": "U qalmitaanku wuxuu ku xiran yahay xaaladdaada. Weydiiso caawimaad sharci oo lacag la'aan ah waxa adiga kuseegaya.",
+          "s3": "Carruurta ku dhalatay Mareykanka waxaa laga yaabaa inay u qalmaan xataa haddii waalidkood aysan u qalmin.",
+          "s4": "Had iyo jeer runta ka sheeg codsiyada."
+        },
+        "links": {
+          "l1": "Faa'iidooyinka dowladda (USA.gov)",
+          "l2": "Khayraadka bulshada (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Haddii aad leedahay taariikh maxkamad socdaal ah",
+        "short": "Waligaa ha moogaan dhegeysi. Ka hubi kiiskaaga internetka.",
+        "body": "Haddii aad dacwad ku leedahay maxkamadda socdaalka, ka maqnaanshaha fadhiga waxay keeni kartaa dhibaatooyin waaweyn. Waxaad taariikhda xigta ee fadhigaaga ka eegi kartaa internetka adigoo adeegsanaya lambarkaaga A-number.",
+        "steps": {
+          "s1": "Internetka ka eeg taariikhda fadhigaaga xiga.",
+          "s2": "Taariikhda fadhiga ku dar taariikhahaaga muhiimka ah.",
+          "s3": "Haddii aad guurtid, u sheeg maxkamadda 5 maalmood gudahood adigoo isticmaalaya foomka EOIR-33.",
+          "s4": "Raadi caawimaad sharci oo lacag la’aan ah sida ugu dhaqsiyaha badan ee aad awooddo.",
+          "s5": "Tag fadhi kasta, xitaa haddii aadan weli haysan qareen."
+        },
+        "links": {
+          "l1": "Macluumaadka kiiska oo toos ah (EOIR)",
+          "l2": "Maxkamadaha socdaalka (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "La hadal caawimaad sharci oo lacag la'aan ah",
+    "body": "Tani waxay ku xiran tahay xaaladdaada socdaal. Koox gargaar sharci oo lacag la'aan ah ayaa eegi karta xaaladdaada.",
+    "button": "Hel Caawimaad Sharci oo Lacag La'aan ah"
+  },
+  "browser": {
+    "close": "Xir",
+    "back": "Dib u noqo",
+    "openInBrowser": "Ku fur Browser-ka",
+    "openPage": "Fur Bogga",
+    "versionOfficial": "Nooca rasmiga ah ee {language}",
+    "versionAi": "Turjumaadda AI",
+    "versionOriginal": "Asalka",
+    "original": "Asalka",
+    "aiBanner": "Waxaa AI u turjumay {source}. Waxaa laga yaabaa inay khaladaad ku jiraan. Hubi asalka wixii muhiim ah.",
+    "cantEmbed": "Boggan laguma tusi karo Landed dhexdiisa. Waa kan soo koobitaan gaaban.",
+    "noSummary": "Boggan laguma tusi karo Landed dhexdiisa.",
+    "summaryTitle": "Soo koobidda Landed",
+    "loading": "Waa la furayaa…",
+    "translating": "Waa la turjumayaa…",
+    "preparing": "Boggan ayaan diyaarinaynaa...",
+    "translate": "Turjum",
+    "translateTo": "Boggan ku turjum",
+    "noTranslation": "Asalka (aan la turjumin)",
+    "translatingTo": "Wuxuu u turjumayaa {language}…",
+    "alreadyIn": "Boggan wuxuu horay u ahaa {language}.",
+    "mustVisitTitle": "Si aad tan u isticmaasho, waa inaad tagtaa bogga rasmiga ah.",
+    "goTo": "Tag {domain}",
+    "aiFormatted": "Qoraalka laga keenay {domain}, oo ay AI u soo agaasintay si ay u fududaato in la akhriyo. Hubi fariinta asalka ah si aadan u seegin wax muhiim ah.",
+    "translateFailed": "Turjumaaddu ma shaqayn. Waxaa la tusayaa asalka.",
+    "viewOriginal": "Bogga asalka ah: {domain}",
+    "notTrusted": "Boggan kama yimid il Landed ay hubisay."
+  },
+  "assistant": {
+    "title": "Weydii Landed",
+    "button": "Weydii Landed",
+    "tab": "Weydii",
+    "welcome": "Ka weydii liiskaaga, taariikhahaaga, ama nolosha Maraykanka.",
+    "placeholder": "Weydii Landed",
+    "send": "Dir",
+    "mic": "Ku hadal su'aashaada",
+    "micStop": "Jooji dhegaysiga",
+    "listening": "Waa la dhagaysanayaa…",
+    "thinking": "Waa la fekerayaa…",
+    "clear": "Nadiifi Sheekada",
+    "save": "Ku kaydi sheekadan qalabkan",
+    "suggested": "Isku day inaad weydiiso",
+    "s1": "Maxaan sameeyaa marka hore?",
+    "s2": "Sideen ku helaa ITIN?",
+    "s3": "Goorma ayuu dhacayaa warqadaha shaqadayda?",
+    "s4": "Maxaa liiskayga ku harsan?",
+    "aboutItem": "Ku saabsan: {title}",
+    "itemPrompt": "I caawi \"{title}\".",
+    "usedData": "La isticmaalay: {sources}",
+    "store_profile": "profile-kaaga",
+    "store_dates": "taariikhahaaga la kaydiyay",
+    "store_checklist": "liiskaaga",
+    "store_plan": "qorshahaaga 90-ka maalmood",
+    "store_prepSummaries": "su'aalahaaga la kaydiyay",
+    "confirm": "Xaqiiji",
+    "cancel": "Hadda Ma Aha",
+    "confirmed": "La kaydiyay",
+    "declined": "Lama kaydin",
+    "proposeDone": "Ma calaamadiyaa \"{title}\" in la qabtay?",
+    "proposeNotDone": "Ma calaamadiyaa \"{title}\" inaan la qaban?",
+    "proposeDate": "Ma ku darraa \"{label}\" taariikhdu markay tahay {date}?",
+    "backToChat": "Ku noqo wadahadalka",
+    "error": "Wax bay khaldameen. Fadlan mar kale isku day."
+  }
+}

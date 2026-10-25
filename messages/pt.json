@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "done": "Pronto",
+    "close": "Fechar",
+    "add": "Adicionar",
+    "added": "Adicionado",
+    "delete": "Apagar",
+    "save": "Salvar",
+    "continue": "Continuar",
+    "skip": "Pular",
+    "comingSoon": "Em breve",
+    "aiLabel": "Explicação por IA · Não é conselho jurídico",
+    "sources": "Fontes",
+    "error": "Algo deu errado. Tente de novo.",
+    "retry": "Tentar de novo",
+    "loading": "Carregando…",
+    "sampleData": "Resultados de exemplo. Adicione chaves de API para ver resultados reais.",
+    "settings": "Configurações",
+    "learnMore": "Saiba mais",
+    "openSource": "Código aberto: {name}"
+  },
+  "tabs": {
+    "label": "Principal",
+    "home": "Início",
+    "legal": "Ajuda legal",
+    "community": "Comunidade",
+    "jobs": "Trabalhos"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "es": "Español",
+    "choose": "Escolha seu idioma",
+    "search": "Buscar idiomas",
+    "other": "Outro idioma",
+    "otherPlaceholder": "Digite seu idioma",
+    "otherFooter": "Vamos traduzir o aplicativo para o seu idioma com IA. Pode ter alguns erros.",
+    "translate": "Traduzir",
+    "translating": "Traduzindo Landed para {language}…",
+    "notConfigured": "Para traduzir para um novo idioma, é preciso uma chave da API Gemini no servidor.",
+    "unknownLanguage": "Não achamos esse idioma. Confira a grafia e tente de novo.",
+    "translateFailed": "A tradução não deu certo. Tente de novo."
+  },
+  "disclaimer": "Landed explica informações. Não é conselho jurídico. Para o seu caso, fale com um advogado ou representante credenciado.",
+  "landing": {
+    "hero": "Seu primeiro ano nos EUA, com um guia e novos amigos.",
+    "sub": "Entenda suas cartas, guarde as datas importantes, ache ajuda de confiança e conheça pessoas que já passaram por isso.",
+    "whyTitle": "Por que isso importa",
+    "whyIntro": "Isso afeta milhões de pessoas, mas quase não se fala nisso. O dano é silencioso: uma carta confusa, um prazo perdido, um falso “notario”.",
+    "stat1Value": "34%",
+    "stat1": "das pessoas em casos de imigração encerrados no tribunal tinham advogado no ano fiscal de 2026, o índice mais baixo desde 2010.",
+    "stat2Value": "2%",
+    "stat2": "das pessoas que pediram ajuda sem advogado conseguiram, em um estudo nacional com 1,2 milhão de casos de deportação.",
+    "stat3Value": "5×",
+    "stat3": "Famílias que só falam espanhol historicamente têm cerca de cinco vezes mais chances de não ter conta em banco (dados de pesquisa da FDIC).",
+    "statsFooter": "A fraude de notários é pouco denunciada porque as vítimas têm medo de falar. Crianças costumam traduzir contas, aluguéis e cartas legais para os pais.",
+    "pitch": "A ajuda existe. Só que as pessoas não conseguem achar, ler ou saber qual parte se aplica a elas.",
+    "privacyTitle": "Sua Privacidade",
+    "privacy": "Sem cadastro. Nada sai do seu celular, a menos que você peça. Nunca guardamos fotos dos seus documentos.",
+    "getStarted": "Começar",
+    "demoPersona": "Usar Perfil de Teste",
+    "continueToHome": "Ir para a Tela Inicial"
+  },
+  "onboarding": {
+    "progress": "Passo {current} de {total}",
+    "langTitle": "Qual idioma você prefere?",
+    "countryTitle": "De onde você é?",
+    "countryOther": "Outro país",
+    "countryPlaceholder": "Digite seu país",
+    "cityTitle": "Em qual cidade você mora?",
+    "cityPlaceholder": "Outra cidade, ex: Chicago, IL",
+    "timeTitle": "Há quanto tempo você está nos EUA?",
+    "time0": "Menos de 1 mês",
+    "time1": "1 a 6 meses",
+    "time2": "6 a 12 meses",
+    "time3": "Mais de 1 ano",
+    "aboutTitle": "Um pouco sobre você",
+    "aboutFooter": "Opcional. Isso nos ajuda a sugerir empregos e pessoas para conhecer.",
+    "nameLabel": "Nome",
+    "namePlaceholder": "Como devemos te chamar?",
+    "kidsLabel": "Tenho filhos",
+    "workLabel": "Trabalho no meu país",
+    "workPlaceholder": "ex: Enfermeiro(a)",
+    "hardTitle": "O que está mais difícil agora?",
+    "hardFooter": "Escolha quantos quiser.",
+    "hard_paperwork": "Papelada",
+    "hard_money": "Dinheiro",
+    "hard_work": "Achar trabalho",
+    "hard_people": "Conhecer gente",
+    "hard_english": "Inglês",
+    "hard_housing": "Moradia",
+    "hard_health": "Saúde",
+    "finish": "Criar Meu Plano",
+    "making": "Criando o seu plano…",
+    "demoNote": "Perfil de teste: Maria, enfermeira da Venezuela, em Houston há 2 meses."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "México",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colômbia",
+    "India": "Índia",
+    "Vietnam": "Vietnã",
+    "Nigeria": "Nigéria",
+    "Ukraine": "Ucrânia",
+    "Afghanistan": "Afeganistão"
+  },
+  "categories": {
+    "legal": "Legal",
+    "money": "Dinheiro",
+    "social": "Pessoas",
+    "jobs": "Trabalho",
+    "health": "Saúde",
+    "daily": "Vida Diária"
+  },
+  "home": {
+    "title": "Início",
+    "greeting": "Olá, {name}.",
+    "greetingNoName": "Olá.",
+    "dayIn": "Dia {day} em {city}",
+    "nextSteps": "Seus Próximos Passos",
+    "nextStepsFooter": "Do seu plano dos primeiros 90 dias. Toque no círculo quando terminar.",
+    "allSteps": "Ver Todos os Passos ({count})",
+    "fewerSteps": "Mostrar Menos",
+    "allDone": "Você concluiu todos os passos. Bom trabalho.",
+    "dueIn": "{count, plural, =0 {Hoje} one {Em # dia} other {Em # dias}}",
+    "markDone": "Marcar “{title}” como concluído",
+    "markNotDone": "Marcar “{title}” como não concluído",
+    "comingUp": "Próximos Eventos",
+    "noDates": "Nenhuma data ainda",
+    "noDatesSub": "Escaneie uma carta para acompanhar as datas",
+    "explore": "Explorar",
+    "legalSub": "Cartas, datas e ajuda gratuita",
+    "communitySub": "Eventos e pessoas perto de você",
+    "jobsSub": "Trabalho e seus diplomas",
+    "money": "Dinheiro",
+    "health": "Saúde",
+    "noProfile": "Vamos montar seu plano primeiro.",
+    "setUp": "Começar",
+    "makingPlan": "Montando seu plano…",
+    "profileButton": "Configurações e perfil"
+  },
+  "status": {
+    "green": "Tudo certo por enquanto",
+    "greenSub": "Nada previsto para os próximos 6 meses.",
+    "yellow": "Próximo em {count, plural, one {# dia} other {# dias}}",
+    "red": "Próximo: {count, plural, =0 {hoje} one {em # dia} other {em # dias}}",
+    "redPast": "Uma data já passou",
+    "redPastSub": "“{label}” foi há {count, plural, one {# dia} other {# dias}}.",
+    "nextSub": "{label} · {date}",
+    "empty": "Nenhuma data marcada ainda",
+    "emptySub": "Escaneie uma carta ou adicione uma data para começar.",
+    "count": "{count, plural, one {# data marcada} other {# datas marcadas}}",
+    "prepare": "O que devo preparar?"
+  },
+  "legal": {
+    "title": "Legal",
+    "myDates": "Minhas Datas",
+    "addDate": "Adicionar Data",
+    "datesEmpty": "As datas que você adicionar ou escanear vão aparecer aqui.",
+    "daysLeft": "{count, plural, =0 {Hoje} one {# dia restante} other {# dias restantes}}",
+    "daysAgo": "{count, plural, one {# dia atrás} other {# dias atrás}}",
+    "reminder": "Lembrete",
+    "deleteDate": "Excluir “{label}”",
+    "fromScan": "De um escaneamento",
+    "tools": "Ferramentas",
+    "scan": "Escanear uma Carta",
+    "scanSub": "Foto para explicação simples",
+    "ask": "Fazer uma Pergunta",
+    "askSub": "Respostas com fontes",
+    "help": "Encontrar Ajuda Jurídica Gratuita",
+    "helpSub": "Ajuda jurídica perto de você",
+    "prep": "Preparar para uma Consulta",
+    "prepSub": "Um resumo para levar com você",
+    "rights": "Conheça Seus Direitos",
+    "rightsFooter": "Informações gerais com links para fontes oficiais.",
+    "addSheetTitle": "Adicionar uma Data",
+    "docType": "Documento",
+    "labelField": "Qual é esta data?",
+    "labelPlaceholder": "ex.: Vencimento da autorização de trabalho",
+    "dateField": "Data",
+    "noteField": "Nota",
+    "notePlaceholder": "Opcional",
+    "docTypes": {
+      "workPermit": "Autorização de trabalho",
+      "passport": "Passaporte",
+      "uscis": "Aviso da USCIS",
+      "court": "Aviso judicial",
+      "i94": "I-94",
+      "lease": "Contrato de aluguel",
+      "other": "Outro"
+    },
+    "sourceLink": "Fonte: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Notarios não podem dar aconselhamento jurídico",
+      "short": "Apenas advogados e representantes credenciados podem.",
+      "body": "Apenas advogados e representantes credenciados pelo DOJ podem dar aconselhamento jurídico de imigração. Um “notario” não pode. Nos EUA, um notário público só pode testemunhar assinaturas.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Ninguém pode garantir um green card",
+      "short": "Não existe “lista especial”.",
+      "body": "Ninguém pode garantir um green card ou colocar você em uma “lista especial”. Se alguém promete um resultado ou pede dinheiro para acelerar as coisas, é um sinal de alerta.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Os formulários da USCIS são gratuitos",
+      "short": "Baixe-os em uscis.gov.",
+      "body": "Os formulários oficiais da USCIS são gratuitos para baixar em uscis.gov. Alguns pedidos têm taxa de protocolo, mas os formulários em si nunca custam dinheiro. Sites oficiais do governo terminam em .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Como verificar um advogado",
+      "short": "Consulte a ordem dos advogados do seu estado.",
+      "body": "Consulte um advogado na ordem dos advogados onde ele tem licença. No Texas, use a busca “Find a Lawyer” da State Bar of Texas. Para representantes credenciados, consulte a lista do DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Noções básicas para inquilinos",
+      "short": "Despejos devem passar por um tribunal.",
+      "body": "Leia seu contrato de aluguel e guarde uma cópia. O proprietário não pode tirar você trocando as fechaduras ou levando suas coisas; o despejo precisa passar por um tribunal. Se receber papéis do tribunal, não os ignore.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Noções básicas de trabalho",
+      "short": "Salário mínimo e hora extra se aplicam à maioria dos trabalhadores.",
+      "body": "A maioria dos trabalhadores deve receber pelo menos o salário mínimo federal e hora extra para horas acima de 40 por semana. O US Department of Labor aceita reclamações salariais independentemente do status de imigração. Guarde um registro de suas horas e do seu pagamento.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Escanear uma carta",
+    "intro": "Tire uma foto de uma carta ou documento. Vamos explicar de forma simples.",
+    "privacy": "Sua foto é lida uma vez para ser explicada e depois apagada. Ela nunca é salva.",
+    "protecting": "Escondendo dados pessoais…",
+    "protectingNote": "Isso acontece no seu celular. Nada foi enviado ainda.",
+    "reviewTitle": "Confira antes de enviar",
+    "reviewIntro": "Tarjas pretas cobrem os dados particulares. Só esta cópia coberta é enviada para leitura.",
+    "foundCount": "{count, plural, =0 {Não achamos dados particulares sozinhos.} one {Cobrimos # dado particular: {kinds}.} other {Cobrimos # dados particulares: {kinds}.}}",
+    "ocrFailed": "Não conseguimos ler o texto no seu celular. Passe o dedo por cima de qualquer dado particular para cobri-lo.",
+    "reviewHelp": "Passe o dedo sobre qualquer outra coisa que quiser esconder. Toque na tarja preta para mostrar de novo.",
+    "reviewImageAlt": "Seu documento com os dados particulares cobertos",
+    "uncover": "Mostrar isso",
+    "undo": "Desfazer",
+    "sendCovered": "Enviar Cópia Coberta",
+    "cancelScan": "Cancelar",
+    "rejected_blurry": "Esta foto está muito desfocada para ler",
+    "rejected_dark": "Esta foto está muito escura para ler",
+    "rejected_bright": "Esta foto está muito clara ou com muito brilho",
+    "rejected_unreadable": "Não conseguimos ler o suficiente desta foto",
+    "rejectedBody": "Para explicar sua carta corretamente e cobrir seus dados pessoais, precisamos de uma foto nítida. Nada foi enviado.",
+    "tipsTitle": "Para uma foto nítida",
+    "tip1": "Coloque a carta plana sobre uma mesa escura.",
+    "tip2": "Use luz forte e uniforme. Evite sombras e reflexos.",
+    "tip3": "Segure o celular reto sobre a página, para que ela ocupe a tela.",
+    "tip4": "Toque na tela para focar e fique parado.",
+    "retake": "Tirar Outra Foto",
+    "chooseAnother": "Escolher Outra Foto",
+    "kind_aNumber": "A-number",
+    "kind_receipt": "número do recibo",
+    "kind_ssn": "Social Security number",
+    "kind_phone": "número de telefone",
+    "kind_email": "e-mail",
+    "kind_account": "número da conta",
+    "kind_name": "nome",
+    "kind_birth": "data de nascimento",
+    "kind_address": "endereço de casa",
+    "kind_id": "número de identidade",
+    "takePhoto": "Tirar foto",
+    "choosePhoto": "Escolher foto",
+    "trySample": "Testar uma carta de exemplo",
+    "samplesTitle": "Cartas de exemplo",
+    "samplesFooter": "Cartas fictícias com nomes e números inventados para testar o aplicativo.",
+    "sample1": "Aviso de recibo",
+    "sample2": "Aviso de audiência",
+    "sample3": "Renovação de contrato de aluguel",
+    "reading": "Lendo sua carta…",
+    "whatThisIs": "O que é isto",
+    "summary": "Resumo",
+    "dates": "Datas",
+    "noDates": "Nenhuma data encontrada.",
+    "addDate": "Adicionar “{label}” às minhas datas",
+    "wordsToKnow": "Palavras para conhecer",
+    "nextStep": "Próximo passo",
+    "highRiskTitle": "Isto pode precisar de um profissional",
+    "mediumRiskTitle": "Isto pode precisar de resposta",
+    "risk_low": "Baixo risco",
+    "risk_medium": "Precisa de atenção",
+    "risk_high": "Importante",
+    "findHelp": "Encontrar ajuda jurídica gratuita",
+    "photoNotSaved": "Sua foto não foi salva.",
+    "scanAnother": "Escanear outra",
+    "tooBig": "Essa foto é muito grande. Tente outra.",
+    "notConfigured": "A leitura de cartas precisa de uma chave de IA no servidor. Tente uma carta de exemplo."
+  },
+  "ask": {
+    "title": "Fazer uma pergunta",
+    "emptyTitle": "Pergunte sobre a vida nos EUA",
+    "emptySub": "As respostas vêm de fontes confiáveis. Para perguntas sobre o seu próprio caso, ajudaremos você a encontrar um profissional.",
+    "suggested": "Tente perguntar",
+    "q1": "Qual é a diferença entre um green card e uma autorização de trabalho?",
+    "q2": "O que é um I-94?",
+    "q3": "Como sei se um advogado é verdadeiro?",
+    "q4": "O que é um notario e por que devo ter cuidado?",
+    "placeholder": "Faça uma pergunta",
+    "send": "Enviar",
+    "mic": "Fale sua pergunta",
+    "micStop": "Parar de ouvir",
+    "listening": "Ouvindo…",
+    "thinking": "Procurando em fontes confiáveis…",
+    "caseSpecific": "Isso depende da sua situação",
+    "findHelp": "Encontre ajuda jurídica gratuita perto de você",
+    "you": "Você",
+    "landed": "Landed",
+    "clear": "Limpar"
+  },
+  "help": {
+    "title": "Encontre ajuda jurídica gratuita",
+    "searchPlaceholder": "Pesquisar em {city}",
+    "filterLabel": "Filtrar",
+    "all": "Todos",
+    "free": "Gratuito",
+    "spanish": "Espanhol",
+    "directories": "Diretórios de confiança",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Serviços jurídicos sem fins lucrativos por CEP",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "Provedores gratuitos listados pelos tribunais de imigração",
+    "results": "Perto de {city}",
+    "finding": "Encontrando ajuda perto de você…",
+    "empty": "Nenhum resultado encontrado. Tente \"Todos.\"",
+    "type_nonprofit": "Sem fins lucrativos",
+    "type_accredited_rep": "Representante credenciado",
+    "type_attorney": "Advogado",
+    "type_clinic": "Clínica",
+    "type_unknown": "Organização",
+    "cost_free": "Gratuito",
+    "cost_low": "Baixo custo",
+    "cost_paid": "Pago",
+    "cost_unknown": "Pergunte sobre o custo",
+    "speaks": "Fala {languages}",
+    "call": "Ligar",
+    "website": "Site",
+    "directions": "Como chegar",
+    "details": "Detalhes",
+    "howToVerify": "Como verificar",
+    "verify1": "Pergunte se a pessoa que está ajudando você é um advogado licenciado ou um representante credenciado pelo DOJ.",
+    "verify2": "Consulte advogados na Ordem dos Advogados do estado (state bar). Consulte representantes credenciados na lista da EOIR.",
+    "verify3": "Nunca assine formulários em branco nem entregue documentos originais.",
+    "verify4": "Pergunte sobre o custo antes da sua primeira reunião.",
+    "verifyLinkBar": "Consulta na Ordem dos Advogados",
+    "verifyLinkEoir": "Lista da EOIR",
+    "rating": "Avaliado em {rating} de 5",
+    "notFound": "Este anúncio não está mais disponível."
+  },
+  "prep": {
+    "title": "Preparação para a Consulta",
+    "intro": "Crie um resumo de uma página para levar a um advogado ou representante credenciado. Está escrito no seu idioma e em inglês.",
+    "datesSection": "Datas Incluídas",
+    "noDates": "Ainda sem datas. Você ainda pode adicionar perguntas.",
+    "questions": "Minhas Perguntas",
+    "questionsFooter": "Até 5. Não inclua números de identidade.",
+    "questionPlaceholder": "Pergunta {n}",
+    "create": "Criar Resumo",
+    "creating": "Escrevendo seu resumo…",
+    "share": "Compartilhar",
+    "print": "Imprimir",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "yourLanguage": "No Seu Idioma",
+    "english": "Em Inglês",
+    "edit": "Editar"
+  },
+  "community": {
+    "title": "Comunidade",
+    "events": "Eventos Perto de Você",
+    "eventsFooter": "Eventos gratuitos e acolhedores para recém-chegados de listas públicas.",
+    "noEvents": "Nenhum evento encontrado no momento.",
+    "loadingEvents": "Procurando eventos perto de você…",
+    "people": "Pessoas que já passaram por isso",
+    "peopleFooter": "Perfis de exemplo para esta demonstração. A combinação real chega em breve.",
+    "sayHi": "Dizer Olá",
+    "sayHiTo": "Dizer olá para {name}",
+    "toast": "As mensagens chegam em breve.",
+    "bio": "Mudou-se de {from} para {city} há {years, plural, =0 {menos de um ano} =1 {# ano} other {# anos}}. {job}. Fala {languages}.",
+    "open": "Abrir evento"
+  },
+  "jobs": {
+    "title": "Empregos",
+    "credentialTitle": "Suas Credenciais",
+    "credentialLoading": "Verificando como sua profissão é licenciada…",
+    "noBackground": "Adicione sua experiência de trabalho nas Configurações para ver como ela se aplica.",
+    "stateBoard": "Encontre o Órgão do seu Estado",
+    "searchPlaceholder": "Pesquisar empregos em {city}",
+    "results": "Empregos Perto de {city}",
+    "empty": "Nenhum emprego encontrado. Tente outra busca.",
+    "finding": "Procurando empregos…",
+    "via": "via {source}"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "profile": "Perfil",
+    "editProfile": "Refazer o início",
+    "city": "Cidade",
+    "language": "Idioma",
+    "notifications": "Lembretes de datas",
+    "notificationsFooter": "Os lembretes ficam salvos apenas neste aparelho.",
+    "notificationsDenied": "As notificações estão bloqueadas nas configurações do seu navegador.",
+    "privacy": "Privacidade",
+    "privacyFooter": "Tudo o que o Landed sabe fica salvo apenas neste aparelho. As fotos dos documentos nunca são salvas.",
+    "deleteData": "Apagar meus dados",
+    "deleteTitle": "Apagar todos os seus dados?",
+    "deleteBody": "Isso remove seu perfil, plano, datas e perguntas deste aparelho. Não dá para desfazer isso.",
+    "deleteConfirm": "Apagar",
+    "deleted": "Seus dados foram apagados.",
+    "about": "Sobre",
+    "version": "Versão",
+    "aboutFooter": "O Landed explica informações. Ele não substitui aconselhamento jurídico."
+  },
+  "checklist": {
+    "title": "Coisas para resolver",
+    "entrySub": "Sua lista do primeiro ano",
+    "progress": "{done} de {total} concluídos",
+    "howToToggle": "Como fazer isso",
+    "howToTitle": "Como fazer",
+    "linksTitle": "Links confiáveis",
+    "official": "Oficial",
+    "nonprofit": "Sem fins lucrativos",
+    "checked": "Verificado em {date}",
+    "markDone": "Marcar como feito",
+    "markNotDone": "Marcar como não feito",
+    "doneOn": "Feito em {date}",
+    "addDate": "Adicionar uma data para isso",
+    "markItemDone": "Marcar “{title}” como feito",
+    "markItemNotDone": "Marcar “{title}” como não feito",
+    "notFound": "Este item não está na sua lista.",
+    "stepsFooter": "Passos gerais escritos pela equipe do Landed. Eles não são aconselhamento jurídico.",
+    "sections": {
+      "start": "Primeiros passos",
+      "money": "Dinheiro e impostos",
+      "work": "Trabalho",
+      "family": "Saúde e família",
+      "protect": "Proteja-se",
+      "status": "Depende do seu status"
+    },
+    "items": {
+      "i94": {
+        "title": "Obtenha uma cópia do seu I-94",
+        "short": "Seu registro oficial de chegada. Confira as datas nele.",
+        "body": "O I-94 é o registro do governo de quando você chegou e por quanto tempo pode ficar. Muitos escritórios o pedem, e a data nele é importante. Você pode obtê-lo de graça na internet.",
+        "steps": {
+          "s1": "Acesse o site oficial do I-94. É gratuito.",
+          "s2": "Escolha “Get Most Recent I-94” (Obter I-94 mais recente) e digite seu nome e os dados do passaporte exatamente como estão no documento.",
+          "s3": "Confira seu nome, sua classe de admissão e a data de “Admit Until” (Admitido até).",
+          "s4": "Salve ou imprima uma cópia e guarde-a com seu passaporte.",
+          "s5": "Se algo estiver errado, um escritório de Inspeção Adiada do CBP pode ajudar a corrigir."
+        },
+        "links": {
+          "l1": "Site oficial do I-94 (CBP)",
+          "l2": "Sobre o I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Obtenha um número de Social Security",
+        "short": "Você precisa dele para trabalhar e para muitas outras coisas.",
+        "body": "O número de Social Security (SSN) é usado para trabalho, impostos e bancos. Nem todo mundo pode conseguir um. Isso depende do seu status de imigração e permissão de trabalho. O cartão e o número são sempre gratuitos.",
+        "steps": {
+          "s1": "Descubra se você pode obter um número e quais documentos são necessários.",
+          "s2": "Reúna seus documentos: geralmente seu passaporte, seu documento de imigração e prova da sua idade.",
+          "s3": "Inicie seu pedido pela internet ou vá a um escritório do Social Security perto de você.",
+          "s4": "Espere o cartão chegar pelo correio. Guarde-o em um lugar seguro, não na sua carteira."
+        },
+        "links": {
+          "l1": "Número e cartão do Social Security (SSA)"
+        }
+      },
+      "address": {
+        "title": "Avise o USCIS quando você mudar de endereço",
+        "short": "A maioria das pessoas deve informar um novo endereço em até 10 dias.",
+        "body": "A maioria dos não-cidadãos deve informar ao USCIS sobre um novo endereço em até 10 dias após a mudança. Se você não fizer isso, poderá perder cartas importantes. É gratuito.",
+        "steps": {
+          "s1": "Quando você se mudar, anote a data. Geralmente você tem 10 dias.",
+          "s2": "Mude seu endereço online com o USCIS.",
+          "s3": "Se você tem um processo na corte de imigração, também deve avisar a corte usando o formulário EOIR-33.",
+          "s4": "Salve a página de confirmação ou o e-mail."
+        },
+        "links": {
+          "l1": "Mude seu endereço com o USCIS"
+        }
+      },
+      "bank": {
+        "title": "Abra uma conta em banco",
+        "short": "Mantenha seu dinheiro seguro e evite taxas de cashing de cheque.",
+        "body": "Uma conta em banco ou cooperativa de crédito (credit union) mantém seu dinheiro mais seguro do que dinheiro em espécie e ajuda você a criar histórico nos EUA. Alguns bancos aceitam passaporte ou matrícula consular.",
+        "steps": {
+          "s1": "Compare bancos e cooperativas de crédito. Veja as taxas mensais e os saldos mínimos.",
+          "s2": "Leve sua identidade (passaporte ou matrícula consular) e seu SSN ou ITIN, se tiver um. Pergunte quais documentos eles aceitam.",
+          "s3": "Abra a conta e peça um cartão de débito.",
+          "s4": "Evite locais de troca de cheques. As taxas deles são altas."
+        },
+        "links": {
+          "l1": "Contas bancárias (Consumer Financial Protection Bureau)",
+          "l2": "Informações bancárias (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Obtenha um ID estadual ou carteira de motorista",
+        "short": "Um documento de identidade local com foto facilita muitas coisas.",
+        "body": "Uma carteira de identidade estadual ou carteira de motorista é aceita em quase todo lugar. Cada estado tem suas próprias regras sobre quais documentos você precisa.",
+        "steps": {
+          "s1": "Encontre o escritório de carteira de motorista do seu estado.",
+          "s2": "Confira quais documentos o seu estado aceita.",
+          "s3": "Faça uma consulta se o seu estado precisar.",
+          "s4": "Leve seus documentos e a taxa para a sua consulta."
+        },
+        "links": {
+          "l1": "Encontre o órgão de trânsito do seu estado (USA.gov)",
+          "l2": "Carteira de motorista e ID do Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Faça um ITIN se não puder ter um SSN",
+        "short": "Um número de imposto para quem não pode ter um Social Security number.",
+        "body": "Um ITIN (Individual Taxpayer Identification Number) permite que você declare impostos se não puder ter um Social Security number. Ele não dá permissão para trabalhar. O IRS não compartilha isso para aplicar leis de imigração.",
+        "steps": {
+          "s1": "Veja se você precisa de um ITIN. Você só precisa de um se não puder ter um SSN.",
+          "s2": "Preencha o IRS Form W-7.",
+          "s3": "Envie junto com a sua declaração de impostos ou obtenha ajuda gratuita de um IRS Certified Acceptance Agent.",
+          "s4": "Espere a carta do IRS com o seu número. Guarde-a em um lugar seguro."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Declare seus impostos",
+        "short": "Os impostos geralmente vencem em meados de abril. Há ajuda gratuita disponível.",
+        "body": "Se você ganhou dinheiro nos EUA, talvez precise declarar impostos, geralmente até 15 de abril. Declarar no prazo também pode ajudar você a receber restituições e créditos. Há ajuda gratuita para impostos disponível.",
+        "steps": {
+          "s1": "Junte seus formulários de impostos do trabalho, como o W-2 ou 1099.",
+          "s2": "Encontre ajuda gratuita para impostos perto de você (VITA).",
+          "s3": "Envie sua declaração até o prazo, geralmente em 15 de abril.",
+          "s4": "Guarde cópias da sua declaração e dos formulários."
+        },
+        "links": {
+          "l1": "Declare seus impostos (IRS)",
+          "l2": "Ajuda gratuita para impostos (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Comece a construir crédito",
+        "short": "O crédito ajuda você a alugar uma casa e conseguir empréstimos.",
+        "body": "Seu histórico de crédito mostra como você paga as contas. Proprietários de imóveis e credores olham para isso. Você pode começar a construir isso aos poucos e verificar seus relatórios de graça.",
+        "steps": {
+          "s1": "Aprenda o que são relatórios e pontuações de crédito.",
+          "s2": "Obtenha seus relatórios de crédito gratuitos e verifique se há erros.",
+          "s3": "Pague todas as contas em dia.",
+          "s4": "Pense em um cartão de crédito garantido e nunca pague alguém que promete “consertar” seu crédito."
+        },
+        "links": {
+          "l1": "Relatórios e pontuações de crédito (CFPB)",
+          "l2": "Relatórios de crédito gratuitos (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Conheça as datas da sua permissão de trabalho",
+        "short": "Adicione a data de validade para não perder.",
+        "body": "Uma permissão de trabalho (EAD) tem uma data de término. Algumas pessoas podem pedir uma nova antes que ela acabe. Quando e como fazer isso depende da sua categoria, então consulte a página oficial e salve a data.",
+        "steps": {
+          "s1": "Encontre a data de validade no seu cartão e adicione-a às suas datas.",
+          "s2": "Leia quando e como você pode pedir uma renovação (Form I-765).",
+          "s3": "Se você enviar online, use uma conta do USCIS.",
+          "s4": "Guarde o aviso de recebimento e acompanhe o status do seu caso."
+        },
+        "links": {
+          "l1": "Form I-765, permissão de trabalho (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Conheça seus direitos no trabalho",
+        "short": "O salário mínimo e as horas extras se aplicam à maioria dos trabalhadores.",
+        "body": "A maioria dos trabalhadores deve receber pelo menos o salário mínimo e pagamento extra por horas extras. O Department of Labor aceita reclamações de trabalhadores independentemente do status de imigração.",
+        "steps": {
+          "s1": "Saiba qual é o salário mínimo no seu estado.",
+          "s2": "Anote suas horas e guarde seus comprovantes de pagamento.",
+          "s3": "Se você não receber o que lhe devem, pode apresentar uma reclamação."
+        },
+        "links": {
+          "l1": "Salário mínimo (Department of Labor)",
+          "l2": "Apresentar uma reclamação salarial (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "Encontre atendimento médico de baixo custo",
+        "short": "Os centros de saúde comunitários cobram com base na sua renda.",
+        "body": "Os centros de saúde comunitários atendem pacientes mesmo sem seguro e cobram com base na renda. Alguns imigrantes também podem conseguir seguro saúde. Os pronto-socorros devem atender você em uma emergência.",
+        "steps": {
+          "s1": "Encontre um centro de saúde comunitário perto de você.",
+          "s2": "Verifique qual cobertura de saúde você pode conseguir.",
+          "s3": "Leve documento de identidade e comprovante de renda na sua primeira visita.",
+          "s4": "Em caso de emergência, vá ao pronto-socorro ou ligue para o 911."
+        },
+        "links": {
+          "l1": "Cobertura de saúde para imigrantes (HealthCare.gov)",
+          "l2": "Encontre um centro de saúde (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Matricule seus filhos na escola",
+        "short": "Todas as crianças têm o direito à escola pública.",
+        "body": "Nos EUA, todas as crianças podem estudar em escola pública de graça, não importa a situação imigratória. As escolas não podem perguntar sobre a situação imigratória para matricular uma criança.",
+        "steps": {
+          "s1": "Entre em contato com o escritório do distrito escolar da sua região.",
+          "s2": "Junte um comprovante da idade do seu filho e um comprovante de onde você mora.",
+          "s3": "Preencha os papéis de matrícula. Peça ajuda no seu idioma.",
+          "s4": "Pergunte sobre apoio de inglês para o seu filho."
+        },
+        "links": {
+          "l1": "Escola para crianças (USAHello)",
+          "l2": "Direitos educacionais (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Inscreva-se no Serviço Seletivo (homens de 18 a 25 anos)",
+        "short": "A maioria dos homens de 18 a 25 anos que mora nos EUA precisa se registrar.",
+        "body": "A maioria dos homens de 18 a 25 anos que mora nos EUA, incluindo a maioria dos imigrantes, precisa se registrar no Selective Service. O registro é de graça e rápido.",
+        "steps": {
+          "s1": "Veja se você precisa se registrar. São principalmente homens de 18 a 25 anos.",
+          "s2": "Faça o registro pela internet.",
+          "s3": "Guarde o seu número de registro."
+        },
+        "links": {
+          "l1": "Registrar-se (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Encontre ajuda jurídica gratuita em que você possa confiar",
+        "short": "Saiba quem pode dar conselhos de imigração antes de precisar.",
+        "body": "Apenas advogados e representantes credenciados pelo DOJ podem dar conselhos jurídicos de imigração. Encontre um grupo de ajuda jurídica gratuito ou de baixo custo perto de você antes de precisar.",
+        "steps": {
+          "s1": "Procure ajuda jurídica gratuita ou de baixo custo perto de você.",
+          "s2": "Certifique-se de que a pessoa é um advogado ou um representante credenciado pelo DOJ.",
+          "s3": "Pergunte sobre o custo antes da sua primeira reunião.",
+          "s4": "Leve cópias dos seus documentos. Guarde os originais."
+        },
+        "links": {
+          "l1": "Encontrar ajuda jurídica (ImmigrationLawHelp.org)",
+          "l2": "Prestadores de serviços jurídicos gratuitos (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Aprenda a identificar golpes de imigração",
+        "short": "Notarios não podem dar conselhos jurídicos. Os formulários são gratuitos.",
+        "body": "Os golpistas têm como alvo os imigrantes. Um “notario” não pode dar conselhos jurídicos, ninguém pode garantir um green card e os formulários do USCIS são gratuitos para baixar.",
+        "steps": {
+          "s1": "Conheça os golpes de imigração mais comuns.",
+          "s2": "Baixe os formulários apenas em uscis.gov. Eles são de graça.",
+          "s3": "Se alguém tentar te dar um golpe, denuncie."
+        },
+        "links": {
+          "l1": "Evitar golpes (USCIS)",
+          "l2": "Golpes contra imigrantes (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Conheça seus direitos como inquilino",
+        "short": "O senhorio precisa passar pela justiça para despejar você.",
+        "body": "No Texas, o senhorio não pode tirar você trocando as fechaduras ou pegando suas coisas. Um despejo precisa passar por um tribunal. Leia o seu contrato de aluguel e guarde uma cópia.",
+        "steps": {
+          "s1": "Leia o seu contrato de aluguel e guarde uma cópia.",
+          "s2": "Peça reparos por escrito e guarde cópias.",
+          "s3": "Aprenda como funciona o processo de despejo.",
+          "s4": "Se você receber papéis da justiça, não ignore. Obtenha ajuda jurídica gratuita."
+        },
+        "links": {
+          "l1": "Se o seu senhorio trocar a fechadura (TexasLawHelp)",
+          "l2": "Como funciona o despejo (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Antes de viajar para fora dos EUA",
+        "short": "Sair do país pode afetar um caso em andamento. Pergunte primeiro.",
+        "body": "Para muitos imigrantes, sair dos EUA pode afetar um pedido em andamento ou a capacidade de voltar. Algumas pessoas precisam de um documento de viagem antes de sair. Saber se é seguro depende da sua situação.",
+        "steps": {
+          "s1": "Antes de comprar uma passagem, conheça quais documentos de viagem existem.",
+          "s2": "Leia sobre o Advance Parole e as Autorizações de Reingresso (Formulário I-131).",
+          "s3": "Fale com a ajuda jurídica gratuita sobre a sua situação antes de viajar.",
+          "s4": "Carregue seus documentos de imigração quando viajar."
+        },
+        "links": {
+          "l1": "Documentos de viagem (USCIS)",
+          "l2": "Formulário I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Benefícios públicos e o seu status",
+        "short": "Quem pode receber ajuda depende do status. Pergunte antes de se inscrever.",
+        "body": "Alguns programas ajudam com comida, saúde e moradia. Quem pode recebê-los depende do status imigratório e, em alguns casos, usar benefícios pode importar para um pedido futuro. Peça ajuda jurídica gratuita antes de se inscrever.",
+        "steps": {
+          "s1": "Conheça quais programas de benefícios do governo existem.",
+          "s2": "A elegibilidade depende do seu status. Pergunte à ajuda jurídica gratuita o que se aplica a você.",
+          "s3": "Crianças nascidas nos EUA podem se qualificar mesmo que os pais não.",
+          "s4": "Sempre diga a verdade nos pedidos."
+        },
+        "links": {
+          "l1": "Benefícios do governo (USA.gov)",
+          "l2": "Recursos comunitários (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Se você tem uma data no tribunal de imigração",
+        "short": "Nunca perca uma audiência. Verifique seu caso online.",
+        "body": "Se você tem um caso na corte de imigração, perder uma audiência pode ter consequências graves. Você pode verificar a data da sua próxima audiência online usando o seu A-number.",
+        "steps": {
+          "s1": "Verifique a data da sua próxima audiência online.",
+          "s2": "Adicione a data da audiência às suas datas.",
+          "s3": "Se mudar de endereço, avise a corte em até 5 dias usando o formulário EOIR-33.",
+          "s4": "Procure ajuda jurídica gratuita o mais rápido possível.",
+          "s5": "Vá a todas as audiências, mesmo que ainda não tenha um advogado."
+        },
+        "links": {
+          "l1": "Informações automatizadas de processos (EOIR)",
+          "l2": "Cortes de imigração (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Fale com a ajuda jurídica gratuita",
+    "body": "Isso depende do seu status imigratório. Um grupo de assistência jurídica gratuita pode analisar o seu caso.",
+    "button": "Encontrar Ajuda Jurídica Gratuita"
+  },
+  "browser": {
+    "close": "Fechar",
+    "back": "Voltar",
+    "openInBrowser": "Abrir no navegador",
+    "openPage": "Abrir página",
+    "versionOfficial": "Versão oficial em {language}",
+    "versionAi": "Tradução por IA",
+    "versionOriginal": "Original",
+    "original": "Original",
+    "aiBanner": "Traduzido por IA a partir de {source}. Pode conter erros. Confira o original se algo for importante.",
+    "cantEmbed": "Este site não pode ser exibido dentro do Landed. Aqui está um breve resumo.",
+    "noSummary": "Este site não pode ser exibido dentro do Landed.",
+    "summaryTitle": "Resumo do Landed",
+    "loading": "Abrindo...",
+    "translating": "Traduzindo...",
+    "preparing": "Preparando esta página…",
+    "translate": "Traduzir",
+    "translateTo": "Traduzir esta página para",
+    "noTranslation": "Original (sem tradução)",
+    "translatingTo": "Traduzindo para {language}…",
+    "alreadyIn": "Esta página já está em {language}.",
+    "mustVisitTitle": "Para usar isto, você precisa ir ao site oficial.",
+    "goTo": "Ir para {domain}",
+    "aiFormatted": "Texto de {domain}, organizado pela IA para ser mais fácil de ler. Confira o original se precisar de algo importante.",
+    "translateFailed": "A tradução não funcionou. Mostrando o original.",
+    "viewOriginal": "Página original: {domain}",
+    "notTrusted": "Esta página não é de uma fonte verificada pelo Landed."
+  },
+  "assistant": {
+    "title": "Pergunte ao Landed",
+    "button": "Pergunte ao Landed",
+    "tab": "Perguntar",
+    "welcome": "Pergunte sobre sua lista de tarefas, suas datas ou a vida nos EUA.",
+    "placeholder": "Pergunte ao Landed",
+    "send": "Enviar",
+    "mic": "Fale sua pergunta",
+    "micStop": "Parar de ouvir",
+    "listening": "Ouvindo...",
+    "thinking": "Pensando...",
+    "clear": "Limpar conversa",
+    "save": "Salvar conversa neste aparelho",
+    "suggested": "Tente perguntar",
+    "s1": "O que devo fazer primeiro?",
+    "s2": "Como faço para obter um ITIN?",
+    "s3": "Quando vence a minha autorização de trabalho?",
+    "s4": "O que falta na minha lista?",
+    "aboutItem": "Sobre: {title}",
+    "itemPrompt": "Me ajude com “{title}”.",
+    "usedData": "Usado: {sources}",
+    "store_profile": "seu perfil",
+    "store_dates": "suas datas salvas",
+    "store_checklist": "sua lista de tarefas",
+    "store_plan": "seu plano de 90 dias",
+    "store_prepSummaries": "suas perguntas salvas",
+    "confirm": "Confirmar",
+    "cancel": "Agora não",
+    "confirmed": "Salvo",
+    "declined": "Não salvo",
+    "proposeDone": "Marcar “{title}” como concluído?",
+    "proposeNotDone": "Marcar “{title}” como não concluído?",
+    "proposeDate": "Adicionar “{label}” em {date}?",
+    "backToChat": "Voltar ao chat",
+    "error": "Algo deu errado. Tente de novo."
+  }
+}

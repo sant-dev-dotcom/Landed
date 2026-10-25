@@ -1,0 +1,811 @@
+{
+  "common": {
+    "appName": "Landed",
+    "back": "Rudi",
+    "cancel": "Ghairi",
+    "done": "Tayari",
+    "close": "Funga",
+    "add": "Ongeza",
+    "added": "Imeongezwa",
+    "delete": "Futa",
+    "save": "Hifadhi",
+    "continue": "Endelea",
+    "skip": "Ruka",
+    "comingSoon": "Inakuja Karibuni",
+    "aiLabel": "Maelezo ya AI · Siyo ushauri wa kisheria",
+    "sources": "Vyanzo",
+    "error": "Kuna kitu kimekwenda vibaya. Tafadhali jaribu tena.",
+    "retry": "Jaribu Tena",
+    "loading": "Inapakia…",
+    "sampleData": "Matokeo ya mfano. Weka funguo za API kwa matokeo halisi.",
+    "settings": "Mipangilio",
+    "learnMore": "Jifunze Zaidi",
+    "openSource": "Chanzo huria: {name}"
+  },
+  "tabs": {
+    "label": "Kuu",
+    "home": "Nyumbani",
+    "legal": "Sheria",
+    "community": "Jamii",
+    "jobs": "Kazi"
+  },
+  "language": {
+    "label": "Lugha",
+    "en": "English",
+    "es": "Español",
+    "choose": "Chagua Lugha Yako",
+    "search": "Tafuta lugha",
+    "other": "Lugha nyingine",
+    "otherPlaceholder": "Andika lugha yako",
+    "otherFooter": "Tutasitiri programu hii katika lugha yako kwa kutumia AI. Inaweza kuwa na makosa madogo.",
+    "translate": "Tafsiri",
+    "translating": "Inatafsiri Landed kwenda {language}…",
+    "notConfigured": "Kutafsiri kwenda lugha mpya kunahitaji ufunguo wa Gemini API kwenye seva.",
+    "unknownLanguage": "Hatukuweza kupata lugha hiyo. Angalia tahajia na ujaribu tena.",
+    "translateFailed": "Tafsiri haikufanikiwa. Tafadhali jaribu tena."
+  },
+  "disclaimer": "Landed inaeleza taarifa. Siyo ushauri wa kisheria. Kwa hali yako, ongea na wakili au mwakilishi aliyeidhinishwa.",
+  "landing": {
+    "hero": "Mwaka wako wa kwanza nchini Marekani, ukiwa na mwongozo na marafiki wachache.",
+    "sub": "Elewa barua zako, fuatilia tarehe muhimu, pata msaada unaoweza kuamini, na ukutane na watu waliopitia hayo.",
+    "whyTitle": "Kwa Nini Hii Ni Muhimu",
+    "whyIntro": "Hii inawahusu mamilioni ya watu, lakini mara chache unasikia kuhusu hilo. Madhara yake ni ya kimya: barua ya kuchanganya, tarehe iliyopitwa, au “notario” bandia.",
+    "stat1Value": "34%",
+    "stat1": "ya watu katika kesi za mahakama ya uhamiaji zilizokamilishwa walikuwa na wakili katika mwaka wa fedha wa 2026, ikiwa ni kiwango cha chini zaidi tangu 2010.",
+    "stat2Value": "2%",
+    "stat2": "ya watu waliomba msaada bila wakili walifanikiwa, katika utafiti wa kitaifa wa kesi milioni 1.2 za kufukuzwa nchini.",
+    "stat3Value": "5×",
+    "stat3": "Kihistoria, kaya zinazozungumza Kihispania pekee zimekuwa na uwezekano wa mara tano zaidi wa kutokuwa na akaunti ya benki (data ya utafiti ya FDIC).",
+    "statsFooter": "Ulaghai wa notario hauripotiwi ipasavyo kwa sababu waathiriwa wanaogopa kujitokeza. Watoto mara nyingi hutafsiri bili, mikopo ya nyumba na barua za kisheria kwa ajili ya wazazi wao.",
+    "pitch": "Msaada upo. Watu hawawezi tu kuupata, kuusoma, au kujua sehemu gani inawahusu.",
+    "privacyTitle": "Faragha Yako",
+    "privacy": "Hakuna akaunti. Hakuna kinachoondoka kwenye simu yako isipokuwa kama utaomba. Hatutunzi kamwe picha za hati zako.",
+    "getStarted": "Anza Sasa",
+    "demoPersona": "Tumia Mtu wa Majaribio",
+    "continueToHome": "Endelea hadi Nyumbani"
+  },
+  "onboarding": {
+    "progress": "Hatua ya {current} kati ya {total}",
+    "langTitle": "Unapenda lugha gani?",
+    "countryTitle": "Unatokea wapi?",
+    "countryOther": "Nchi nyingine",
+    "countryPlaceholder": "Andika nchi yako",
+    "cityTitle": "Unaishi mji gani?",
+    "cityPlaceholder": "Mji mwingine, mf. Chicago, IL",
+    "timeTitle": "Umekuwa Marekani kwa muda gani?",
+    "time0": "Chini ya mwezi 1",
+    "time1": "Miezi 1–6",
+    "time2": "Miezi 6–12",
+    "time3": "Zaidi ya mwaka 1",
+    "aboutTitle": "Kidogo kukuhusu",
+    "aboutFooter": "Si lazima. Hii inatusaidia kupendekeza kazi na watu wa kukutana nao.",
+    "nameLabel": "Jina",
+    "namePlaceholder": "Tukuite nani?",
+    "kidsLabel": "Nina watoto",
+    "workLabel": "Kazi katika nchi yangu",
+    "workPlaceholder": "mf. Muuguzi aliyesajiliwa",
+    "hardTitle": "Unahisi nini kigumu zaidi sasa hivi?",
+    "hardFooter": "Chagua nyingi uwezavyo.",
+    "hard_paperwork": "Karatasi na fomu",
+    "hard_money": "Pesa",
+    "hard_work": "Kupata kazi",
+    "hard_people": "Kukutana na watu",
+    "hard_english": "Kiingereza",
+    "hard_housing": "Nyumba",
+    "hard_health": "Afya",
+    "finish": "Tengeneza Mpango Wangu",
+    "making": "Inatengeneza mpango wako…",
+    "demoNote": "Mtu wa majaribio: Maria, muuguzi kutoka Venezuela, yuko Houston kwa miezi 2."
+  },
+  "countries": {
+    "Venezuela": "Venezuela",
+    "Mexico": "Mexico",
+    "Honduras": "Honduras",
+    "Guatemala": "Guatemala",
+    "El Salvador": "El Salvador",
+    "Cuba": "Cuba",
+    "Colombia": "Colombia",
+    "India": "India",
+    "Vietnam": "Vietnam",
+    "Nigeria": "Nigeria",
+    "Ukraine": "Ukraine",
+    "Afghanistan": "Afghanistan"
+  },
+  "categories": {
+    "legal": "Sheria",
+    "money": "Pesa",
+    "social": "Watu",
+    "jobs": "Kazi",
+    "health": "Afya",
+    "daily": "Maisha ya Kila Siku"
+  },
+  "home": {
+    "title": "Nyumbani",
+    "greeting": "Hujambo, {name}.",
+    "greetingNoName": "Hujambo.",
+    "dayIn": "Siku ya {day} katika {city}",
+    "nextSteps": "Hatua Zako Zinazofuata",
+    "nextStepsFooter": "Kutoka kwa mpango wako wa siku 90 za kwanza. Gusa duara ukimaliza.",
+    "allSteps": "Ona Hatua Zote ({count})",
+    "fewerSteps": "Onyesha Kidogo",
+    "allDone": "Umemaliza kila hatua. Kazi nzuri.",
+    "dueIn": "{count, plural, =0 {Leo} one {Ndani ya siku #} other {Ndani ya siku #}}",
+    "markDone": "Weka alama “{title}” kuwa imekamilika",
+    "markNotDone": "Weka alama “{title}” kuwa haijakamilika",
+    "comingUp": "Inayokuja",
+    "noDates": "Hakuna tarehe bado",
+    "noDatesSub": "Changanua barua ili ufuatilie tarehe zake",
+    "explore": "Chunguza",
+    "legalSub": "Barua, tarehe na msaada wa bure",
+    "communitySub": "Matukio na watu karibu nawe",
+    "jobsSub": "Kazi na vyeti vyako",
+    "money": "Pesa",
+    "health": "Afya",
+    "noProfile": "Tuanze kwa kuweka mpango wako.",
+    "setUp": "Weka Mpango",
+    "makingPlan": "Tunatengeneza mpango wako…",
+    "profileButton": "Mipangilio na maelezo yako"
+  },
+  "status": {
+    "green": "Uko sawa kwa sasa",
+    "greenSub": "Hakuna kitu kinachokuja katika miezi 6 ijayo.",
+    "yellow": "Inakuja baada ya {count, plural, =0 {siku 0} one {siku #} other {siku #}}",
+    "red": "Inakuja hivi karibuni: {count, plural, =0 {leo} one {baada ya siku #} other {baada ya siku #}}",
+    "redPast": "Tarehe imepita",
+    "redPastSub": "“{label}” ilikuwa siku {count, plural, =0 {0} one {#} other {#}} zilizopita.",
+    "nextSub": "{label} · {date}",
+    "empty": "Hakuna tarehe zilizofuatiliwa bado",
+    "emptySub": "Changanua barua au uongeze tarehe ili uanze.",
+    "count": "{count, plural, =0 {tarehe 0 zilizofuatiliwa} one {tarehe # iliyofuatiliwa} other {tarehe # zilizofuatiliwa}}",
+    "prepare": "Nipashe Nini?"
+  },
+  "legal": {
+    "title": "Sheria",
+    "myDates": "Tarehe Zangu",
+    "addDate": "Ongeza Tarehe",
+    "datesEmpty": "Tarehe unazoongeza au kuchanganua zitaonekana hapa.",
+    "daysLeft": "{count, plural, =0 {Leo} one {Siku # imebaki} other {Siku # zimebaki}}",
+    "daysAgo": "{count, plural, =0 {siku 0 zilizopita} one {siku # iliyopita} other {siku # zilizopita}}",
+    "reminder": "Kumbusho",
+    "deleteDate": "Futa “{label}”",
+    "fromScan": "Kutoka kwenye uchunguzi",
+    "tools": "Zana",
+    "scan": "Changanua Barua",
+    "scanSub": "Picha kuwa maelezo rahisi",
+    "ask": "Uliza Swali",
+    "askSub": "Majibu yenye vyanzo",
+    "help": "Tafuta Msaada wa Sheria wa Bure",
+    "helpSub": "Msaada wa sheria karibu nawe",
+    "prep": "Jiandae kwa Ajili ya Miadi",
+    "prepSub": "Muhtasari wa kuenda nao",
+    "rights": "Jua Haki Zako",
+    "rightsFooter": "Taarifa za jumla zenye viungo vya vyanzo rasmi.",
+    "addSheetTitle": "Ongeza Tarehe",
+    "docType": "Hati",
+    "labelField": "Tarehe hii ni ya nini?",
+    "labelPlaceholder": "mf. Kibali cha kazi kinaisha",
+    "dateField": "Tarehe",
+    "noteField": "Ujumbe",
+    "notePlaceholder": "Si lazima",
+    "docTypes": {
+      "workPermit": "Kibali cha kazi",
+      "passport": "Pasipoti",
+      "uscis": "Taarifa ya USCIS",
+      "court": "Taarifa ya mahakama",
+      "i94": "I-94",
+      "lease": "Mkataba wa nyumba",
+      "other": "Nyingine"
+    },
+    "sourceLink": "Chanzo: {name}"
+  },
+  "rights": {
+    "notario": {
+      "title": "Notario Hawezi Kutoa Ushauri wa Kisheria",
+      "short": "Mawakili na wawakilishi waliioidhinishwa pekee ndio wanaoweza.",
+      "body": "Mawakili na wawakilishi waliioidhinishwa na DOJ pekee ndio wanaoweza kutoa ushauri wa kisheria kuhusu masuala ya uhamiaji. \"notario\" hawezi. Nchini Marekani, notary public anaweza tu kushuhudia utiaji saini.",
+      "source": "FTC",
+      "url": "https://consumer.ftc.gov/features/scams-against-immigrants"
+    },
+    "guarantee": {
+      "title": "Hakuna Anayeweza Kuhakikishia Green Card",
+      "short": "Hakuna “orodha maalum.”",
+      "body": "Hakuna anayeweza kuhakikishia green card au kukuweka kwenye “orodha maalum.” Mtu fulani akiahidi matokeo au kuomba pesa ili kuharakisha mambo, hiyo ni ishara ya hatari.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/avoid-scams"
+    },
+    "forms": {
+      "title": "Fomu za USCIS Ni Bure",
+      "short": "Zipakue kutoka uscis.gov.",
+      "body": "Fomu rasmi za USCIS ni bure kupakua kutoka uscis.gov. Baadhi ya maombi yana ada ya kuwasilisha, lakini fomu zenyewe hazigharimu pesa kamwe. Tovuti rasmi za serikali huishia na .gov.",
+      "source": "USCIS",
+      "url": "https://www.uscis.gov/forms"
+    },
+    "checkLawyer": {
+      "title": "Jinsi ya Kumchunguza Wakili",
+      "short": "Mtafute kupitia chama cha wawakilishi cha jimbo lako.",
+      "body": "Mtafute wakili kupitia chama cha wawakilishi cha jimbo ambako ana leseni. Huko Texas, tumia utafutaji wa “Find a Lawyer” wa State Bar of Texas. Kwa wawakilishi waliioidhinishwa, angalia orodha ya DOJ (EOIR).",
+      "source": "State Bar of Texas",
+      "url": "https://www.texasbar.com/AM/Template.cfm?Section=Find_A_Lawyer"
+    },
+    "tenant": {
+      "title": "Misingi ya Mpangaji",
+      "short": "Kufukuzwa lazima kupitie mahakamani.",
+      "body": "Soma mkataba wako wa nyumba na utunze nakala. Mwenye nyumba hawezi kukutoa kwa kubadili kufuli au kuchukua vitu vyako; kufukuzwa lazima kupitie mahakamani. Ukipata karatasi za mahakama, usizipuuze.",
+      "source": "TexasLawHelp.org",
+      "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out"
+    },
+    "workplace": {
+      "title": "Misingi ya Mahali pa Kazi",
+      "short": "Mshahara wa chini na malipo ya ziada yanawahusu wafanyakazi wengi.",
+      "body": "Wafanyakazi wengi lazima walipwe angalau mshahara wa chini wa shirikisho na malipo ya ziada kwa saa zinazozidi 40 kwa wiki. Idara ya Kazi huchukua malalamiko ya mishahara bila kujali hali ya uhamiaji. Weka kumbukumbu ya masaa yako na malipo.",
+      "source": "US Department of Labor",
+      "url": "https://www.dol.gov/agencies/whd/minimum-wage"
+    }
+  },
+  "scan": {
+    "title": "Changanua Barua",
+    "intro": "Piga picha ya barua au hati. Tutaeleza kwa lugha rahisi.",
+    "privacy": "Picha yako inasomwa mara moja ili ieleweke, kisha inatupwa. Haihifadhiwi kamwe.",
+    "protecting": "Inaficha mambo ya siri…",
+    "protectingNote": "Hili linafanyika kwenye simu yako. Hakuna kilichotumwa bado.",
+    "reviewTitle": "Angalia kabla ya kutuma",
+    "reviewIntro": "Mistari minyeusi inaficha mambo ya siri. Nakala hii tu iliyofichwa ndiyo inayotumwa isomwe.",
+    "foundCount": "{count, plural, =0 {Hatukupata mambo ya siri kiotomatiki.} one {Tumeficha siri # ya kibinafsi: {kinds}.} other {Tumeficha siri # za kibinafsi: {kinds}.}}",
+    "ocrFailed": "Hatukuweza kusoma maandishi kwenye simu yako. Buruta juu ya chochote cha siri ili ukifiche.",
+    "reviewHelp": "Buruta kwenye kitu kingine chochote unachotaka kuficha. Gusa mstari mweusi ili kuufunua.",
+    "reviewImageAlt": "Hati yako yenye mambo ya siri yaliyofichwa",
+    "uncover": "Funua hii",
+    "undo": "Tendua",
+    "sendCovered": "Tuma Nakala Iliyofichwa",
+    "cancelScan": "Ghairi",
+    "rejected_blurry": "Picha hii ina ukungu mno kusomeka",
+    "rejected_dark": "Picha hii ina giza mno kusomeka",
+    "rejected_bright": "Picha hii ina mwanga mwingi mno au imefifia",
+    "rejected_unreadable": "Hatuwezi kusoma sehemu ya kutosha ya picha hii",
+    "rejectedBody": "Ili kueleza barua yako kwa usahihi na kufunika taarifa zako binafsi, tunahitaji picha iliyo wazi. Hakuna kilichotumwa.",
+    "tipsTitle": "Kwa picha iliyo wazi",
+    "tip1": "Laza barua bapa juu ya meza yenye rangi nyeusi.",
+    "tip2": "Tumia mwanga mkali na ulio sawa. Epuka vivuli na mng’ao.",
+    "tip3": "Shika simu moja kwa moja juu ya ukurasa ili ukurasa ujaze skrini.",
+    "tip4": "Gusa skrini ili kulenga, kisha usitikisike.",
+    "retake": "Piga Picha Nyingine",
+    "chooseAnother": "Chagua Picha Nyingine",
+    "kind_aNumber": "namba ya A-number",
+    "kind_receipt": "namba ya risiti",
+    "kind_ssn": "namba ya Social Security number",
+    "kind_phone": "namba ya simu",
+    "kind_email": "barua pepe",
+    "kind_account": "namba ya akaunti",
+    "kind_name": "jina",
+    "kind_birth": "tarehe ya kuzaliwa",
+    "kind_address": "anwani ya nyumbani",
+    "kind_id": "namba ya kitambulisho",
+    "takePhoto": "Piga Picha",
+    "choosePhoto": "Chagua Picha",
+    "trySample": "Jaribu Barua ya Mfano",
+    "samplesTitle": "Barua za Mfano",
+    "samplesFooter": "Barua za uwongo zenye majina na nambari za kubuni, kwa ajili ya kujaribu programu.",
+    "sample1": "Taarifa ya kupokea",
+    "sample2": "Taarifa ya kusikilizwa kesi",
+    "sample3": "Ufanyaji upya wa mkataba wa nyumba",
+    "reading": "Inasoma barua yako…",
+    "whatThisIs": "Hii ni nini",
+    "summary": "Muhtasari",
+    "dates": "Tarehe",
+    "noDates": "Hakuna tarehe zilizopatikana.",
+    "addDate": "Weka “{label}” kwenye tarehe zangu",
+    "wordsToKnow": "Maneno ya Kujua",
+    "nextStep": "Hatua Inayofuata",
+    "highRiskTitle": "Hii inaweza kuhitaji mtaalamu",
+    "mediumRiskTitle": "Hii inaweza kuhitaji jibu",
+    "risk_low": "Hatari ndogo",
+    "risk_medium": "Inahitaji uangalifu",
+    "risk_high": "Muhimu",
+    "findHelp": "Tafuta Msaada wa Sheria wa Bure",
+    "photoNotSaved": "Picha yako haikuhifadhiwa.",
+    "scanAnother": "Changanua Nyingine",
+    "tooBig": "Picha hiyo ni kubwa mno. Jaribu nyingine.",
+    "notConfigured": "Usomaji wa barua unahitaji ufunguo wa AI kwenye seva. Jaribu barua ya mfano badala yake."
+  },
+  "ask": {
+    "title": "Uliza Swali",
+    "emptyTitle": "Uliza kuhusu maisha nchini Marekani",
+    "emptySub": "Majibu yanatoka vyanzo vinavyoaminika. Kwa maswali kuhusu kesi yako mwenyewe, tutakusaidia kupata mtaalamu.",
+    "suggested": "Jaribu Kuuliza",
+    "q1": "Kuna tofauti gani kati ya green card na kibali cha kazi?",
+    "q2": "I-94 ni nini?",
+    "q3": "Najuaje kama wakili ni wa kweli?",
+    "q4": "notario ni nini na kwa nini niwe mwangalifu?",
+    "placeholder": "Uliza swali",
+    "send": "Tuma",
+    "mic": "Tamka swali lako",
+    "micStop": "Acha kusikiliza",
+    "listening": "Inasikiliza…",
+    "thinking": "Inatafuta katika vyanzo vinavyoaminika…",
+    "caseSpecific": "Hii inategemea na hali yako",
+    "findHelp": "Pata Msaada wa Kisheria wa Bure Karibu Nawe",
+    "you": "Wewe",
+    "landed": "Landed",
+    "clear": "Futa"
+  },
+  "help": {
+    "title": "Pata Msaada wa Kisheria wa Bure",
+    "searchPlaceholder": "Tafuta katika {city}",
+    "filterLabel": "Chuja",
+    "all": "Zote",
+    "free": "Bure",
+    "spanish": "Kihispania",
+    "directories": "Orodha Zinazoaminika",
+    "ilh": "ImmigrationLawHelp.org",
+    "ilhSub": "Huduma za kisheria zisizo za faida kwa nambari ya posta",
+    "eoir": "EOIR Pro Bono List",
+    "eoirSub": "Watoa huduma wa bure walioorodheshwa na mahakama za wahamiaji",
+    "results": "Karibu na {city}",
+    "finding": "Inatafuta msaada karibu nawe…",
+    "empty": "Hakuna kilichopatikana. Jaribu “Zote.”",
+    "type_nonprofit": "Isiyo ya faida",
+    "type_accredited_rep": "Mwakilishi aliyeidhinishwa",
+    "type_attorney": "Wakili",
+    "type_clinic": "Kliniki",
+    "type_unknown": "Shirika",
+    "cost_free": "Bure",
+    "cost_low": "Gharama ya chini",
+    "cost_paid": "Imelipiwa",
+    "cost_unknown": "Uliza kuhusu gharama",
+    "speaks": "Anaongea {languages}",
+    "call": "Piga simu",
+    "website": "Tovuti",
+    "directions": "Maelekezo ya njia",
+    "details": "Maelezo",
+    "howToVerify": "Jinsi ya Kuhakiki",
+    "verify1": "Uliza ikiwa mtu anayekusaidia ni wakili aliye na leseni au mwakilishi aliyeidhinishwa na DOJ.",
+    "verify2": "Angalia mawakili kupitia chama cha mawakili cha jimbo. Angalia wawakilishi walioidhinishwa kwenye orodha ya EOIR.",
+    "verify3": "Usiwahi kutii fomu tupu au kukabidhi nyaraka halisi.",
+    "verify4": "Uliza kuhusu gharama kabla ya mkutano wako wa kwanza.",
+    "verifyLinkBar": "Utafutaji wa Chama cha Mawakili",
+    "verifyLinkEoir": "Orodha ya EOIR",
+    "rating": "Imepata nyota {rating} kati ya 5",
+    "notFound": "Ukurasa huu haupo tena."
+  },
+  "prep": {
+    "title": "Maandalizi ya Mkutano",
+    "intro": "Tengeneza muhtasari wa ukurasa mmoja ili kupeleka kwa wakili au mwakilishi aliyesajiliwa. Imeandikwa kwa lugha yako na kwa Kiingereza.",
+    "datesSection": "Tarehe Zilizomo",
+    "noDates": "Hakuna tarehe bado. Unaweza kuongeza maswali.",
+    "questions": "Maswali Yangu",
+    "questionsFooter": "Hadi 5. Usiweke namba za utambulisho.",
+    "questionPlaceholder": "Swali {n}",
+    "create": "Tengeneza Muhtasari",
+    "creating": "Inatayarisha muhtasari wako…",
+    "share": "Shirikisha",
+    "print": "Chapisha",
+    "copy": "Nakili",
+    "copied": "Imenakiliwa",
+    "yourLanguage": "Kwa Lugha Yako",
+    "english": "Kwa Kiingereza",
+    "edit": "Badilisha"
+  },
+  "community": {
+    "title": "Jamii",
+    "events": "Matukio Karibu Nawe",
+    "eventsFooter": "Matukio ya bure na ya kirafiki kwa wageni kutoka kwenye orodha za umma.",
+    "noEvents": "Hakuna matukio yaliyopatikana kwa sasa.",
+    "loadingEvents": "Inatafuta matukio karibu nawe…",
+    "people": "Watu Waliopitia Njia Hii",
+    "peopleFooter": "Wasifu wa mfano kwa toleo hili la majaribio. Ulinganishaji halisi unakuja hivi karibuni.",
+    "sayHi": "Sema Hujambo",
+    "sayHiTo": "Sema hujambo kwa {name}",
+    "toast": "Ujumbe utapatikana hivi karibuni.",
+    "bio": " Alihamia kutoka {from} hadi {city} miaka {years, plural, zero {0} one {# mwaka} other {# miaka}} iliyopita. {job}. Anazungumza {languages}.",
+    "open": "Fungua tukio"
+  },
+  "jobs": {
+    "title": "Kazi",
+    "credentialTitle": "Stadi na Vyeti Vyako",
+    "credentialLoading": "Inachunguza jinsi kazi yako inavyotambuliwa na kupewa leseni…",
+    "noBackground": "Weka historia yako ya kazi kwenye Mipangilio ili uone jinsi inavyotumika hapa.",
+    "stateBoard": "Tafuta Bodi ya Jimbo Lako",
+    "searchPlaceholder": "Tafuta kazi katika {city}",
+    "results": "Kazi Karibu na {city}",
+    "empty": "Hakuna kazi zilizopatikana. Jaribu utafutaji mwingine.",
+    "finding": "Inatafuta kazi…",
+    "via": "kupitia {source}"
+  },
+  "settings": {
+    "title": "Mipangilio",
+    "profile": "Wasifu",
+    "editProfile": "Rudia Maswali ya Kuanza",
+    "city": "Jiji",
+    "language": "Lugha",
+    "notifications": "Kumbukumbu za Tarehe",
+    "notificationsFooter": "Kumbukumbu zinabaki kwenye simu hii.",
+    "notificationsDenied": "Arifa zimezuiwa katika mipangilio ya simu yako.",
+    "privacy": "Faragha",
+    "privacyFooter": "Kila kitu ambacho Landed inajua kimehifadhiwa kwenye simu hii pekee. Picha za barua hazihifadhiwi kamwe.",
+    "deleteData": "Futa Data Yangu",
+    "deleteTitle": "Ufute data yako yote?",
+    "deleteBody": "Hii itaondoa wasifu wako, mpango, tarehe na maswali kutoka kwenye simu hii. Hili haliwezi kutenduliwa.",
+    "deleteConfirm": "Futa",
+    "deleted": "Data yako imefutwa.",
+    "about": "Kuhusu Landed",
+    "version": "Toleo",
+    "aboutFooter": "Landed inafafanua taarifa. Siyo ushauri wa kisheria."
+  },
+  "checklist": {
+    "title": "Mambo ya Kufanya",
+    "entrySub": "Orodha yako ya mwaka wa kwanza",
+    "progress": "{done} kati ya {total} zimekamilika",
+    "howToToggle": "Jinsi ya kufanya hivi",
+    "howToTitle": "Jinsi ya Kufanya",
+    "linksTitle": "Viungo Vinavyoaminika",
+    "official": "Rasmi",
+    "nonprofit": "Isiyo ya faida",
+    "checked": "Imekaguliwa {date}",
+    "markDone": "Weka kama imekamilika",
+    "markNotDone": "Weka kama haijakamilika",
+    "doneOn": "Imekamilika {date}",
+    "addDate": "Weka Tarehe ya Hii",
+    "markItemDone": "Weka “{title}” kama imekamilika",
+    "markItemNotDone": "Weka “{title}” kama haijakamilika",
+    "notFound": "Kitu hiki hakipo kwenye orodha yako.",
+    "stepsFooter": "Hatua za jumla zilioandikwa na timu ya Landed. Siyo ushauri wa kisheria.",
+    "sections": {
+      "start": "Hatua za Kwanza",
+      "money": "Pesa na Kodi",
+      "work": "Kazi",
+      "family": "Afya na Familia",
+      "protect": "Jilinde",
+      "status": "Inategemea Hali Yako"
+    },
+    "items": {
+      "i94": {
+        "title": "Pata nakala ya I-94 yako",
+        "short": "Rekodi yako rasmi ya kuwasili. Angalia tarehe zilizomo.",
+        "body": "I-94 ni rekodi ya serikali ya wakati ulipofika na muda unaoweza kukaa. Ofisi nyingi huomba, na tarehe iliyomo ni muhimu. Unaweza kuipata bure mtandaoni.",
+        "steps": {
+          "s1": "Nenda kwenye tovuti rasmi ya I-94. Ni bure.",
+          "s2": "Chagua “Get Most Recent I-94” na uandike jina lako na maelezo ya pasipoti jinsi yalivyo katika pasipoti yako.",
+          "s3": "Angalia jina lako, daraja lako la kuingia, na tarehe ya “Admit Until”.",
+          "s4": "Hifadhi au chapisha nakala na uiweke pamoja na pasipoti yako.",
+          "s5": "Kama kitu fulani ndani yake si sahihi, ofisi ya CBP Deferred Inspection inaweza kusaidia kurekebisha."
+        },
+        "links": {
+          "l1": "Tovuti rasmi ya I-94 (CBP)",
+          "l2": "Kuhusu I-94 (CBP)"
+        }
+      },
+      "ssn": {
+        "title": "Pata namba ya Social Security",
+        "short": "Unaihitaji ili kufanya kazi na kwa mambo mengine mengi.",
+        "body": "Namba ya Social Security (SSN) inatumika kwa kazi, kodi, na benki. Si kila mtu anayeweza kuipata. Inategemea hali yako ya uhamiaji na ruhusa ya kufanya kazi. Kadi na namba ni bure kila wakati.",
+        "steps": {
+          "s1": "Gundua kama unaweza kupata namba na nyaraka zipi unazohitaji.",
+          "s2": "Kusanya nyaraka zako: mara nyingi pasipoti yako, nyaraka yako ya uhamiaji, na uthibitisho wa umri wako.",
+          "s3": "Anza maombi yako mtandaoni au nenda kwenye ofisi ya Social Security iliyo karibu nawe.",
+          "s4": "Subiri kadi yako ipitie posta. Iweke mahali salama, usiweke kwenye pochi yako."
+        },
+        "links": {
+          "l1": "Namba na kadi ya Social Security (SSA)"
+        }
+      },
+      "address": {
+        "title": "Iambie USCIS unapohama",
+        "short": "Watu wengi lazima waripoti anwani mpya ndani ya siku 10.",
+        "body": "Watu wengi wasio raia lazima waambie USCIS kuhusu anwani mpya ndani ya siku 10 za kuhama. Usipofanya hivyo, unaweza kukosa barua muhimu. Ni bure.",
+        "steps": {
+          "s1": "Unapohama, andika tarehe. Kawaida una siku 10.",
+          "s2": "Badilisha anwani yako mtandaoni na USCIS.",
+          "s3": "Kama una kesi katika mahakama ya uhamiaji, lazima pia uiambie mahakama, ukitumia fomu EOIR-33.",
+          "s4": "Hifadhi ukurasa wa uthibitisho au barua pepe."
+        },
+        "links": {
+          "l1": "Badilisha anwani yako na USCIS"
+        }
+      },
+      "bank": {
+        "title": "Fungua akaunti ya benki",
+        "short": "Weka pesa zako salama na uepuke ada za kubadilisha hundi.",
+        "body": "Akaunti ya benki au chama cha mikopo huweka pesa zako salama zaidi kuliko pesa taslimu na inakusaidia kujenga historia nchini Marekani. Baadhi ya benki zinakubali pasipoti au kitambulisho cha ubalozi.",
+        "steps": {
+          "s1": "Linganisha benki na vyama vya mikopo. Angalia ada za kila mwezi na salio la chini.",
+          "s2": "Leta kitambulisho chako (pasipoti au kitambulisho cha ubalozi) na SSN yako au ITIN kama unayo. Uliza ni nyaraka gani wanazokubali.",
+          "s3": "Fungua akaunti na uombe kadi ya benki (debit card).",
+          "s4": "Epuka maduka ya kubadilisha hundi. Ada zao ni kubwa."
+        },
+        "links": {
+          "l1": "Akaunti za benki (Consumer Financial Protection Bureau)",
+          "l2": "Taarifa za benki (USAHello)"
+        }
+      },
+      "stateId": {
+        "title": "Pata kitambulisho cha jimbo au leseni ya dereva",
+        "short": "Kitambulisho cha picha cha eneo lako hufanya mambo mengi kuwa rahisi.",
+        "body": "Kitambulisho cha jimbo au leseni ya dereva inakubaliwa karibu kila mahali. Kila jimbo lina sheria zake kuhusu nyaraka unazohitaji.",
+        "steps": {
+          "s1": "Tafuta ofisi ya leseni ya dereva ya jimbo lako.",
+          "s2": "Angalia ni nyaraka gani jimbo lako linakubali.",
+          "s3": "Fanya miadi ikiwa jimbo lako linahitaji.",
+          "s4": "Leta nyaraka zako na ada kwenye miadi yako."
+        },
+        "links": {
+          "l1": "Tafuta ofisi ya magari ya jimbo lako (USA.gov)",
+          "l2": "Leseni ya dereva na kitambulisho cha Texas (Texas DPS)"
+        }
+      },
+      "itin": {
+        "title": "Pata ITIN ikiwa huwezi kupata SSN",
+        "short": "Namba ya kodi kwa watu ambao hawawezi kupata namba ya Social Security.",
+        "body": "ITIN (Individual Taxpayer Identification Number) inakuwezesha kulipa kodi ikiwa huwezi kupata namba ya Social Security. Haitoi ruhusa ya kufanya kazi. IRS haishiriki namba hii kutekeleza sheria za uhamiaji.",
+        "steps": {
+          "s1": "Angalia ikiwa unahitaji ITIN. Unahitaji tu ikiwa huwezi kupata SSN.",
+          "s2": "Jaza Fomu ya IRS W-7.",
+          "s3": "Itume pamoja na fomu yako ya kodi, au pata msaada wa bure kutoka kwa Wakala Aliyeidhinishwa na IRS wa Kukubali Fomu (IRS Certified Acceptance Agent).",
+          "s4": "Subiri barua ya IRS yenye namba yako. Iweke salama."
+        },
+        "links": {
+          "l1": "ITIN (IRS)"
+        }
+      },
+      "taxes": {
+        "title": "Lipa kodi yako",
+        "short": "Kodi mara nyingi hulipwa katikati ya Aprili. Msaada wa bure unapatikana.",
+        "body": "Ikiwa ulipata pesa nchini US, unaweza kuhitaji kuwasilisha ripoti ya kodi, mara nyingi kabla ya Aprili 15. Kuwasilisha kwa wakati kunaweza pia kukusaidia kupata marejesho na mikopo. Msaada wa bure wa kodi unapatikana.",
+        "steps": {
+          "s1": "Kusanya fomu zako za kodi kutoka kazini, kama vile W-2 au 1099.",
+          "s2": "Tafuta msaada wa bure wa kodi karibu nawe (VITA).",
+          "s3": "Wasilisha ripoti yako kabla ya tarehe ya mwisho, mara nyingi Aprili 15.",
+          "s4": "Weka nakala za ripoti yako na fomu zako."
+        },
+        "links": {
+          "l1": "Wasilisha kodi yako (IRS)",
+          "l2": "Msaada wa bure wa kodi (IRS)"
+        }
+      },
+      "credit": {
+        "title": "Anza kujenga historia ya mikopo",
+        "short": "Historia ya mikopo inakusaidia kukodisha nyumba na kupata mikopo.",
+        "body": "Historia yako ya mikopo inaonyesha jinsi unavyolipa bili. Wenye nyumba na wakopeshaji huiangalia. Unaweza kuanza kuijenga polepole na kuangalia ripoti zako bure.",
+        "steps": {
+          "s1": "Jifunze ripoti za mikopo na alama za mikopo ni nini.",
+          "s2": "Pata ripoti zako za bure za mikopo na uziangalie kwa makosa.",
+          "s3": "Lipa kila bili kwa wakati.",
+          "s4": "Fikiria kuhusu kadi ya mkopo iliyowekewa dhamana, na usimlipe kamwe mtu anayeahidi “kurekebisha” historia yako ya mikopo."
+        },
+        "links": {
+          "l1": "Ripoti na alama za mikopo (CFPB)",
+          "l2": "Ripoti za bure za mikopo (FTC)"
+        }
+      },
+      "workPermit": {
+        "title": "Jua tarehe za idhini yako ya kazi",
+        "short": "Ongeza tarehe ya mwisho ili usije kuipitwa.",
+        "body": "Idhini ya kazi (EAD) ina tarehe ya mwisho. Baadhi ya watu wanaweza kuomba nyingine kabla haijaisha. Lini na jinsi gani inategemea kundi lako, kwa hiyo angalia ukurasa rasmi na uhifadhi tarehe.",
+        "steps": {
+          "s1": "Tafuta tarehe ya mwisho kwenye kadi yako na uiongeze kwenye tarehe zako.",
+          "s2": "Soma lini na jinsi gani unaweza kuomba kuongezewa muda (Fomu I-765).",
+          "s3": "Ikiwa utawasilisha mtandaoni, tumia akaunti ya USCIS.",
+          "s4": "Weka taarifa yako ya kupokelewa na uangalie hali ya kesi yako."
+        },
+        "links": {
+          "l1": "Fomu I-765, idhini ya kazi (USCIS)"
+        }
+      },
+      "wages": {
+        "title": "Jua haki zako kazini",
+        "short": "Mshahara wa chini na malipo ya ziada yanawahusu wafanyakazi wengi.",
+        "body": "Wafanyakazi wengi lazima wapate angalau mshahara wa chini na malipo ya ziada ya saa za ziada. Idara ya Kazi (Department of Labor) inapokea malalamiko kutoka kwa wafanyakazi bila kujali hali yao ya uhamiaji.",
+        "steps": {
+          "s1": "Jifunze mshahara wa chini katika jimbo lako.",
+          "s2": "Andika saa zako na uweke stakabadhi zako za mshahara.",
+          "s3": "Ikiwa hulipwi kile unachodaiwa, unaweza kuwasilisha malalamiko."
+        },
+        "links": {
+          "l1": "Mshahara wa chini (Department of Labor)",
+          "l2": "Wasilisha malalamiko ya mshahara (Department of Labor)"
+        }
+      },
+      "health": {
+        "title": "Tafuta huduma ya afya ya bei nafuu",
+        "short": "Vituo vya afya vya jamii hutoza kulingana na kipato chako.",
+        "body": "Vituo vya afya vya jamii huona wagonjwa hata bila bima na hutoza kulingana na kipato. Baadhi ya wahamiaji wanaweza pia kupata bima ya afya. Vyumba vya dharura lazima vikuhudumia wakati wa dharura.",
+        "steps": {
+          "s1": "Tafuta kituo cha afya cha jamii karibu nawe.",
+          "s2": "Angalia ni bima gani ya afya unayoweza kuipata.",
+          "s3": "Leta kitambulisho na uthibitisho wa kipato kwenye ziara yako ya kwanza.",
+          "s4": "Wakati wa dharura, nenda kwenye chumba cha dharura au piga simu 911."
+        },
+        "links": {
+          "l1": "Bima ya afya kwa wahamiaji (HealthCare.gov)",
+          "l2": "Tafuta kituo cha afya (HRSA)"
+        }
+      },
+      "school": {
+        "title": "Andikisha watoto wako shuleni",
+        "short": "Watoto wote wana haki ya kwenda shule ya umma.",
+        "body": "Nchini Marekani, watoto wote wanaweza kwenda shule ya bure ya serikali, bila kujali hali yao ya uhamiaji. Shule haziwezi kuuliza kuhusu hali ya uhamiaji ili kumwandikisha mtoto.",
+        "steps": {
+          "s1": "Wasiliana na ofisi ya wilaya ya shule iliyo karibu nawe.",
+          "s2": "Kusanya uthibitisho wa umri wa mtoto wako na uthibitisho wa mahali unapoishi.",
+          "s3": "Jaza fomu za uandikishaji. Omba msaada kwa lugha yako.",
+          "s4": "Uliza kuhusu msaada wa kujifunza Kiingereza kwa ajili ya mtoto wako."
+        },
+        "links": {
+          "l1": "Shule kwa ajili ya watoto (USAHello)",
+          "l2": "Haki za kielimu (Department of Justice)"
+        }
+      },
+      "selectiveService": {
+        "title": "Jisajili kwa Huduma ya Kijeshi (wanaume wenye umri wa miaka 18–25)",
+        "short": "Wanaume wengi wenye umri wa miaka 18 hadi 25 wanaoishi Marekani lazima wajisajili.",
+        "body": "Wanaume wengi wenye umri wa miaka 18 hadi 25 wanaoishi Marekani, pamoja na wahamiaji wengi, lazima wajisajili kwenye Selective Service. Kujisajili ni bure na kwa haraka.",
+        "steps": {
+          "s1": "Angalia kama unahitaji kujisajili. Hawa ni hasa wanaume wenye umri wa miaka 18 hadi 25.",
+          "s2": "Jisajili mtandaoni.",
+          "s3": "Hifadhi namba yako ya usajili."
+        },
+        "links": {
+          "l1": "Jisajili (Selective Service System)"
+        }
+      },
+      "legalHelp": {
+        "title": "Tafuta msaada wa kisheria wa bure unaoweza kuumini",
+        "short": "Jua ni nani anayeweza kukupa ushauri wa uhamiaji kabla hujauhitaji.",
+        "body": "Mawakili tu na wawakilishi waliothibitishwa na DOJ ndio wanaoweza kutoa ushauri wa kisheria wa uhamiaji. Tafuta kikundi cha msaada wa kisheria cha bure au cha bei nafuu kilicho karibu nawe kabla hujahitaji.",
+        "steps": {
+          "s1": "Tafuta msaada wa kisheria wa bure au wa bei nafuu karibu nawe.",
+          "s2": "Hakikisha mtu huyo ni wakili au mwakilishi aliyeidhinishwa na DOJ.",
+          "s3": "Uliza kuhusu gharama kabla ya mkutano wako wa kwanza.",
+          "s4": "Leta nakala za nyaraka zako. Weka zile za asili."
+        },
+        "links": {
+          "l1": "Tafuta msaada wa kisheria (ImmigrationLawHelp.org)",
+          "l2": "Watoa huduma za kisheria wa bure (EOIR)"
+        }
+      },
+      "scams": {
+        "title": "Jifunze kutambua ulaghai wa uhamiaji",
+        "short": "Watu wanaoitwa notario hawawezi kutoa ushauri wa kisheria. Fomu ni za bure.",
+        "body": "Walaghai huwalenga wahamiaji. Mtu anayeitwa “notario” hawezi kutoa ushauri wa kisheria, hakuna anayeweza kuhakikisha unapata green card, na fomu za USCIS ni za bure kupakua.",
+        "steps": {
+          "s1": "Jifunze ulaghai wa uhamiaji ulio wa kawaida zaidi.",
+          "s2": "Pakua fomu kutoka uscis.gov pekee. Ni za bure.",
+          "s3": "Ikiwa mtu atajaribu kukuhadaa, ripoti."
+        },
+        "links": {
+          "l1": "Epuka ulaghai (USCIS)",
+          "l2": "Ulaghai dhidi ya wahamiaji (FTC)"
+        }
+      },
+      "tenant": {
+        "title": "Jua haki zako kama mpangaji",
+        "short": "Mwenye nyumba lazima apitie mahakamani ili kukufukuza.",
+        "body": "Huko Texas, mwenye nyumba hawezi kukutoa kwa kubadili kufuli au kuchukua vitu vyako. Kufukuzwa lazima kupitie mahakamani. Soma mkataba wako wa kupanga na uweke nakala.",
+        "steps": {
+          "s1": "Soma mkataba wako na uweke nakala.",
+          "s2": "Omba marekebisho kwa maandishi na uweke nakala.",
+          "s3": "Jifunze jinsi mchakato wa kufukuzwa unavyofanya kazi.",
+          "s4": "Ukipata karatasi za mahakama, usizipuuze. Pata msaada wa kisheria wa bure."
+        },
+        "links": {
+          "l1": "Ikiwa mwenye nyumba atakufungia nje (TexasLawHelp)",
+          "l2": "Jinsi kufukuzwa kunavyofanya kazi (TexasLawHelp)"
+        }
+      },
+      "travel": {
+        "title": "Kabla ya kusafiri nje ya Marekani",
+        "short": "Kuondoka kunaweza kuathiri kesi inayoendelea. Uliza kwanza.",
+        "body": "Kwa wahamiaji wengi, kuondoka Marekani kunaweza kuathiri maombi yanayosubiri au uwezo wa kurudi. Watu wengine wanahitaji hati ya kusafiri kabla hawajaondoka. Ikiwa ni salama inategemea hali yako.",
+        "steps": {
+          "s1": "Kabla hujanunua tiketi, jifunze ni hati gani za kusafiri zilizopo.",
+          "s2": "Soma kuhusu Advance Parole na vibali vya kurudi (Fomu I-131).",
+          "s3": "Zungumza na msaada wa kisheria wa bure kuhusu hali yako kabla ya kusafiri.",
+          "s4": "Beba nyaraka zako za uhamiaji unaposafiri."
+        },
+        "links": {
+          "l1": "Hati za kusafiri (USCIS)",
+          "l2": "Fomu I-131 (USCIS)"
+        }
+      },
+      "benefits": {
+        "title": "Ruzuku za umma na hali yako",
+        "short": "Nani anayeweza kupata msaada kunategemea hali yako. Uliza kabla hujaomba.",
+        "body": "Programu zingine husaidia na chakula, huduma ya afya na makazi. Nani anayeweza kuzipata kunategemea hali ya uhamiaji, na wakati mwingine kutumia ruzuku kunaweza kuleta maana kwa maombi ya baadaye. Uliza msaada wa kisheria wa bure kabla hujaomba.",
+        "steps": {
+          "s1": "Jifunze ni programu gani za ruzuku za serikali zilizopo.",
+          "s2": "Uwezo wa kupata unategemea hali yako. Uliza msaada wa kisheria wa bure kile kinachokuhusu.",
+          "s3": "Watoto waliozaliwa Marekani wanaweza kustahili hata kama wazazi wao hawastahili.",
+          "s4": "Sema ukweli kila wakati kwenye maombi."
+        },
+        "links": {
+          "l1": "Ruzuku za serikali (USA.gov)",
+          "l2": "Rasilimali za jamii (ILRC)"
+        }
+      },
+      "court": {
+        "title": "Ikiwa una tarehe ya mahakama ya uhamiaji",
+        "short": "Usikose kusikilizwa kamwe. Angalia kesi yako mtandaoni.",
+        "body": "Kama una kesi kwenye mahakama ya wahamiaji, kukosa kusikilizwa kunaweza kuleta madhara makubwa. Unaweza kuangalia tarehe yako inayofuata ya kusikilizwa mtandaoni kwa kutumia namba yako ya A.",
+        "steps": {
+          "s1": "Angalia tarehe yako inayofuata ya kusikilizwa mtandaoni.",
+          "s2": "Weka tarehe ya kusikilizwa kwenye tarehe zako.",
+          "s3": "Kama unahamia mahali pengine, iambie mahakama ndani ya siku 5 kwa kutumia fomu ya EOIR-33.",
+          "s4": "Tafuta msaada wa kisheria wa bure mapema uwezavyo.",
+          "s5": "Nenda kwenye kila usikilizaji, hata kama huna wakili bado."
+        },
+        "links": {
+          "l1": "Taarifa za kesi kiotomatiki (EOIR)",
+          "l2": "Mahakama za wahamiaji (EOIR)"
+        }
+      }
+    }
+  },
+  "legalHelpCard": {
+    "title": "Ongea na msaada wa kisheria wa bure",
+    "body": "Hii inategemea hali yako ya uhamiaji. Kikundi cha msaada wa kisheria cha bure kinaweza kuangalia hali yako.",
+    "button": "Tafuta Msaada wa Kisheria wa Bure"
+  },
+  "browser": {
+    "close": "Funga",
+    "back": "Rudi",
+    "openInBrowser": "Fungua kwenye Kivinjari",
+    "openPage": "Fungua Ukurasa",
+    "versionOfficial": "Toleo rasmi la {language}",
+    "versionAi": "Tafsiri ya AI",
+    "versionOriginal": "Ya asili",
+    "original": "Ya asili",
+    "aiBanner": "Imetafsiriwa na AI kutoka {source}. Inaweza kuwa na makosa. Angalia ile ya asili kwa kitu chochote cha maana.",
+    "cantEmbed": "Tovuti hii haiwezi kuonyeshwa ndani ya Landed. Huu hapa ni muhtasari mfupi.",
+    "noSummary": "Tovuti hii haiwezi kuonyeshwa ndani ya Landed.",
+    "summaryTitle": "Muhtasari kutoka Landed",
+    "loading": "Inafungua…",
+    "translating": "Inatafsiri…",
+    "preparing": "Inatayarisha ukurasa huu…",
+    "translate": "Tafsiri",
+    "translateTo": "Tafsiri ukurasa huu kwa",
+    "noTranslation": "Asili (bila tafsiri)",
+    "translatingTo": "Inatafsiriwa kwenda {language}…",
+    "alreadyIn": "Ukurasa huu uko tayari katika lugha ya {language}.",
+    "mustVisitTitle": "Ili kutumia hii, unahitaji kwenda kwenye tovuti rasmi.",
+    "goTo": "Nenda {domain}",
+    "aiFormatted": "Maandishi kutoka {domain}, yamepangwa na AI ili iwe rahisi kusoma. Angalia ya asili kwa ajili ya jambo lolote muhimu.",
+    "translateFailed": "Tafsiri haikufaulu. Inaonyesha ya asili.",
+    "viewOriginal": "Ukurasa wa asili: {domain}",
+    "notTrusted": "Ukurasa huu hautoki kwenye chanzo kilichothibitishwa na Landed."
+  },
+  "assistant": {
+    "title": "Uliza Landed",
+    "button": "Uliza Landed",
+    "tab": "Uliza",
+    "welcome": "Uliza kuhusu orodha yako, tarehe zako, au maisha nchini Marekani.",
+    "placeholder": "Uliza Landed",
+    "send": "Tuma",
+    "mic": "Tamka swali lako",
+    "micStop": " Acha kusikiliza",
+    "listening": "Inasikiliza…",
+    "thinking": "Inafikiri…",
+    "clear": "Futa Mazungumzo",
+    "save": "Hifadhi mazungumzo kwenye kifaa hiki",
+    "suggested": "Jaribu kuuliza",
+    "s1": "Nifanye nini kwanza?",
+    "s2": "Napata aje ITIN?",
+    "s3": "Kibali changu cha kazi kinaisha lini?",
+    "s4": "Kimebakia nini kwenye orodha yangu?",
+    "aboutItem": "Kuhusu: {title}",
+    "itemPrompt": "Nisaidie kuhusu “{title}”.",
+    "usedData": "Imetumia: {sources}",
+    "store_profile": "wasifu wako",
+    "store_dates": "tarehe zako zilizohifadhiwa",
+    "store_checklist": "orodha yako ya mambo ya kufanya",
+    "store_plan": "mpango wako wa siku 90",
+    "store_prepSummaries": "maswali yako yaliyohifadhiwa",
+    "confirm": "Thibitisha",
+    "cancel": "Si Sasa",
+    "confirmed": "Imehifadhiwa",
+    "declined": " Haijahifadhiwa",
+    "proposeDone": "Weka alama “{title}” kuwa imekamilika?",
+    "proposeNotDone": "Weka alama “{title}” kuwa haijakamilika?",
+    "proposeDate": "Weka “{label}” tarehe {date}?",
+    "backToChat": "Rudi kwenye mazungumzo",
+    "error": "Kuna kitu kimeenda vibaya. Tafadhali jaribu tena."
+  }
+}
