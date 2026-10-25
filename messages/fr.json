@@ -176,8 +176,6 @@
     "askSub": "Des réponses avec sources",
     "help": "Trouver de l’aide juridique gratuite",
     "helpSub": "Aide juridique près de chez vous",
-    "prep": "Préparer un rendez-vous",
-    "prepSub": "Un résumé à apporter avec vous",
     "rights": "Connaissez vos droits",
     "rightsFooter": "Informations générales avec liens vers les sources officielles.",
     "addSheetTitle": "Ajouter une date",
@@ -368,7 +366,6 @@
     "notFound": "Cette annonce n’est plus disponible."
   },
   "prep": {
-    "title": "Préparation de rendez-vous",
     "intro": "Faites un résumé d’une page à apporter à un avocat ou à un représentant agréé. Il est écrit dans votre langue et en anglais.",
     "datesSection": "Dates incluses",
     "noDates": "Pas encore de dates. Vous pouvez quand même ajouter des questions.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Obtenir un ITIN si vous ne pouvez pas avoir de SSN",
         "short": "Un numéro de taxe pour les personnes qui ne peuvent pas obtenir de numéro de Sécurité sociale.",
-        "body": "Un ITIN (Individual Taxpayer Identification Number) vous permet de faire vos impôts si vous ne pouvez pas obtenir de numéro de Sécurité sociale. Il ne donne pas le droit de travailler. L’IRS ne le partage pas pour faire respecter les lois sur l’immigration.",
         "steps": {
           "s1": "Vérifiez si vous avez besoin d’un ITIN. Vous en avez seulement besoin si vous ne pouvez pas obtenir de SSN.",
           "s2": "Remplissez le formulaire W-7 de l’IRS.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Connaissez vos droits en tant que locataire",
         "short": "Un propriétaire doit passer par un tribunal pour vous expulser.",
-        "body": "Au Texas, un propriétaire ne peut pas vous expulser en changeant les serrures ou en prenant vos affaires. Une expulsion doit passer par un tribunal. Lisez votre bail et gardez-en une copie.",
         "steps": {
           "s1": "Lisez votre bail et gardez-en une copie.",
           "s2": "Demandez les réparations par écrit et gardez des copies.",

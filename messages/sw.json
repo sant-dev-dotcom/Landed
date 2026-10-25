@@ -176,8 +176,6 @@
     "askSub": "Majibu yenye vyanzo",
     "help": "Tafuta Msaada wa Sheria wa Bure",
     "helpSub": "Msaada wa sheria karibu nawe",
-    "prep": "Jiandae kwa Ajili ya Miadi",
-    "prepSub": "Muhtasari wa kuenda nao",
     "rights": "Jua Haki Zako",
     "rightsFooter": "Taarifa za jumla zenye viungo vya vyanzo rasmi.",
     "addSheetTitle": "Ongeza Tarehe",
@@ -368,7 +366,6 @@
     "notFound": "Ukurasa huu haupo tena."
   },
   "prep": {
-    "title": "Maandalizi ya Mkutano",
     "intro": "Tengeneza muhtasari wa ukurasa mmoja ili kupeleka kwa wakili au mwakilishi aliyesajiliwa. Imeandikwa kwa lugha yako na kwa Kiingereza.",
     "datesSection": "Tarehe Zilizomo",
     "noDates": "Hakuna tarehe bado. Unaweza kuongeza maswali.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Pata ITIN ikiwa huwezi kupata SSN",
         "short": "Namba ya kodi kwa watu ambao hawawezi kupata namba ya Social Security.",
-        "body": "ITIN (Individual Taxpayer Identification Number) inakuwezesha kulipa kodi ikiwa huwezi kupata namba ya Social Security. Haitoi ruhusa ya kufanya kazi. IRS haishiriki namba hii kutekeleza sheria za uhamiaji.",
         "steps": {
           "s1": "Angalia ikiwa unahitaji ITIN. Unahitaji tu ikiwa huwezi kupata SSN.",
           "s2": "Jaza Fomu ya IRS W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Jua haki zako kama mpangaji",
         "short": "Mwenye nyumba lazima apitie mahakamani ili kukufukuza.",
-        "body": "Huko Texas, mwenye nyumba hawezi kukutoa kwa kubadili kufuli au kuchukua vitu vyako. Kufukuzwa lazima kupitie mahakamani. Soma mkataba wako wa kupanga na uweke nakala.",
         "steps": {
           "s1": "Soma mkataba wako na uweke nakala.",
           "s2": "Omba marekebisho kwa maandishi na uweke nakala.",

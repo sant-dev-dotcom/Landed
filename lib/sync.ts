@@ -179,5 +179,7 @@ export async function deleteAccountData() {
     sb.from("user_data").delete().eq("user_id", id),
     sb.from("forum_replies").delete().eq("author_id", id),
     sb.from("forum_posts").delete().eq("author_id", id),
+    sb.from("community_event_rsvps").delete().eq("user_id", id),
+    sb.from("community_events").delete().eq("author_id", id),
   ]);
 }

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Landed</string>
+    <string name="title_activity_main">Landed</string>
+    <string name="package_name">com.landed.app</string>
+    <string name="custom_url_scheme">com.landed.app</string>
+</resources>

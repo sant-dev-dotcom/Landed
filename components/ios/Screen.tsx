@@ -26,7 +26,7 @@ export function Screen({
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: push && !reduce ? 0.35 : 0.2, ease: [0.32, 0.72, 0, 1] }}
       className={`min-h-dvh ${plain ? "bg-bg" : "bg-grouped"} ${
-        withTabBar ? "pb-[calc(50px+env(safe-area-inset-bottom)+16px)]" : ""
+        withTabBar ? "pb-[calc(var(--tab-bar-space)+16px)]" : ""
       }`}
     >
       {children}

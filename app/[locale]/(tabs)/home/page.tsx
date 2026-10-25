@@ -11,10 +11,12 @@ import { ListRow } from "@/components/ios/ListRow";
 import { Screen } from "@/components/ios/Screen";
 import { ButtonLink } from "@/components/ios/Button";
 import { Card } from "@/components/ios/Card";
-import { CaseIcon, ClockIcon, PeopleIcon, ShieldIcon, WarningIcon } from "@/components/LampIcons";
+import { CaseIcon, ClockIcon, PeopleIcon, RowChevron, ShieldIcon, WarningIcon } from "@/components/LampIcons";
 import { useOpenLink } from "@/components/browser/InAppBrowser";
 import { AskLandedButton } from "@/components/assistant/Assistant";
-import { daysUntil, formatDate, nextDate, useDates, usePlan, useProfile } from "@/lib/hooks";
+import { itemsFor } from "@/lib/checklist";
+import { daysUntil, formatDate, nextDate, useChecklist, useDates, usePlan, useProfile } from "@/lib/hooks";
+import { learnMoreFor } from "@/lib/planLinks";
 import { savePlan } from "@/lib/storage";
 import type { Profile } from "@/lib/types";
 
@@ -41,6 +43,7 @@ export default function HomePage() {
   const [profile, profileReady] = useProfile();
   const [plan] = usePlan();
   const [dates] = useDates();
+  const [checklist] = useChecklist();
   const [showAll, setShowAll] = useState(false);
   const openLink = useOpenLink();
 
@@ -48,6 +51,9 @@ export default function HomePage() {
   const visible = showAll ? plan : open.slice(0, 3);
   const upcoming = nextDate(dates);
   const upcomingDays = upcoming ? daysUntil(upcoming.date) : 0;
+  const legalItems = itemsFor(profile);
+  const legalDone = legalItems.filter((i) => checklist[i.id]?.done).length;
+  const legalFinished = legalItems.length > 0 && legalDone === legalItems.length;
 
   const toggle = (id: string) => savePlan(plan.map((s) => (s.id === id ? { ...s, done: !s.done } : s)));
 
@@ -84,9 +90,31 @@ export default function HomePage() {
           </Card>
         )}
 
-        {plan.length > 0 && (
+        {(plan.length > 0 || profile) && (
           <ListSection id="steps" header={t("nextSteps")} footer={t("nextStepsFooter")}>
-            {visible.length === 0 && <ListRow title={<span className="text-label-soft">{t("allDone")}</span>} />}
+            {/* Legal paperwork comes first: pinned above the plan in the urgent clay-rose style
+                until every checklist item is done. */}
+            {profile && (
+              <Link
+                href="/legal/checklist"
+                className={`list-row flex w-full items-stretch gap-3.5 pl-4 transition-colors duration-200 active:bg-fill ${legalFinished ? "" : "bg-red-tint"}`}
+              >
+                <span className="flex shrink-0 items-start pt-[14px]">
+                  <ShieldIcon size={24} detail={legalFinished} className={legalFinished ? "text-sage" : "text-clay"} />
+                </span>
+                <span className="flex min-h-[52px] min-w-0 flex-1 items-center gap-3 py-[14px] pr-4">
+                  <span className="min-w-0 flex-1">
+                    {!legalFinished && <span className="block text-footnote font-medium text-clay">{t("legalFirst")}</span>}
+                    <span className="block text-body">{t("legalTitle")}</span>
+                    <span className="mt-0.5 block text-subheadline text-secondary-label">
+                      {legalFinished ? t("legalAllDone") : t("legalSub", { done: legalDone, total: legalItems.length })}
+                    </span>
+                  </span>
+                  <RowChevron />
+                </span>
+              </Link>
+            )}
+            {plan.length > 0 && visible.length === 0 && <ListRow title={<span className="text-label-soft">{t("allDone")}</span>} />}
             {visible.map((s) => (
               <ListRow
                 key={s.id}
@@ -110,14 +138,11 @@ export default function HomePage() {
                       <span className="mt-1 block text-footnote">
                         {tcat(s.category)}
                         {s.dueInDays ? ` · ${t("dueIn", { count: s.dueInDays })}` : ""}
-                        {s.sourceUrl && (
-                          <>
-                            {" · "}
-                            <button type="button" onClick={() => openLink(s.sourceUrl!)} className="text-tint">
-                              {tc("learnMore")}
-                            </button>
-                          </>
-                        )}
+                        {/* Every step has one, including plans saved before links were checked. */}
+                        {" · "}
+                        <button type="button" onClick={() => openLink(learnMoreFor(s, locale))} className="text-tint">
+                          {tc("learnMore")}
+                        </button>
                       </span>
                     </>
                   )

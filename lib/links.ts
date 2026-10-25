@@ -20,6 +20,11 @@ export const NONPROFIT_DOMAINS = [
   "immigrationlawhelp.org",
   "ilrc.org",
   "texaslawhelp.org",
+  "floridalawhelp.org",
+  "azlawhelp.org",
+  "lawhelpny.org",
+  // The FCC's Lifeline phone-discount program, run for the FCC by USAC (not a .gov address).
+  "lifelinesupport.org",
   "lawhelp.org",
   "nilc.org",
 ];

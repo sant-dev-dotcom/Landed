@@ -3,7 +3,7 @@ import { Readability } from "@mozilla/readability";
 import { parseHTML } from "linkedom";
 import { createCache } from "./cache";
 import { isTrusted } from "./links";
-import { generateJSON } from "./llm";
+import { FLASH_LITE_MODELS, generateJSON } from "./llm";
 
 // Server-side reading of trusted pages for the in-app browser: whether a page may be
 // framed, which official translations it links to, and a clean reading view of its main
@@ -275,7 +275,8 @@ If the page is an interactive online tool or form, explain in 2-4 sentences what
 Links are written as [[n|link text]]. Keep the links you keep with exactly the same n${translateTo ? " (translate only the link text)" : ""}. Never invent new n.
 Also decide "requiresSite": true when the page's main task can only be finished on the website itself (or an online system it links to): using an online tool or search, applying or filing online, changing or updating information online, signing in to an account, paying, or booking an appointment. This includes pages that explain how to do such a task online. Pages that only give information are false.
 If requiresSite is true, "siteAction" is one short, concrete sentence${translateTo ? ` in ${translateTo}` : " in the page's language"} saying what the person has to do on the website, naming the site (for example "Look up and print your I-94 record on the CBP website." or "Change your address online on the USCIS website."). Otherwise "".
-Return JSON: { "title": string, "requiresSite": boolean, "siteAction": string, "blocks": [{ "kind": "h" | "p" | "li", "level"?: 2 | 3, "ordered"?: boolean, "text": string }] }`;
+If requiresSite is true, also provide "siteNotice" with "title" translating "To use this, you need to go to the official website." and "button" translating "Go to {domain}"${translateTo ? ` into ${translateTo}` : " into the page's language"}. Keep the literal placeholder {domain} unchanged. These are app labels, separate from the page's content.
+Return JSON: { "title": string, "requiresSite": boolean, "siteAction": string, "siteNotice"?: { "title": string, "button": string }, "blocks": [{ "kind": "h" | "p" | "li", "level"?: 2 | 3, "ordered"?: boolean, "text": string }] }`;
 
 type AiBlock = { kind?: string; level?: number; ordered?: boolean; text?: string };
 
@@ -288,6 +289,8 @@ export interface FormattedPage {
   requiresSite: boolean;
   /** What the person has to do there, in the output language. */
   siteAction: string;
+  /** App notice labels in the same language as the page content. */
+  siteNotice?: { title: string; button: string };
 }
 
 async function formatWithAI(source: ReturnType<typeof pageText>, pageUrl: string, translateTo?: string) {
@@ -299,14 +302,18 @@ async function formatWithAI(source: ReturnType<typeof pageText>, pageUrl: string
   const links = isTool ? [pageUrl] : source.links;
   const chunks: string[] = [];
   for (let i = 0; i < body.length; i += AI_CHUNK) chunks.push(body.slice(i, i + AI_CHUNK));
+  const format = (c: string, i: number) =>
+    generateJSON<{ title?: string; requiresSite?: boolean; siteAction?: string; siteNotice?: FormattedPage["siteNotice"]; blocks?: AiBlock[] }>({
+      system: formatPrompt(translateTo),
+      user: `${chunks.length > 1 ? `Part ${i + 1} of ${chunks.length} of the page.\n` : ""}Page title: ${source.title}\n\n${c}`,
+      temperature: 0.1,
+      // Reformatting (and translating) a page is always Gemini Flash-Lite.
+      onlyGemini: FLASH_LITE_MODELS,
+    });
   const outs = await Promise.all(
-    chunks.map((c, i) =>
-      generateJSON<{ title?: string; requiresSite?: boolean; siteAction?: string; blocks?: AiBlock[] }>({
-        system: formatPrompt(translateTo),
-        user: `${chunks.length > 1 ? `Part ${i + 1} of ${chunks.length} of the page.\n` : ""}Page title: ${source.title}\n\n${c}`,
-        temperature: 0.1,
-      })
-    )
+    // Long answers (often translations into less common languages) sometimes come back as
+    // broken JSON: one more try usually works.
+    chunks.map((c, i) => format(c, i).catch((err) => (/JSON/.test(String(err)) ? format(c, i) : Promise.reject(err))))
   );
   const blocks: Block[] = outs
     .flatMap((o) => o.blocks ?? [])
@@ -321,7 +328,12 @@ async function formatWithAI(source: ReturnType<typeof pageText>, pageUrl: string
   // A tool whose content only loads in the browser always needs the website.
   const requiresSite = isTool || outs.some((o) => o.requiresSite === true);
   const siteAction = requiresSite ? String(outs.find((o) => typeof o.siteAction === "string" && o.siteAction.trim())?.siteAction ?? "").slice(0, 300) : "";
-  return { title: String(outs[0].title || source.title), blocks, requiresSite, siteAction };
+  const siteNotice = requiresSite ? outs.find((o) =>
+    typeof o.siteNotice?.title === "string" && o.siteNotice.title.trim() &&
+    typeof o.siteNotice.button === "string" && o.siteNotice.button.includes("{domain}")
+  )?.siteNotice : undefined;
+  if (requiresSite && !siteNotice) throw new Error("AI returned no localized site notice");
+  return { title: String(outs[0].title || source.title), blocks, requiresSite, siteAction, siteNotice };
 }
 
 // AI-formatted pages, shared through Valkey when configured: each one costs a Gemini call.
@@ -333,7 +345,7 @@ const formatted = createCache<FormattedPage>("page", { ttlSeconds: DAY / 1000, m
  * the plain Readability extraction if the AI is unavailable. Cached 24 hours per URL + language.
  */
 export async function formattedPage(page: Fetched, translateTo?: string): Promise<FormattedPage> {
-  const key = `${page.url}|${translateTo ?? ""}`;
+  const key = `v2|${page.url}|${translateTo ?? ""}`;
   const hit = await formatted.get(key);
   if (hit) return hit;
   let data: FormattedPage;

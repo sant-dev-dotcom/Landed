@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { COMMON_RULES, generateJSON, isLLMConfigured, languageName } from "@/lib/llm";
 import { planFallback } from "@/lib/fallbacks";
 import { asLocale, clip, maskDeep } from "@/lib/mask";
+import { learnMoreFor } from "@/lib/planLinks";
 import type { PlanStep, Profile } from "@/lib/types";
 
 const CATEGORIES = new Set(["legal", "money", "social", "jobs", "health", "daily"]);
@@ -40,19 +41,24 @@ Return JSON: { "steps": [{ "id": string, "title": string (max 60 chars), "why": 
       const steps = (out.steps || [])
         .filter((s) => s && s.title)
         .slice(0, 10)
-        .map((s, i) => ({
-          id: `step-${i + 1}`,
-          title: clip(s.title, 90),
-          why: clip(s.why, 300),
-          category: (CATEGORIES.has(s.category) ? s.category : "daily") as PlanStep["category"],
-          dueInDays: Number.isFinite(Number(s.dueInDays)) ? Math.max(1, Math.min(90, Number(s.dueInDays))) : undefined,
-          done: false,
-          sourceUrl: typeof s.sourceUrl === "string" && /^https:\/\//.test(s.sourceUrl) ? s.sourceUrl : undefined,
-        }));
+        .map((s, i) => {
+          const step = {
+            id: `step-${i + 1}`,
+            title: clip(s.title, 90),
+            why: clip(s.why, 300),
+            category: (CATEGORIES.has(s.category) ? s.category : "daily") as PlanStep["category"],
+            dueInDays: Number.isFinite(Number(s.dueInDays)) ? Math.max(1, Math.min(90, Number(s.dueInDays))) : undefined,
+            done: false,
+            sourceUrl: typeof s.sourceUrl === "string" ? s.sourceUrl : undefined,
+          };
+          // Every step gets a Learn More link: the AI's if it's a trusted site, otherwise a checked page.
+          return { ...step, sourceUrl: learnMoreFor(step, profile.locale) };
+        });
       if (steps.length >= 6) return NextResponse.json({ steps: maskDeep(steps) });
     } catch (err) {
       console.error("[plan] LLM failed, using fallback:", err instanceof Error ? err.message : err);
     }
   }
-  return NextResponse.json({ steps: planFallback(profile), sample: true });
+  const steps = planFallback(profile).map((s) => ({ ...s, sourceUrl: learnMoreFor(s, profile.locale) }));
+  return NextResponse.json({ steps, sample: true });
 }

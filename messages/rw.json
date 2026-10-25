@@ -176,8 +176,6 @@
     "askSub": "Isubizo rifite aho ryashingiye",
     "help": "Shaka ubufasha bw’amategeko buntu",
     "helpSub": "Ubufasha bw’amategeko buri hafi yawe",
-    "prep": "Witegure guhura n’inzego zibishinzwe",
-    "prepSub": "Incamake yo kwitwaza",
     "rights": "Menya uburenganzira bwawe",
     "rightsFooter": "Amakuru rusange n’amahuza y’ibigo byemewe.",
     "addSheetTitle": "Ongeraho italiki",
@@ -368,7 +366,6 @@
     "notFound": "Ibi ntibigihari."
   },
   "prep": {
-    "title": "Gutegura Gahunda",
     "intro": "Kora icyegeranyo cy’urupapuro rumwe uzashyira umunyamategeko cyangwa umuhagarariwe wemewe. Cyanditse mu rurimi rwawe no mu Cyongereza.",
     "datesSection": "Amatariki Harimo",
     "noDates": "Nta matariki arimo. Ushobora kongeraho ibibazo.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Fata ITIN niba utabasha kubona SSN",
         "short": "Nimero y’imisoro ku bantu batabasha kubona nimero ya Social Security.",
-        "body": "ITIN (Individual Taxpayer Identification Number) iguha uburenganzira bwo gutanga imisoro niba udashobora kubona nimero ya Social Security. Ntiduha uburenganzira bwo gukora. IRS ntisangira amakuru ngo ikurikize amategeko y’abinjira n’abasohoka.",
         "steps": {
           "s1": "Reba niba ukeneye ITIN. Uyikeneye gusa niba utabasha kubona SSN.",
           "s2": "Uzuza Ifishi ya IRS W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Menya uburenganzira bwawe nk'umukodesha",
         "short": "Nyir'inzu agomba kunyura mu rukiko kugira ngo akwirukane.",
-        "body": "Muri Texas, nyir'inzu ntashobora kukwirukana ahindura ingufuri cyangwa atwara ibintu byawe. Kwirukana umuntu bigomba kunyura mu rukiko. Soma amasezerano yawe y'ubukode kandi ubike kopi.",
         "steps": {
           "s1": "Soma amasezerano yawe y'ubukode kandi ubike kopi.",
           "s2": "Saba ibikorwa byo gusanwa mu nyandiko kandi ubike kopi.",

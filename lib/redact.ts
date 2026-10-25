@@ -13,6 +13,8 @@ export interface RedactionScan {
   width: number;
   height: number;
   findings: Finding[];
+  /** The words read on the device, with where they are (image pixels). Empty without OCR. */
+  lines: OcrLine[];
   /** False when OCR couldn't run (offline, old browser): the person covers details by hand. */
   ocrOk: boolean;
   /** Set when the photo is too blurry, dark, washed out or unreadable to use. */
@@ -52,7 +54,7 @@ export async function scanForPrivateDetails(dataUrl: string, names: string[], on
   const height = img.naturalHeight;
   // Reject unusable photos before spending time on OCR.
   const early: QualityIssue | null = Math.max(width, height) < MIN_SIDE ? "unreadable" : pixelIssue(img);
-  if (early) return { width, height, findings: [], ocrOk: false, quality: early };
+  if (early) return { width, height, findings: [], lines: [], ocrOk: false, quality: early };
   try {
     const { createWorker } = await import("tesseract.js");
     const worker = await createWorker("eng", 1, {
@@ -66,18 +68,18 @@ export async function scanForPrivateDetails(dataUrl: string, names: string[], on
       const words = (data.blocks ?? []).flatMap((b) => b.paragraphs.flatMap((p) => p.lines.flatMap((l) => l.words)));
       // Too little readable text: redaction (and the explanation) can't be trusted.
       const quality = judgeText(words);
-      if (quality) return { width, height, findings: [], ocrOk: true, quality };
+      if (quality) return { width, height, findings: [], lines: [], ocrOk: true, quality };
       const lines: OcrLine[] = (data.blocks ?? []).flatMap((b) =>
         b.paragraphs.flatMap((p) => p.lines.map((l) => ({ words: l.words.map((w) => ({ text: w.text, bbox: w.bbox })) })))
       );
       const findings = findSensitive(lines, names).map((f) => ({ ...f, box: pad(f.box, width, height) }));
-      return { width, height, findings, ocrOk: true, quality: null };
+      return { width, height, findings, lines, ocrOk: true, quality: null };
     } finally {
       await worker.terminate();
     }
   } catch {
     // OCR unavailable: the sharpness check already passed; the person covers details by hand.
-    return { width, height, findings: [], ocrOk: false, quality: null };
+    return { width, height, findings: [], lines: [], ocrOk: false, quality: null };
   }
 }
 

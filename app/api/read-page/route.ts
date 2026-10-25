@@ -24,6 +24,7 @@ export async function GET(req: Request) {
       aiFormatted: view.ai,
       requiresSite: view.requiresSite,
       siteAction: view.siteAction,
+      siteNotice: "siteNotice" in view ? view.siteNotice : undefined,
     });
   } catch (err) {
     return NextResponse.json({ error: err instanceof Error ? err.message : "error" }, { status: 502 });

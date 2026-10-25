@@ -33,6 +33,9 @@ function EventDetail() {
   const id = useSearchParams().get("id") || "";
   const [event, setEvent] = useState<EventListing | null | undefined>(undefined);
   const [details, setDetails] = useState<EventDetails | null>(null);
+  // Written by AI from the name only, when neither the listing nor the page has a description.
+  // null: not asked yet or waiting; "": couldn't get one.
+  const [general, setGeneral] = useState<string | null>(null);
 
   useEffect(() => {
     setEvent(cachedEvent(id) ?? null);
@@ -42,6 +45,12 @@ function EventDetail() {
   const page = event?.links?.find((l) => l.type === "tickets")?.link ?? event?.links?.[0]?.link ?? event?.link;
   useEffect(() => {
     if (!event) return;
+    // Found by web search: already checked against its page (which may be a calendar of many
+    // events, where the page's first event would be the wrong one).
+    if (event.checked) {
+      setDetails(event.checked);
+      return;
+    }
     if (!page) {
       setDetails({});
       return;
@@ -51,6 +60,18 @@ function EventDetail() {
       .then(setDetails)
       .catch(() => setDetails({}));
   }, [event, page, locale]);
+
+  // Nothing describes it: ask for a general description of an event with this name.
+  const missing = Boolean(event && details !== null && !details.description && !event.description);
+  useEffect(() => {
+    setGeneral(null);
+    if (!missing || !event) return;
+    const params = new URLSearchParams({ title: event.title, lang: locale });
+    if (event.venue) params.set("venue", event.venue);
+    getJSON<{ description?: string }>(`/api/events/describe?${params}`)
+      .then((d) => setGeneral(d.description ?? ""))
+      .catch(() => setGeneral(""));
+  }, [missing, event, locale]);
 
   const back = { href: "/social", label: t("title") };
 
@@ -114,9 +135,13 @@ function EventDetail() {
             </div>
           ) : (
             <Card className="flex flex-col gap-3 p-5">
-              <p className={`text-headline ${description ? "text-label-soft" : "text-secondary-label"}`}>{description || t("noDescription")}</p>
+              <p className={`text-headline ${description || general ? "text-label-soft" : "text-secondary-label"}`}>
+                {description || general || (missing && general === null ? t("loadingDetails") : t("noDescription"))}
+              </p>
+              {!description && general && <p className="text-note italic text-secondary-label">{t("generalDescription")}</p>}
               {details?.organizer && <p className="text-subheadline text-secondary-label">{t("hostedBy", { name: details.organizer })}</p>}
               {details?.aiSummary && <p className="text-note italic text-secondary-label">{t("aiSummary")}</p>}
+              {event.checked && <p className="text-note italic text-secondary-label">{t("checkedEvent", { site: event.links?.[0]?.source ?? "" })}</p>}
             </Card>
           )}
         </ListSection>

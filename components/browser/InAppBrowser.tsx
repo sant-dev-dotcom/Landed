@@ -5,7 +5,8 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronDown, ChevronLeft, ExternalLink, Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { CUSTOM_LOCALE, LANGUAGES, languageInfo } from "@/i18n/languages";
+import { CUSTOM_LOCALE, LANGUAGES, languageInfo, matchLanguage } from "@/i18n/languages";
+import { useProfile } from "@/lib/hooks";
 import { domainOf, localizedVersion, sourceType, type LocalizedUrl } from "@/lib/links";
 import { getJSON } from "@/lib/client";
 import { BarButton } from "../ios/Sheet";
@@ -80,6 +81,7 @@ interface SiteNeed {
   /** Using this means going to the website (online tool, application, payment, account…). */
   requiresSite?: boolean;
   siteAction?: string;
+  siteNotice?: { title: string; button: string };
 }
 type View =
   | { kind: "frame"; url: string }
@@ -105,7 +107,7 @@ type ReaderJSON = { title: string; blocks: Block[]; aiFormatted?: boolean } & Si
 const readerView = async (url: string): Promise<View> => {
   try {
     const r = await getJSON<ReaderJSON & { url: string; lang: string }>(`/api/read-page?url=${encodeURIComponent(url)}`);
-    return { kind: "reader", url, title: r.title, blocks: r.blocks, sourceLang: r.lang, formatted: r.aiFormatted, requiresSite: r.requiresSite, siteAction: r.siteAction };
+    return { kind: "reader", url, title: r.title, blocks: r.blocks, sourceLang: r.lang, formatted: r.aiFormatted, requiresSite: r.requiresSite, siteAction: r.siteAction, siteNotice: r.siteNotice };
   } catch {
     return { kind: "summary", url };
   }
@@ -130,6 +132,10 @@ function siteLang(code: string) {
 
 const MODE_KEY = "landed:browser-mode";
 const TARGET_KEY = "landed:browser-language";
+// Languages typed in under "Another language…" (not one of the app's), this session.
+const OTHER_KEY = "landed:browser-other-languages";
+const OTHER = "other:";
+const OTHER_CHOICE = "__other";
 const session = {
   get: (k: string) => {
     try {
@@ -164,6 +170,12 @@ function BrowserPanel({
   const locale = useLocale();
   const reduce = useReducedMotion();
   const customName = useCurrentLanguageName();
+  const [profile] = useProfile();
+  // The language the person chose for Landed (onboarding or Settings).
+  const preferred = profile?.locale ?? locale;
+  const [others, setOthers] = useState<string[]>([]);
+  const [typing, setTyping] = useState(false);
+  const [typed, setTyped] = useState("");
   const [original, setOriginal] = useState<View | null>(null);
   const [pageInfo, setPageInfo] = useState<{ lang: string; alternates: Record<string, string> } | null>(null);
   const [target, setTarget] = useState<string | null>(null);
@@ -172,7 +184,16 @@ function BrowserPanel({
 
   const url = entry?.url ?? "";
   const type = url ? sourceType(url) : null;
-  const nameOf = (code: string) => (code === CUSTOM_LOCALE ? customName : (languageInfo(code)?.native ?? code));
+  const nameOf = (code: string) =>
+    code.startsWith(OTHER) ? code.slice(OTHER.length) : code === CUSTOM_LOCALE ? customName : (languageInfo(code)?.native ?? code);
+
+  useEffect(() => {
+    try {
+      setOthers(JSON.parse(session.get(OTHER_KEY) || "[]"));
+    } catch {
+      setOthers([]);
+    }
+  }, []);
 
   // Load the page itself and which languages the site offers.
   useEffect(() => {
@@ -182,9 +203,11 @@ function BrowserPanel({
     setPageInfo(null);
     setTranslations({});
     setMode(session.get(MODE_KEY) === "original" ? "original" : "translated");
-    // Default: the language chosen earlier this session, or the app language unless it's English.
+    setTyping(false);
+    // Default: the language chosen earlier this session, otherwise the person's preferred
+    // language (no translation when that's English).
     const remembered = session.get(TARGET_KEY);
-    setTarget(remembered !== null ? remembered || null : locale !== "en" ? locale : null);
+    setTarget(remembered !== null ? remembered || null : preferred !== "en" ? preferred : null);
     if (!sourceType(entry.url)) {
       setOriginal({ kind: "summary", url: entry.url });
       setPageInfo({ lang: "", alternates: {} });
@@ -197,7 +220,7 @@ function BrowserPanel({
     return () => {
       live = false;
     };
-  }, [entry, locale]);
+  }, [entry, locale, preferred]);
 
   // Translate into the chosen language (once per language; kept so switching is instant).
   useEffect(() => {
@@ -206,16 +229,19 @@ function BrowserPanel({
     const done = (tr: Translation) => live && setTranslations((s) => ({ ...s, [target]: tr }));
     setTranslations((s) => ({ ...s, [target]: { status: "loading" } }));
     (async () => {
-      const lang = siteLang(target);
-      if (pageInfo.lang && pageInfo.lang === lang) return done({ status: "ready", view: original ?? { kind: "summary", url }, version: "same" });
-      // 1. The site's own version in that language.
-      const official = (entry.opts.localized && localizedVersion(entry.opts.localized, lang)) || pageInfo.alternates[lang];
-      if (official && official !== entry.url) return done({ status: "ready", view: await pageView(official), version: "official" });
+      // A typed-in language has no site version to look for: straight to AI translation.
+      const typedName = target.startsWith(OTHER) ? target.slice(OTHER.length) : null;
+      if (!typedName) {
+        const lang = siteLang(target);
+        if (pageInfo.lang && pageInfo.lang === lang) return done({ status: "ready", view: original ?? { kind: "summary", url }, version: "same" });
+        // 1. The site's own version in that language.
+        const official = (entry.opts.localized && localizedVersion(entry.opts.localized, lang)) || pageInfo.alternates[lang];
+        if (official && official !== entry.url) return done({ status: "ready", view: await pageView(official), version: "official" });
+      }
       // 2. AI translation of the page's text.
       try {
-        const tp = await getJSON<{ sourceLang: string; translated: ReaderJSON }>(
-          `/api/translate-page?url=${encodeURIComponent(entry.url)}&lang=${encodeURIComponent(target)}`
-        );
+        const language = typedName ? `name=${encodeURIComponent(typedName)}` : `lang=${encodeURIComponent(target)}`;
+        const tp = await getJSON<{ sourceLang: string; translated: ReaderJSON }>(`/api/translate-page?url=${encodeURIComponent(entry.url)}&${language}`);
         done({ status: "ready", view: { kind: "reader", url: entry.url, ...tp.translated, ai: true, sourceLang: tp.sourceLang }, version: "ai" });
       } catch {
         // 3. Landed's own summary, if it's in the chosen language.
@@ -231,9 +257,29 @@ function BrowserPanel({
   }, [entry, target, pageInfo, locale]);
 
   const chooseTarget = (code: string) => {
+    if (code === OTHER_CHOICE) {
+      setTyping(true);
+      return;
+    }
+    setTyping(false);
     setTarget(code || null);
     session.set(TARGET_KEY, code);
     if (code) switchMode("translated");
+  };
+  // "Another language…": one of the app's languages by any name ("Spanish", "español") uses
+  // that one (and its official site versions); anything else is translated by AI.
+  const chooseTyped = (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = typed.replace(/[^\p{L}\p{M} ()'-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 40);
+    if (!name) return;
+    const known = matchLanguage(name);
+    setTyped("");
+    if (known) return chooseTarget(known);
+    const label = name.charAt(0).toUpperCase() + name.slice(1);
+    const next = [label, ...others.filter((o) => o.toLowerCase() !== label.toLowerCase())].slice(0, 5);
+    setOthers(next);
+    session.set(OTHER_KEY, JSON.stringify(next));
+    chooseTarget(OTHER + label);
   };
   const switchMode = (m: "translated" | "original") => {
     setMode(m);
@@ -258,6 +304,7 @@ function BrowserPanel({
   const options = [
     ...LANGUAGES.map((l) => ({ code: l.code as string, name: l.native })),
     ...(locale === CUSTOM_LOCALE ? [{ code: CUSTOM_LOCALE, name: customName }] : []),
+    ...others.map((name) => ({ code: OTHER + name, name })),
   ].filter((o) => o.code !== pageInfo?.lang);
 
   return (
@@ -318,6 +365,7 @@ function BrowserPanel({
                               {o.name}
                             </option>
                           ))}
+                          <option value={OTHER_CHOICE}>{t("otherLanguage")}</option>
                         </select>
                       </label>
                     )}
@@ -330,6 +378,29 @@ function BrowserPanel({
                       {t("openInBrowser")}
                     </button>
                   </div>
+
+                  {typing && (
+                    <form onSubmit={chooseTyped} className="flex items-center gap-2 px-4 pb-2.5">
+                      <label htmlFor="other-language" className="sr-only">
+                        {t("otherLanguageLabel")}
+                      </label>
+                      <input
+                        id="other-language"
+                        value={typed}
+                        onChange={(e) => setTyped(e.target.value)}
+                        maxLength={40}
+                        autoFocus
+                        placeholder={t("otherLanguagePlaceholder")}
+                        className="min-h-[40px] min-w-0 flex-1 rounded-control border border-separator bg-cell px-3 text-body outline-none placeholder:text-tertiary-label"
+                      />
+                      <Button type="submit" size="small" disabled={!typed.trim()}>
+                        {t("translate")}
+                      </Button>
+                      <Button type="button" variant="plain" size="small" onClick={() => setTyping(false)}>
+                        {t("cancelOther")}
+                      </Button>
+                    </form>
+                  )}
 
                   {ready && (
                     <div className="px-4 pb-2.5">
@@ -448,10 +519,10 @@ function ViewBox({ view, hidden, summary }: { view: View; hidden: boolean; summa
       {/* Some things can only be done on the website itself: say so first. */}
       {view.requiresSite && (
         <div role="note" className="mb-5 flex flex-col gap-3 rounded-status bg-green-tint p-5">
-          <p className="text-headline font-medium text-label">{t("mustVisitTitle")}</p>
+          <p className="text-headline font-medium text-label">{view.siteNotice?.title ?? t("mustVisitTitle")}</p>
           {view.siteAction && <p className="text-body text-label-soft">{view.siteAction}</p>}
           <Button size="medium" className="self-start" onClick={() => visit(view.url)} icon={<ExternalLink size={17} strokeWidth={1.75} aria-hidden />}>
-            {t("goTo", { domain: domainOf(view.url) })}
+            {view.siteNotice?.button.replaceAll("{domain}", domainOf(view.url)) ?? t("goTo", { domain: domainOf(view.url) })}
           </Button>
         </div>
       )}

@@ -176,8 +176,6 @@
     "askSub": "Mga sagot na may patunay",
     "help": "Maghanap ng Libreng Tulong Legal",
     "helpSub": "Tulong legal malapit sa iyo",
-    "prep": "Maghanda para sa Appointment",
-    "prepSub": "Buod na dadalhin mo",
     "rights": "Alamin ang Iyong mga Karapatan",
     "rightsFooter": "Pangkalahatang impormasyon na may mga link sa opisyal na pinagkukunan.",
     "addSheetTitle": "Magdagdag ng Petsa",
@@ -368,7 +366,6 @@
     "notFound": "Wala na ang listahang ito."
   },
   "prep": {
-    "title": "Paghahanda sa Pagkikita",
     "intro": "Gumawa ng isang pahinang buod para dalhin sa abogado o awtorisadong kinatawan. Naka-sulat ito sa wika mo at sa Ingles.",
     "datesSection": "Mga Petsang Kasama",
     "noDates": "Wala pang petsa. Pwede ka pa ring magdagdag ng mga tanong.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Kumuha ng ITIN kung wala kang SSN",
         "short": "Isang tax number para sa mga taong walang Social Security number.",
-        "body": "Ang ITIN (Individual Taxpayer Identification Number) ay nagbibigay-daan sa iyong magbayad ng buwis kung wala kang Social Security number. Hindi ito nagbibigay ng pahintulot na magtrabaho. Hindi ibinubunyag ng IRS ang numerong ito para magpatupad ng batas sa imigrasyon.",
         "steps": {
           "s1": "Tingnan kung kailangan mo ng ITIN. Kailangan mo lang nito kung wala kang SSN.",
           "s2": "Punan ang IRS Form W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Alamin ang iyong mga karapatan bilang nangungupahan",
         "short": "Kailangang dumaan sa korte ang may-ari ng bahay para mapaalis ka.",
-        "body": "Sa Texas, hindi ka maaaring paalisin ng may-ari ng bahay sa pamamagitan ng pagpapalit ng mga kandado o pagkuha ng iyong mga gamit. Ang pagpapaalis ay kailangang dumaan sa korte. Basahin ang iyong kontrata sa pag-upa at magtabi ng kopya.",
         "steps": {
           "s1": "Basahin ang iyong kontrata sa pag-upa at magtabi ng kopya.",
           "s2": "Humingi ng mga pagkukumpuni sa pamamagitan ng sulat at magtabi ng mga kopya.",

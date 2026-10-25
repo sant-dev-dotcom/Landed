@@ -16,12 +16,12 @@ npm run dev                  # http://localhost:3000
 
 | Env var | Enables |
 |---|---|
-| `GEMINI_API_KEY` | Live plan, letter reading (vision), grounded Q&A, prep summary, credential card |
-| `MUSE_API_KEY` (+ `LLM_PROVIDER=muse`) | Muse Spark as the primary model. Uses an OpenAI-compatible `chat/completions` endpoint; set `MUSE_API_BASE` / `MUSE_MODEL` to match your access. Falls back to Gemini if the call fails. |
+| `GEMINI_API_KEY` | UI translation, trusted webpage reading/translation, and translated event descriptions. |
+| `MUSE_API_KEY` | All chat (Ask Landed, legal Q&A, document chat), document analysis, plans, prep summaries, credential guidance, event drafting and web discovery. Uses the same Meta Responses connection throughout; Gemini is never used as a chat fallback. |
 | `SERPAPI_KEY` | Live Google Maps (legal help), Google Events, Google Jobs. Cached in memory for 10 min per query. |
 | `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Email and password sign-in (see Accounts). Required in production. |
 
-Uploading your own photo needs an LLM key; the sample letters work without one.
+Uploading your own photo needs a Muse Spark key; the sample letters work without one.
 
 ## Accounts
 
@@ -68,7 +68,7 @@ Every external link goes through `useOpenLink()` (`components/browser/InAppBrows
 
 A chat panel (Home, the Ask tab, the checklist, each checklist item) backed by `/api/assistant`, a tool-calling loop over `generateJSON`. The device sends only the data stores a question is about (`routeStores` in `lib/assistant.ts`); if the model needs another, the server returns `needData` and the device sends just that slice. Legal topics are answered only from `searchTrustedSources` (source library, checklist, then an allowlist-restricted live search). Changes to data are proposals the person confirms. `npm run test:assistant` runs the acceptance tests against `npm run dev`.
 
-**Model note:** the free Gemini tier allows only 20 requests a day for `gemini-3.5-flash`, and `gemini-2.5-flash` is closed to new keys, so the default is `gemini-3.5-flash-lite`. Set `GEMINI_MODEL` for a bigger model on a paid key.
+**Model routing:** Muse Spark handles chat and general AI tasks. Gemini handles explicit translation/reading requests. `LLM_PROVIDER` no longer selects a provider. Set `META_MODEL_API_BASE` and `MUSE_SEARCH_MODEL` to override the shared Muse connection. Chat retains its existing limited/sample responses when Muse is unavailable; it never switches to Gemini.
 
 ## Privacy
 

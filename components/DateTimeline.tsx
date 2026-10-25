@@ -9,6 +9,7 @@ import { Toggle } from "./ios/Toggle";
 import { BarButton, Sheet } from "./ios/Sheet";
 import { ListSection } from "./ios/ListSection";
 import { ListRow } from "./ios/ListRow";
+import { DragScroll } from "./ios/DragScroll";
 import { daysUntil, formatDate } from "@/lib/hooks";
 import { addDate, removeDate, uid, updateDate } from "@/lib/storage";
 import type { TrackedDate } from "@/lib/types";
@@ -52,7 +53,7 @@ export function DateTimeline({ dates, onScan }: { dates: TrackedDate[]; onScan: 
             </div>
           </Card>
         ) : (
-          <ul className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-5" aria-label={t("myDates")}>
+          <DragScroll className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-5" aria-label={t("myDates")}>
             {dates.map((d) => {
               const days = daysUntil(d.date);
               return (
@@ -69,7 +70,7 @@ export function DateTimeline({ dates, onScan }: { dates: TrackedDate[]; onScan: 
                 </li>
               );
             })}
-          </ul>
+          </DragScroll>
         )}
       </ListSection>
       <AddDateSheet open={adding} onClose={() => setAdding(false)} />

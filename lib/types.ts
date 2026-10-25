@@ -87,6 +87,11 @@ export interface EventListing {
   thumbnail?: string;
   /** Built-in sample listing (no live search available). */
   sample?: boolean;
+  /**
+   * Found by web search and confirmed against its page, with what that page says. The details
+   * screen shows this instead of reading the page again (a calendar page lists many events).
+   */
+  checked?: EventDetails;
 }
 
 /** What the event's own page says (/api/events/details). */
@@ -108,7 +113,59 @@ export interface JobListing {
   link?: string;
   postedAt?: string;
   via?: string;
+  /** The listing says it sponsors visas (only checked for people on work visas). */
+  sponsors?: boolean;
 }
+
+/** An event posted on Landed's Community tab (or a sample one for the demo). */
+export interface PostedEvent {
+  id: string;
+  title: string;
+  description: string;
+  /** YYYY-MM-DD */
+  date: string;
+  startTime?: string;
+  endTime?: string;
+  venue?: string;
+  address?: string;
+  city: string;
+  cost?: string;
+  /** Event interest ids (lib/interests.ts), for matching people's filters. */
+  interests: string[];
+  /** Who's hosting, on sample events. */
+  host?: string;
+  /** Made up for the demo by AI, not posted by a real person. RSVPs to it stay on this device. */
+  sample?: boolean;
+  /** How many people said they're going, including this person. */
+  going: number;
+  /** This person said they're going. */
+  rsvp?: boolean;
+  /** This person posted it. */
+  mine?: boolean;
+}
+
+/** Event details filled in by AI from a short description or a flyer, before posting. */
+export interface EventDraft {
+  title: string;
+  date: string;
+  startTime: string;
+  endTime: string;
+  venue: string;
+  address: string;
+  cost: string;
+  description: string;
+  interests: string[];
+  /** Fields the AI inferred or suggested instead of reading them: shown for checking. */
+  guessed: string[];
+}
+
+/**
+ * What lets someone work, as they chose it on the Jobs tab. Kept on the device only.
+ * "visa" covers employer-sponsored visas (H-1B, L-1, O-1, TN); "none" is not yet / not sure.
+ */
+export const WORK_STATUSES = ["citizen", "greenCard", "workPermit", "visa", "none"] as const;
+export type WorkStatus = (typeof WORK_STATUSES)[number];
+export const isWorkStatus = (v: unknown): v is WorkStatus => (WORK_STATUSES as readonly unknown[]).includes(v);
 
 export interface SavedQuestion {
   id: string;

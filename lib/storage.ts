@@ -4,7 +4,8 @@ import { clear, del, get, set } from "idb-keyval";
 import { maskIds } from "./mask";
 import { queuePush } from "./sync";
 import type { ChecklistState } from "./checklist";
-import type { PlanStep, PrepSummary, Profile, SavedQuestion, TrackedDate } from "./types";
+import type { EventInterest } from "./interests";
+import type { PlanStep, PrepSummary, Profile, SavedQuestion, TrackedDate, WorkStatus } from "./types";
 
 // Everything the app remembers lives in this browser's IndexedDB, and is copied to the
 // signed-in account in Supabase (lib/sync.ts) so it comes back on any device.
@@ -19,6 +20,13 @@ export const KEYS = {
   checklist: "landed:checklist",
   prep: "landed:prep",
   chat: "landed:chat",
+  // Not in lib/sync.ts on purpose: immigration status never leaves this device.
+  workStatus: "landed:workStatus",
+  // The kinds of events picked or typed on the Community tab (this device only).
+  eventInterests: "landed:eventInterests",
+  eventCustom: "landed:eventCustom",
+  // RSVPs to sample events (they aren't real, so they aren't saved in the account).
+  sampleRsvps: "landed:sampleRsvps",
 } as const;
 
 /** The last appointment-prep summary, kept so the person (and Ask Landed) can find it again. */
@@ -110,6 +118,16 @@ export const deleteSavedChat = async () => {
   }
   queuePush(KEYS.chat);
 };
+
+export const getWorkStatus = () => safeGet<WorkStatus | null>(KEYS.workStatus, null);
+export const saveWorkStatus = (s: WorkStatus) => safeSet(KEYS.workStatus, s);
+
+export const getEventInterests = () => safeGet<EventInterest[]>(KEYS.eventInterests, []);
+export const saveEventInterests = (i: EventInterest[]) => safeSet(KEYS.eventInterests, i);
+export const getSampleRsvps = () => safeGet<string[]>(KEYS.sampleRsvps, []);
+export const saveSampleRsvps = (ids: string[]) => safeSet(KEYS.sampleRsvps, ids);
+export const getCustomInterests = () => safeGet<string[]>(KEYS.eventCustom, []);
+export const saveCustomInterests = (c: string[]) => safeSet(KEYS.eventCustom, c);
 
 export const getCustomLanguage = () => safeGet<CustomLanguage | null>(KEYS.customLanguage, null);
 export const saveCustomLanguage = (c: CustomLanguage) => safeSet(KEYS.customLanguage, c);

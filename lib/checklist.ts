@@ -6,7 +6,8 @@ import type { TrustedLink } from "./links";
 import type { Profile } from "./types";
 
 export type SectionId = "start" | "money" | "work" | "family" | "protect" | "status";
-type Requirement = "children" | "texas";
+// "renterGuide": a state we have checked renter-rights sources for (the four below).
+type Requirement = "children" | "texas" | "florida" | "arizona" | "newYork" | "renterGuide";
 
 export interface ChecklistLink extends TrustedLink {
   /** Only shown when the profile matches (e.g. a Texas-only page). */
@@ -32,11 +33,28 @@ export const ITEMS = data.items as ChecklistItem[];
 
 export const getItem = (id: string) => ITEMS.find((i) => i.id === id);
 
+const STATES: Partial<Record<Requirement, string>> = { texas: "TX", florida: "FL", arizona: "AZ", newYork: "NY" };
+const STATE_NAMES: Record<string, string> = { texas: "TX", florida: "FL", arizona: "AZ", "new york": "NY" };
+
+/**
+ * The two-letter state in the city from onboarding: "Houston, TX", or what someone typed
+ * under "Other" ("Houston, Texas", "houston tx"). Null when it doesn't say.
+ */
+export function stateOf(city: string): string | null {
+  const c = city.trim().toLowerCase().replace(/\.$/, "");
+  const code = c.match(/[,\s]\s*([a-z]{2})$/)?.[1];
+  if (code) return code.toUpperCase();
+  const name = Object.keys(STATE_NAMES).find((n) => c === n || c.endsWith(` ${n}`) || c.endsWith(`,${n}`));
+  return name ? STATE_NAMES[name] : null;
+}
+
 function meets(req: Requirement | undefined, p: Profile | null) {
   if (!req) return true;
   if (!p) return false;
   if (req === "children") return p.hasChildren;
-  return /,\s*TX$/i.test(p.city);
+  const state = stateOf(p.city);
+  if (req === "renterGuide") return state !== null && Object.values(STATES).includes(state);
+  return state === STATES[req];
 }
 
 /** The items for this person, in section order. */

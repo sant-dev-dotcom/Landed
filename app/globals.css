@@ -52,6 +52,9 @@
   --secondary-background: var(--surface);
   --system-fill: rgba(237, 230, 218, 0.08);
   --bar-background: rgba(19, 18, 17, 0.94);
+  /* Height the floating tab bar takes from the bottom of the screen (64px pill + 12px gap),
+     for content and other bottom bars to stay clear of it. */
+  --tab-bar-space: calc(76px + env(safe-area-inset-bottom));
 
   --blue-tint: var(--sage-surface);
   --green-tint: var(--sage-surface);
@@ -139,6 +142,12 @@ label {
   opacity: 0.6;
 }
 
+/* The invisible text over a scanned document: only the highlight shows, in sage. */
+.doc-text ::selection {
+  background: rgba(168, 195, 160, 0.45);
+  color: transparent;
+}
+
 .pt-safe {
   padding-top: env(safe-area-inset-top);
 }
@@ -151,6 +160,17 @@ label {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .drag-scroll,
+  .drag-scroll * {
+    cursor: grab;
+  }
+  .drag-scroll[data-dragging="true"],
+  .drag-scroll[data-dragging="true"] * {
+    cursor: grabbing;
+  }
 }
 
 /* Round check: 2px faint ring, sage fill with an ink tick when done. */

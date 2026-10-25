@@ -62,15 +62,15 @@ export function planFallback(p: Profile): PlanStep[] {
       why: es
         ? "Bibliotecas y colegios comunitarios ofrecen clases de día, de noche y en línea."
         : "Libraries and community colleges offer day, evening and online classes.",
-      sourceUrl: "https://usahello.org/education/learn-english/",
+      sourceUrl: "https://usahello.org/education/learn-english-language/",
     },
     {
       category: "social",
       dueInDays: 45,
       title: es ? "Conozca a alguien que ya pasó por esto" : "Meet one person who's been through it",
       why: es
-        ? "Alguien de su comunidad puede compartir lo que aprendió. Vea eventos y personas en Comunidad."
-        : "Someone from your community can share what they learned. See events and people in Community.",
+        ? "Alguien de su comunidad puede compartir lo que aprendió. Vea eventos y haga preguntas en el foro de Comunidad."
+        : "Someone from your community can share what they learned. See events and ask questions in the Community forum.",
     },
     {
       category: "jobs",
@@ -222,16 +222,7 @@ export function helpFallback(city: string): HelpListing[] {
 
 /* ---------------- Events ---------------- */
 
-export function eventsFallback(city: string, locale: Locale): EventListing[] {
-  const c = city.split(",")[0];
-  const es = locale === "es";
-  return [
-    { title: es ? "Grupo de conversación en inglés (gratis)" : "Free English Conversation Group", startDate: isoFromToday(3), location: es ? `Biblioteca pública, ${c}` : `Public Library, ${c}`, description: es ? "Practique inglés en un ambiente relajado. Todos los niveles." : "Practice English in a relaxed group. All levels welcome." },
-    { title: es ? "Feria de empleo comunitaria" : "Community Job Fair", startDate: isoFromToday(9), location: es ? `Centro comunitario, ${c}` : `Community Center, ${c}` },
-    { title: es ? "Taller: Conozca sus derechos como inquilino" : "Workshop: Know Your Rights as a Tenant", startDate: isoFromToday(12), location: c },
-    { title: es ? "Noche de bienvenida para familias recién llegadas" : "Welcome Night for Newcomer Families", startDate: isoFromToday(17), location: c },
-  ];
-}
+export { eventsFallback } from "./demoEvents";
 
 /* ---------------- Jobs ---------------- */
 

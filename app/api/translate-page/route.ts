@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { fetchTrusted, formattedPage, pageLanguages } from "@/lib/pages";
-import { isLLMConfigured, languageName } from "@/lib/llm";
+import { FLASH_LITE_MODELS, isGeminiConfigured, languageName } from "@/lib/llm";
 import { isTrusted } from "@/lib/links";
 import { asLocale } from "@/lib/mask";
 
@@ -15,19 +15,22 @@ export const maxDuration = 60;
 export async function GET(req: Request) {
   const params = new URL(req.url).searchParams;
   const url = params.get("url") ?? "";
+  // Either one of the app's languages ("lang"), or any language the person typed ("name",
+  // e.g. "Tigrinya"): plain letters only, since it goes into the AI's instructions.
+  const typed = (params.get("name") ?? "").replace(/[^\p{L}\p{M} ()'-]/gu, "").replace(/\s+/g, " ").trim().slice(0, 40);
   const locale = asLocale(params.get("lang"));
   if (!isTrusted(url)) return NextResponse.json({ error: "untrusted" }, { status: 400 });
-  if (locale === "en" && params.get("lang") !== "en") return NextResponse.json({ error: "bad_language" }, { status: 400 });
-  if (!isLLMConfigured()) return NextResponse.json({ error: "not_configured" }, { status: 503 });
+  if (!typed && locale === "en" && params.get("lang") !== "en") return NextResponse.json({ error: "bad_language" }, { status: 400 });
+  if (!isGeminiConfigured(FLASH_LITE_MODELS)) return NextResponse.json({ error: "not_configured" }, { status: 503 });
 
   try {
     const page = await fetchTrusted(url);
-    const [original, translated] = await Promise.all([formattedPage(page), formattedPage(page, languageName(locale, req))]);
+    const [original, translated] = await Promise.all([formattedPage(page), formattedPage(page, typed || languageName(locale, req))]);
     return NextResponse.json({
       url: page.url,
       sourceLang: pageLanguages(page).lang,
-      original: { title: original.title, blocks: original.blocks, aiFormatted: original.ai, requiresSite: original.requiresSite, siteAction: original.siteAction },
-      translated: { title: translated.title, blocks: translated.blocks, requiresSite: translated.requiresSite, siteAction: translated.siteAction },
+      original: { title: original.title, blocks: original.blocks, aiFormatted: original.ai, requiresSite: original.requiresSite, siteAction: original.siteAction, siteNotice: original.siteNotice },
+      translated: { title: translated.title, blocks: translated.blocks, requiresSite: translated.requiresSite, siteAction: translated.siteAction, siteNotice: translated.siteNotice },
     });
   } catch (err) {
     const detail = err instanceof Error ? err.message : String(err);

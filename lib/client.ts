@@ -13,6 +13,26 @@ export const setActiveCustomLanguage = (name: string | null) => {
 const languageHeader = (): Record<string, string> =>
   customLanguage ? { "x-landed-language": encodeURIComponent(customLanguage) } : {};
 
+/** GET a stream of JSON lines (one object per line), calling onLine for each as it arrives. */
+export async function getJSONLines<T>(url: string, onLine: (line: T) => void, signal?: AbortSignal): Promise<void> {
+  const res = await fetch(url, { headers: languageHeader(), signal });
+  if (!res.ok || !res.body) throw Object.assign(new Error(`HTTP ${res.status}`), { status: res.status });
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  for (;;) {
+    const { done, value } = await reader.read();
+    buffer += done ? decoder.decode() : decoder.decode(value, { stream: true });
+    let end;
+    while ((end = buffer.indexOf("\n")) >= 0) {
+      const line = buffer.slice(0, end).trim();
+      buffer = buffer.slice(end + 1);
+      if (line) onLine(JSON.parse(line) as T);
+    }
+    if (done) break;
+  }
+}
+
 export async function postJSON<T>(url: string, body: unknown): Promise<T> {
   const res = await fetch(url, {
     method: "POST",
@@ -24,8 +44,8 @@ export async function postJSON<T>(url: string, body: unknown): Promise<T> {
   return data as T;
 }
 
-export async function getJSON<T>(url: string): Promise<T> {
-  const res = await fetch(url, { headers: languageHeader() });
+export async function getJSON<T>(url: string, signal?: AbortSignal): Promise<T> {
+  const res = await fetch(url, { headers: languageHeader(), signal });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }

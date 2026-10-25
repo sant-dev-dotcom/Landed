@@ -176,8 +176,6 @@
     "askSub": "Respostas com fontes",
     "help": "Encontrar Ajuda Jurídica Gratuita",
     "helpSub": "Ajuda jurídica perto de você",
-    "prep": "Preparar para uma Consulta",
-    "prepSub": "Um resumo para levar com você",
     "rights": "Conheça Seus Direitos",
     "rightsFooter": "Informações gerais com links para fontes oficiais.",
     "addSheetTitle": "Adicionar uma Data",
@@ -368,7 +366,6 @@
     "notFound": "Este anúncio não está mais disponível."
   },
   "prep": {
-    "title": "Preparação para a Consulta",
     "intro": "Crie um resumo de uma página para levar a um advogado ou representante credenciado. Está escrito no seu idioma e em inglês.",
     "datesSection": "Datas Incluídas",
     "noDates": "Ainda sem datas. Você ainda pode adicionar perguntas.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Faça um ITIN se não puder ter um SSN",
         "short": "Um número de imposto para quem não pode ter um Social Security number.",
-        "body": "Um ITIN (Individual Taxpayer Identification Number) permite que você declare impostos se não puder ter um Social Security number. Ele não dá permissão para trabalhar. O IRS não compartilha isso para aplicar leis de imigração.",
         "steps": {
           "s1": "Veja se você precisa de um ITIN. Você só precisa de um se não puder ter um SSN.",
           "s2": "Preencha o IRS Form W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Conheça seus direitos como inquilino",
         "short": "O senhorio precisa passar pela justiça para despejar você.",
-        "body": "No Texas, o senhorio não pode tirar você trocando as fechaduras ou pegando suas coisas. Um despejo precisa passar por um tribunal. Leia o seu contrato de aluguel e guarde uma cópia.",
         "steps": {
           "s1": "Leia o seu contrato de aluguel e guarde uma cópia.",
           "s2": "Peça reparos por escrito e guarde cópias.",

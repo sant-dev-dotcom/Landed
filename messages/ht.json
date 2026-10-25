@@ -176,8 +176,6 @@
     "askSub": "Repons ak sous yo",
     "help": "Jwenn èd legal gratis",
     "helpSub": "Èd legal toupre ou",
-    "prep": "Prepare pou yon randevou",
-    "prepSub": "Yon rezime pou pote avèk ou",
     "rights": "Konnen dwa ou",
     "rightsFooter": "Enfòmasyon jeneral ki gen lyen ak sous ofisyèl.",
     "addSheetTitle": "Ajoute yon dat",
@@ -368,7 +366,6 @@
     "notFound": "Anons sa a pa disponib ankò."
   },
   "prep": {
-    "title": "Preparasyon pou Randevou",
     "intro": "Fè yon rezime sou yon sèl paj pou pote bay yon avoka oswa yon reprezantan ki akredite. Li ekri nan lang ou ak an Anglè.",
     "datesSection": "Dat ki Enkli",
     "noDates": "Poko gen dat. Ou ka toujou ajoute kesyon.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Jwenn yon ITIN si ou pa ka jwenn yon SSN",
         "short": "Yon nimewo taks pou moun ki pa ka jwenn yon nimewo Sekirite Sosyal.",
-        "body": "Yon ITIN (Nimewo Idantifikasyon Kontribyab Endividyèl) pèmèt ou ranpli taks si ou pa ka jwenn yon nimewo Sekirite Sosyal. Li pa ba ou dwa pou travay. IRS pa pataje l pou fè respekte lwa sou imigrasyon.",
         "steps": {
           "s1": "Verifye si ou bezwen yon ITIN. Ou bezwen youn sèlman si ou pa ka jwenn yon SSN.",
           "s2": "Ranpli Fòm W-7 IRS la.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Konnen dwa ou kòm lokatè",
         "short": "Yon pwopriyetè dwe pase nan tribinal pou mete ou deyò.",
-        "body": "Nan Texas, yon pwopriyetè pa ka mete ou deyò lè li chanje kadna yo oswa pran afè ou. Yon pwosedi pou mete moun deyò dwe pase nan tribinal. Lektir kontra lwaye ou epi kenbe yon kopi.",
         "steps": {
           "s1": "Lekti kontra lwaye ou epi kenbe yon kopi.",
           "s2": "Mande pou reparasyon yo alekri epi kenbe kopi.",

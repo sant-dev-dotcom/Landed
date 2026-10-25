@@ -1,15 +1,17 @@
 import "server-only";
 import { CUSTOM_LOCALE, languageInfo, type Locale } from "@/i18n/languages";
+import { museText } from "./muse";
 
-// Provider-agnostic LLM client. Supports text + one optional image, JSON output.
-// LLM_PROVIDER=muse uses Meta Muse Spark through an OpenAI-compatible endpoint and
-// falls back to Gemini if that call fails and a Gemini key is set.
+// Muse Spark handles chat and general AI tasks. Translation requests explicitly select
+// Gemini with onlyGemini. Providers never substitute for one another.
 
 export interface LLMRequest {
   system: string;
   user: string;
   image?: { mimeType: string; base64: string };
   temperature?: number;
+  /** Use only these Gemini models, in order (no other model or provider). */
+  onlyGemini?: string[];
 }
 
 type Provider = "muse" | "gemini";
@@ -17,34 +19,32 @@ type Provider = "muse" | "gemini";
 // A provider whose key was rejected (401/403) is skipped until the server restarts.
 const rejected = new Set<Provider>();
 
-function providers(): Provider[] {
-  const preferred = (process.env.LLM_PROVIDER || "gemini").toLowerCase() as Provider;
-  const available: Provider[] = [];
-  if (process.env.MUSE_API_KEY && !rejected.has("muse")) available.push("muse");
-  if (process.env.GEMINI_API_KEY && !rejected.has("gemini") && geminiModels().length) available.push("gemini");
-  return available.sort((a, b) => (a === preferred ? -1 : b === preferred ? 1 : 0));
+export function isLLMConfigured() {
+  return Boolean(process.env.MUSE_API_KEY) && !rejected.has("muse");
 }
 
-export function isLLMConfigured() {
-  return providers().length > 0;
+export function isGeminiConfigured(models?: readonly string[]) {
+  return Boolean(process.env.GEMINI_API_KEY) && !rejected.has("gemini") &&
+    (models ?? geminiModels()).some((model) => (unavailable.get(model) ?? 0) <= Date.now());
 }
 
 export async function generateJSON<T>(req: LLMRequest): Promise<T> {
-  const order = providers();
-  if (order.length === 0) throw new Error("No LLM provider configured");
-  const errors: string[] = [];
-  for (const p of order) {
-    try {
-      const raw = p === "muse" ? await callMuse(req) : await callGemini(req);
-      return parseJSON<T>(raw);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      if (/HTTP (401|403)\b/.test(message)) rejected.add(p);
-      errors.push(`${p}: ${message.slice(0, 200)}`);
-      console.error(`[llm] ${p} failed:`, message);
-    }
+  const provider: Provider = req.onlyGemini ? "gemini" : "muse";
+  if (req.onlyGemini ? !isGeminiConfigured(req.onlyGemini) : !isLLMConfigured()) {
+    throw new Error(req.onlyGemini ? "Gemini is not configured" : "Muse Spark is not configured");
   }
-  throw new Error(errors.join(" | "));
+  try {
+    const raw = provider === "gemini" ? await callGemini(req) : await museText(req.system, req.user, {
+      image: req.image ? `data:${req.image.mimeType};base64,${req.image.base64}` : undefined,
+      timeoutMs: 45_000,
+    });
+    return parseJSON<T>(raw);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    if (/HTTP (401|403)\b/.test(message)) rejected.add(provider);
+    console.error(`[llm] ${provider} failed:`, message);
+    throw err;
+  }
 }
 
 function parseJSON<T>(raw: string): T {
@@ -67,6 +67,8 @@ function parseJSON<T>(raw: string): T {
 // the next is used instead of failing. gemini-2.5-flash is closed to new keys.
 // GEMINI_MODEL can be one model or a comma-separated list.
 const DEFAULT_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.5-flash"];
+/** Only the Flash-Lite models (the second takes over when the first's daily quota runs out). */
+export const FLASH_LITE_MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"];
 
 /** Models whose daily quota is used up (or that don't exist for this key), until when. */
 const unavailable = new Map<string, number>();
@@ -86,8 +88,9 @@ function retryAfter(detail: string) {
 async function callGemini(req: LLMRequest): Promise<string> {
   const parts: unknown[] = [{ text: req.user }];
   if (req.image) parts.push({ inline_data: { mime_type: req.image.mimeType, data: req.image.base64 } });
-  const models = geminiModels();
-  if (!models.length) throw new Error("Gemini: every model's daily quota is used up");
+  const now = Date.now();
+  const models = req.onlyGemini ? req.onlyGemini.filter((m) => (unavailable.get(m) ?? 0) <= now) : geminiModels();
+  if (!models.length) throw new Error(`Gemini: daily quota used up on ${req.onlyGemini ? req.onlyGemini.join(", ") : "every model"}`);
 
   let lastError = "";
   for (const model of models) {
@@ -124,34 +127,6 @@ async function callGemini(req: LLMRequest): Promise<string> {
     else if (res.status !== 429 && res.status < 500) break; // a request problem: another model won't help
   }
   throw new Error(`Gemini ${lastError}`);
-}
-
-async function callMuse(req: LLMRequest): Promise<string> {
-  const base = (process.env.MUSE_API_BASE || "https://api.llama.com/compat/v1").replace(/\/$/, "");
-  const model = process.env.MUSE_MODEL || "muse-spark";
-  const userContent: unknown[] = [{ type: "text", text: req.user }];
-  if (req.image) {
-    userContent.push({ type: "image_url", image_url: { url: `data:${req.image.mimeType};base64,${req.image.base64}` } });
-  }
-  const res = await fetch(`${base}/chat/completions`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${process.env.MUSE_API_KEY}` },
-    body: JSON.stringify({
-      model,
-      temperature: req.temperature ?? 0.3,
-      response_format: { type: "json_object" },
-      messages: [
-        { role: "system", content: req.system },
-        { role: "user", content: userContent },
-      ],
-    }),
-    signal: AbortSignal.timeout(45_000),
-  });
-  if (!res.ok) throw new Error(`Muse HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
-  const data = await res.json();
-  const text = data?.choices?.[0]?.message?.content ?? data?.completion_message?.content?.text;
-  if (!text) throw new Error("Muse returned no text");
-  return typeof text === "string" ? text : JSON.stringify(text);
 }
 
 /** The language to answer in. A typed-in language arrives in the x-landed-language header (see lib/client.ts). */

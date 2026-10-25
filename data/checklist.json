@@ -149,6 +149,16 @@
           "url": "https://www.dps.texas.gov/section/driver-license",
           "requires": "texas",
           "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.flhsmv.gov/driver-licenses-id-cards/",
+          "requires": "florida",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://azmvdnow.gov/",
+          "requires": "arizona",
+          "lastVerified": "2026-10-25"
         }
       ],
       "howTo": [
@@ -166,6 +176,7 @@
     {
       "id": "itin",
       "section": "money",
+      "statusDependent": true,
       "links": [
         {
           "url": {
@@ -532,14 +543,46 @@
     {
       "id": "tenant",
       "section": "protect",
-      "requires": "texas",
+      "requires": "renterGuide",
       "links": [
         {
           "url": "https://texaslawhelp.org/article/when-tenants-get-locked-out",
-          "lastVerified": "2026-10-25"
+          "lastVerified": "2026-10-25",
+          "requires": "texas"
         },
         {
           "url": "https://texaslawhelp.org/article/eviction",
+          "lastVerified": "2026-10-25",
+          "requires": "texas"
+        },
+        {
+          "url": "https://www.fdacs.gov/Consumer-Resources/Landlord-Tenant",
+          "requires": "florida",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.floridalawhelp.org/",
+          "requires": "florida",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.azcourts.gov/selfservicecenter/Landlord-Tenant-Disputes-Eviction-Actions",
+          "requires": "arizona",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.azlawhelp.org/",
+          "requires": "arizona",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://ag.ny.gov/publications/residential-tenants-rights-guide",
+          "requires": "newYork",
+          "lastVerified": "2026-10-25"
+        },
+        {
+          "url": "https://www.lawhelpny.org/issues/housing",
+          "requires": "newYork",
           "lastVerified": "2026-10-25"
         }
       ],
@@ -549,7 +592,8 @@
         {
           "link": {
             "url": "https://texaslawhelp.org/article/eviction",
-            "lastVerified": "2026-10-25"
+            "lastVerified": "2026-10-25",
+            "requires": "texas"
           }
         },
         {}

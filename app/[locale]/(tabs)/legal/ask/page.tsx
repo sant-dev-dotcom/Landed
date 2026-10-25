@@ -122,7 +122,7 @@ export default function AskPage() {
         }
       />
 
-      <div className="px-5 pb-[calc(50px+env(safe-area-inset-bottom)+80px)] pt-4">
+      <div className="px-5 pb-[calc(var(--tab-bar-space)+80px)] pt-4">
         {items.length === 0 ? (
           <div className="flex flex-col gap-7">
             <div className="pt-4">
@@ -174,7 +174,7 @@ export default function AskPage() {
           e.preventDefault();
           ask(input);
         }}
-        className="bar-blur hairline-t fixed bottom-[calc(50px+env(safe-area-inset-bottom))] left-1/2 z-30 flex w-full max-w-app -translate-x-1/2 items-end gap-2 px-3 py-2.5"
+        className="bar-blur hairline-t fixed bottom-[var(--tab-bar-space)] left-1/2 z-30 flex w-full max-w-app -translate-x-1/2 items-end gap-2 px-3 py-2.5"
       >
         {speech && (
           <button

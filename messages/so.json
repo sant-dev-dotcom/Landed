@@ -176,8 +176,6 @@
     "askSub": "Jawaabo wata meelaha laga soo xigtay",
     "help": "Hel Caawimaad Sharci oo Lacag La’aan ah",
     "helpSub": "Gargaar sharci oo kuu dhow",
-    "prep": "U diyaar garow Ballan",
-    "prepSub": "Warbixin kooban oo aad wadatid",
     "rights": "Baro Xuquuqdaada",
     "rightsFooter": "Macluumaad guud oo wata xiriiriyeyaal xagga ilaha rasmiga ah.",
     "addSheetTitle": "Ku dar Taariikh",
@@ -368,7 +366,6 @@
     "notFound": "Liiskan hadda danbe ma jiro."
   },
   "prep": {
-    "title": "Diyaarinta Ballanta",
     "intro": "Samee warqad kooban oo hal bog ah oo aad u geyso qareen ama wakiil sharci ah oo la aqoonsan yahay. Waxaa lagu qoray afkaaga iyo Ingiriisiga.",
     "datesSection": "Taariikhaha ku Jira",
     "noDates": "Weli taariikh ma jiraan. Weli waad dari kartaa su'aalo.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Hel ITIN haddii aanad heli karin SSN",
         "short": "Nambar canshuur oo loogu talagalay dadka aan heli karin lambarka Social Security.",
-        "body": "ITIN (Individual Taxpayer Identification Number) wuxuu kuu ogolaanayaa inaad bixiso canshuurta haddii aanad heli karin lambarka Social Security. Ma siinayso ogolaansho shaqo. IRS lama wadaagto si ay u fuliso sharciga socdaalka.",
         "steps": {
           "s1": "Hubi haddii aad u baahan tahay ITIN. Waxaad u baahan tahay oo kaliya haddii aanad heli karin SSN.",
           "s2": "Buuxi foomka IRS W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Ogow xuquuqdaada ah qof guri kireysta",
         "short": "Mulkiilaha gurigu waa inuu maxkamadraa inuu ku saaro.",
-        "body": "Texas gudaheeda, mulkiilaha gurigu kuguma saari karo inuu beddelo qufulada ama uu qaato alaabtaada. Cayrinta waa inay marto maxkamad. Akhri heshiiskaaga kirada oo hayso koobi.",
         "steps": {
           "s1": "Akhri heshiiskaaga kirada oo hayso koobi.",
           "s2": "Weydiiso dayactir adigoo qoraal ku gudbinaya oo hayso koobiyo.",

@@ -176,8 +176,6 @@
     "askSub": "Câu trả lời kèm theo nguồn",
     "help": "Tìm Trợ Giúp Pháp Lý Miễn Phí",
     "helpSub": "Trợ giúp pháp lý gần bạn",
-    "prep": "Chuẩn Bị Cho Cuộc Hẹn",
-    "prepSub": "Bản tóm tắt để mang theo",
     "rights": "Biết Quyền Của Bạn",
     "rightsFooter": "Thông tin chung có kèm liên kết đến các nguồn chính thức.",
     "addSheetTitle": "Thêm Ngày",
@@ -368,7 +366,6 @@
     "notFound": "Thông tin này không còn nữa."
   },
   "prep": {
-    "title": "Chuẩn bị gặp luật sư",
     "intro": "Tạo một bản tóm tắt một trang để mang theo khi gặp luật sư hoặc người đại diện được công nhận. Bản này có bằng ngôn ngữ của bạn và tiếng Anh.",
     "datesSection": "Các ngày có trong thư",
     "noDates": "Chưa có ngày nào. Bạn vẫn có thể thêm câu hỏi.",
@@ -529,7 +526,6 @@
       "itin": {
         "title": "Lấy số ITIN nếu bạn không thể có SSN",
         "short": "Mã số thuế dành cho những người không thể có số An sinh Xã hội.",
-        "body": "Số ITIN (Mã số Nhận dạng Người nộp thuế Cá nhân) cho phép bạn khai thuế nếu bạn không thể có số An sinh Xã hội. Số này không cấp quyền làm việc. IRS không chia sẻ số này để thực thi luật di trú.",
         "steps": {
           "s1": "Kiểm tra xem bạn có cần số ITIN không. Bạn chỉ cần số này nếu không thể có SSN.",
           "s2": "Điền vào Mẫu đơn IRS W-7.",
@@ -673,7 +669,6 @@
       "tenant": {
         "title": "Biết quyền lợi của bạn khi đi thuê nhà",
         "short": "Chủ nhà phải thông qua tòa án mới được đuổi bạn đi.",
-        "body": "Ở Texas, chủ nhà không thể đuổi bạn bằng cách đổi ổ khóa hoặc lấy đồ đạc của bạn. Việc trục xuất phải thông qua tòa án. Hãy đọc hợp đồng thuê nhà và giữ một bản sao.",
         "steps": {
           "s1": "Đọc hợp đồng thuê nhà của bạn và giữ một bản sao.",
           "s2": "Yêu cầu sửa chữa bằng văn bản và giữ các bản sao.",

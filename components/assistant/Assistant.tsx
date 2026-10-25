@@ -116,7 +116,7 @@ export function AssistantProvider({ children }: { children: ReactNode }) {
             setReturnPill(false);
             setOpen(true);
           }}
-          className="pressable fixed bottom-[calc(50px+env(safe-area-inset-bottom)+14px)] left-1/2 z-40 flex min-h-[44px] -translate-x-1/2 items-center gap-2 rounded-full bg-tint-fill px-5 text-callout font-medium text-on-accent shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+          className="pressable fixed bottom-[calc(var(--tab-bar-space)+10px)] left-1/2 z-40 flex min-h-[44px] -translate-x-1/2 items-center gap-2 rounded-full bg-tint-fill px-5 text-callout font-medium text-on-accent shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
         >
           <MessageCircle size={18} strokeWidth={1.75} aria-hidden />
           {t("backToChat")}

@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { intlTag } from "@/i18n/languages";
-import { getChecklist, getDates, getPlan, getProfile, getSettings, type Settings } from "./storage";
+import { getChecklist, getCustomInterests, getDates, getEventInterests, getPlan, getProfile, getSettings, getWorkStatus, type Settings } from "./storage";
 import type { ChecklistState } from "./checklist";
-import type { PlanStep, Profile, TrackedDate } from "./types";
+import type { EventInterest } from "./interests";
+import type { PlanStep, Profile, TrackedDate, WorkStatus } from "./types";
 
 function useStored<T>(loader: () => Promise<T>, initial: T) {
   const [value, setValue] = useState<T>(initial);
@@ -30,6 +31,9 @@ export const useProfile = () => useStored<Profile | null>(getProfile, null);
 export const usePlan = () => useStored<PlanStep[]>(getPlan, []);
 export const useSettings = () => useStored<Settings>(getSettings, { notifications: false });
 export const useChecklist = () => useStored<ChecklistState>(getChecklist, {});
+export const useWorkStatus = () => useStored<WorkStatus | null>(getWorkStatus, null);
+export const useEventInterests = () => useStored<EventInterest[]>(getEventInterests, []);
+export const useCustomInterests = () => useStored<string[]>(getCustomInterests, []);
 
 export function useDates() {
   const [dates, ready] = useStored<TrackedDate[]>(getDates, []);

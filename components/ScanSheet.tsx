@@ -8,13 +8,15 @@ import { Button } from "./ios/Button";
 import { ListSection } from "./ios/ListSection";
 import { ListRow } from "./ios/ListRow";
 import { LoadingBlock } from "./ios/Spinner";
-import { ScanResultView } from "./ScanResult";
 import { demoLetterSvg, SAMPLE_IDS, type SampleId } from "@/lib/demoLetters";
 import { fileToJpeg, postJSON, svgToJpeg } from "@/lib/client";
 import { paintRedactions, scanForPrivateDetails, type RedactionScan } from "@/lib/redact";
 import type { Box } from "@/lib/redactRules";
 import type { QualityIssue } from "@/lib/imageQuality";
 import { useProfile } from "@/lib/hooks";
+import { openDocument } from "@/lib/documentSession";
+import { visibleLines } from "@/lib/documentText";
+import { useRouter } from "@/i18n/routing";
 import type { ScanResult } from "@/lib/types";
 import { ProgressBar } from "./ios/ProgressBar";
 import { RedactReview } from "./RedactReview";
@@ -25,7 +27,6 @@ type State =
   | { kind: "review"; image: string; scan: RedactionScan; sampleId?: SampleId }
   | { kind: "rejected"; issue: QualityIssue }
   | { kind: "reading" }
-  | { kind: "result"; result: ScanResult; sample?: boolean }
   | { kind: "error"; message: string };
 
 export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -34,6 +35,7 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
   const locale = useLocale();
   const [state, setState] = useState<State>({ kind: "idle" });
   const [profile] = useProfile();
+  const router = useRouter();
   // Preview of the image while it is being read. Cleared as soon as the result arrives.
   const [preview, setPreview] = useState<string | null>(null);
   const cameraRef = useRef<HTMLInputElement>(null);
@@ -58,8 +60,9 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
     }
   };
 
-  // 2. Only the covered copy is sent to be read.
-  const send = async (image: string, boxes: Box[], sampleId?: SampleId) => {
+  // 2. Only the covered copy is sent to be read. Then it opens on the document screen, with the
+  //    words that weren't covered laid over it so they can be highlighted and asked about.
+  const send = async (image: string, boxes: Box[], scan: RedactionScan, sampleId?: SampleId) => {
     setState({ kind: "reading" });
     let covered: string | null = null;
     try {
@@ -71,7 +74,8 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
         locale,
         sampleId,
       });
-      setState({ kind: "result", result: data.result, sample: data.sample });
+      openDocument({ image: covered, width: scan.width, height: scan.height, lines: visibleLines(scan.lines, boxes), result: data.result, sample: data.sample });
+      router.push("/legal/document");
     } catch (err) {
       const code = (err as { code?: string }).code;
       setState({
@@ -79,7 +83,8 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
         message: code === "too_large" ? t("tooBig") : code === "not_configured" ? t("notConfigured") : tc("error"),
       });
     } finally {
-      // Drop every reference to the image. Nothing is written to storage.
+      // Drop this sheet's references to the image. The document screen keeps the covered copy in
+      // memory only while it's open; nothing is written to storage.
       covered = null;
       setPreview(null);
     }
@@ -194,7 +199,7 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
         <RedactReview
           image={state.image}
           scan={state.scan}
-          onSend={(boxes) => send(state.image, boxes, state.sampleId)}
+          onSend={(boxes) => send(state.image, boxes, state.scan, state.sampleId)}
           onCancel={() => setState({ kind: "idle" })}
         />
       )}
@@ -207,10 +212,6 @@ export function ScanSheet({ open, onClose }: { open: boolean; onClose: () => voi
           )}
           <LoadingBlock text={t("reading")} />
         </div>
-      )}
-
-      {state.kind === "result" && (
-        <ScanResultView result={state.result} sample={state.sample} onAgain={() => setState({ kind: "idle" })} />
       )}
 
       {state.kind === "error" && (
