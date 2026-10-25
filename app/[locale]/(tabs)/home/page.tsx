@@ -11,7 +11,7 @@ import { ListRow } from "@/components/ios/ListRow";
 import { Screen } from "@/components/ios/Screen";
 import { ButtonLink } from "@/components/ios/Button";
 import { Card } from "@/components/ios/Card";
-import { CaseIcon, ClockIcon, PeopleIcon, RowChevron, ShieldIcon, WarningIcon } from "@/components/LampIcons";
+import { ClockIcon, RowChevron, ShieldIcon, WarningIcon } from "@/components/LampIcons";
 import { useOpenLink } from "@/components/browser/InAppBrowser";
 import { AskLandedButton } from "@/components/assistant/Assistant";
 import { itemsFor } from "@/lib/checklist";
@@ -38,7 +38,6 @@ export default function HomePage() {
   const tl = useTranslations("legal");
   const tc = useTranslations("common");
   const tcat = useTranslations("categories");
-  const ttabs = useTranslations("tabs");
   const locale = useLocale();
   const [profile, profileReady] = useProfile();
   const [plan] = usePlan();
@@ -59,12 +58,6 @@ export default function HomePage() {
 
   const title = profile?.name ? t("greeting", { name: profile.name }) : t("greetingNoName");
   const eyebrow = profile ? t("dayIn", { day: dayInUS(profile), city: profile.city.split(",")[0] }) : undefined;
-
-  const explore = [
-    { href: "/legal", label: ttabs("legal"), Icon: ShieldIcon, color: "text-sage" },
-    { href: "/social", label: ttabs("community"), Icon: PeopleIcon, color: "text-lavender" },
-    { href: "/jobs", label: ttabs("jobs"), Icon: CaseIcon, color: "text-oat" },
-  ];
 
   return (
     <Screen>
@@ -191,23 +184,6 @@ export default function HomePage() {
           )}
         </section>
 
-        <section aria-labelledby="explore-heading" className="flex flex-col gap-3">
-          <h2 id="explore-heading" className="text-title3">
-            {t("explore")}
-          </h2>
-          <div className="grid grid-cols-3 gap-2.5">
-            {explore.map(({ href, label, Icon, color }) => (
-              <Link
-                key={href}
-                href={href}
-                className="pressable flex min-h-[76px] flex-col justify-between gap-2 rounded-tile bg-cell px-3 py-4 text-callout"
-              >
-                <Icon size={26} detail className={color} />
-                {label}
-              </Link>
-            ))}
-          </div>
-        </section>
       </GroupedList>
     </Screen>
   );

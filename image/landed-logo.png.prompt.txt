@@ -1,0 +1,11 @@
+Generated with the built-in image_gen tool.
+
+Use case: logo-brand.
+Create one refined, memorable logo for "Landed", a welcoming app helping newcomers to the United States understand documents, navigate important dates, find trustworthy help, find work, and build community.
+Asset: finished primary brand logo for an app and a hackathon video.
+Design a minimal flat geometric emblem suggesting an open doorway and a path arriving at a safe home: a softly rounded sage-green arch with an elegant L-shaped negative-space path inside and a small warm-cream rising sun. Make the silhouette distinctive, balanced, confident, humane, and legible at small app-icon sizes. Use a few substantial clean shapes with intentional negative space.
+Place the emblem to the left of the exact word "Landed" (capital L, lowercase anded), spelled L-a-n-d-e-d. The wordmark should be generously spaced, custom-looking rounded humanist sans serif, medium weight, warm cream color. Carefully balance the size and spacing of emblem and type as a single cohesive horizontal lockup.
+Palette: sage #A8C3A0, warm cream #EDE6DA, background solid warm charcoal #131211, matching the existing Landed app.
+Composition: clean landscape canvas, logo centered with generous clear space, large enough to inspect, immaculate crisp edges, vector-like graphic quality.
+Constraints: one logo only; only the word Landed; no tagline, no mockups, no presentation-board labels, no shadows, no gradients, no textures, no 3D, no flags, no airplanes, no hands, no stock globe symbols, no watermarks. A polished usable identity, understated and warm.
+

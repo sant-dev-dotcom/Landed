@@ -1,0 +1,10 @@
+Edited with the built-in image_gen tool.
+
+Edit the supplied Landed logo to remove visual artifacts and make it look like a pristine flat vector logo.
+Preserve the current composition, exact word "Landed", wordmark shapes and rounded typography, icon silhouette, spacing, scale, palette, and placement. Preserve the emblem as it is: the sage arch, cream circular sun/moon, and cream curved path. This is cleanup, not a redesign.
+Specific fixes:
+- Remove the grain, mottling, cloudy discoloration, faint diagonal banding, and uneven tonal patches from the background. Make the entire background a perfectly uniform warm charcoal #131211.
+- Make the sage emblem one completely flat, solid #A8C3A0, and make every cream element and every letter one completely flat, solid #EDE6DA. Remove all gradients, lighting, highlights, surface texture, or color variation inside the shapes.
+- Clean the small soft pale halo and blended overlap where the curved cream path meets the inner right edge of the green arch near its lower-right corner. There must be a single crisp boundary with no ghost outline, fringe, smearing, glow, or stray pale pixels. Keep the path enclosed within the emblem's original outer boundary.
+- Refine all contours and lettering into smooth, precise, consistently antialiased curves and clean straight baselines. Keep the dot circular. Remove tiny dents, bumps, seams and stray marks.
+Output a polished high-resolution landscape logo with exactly the same design and framing, clean flat colors, no added text, no added symbols, no mockup, no shadow, no texture, no watermark. Keep the opaque charcoal background.
